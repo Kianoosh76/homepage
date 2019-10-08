@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>CSC209</title>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="description" content="Software Tools and System Programming - Summer 2022">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- Open Graph / Facebook -->
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="https://www.cs.toronto.edu/~kianoosh/courses/csc209/">
+	<meta property="og:title" content="CSC209">
+	<meta property="og:description" content="Software Tools and System Programming - Summer 2022">
+	<meta property="og:image" content="https://www.cs.toronto.edu/~kianoosh/courses/csc209/images/card.png">
+
+	<!-- Twitter -->
+	<meta property="twitter:card" content="summary_large_image">
+	<meta property="twitter:url" content="https://www.cs.toronto.edu/~kianoosh/courses/csc209/">
+	<meta property="twitter:title" content="CSC209">
+	<meta property="twitter:description" content="Software Tools and System Programming - Summer 2022">
+	<meta property="twitter:image" content="https://www.cs.toronto.edu/~kianoosh/courses/csc209/images/card.png">
+
+
+	<link rel="shortcut icon" type="image/jpg" href="images/favicon.png"/>
+	<link rel="stylesheet" type="text/css" href="styles/bootstrap4/bootstrap.min.css">
+	<link href="plugins/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+	<link href="plugins/colorbox/colorbox.css" rel="stylesheet" type="text/css">
+
+	<link rel="stylesheet" type="text/css" href="styles/course.css?v=1.3">
+	<link rel="stylesheet" type="text/css" href="styles/course_responsive.css?v=1.1">
+</head>
+<body>
+
+<div class="super_container">
+
+	<!-- Header -->
+
+<!--	<header class="header">-->
+<!--			-->
+<!--		&lt;!&ndash; Top Bar &ndash;&gt;-->
+<!--		<div class="top_bar">-->
+<!--			<div class="top_bar_container">-->
+<!--				<div class="container">-->
+<!--					<div class="row">-->
+<!--						<div class="col">-->
+<!--							<div class="top_bar_content d-flex flex-row align-items-center justify-content-start">-->
+<!--								<ul class="top_bar_contact_list">-->
+<!--									<li><div class="question">Have any questions?</div></li>-->
+<!--									<li>-->
+<!--										<i class="fa fa-phone" aria-hidden="true"></i>-->
+<!--										<div>001-1234-88888</div>-->
+<!--									</li>-->
+<!--									<li>-->
+<!--										<i class="fa fa-envelope-o" aria-hidden="true"></i>-->
+<!--										<div>info.deercreative@gmail.com</div>-->
+<!--									</li>-->
+<!--								</ul>-->
+<!--								<div class="top_bar_login ml-auto">-->
+<!--									<div class="login_button"><a href="#">Register or Login</a></div>-->
+<!--								</div>-->
+<!--							</div>-->
+<!--						</div>-->
+<!--					</div>-->
+<!--				</div>-->
+<!--			</div>				-->
+<!--		</div>-->
+
+<!--		&lt;!&ndash; Header Content &ndash;&gt;-->
+<!--		<div class="header_container">-->
+<!--			<div class="container">-->
+<!--				<div class="row">-->
+<!--					<div class="col">-->
+<!--						<div class="header_content d-flex flex-row align-items-center justify-content-start">-->
+<!--							<div class="logo_container">-->
+<!--								<a href="#">-->
+<!--									<div class="logo_text">Unic<span>at</span></div>-->
+<!--								</a>-->
+<!--							</div>-->
+<!--							<nav class="main_nav_contaner ml-auto">-->
+<!--								<ul class="main_nav">-->
+<!--									<li><a href="index.html">Home</a></li>-->
+<!--									<li><a href="about.html">About</a></li>-->
+<!--									<li><a href="courses.html">Courses</a></li>-->
+<!--									<li><a href="blog.html">Blog</a></li>-->
+<!--									<li><a href="#">Page</a></li>-->
+<!--									<li><a href="contact.html">Contact</a></li>-->
+<!--								</ul>-->
+<!--								<div class="search_button"><i class="fa fa-search" aria-hidden="true"></i></div>-->
+
+<!--								&lt;!&ndash; Hamburger &ndash;&gt;-->
+
+<!--								<div class="shopping_cart"><i class="fa fa-shopping-cart" aria-hidden="true"></i></div>-->
+<!--								<div class="hamburger menu_mm">-->
+<!--									<i class="fa fa-bars menu_mm" aria-hidden="true"></i>-->
+<!--								</div>-->
+<!--							</nav>-->
+
+<!--						</div>-->
+<!--					</div>-->
+<!--				</div>-->
+<!--			</div>-->
+<!--		</div>-->
+
+<!--		&lt;!&ndash; Header Search Panel &ndash;&gt;-->
+<!--		<div class="header_search_container">-->
+<!--			<div class="container">-->
+<!--				<div class="row">-->
+<!--					<div class="col">-->
+<!--						<div class="header_search_content d-flex flex-row align-items-center justify-content-end">-->
+<!--							<form action="#" class="header_search_form">-->
+<!--								<input type="search" class="search_input" placeholder="Search" required="required">-->
+<!--								<button class="header_search_button d-flex flex-column align-items-center justify-content-center">-->
+<!--									<i class="fa fa-search" aria-hidden="true"></i>-->
+<!--								</button>-->
+<!--							</form>-->
+<!--						</div>-->
+<!--					</div>-->
+<!--				</div>-->
+<!--			</div>			-->
+<!--		</div>			-->
+<!--	</header>-->
+
+<!--	&lt;!&ndash; Menu &ndash;&gt;-->
+
+<!--	<div class="menu d-flex flex-column align-items-end justify-content-start text-right menu_mm trans_400">-->
+<!--		<div class="menu_close_container"><div class="menu_close"><div></div><div></div></div></div>-->
+<!--		<div class="search">-->
+<!--			<form action="#" class="header_search_form menu_mm">-->
+<!--				<input type="search" class="search_input menu_mm" placeholder="Search" required="required">-->
+<!--				<button class="header_search_button d-flex flex-column align-items-center justify-content-center menu_mm">-->
+<!--					<i class="fa fa-search menu_mm" aria-hidden="true"></i>-->
+<!--				</button>-->
+<!--			</form>-->
+<!--		</div>-->
+<!--		<nav class="menu_nav">-->
+<!--			<ul class="menu_mm">-->
+<!--				<li class="menu_mm"><a href="index.html">Home</a></li>-->
+<!--				<li class="menu_mm"><a href="#">About</a></li>-->
+<!--				<li class="menu_mm"><a href="#">Courses</a></li>-->
+<!--				<li class="menu_mm"><a href="#">Blog</a></li>-->
+<!--				<li class="menu_mm"><a href="#">Page</a></li>-->
+<!--				<li class="menu_mm"><a href="contact.html">Contact</a></li>-->
+<!--			</ul>-->
+<!--		</nav>-->
+<!--	</div>-->
+<!--	-->
+<!--	&lt;!&ndash; Home &ndash;&gt;-->
+
+<!--	<div class="home">-->
+<!--		<div class="breadcrumbs_container">-->
+<!--			<div class="container">-->
+<!--				<div class="row">-->
+<!--					<div class="col">-->
+<!--						<div class="breadcrumbs">-->
+<!--							<ul>-->
+<!--								<li><a href="index.html">Home</a></li>-->
+<!--								<li><a href="courses.html">Courses</a></li>-->
+<!--								<li>Course Details</li>-->
+<!--							</ul>-->
+<!--						</div>-->
+<!--					</div>-->
+<!--				</div>-->
+<!--			</div>-->
+<!--		</div>			-->
+<!--	</div>-->
+
+	<!-- Course -->
+
+	<div class="course">
+		<div class="container">
+			<div class="row">
+
+				<!-- Course -->
+				<div class="col-lg-8">
+					
+					<div class="course_container">
+						<div class="course_title">CSC209: Software Tools and System Programming</div>
+						<div class="course_info d-flex flex-lg-row flex-column align-items-lg-center align-items-start justify-content-start">
+
+							<!-- Course Info Item -->
+							<div class="course_info_item">
+								<div class="course_info_title">Summer 2022</div>
+								<div class="course_info_text"><a href="https://utm.utoronto.ca">University of Toronto Mississauga</a></div>
+							</div>
+
+							<!-- Course Info Item -->
+							<div class="course_info_item">
+								<div class="course_info_title">Lectures </div>
+								<div class="course_info_text" style="color: black">Tuesdays 19-21 (<a href="https://student.utm.utoronto.ca/roomimages/map_IB345.gif">IB 345</a>)</div>
+							</div>
+
+							<!-- Course Info Item -->
+							<div class="course_info_item">
+								<div class="course_info_title">Office hours</div>
+								<div class="course_info_text" style="color: black">Thursdays 12-13 (<a href=" https://utoronto.zoom.us/j/87807612325">Zoom</a>)
+								<br>By appointment (<a href="https://goo.gl/maps/XrkauGLh19Fv6CDZA">DH 3097D</a>)</div>
+							</div>
+
+						</div>
+
+						<!-- Course Tabs -->
+						<div class="course_tabs_container">
+							<div class="tabs d-flex flex-row align-items-center justify-content-start">
+								<div class="tab active">description</div>
+								<div class="tab">curriculum</div>
+								<div class="tab">team</div>
+							</div>
+							<div class="tab_panels">
+
+								<!-- Description -->
+								<div class="tab_panel active">
+									<div class="tab_panel_content">
+										<div class="tab_panel_section">
+											<div class="tab_panel_title">About the course</div>
+											<div class="tab_panel_text">
+												<p>Software tools and development in a Unix/Linux environment, using a machine-oriented programming language (typically C). Core topics: software tools (shell utilities and make), processes and program execution, the memory model, system calls, file processing, interprocess communication (pipes and signals), and an introduction to concurrency, including multithreading.
+												</p>
+											</div>
+										</div>
+
+										<div class="tab_panel_section">
+											<div class="tab_panel_title">Prerequisites</div>
+											<ul class="tab_panel_bullets">
+												<li>Software Design (CSC207)</li>
+											</ul>
+										</div>
+										<div class="tab_panel_section">
+											<div class="tab_panel_title">Discussion board</div>
+											<div class="tab_panel_text">
+												<p>We will use <a href="https://piazza.com/utoronto.ca/summer2022/csc209/home">Piazza</a> for announcements/Q&A. Important announcements are <b>only</b> made on Piazza, so it is essential for you to regularly check Piazza or ensure that your email preferences is such that you receive them through email. There is also a <a href="https://discord.gg/nZgaqcmMN6">Discord server</a> that is only meant for informal discussion between the students and TAs; joining it is optional and official announcement will not be posted there.</p>
+
+											</div>
+										</div>
+										<div class="tab_panel_section">
+											<div class="tab_panel_title">Textbooks and other materials</div>
+											<div class="tab_panel_text">
+												<p>Videos and required exercises to be completed before each class are hosted on <a href="https://pcrs.utm.utoronto.ca/209/">PCRS</a>. Additionally, you may find it useful to have good C and syscall references handy. Recommended (but optional) readings are as follows: </p>
+												<ul class="tab_panel_bullets">
+
+
+													<li>King. C Programming: A Modern Approach. W. W. Norton and Company, 2008.</li>
+													<li>Kerrisk. The Linux Programming Interface. No Starch Press, 2010.</li>
+												</ul>
+
+											</div>
+										</div>
+
+										<div class="tab_panel_section">
+											<div class="tab_panel_title">Assessment</div>
+											<div class="tab_panel_subtitle">Weekly prep</div>
+
+											<div class="tab_panel_text">
+												<p>Research consistently shows us that students remember only a small fraction of what we present in lecture. It is not easy to make sense of material that you see for the first time in the first half-hour of a fast-paced lecture environment, let alone to stay focused for 2 hours. It is also important to space out your studying (spaced repetition). To prime you for what we will discuss, you will view a set of videos and complete exercises by Tuesday at 6:00pm (one hour before the lectures). In some weeks, the videos will be supplemented or replaced by recommended readings and an activity.. These are the <span class="quote">Preparation</span> exercises hosted on <a href="https://pcrs.utm.utoronto.ca/209/">PCRS</a>
+
+												</p>
+											</div>
+											<br>
+												<div class="tab_panel_subtitle">Assignments</div>
+											<div class="tab_panel_text">
+<p>
+												There are three assignments. They must be submitted electronically through Markus git repository. Grading will be done by an automated testing program, so you must follow the submission instructions exactly. Any program that does not compile on a CS lab machine or that crashes (e.g., seg fault or bus error) will receive a grade of 0. Check your submission carefully; verify that you have submitted exactly the files you intended to submit and that they compile on a lab machine.
+
+
+</p>
+											</div>
+											<br>
+											<div class="tab_panel_subtitle">Midterm and final exam</div>
+											<div class="tab_panel_text">
+												<p>
+
+													There is one midterm. It will take place on Tuesday, July 5th at 19:00 (during the lecture).
+
+												</p><p>
+												The final exam is comprehensive and takes place after classes are over. To pass the course, you must receive <b>at least 40% on the final exam</b>. The highest mark you will receive if your grade on the final exam is less than 40% is 47%. The final exam schedule is not yet available but will be posted later in the term. We will make an announcement once the registrar’s site has final exam information.</p><p>
+
+												Both exams are paper-based. More information will be posted on Piazza prior to the exam dates.
+
+
+											</p>
+											</div>
+											<br>
+											<div class="tab_panel_subtitle">Grading breakdown</div>
+											<div class="container">
+												<div class="row">
+													<div class="col-sm">
+														<ul class="tab_panel_bullets">
+															<li>Assignment 1: 10%</li>
+															<li>Assignment 2: 10%</li>
+															<li>Assignment 3: 10%</li>
+														</ul>
+													</div>
+													<div class="col-sm">
+														<ul class="tab_panel_bullets">
+															<li>Weekly prep: 10%</li>
+															<li>Midterm: 20%</li>
+															<li>Final exam: 40%</li>
+														</ul>
+													</div>
+												</div>
+											</div>
+
+
+										</div>
+
+										<div class="tab_panel_section">
+											<div class="tab_panel_title">Late submissions</div>
+											<div class="tab_panel_text">
+												<p>We recognize that unexpected problems sometimes make it difficult to submit assignments on time. For this reason, we will be using grace tokens to give you some flexibility with assignment deadlines. Each student will receive <b>18 grace tokens</b>; each grace token can be used for a <b>four-hour extension</b> for an assignment. For example, you may choose to use all 18 grace tokens on A1, extending its deadline by 72 hours. Alternatively, you may wish to use nine tokens for each of A1 and A2 (and none on A3), extending each deadline by 36 hours.</p>
+
+												<p>MarkUs automatically deducts grace tokens when you submit an assignment late. That is, you do <b>not</b> need to explicitly say you are using a grace token, just submit your work within the grace token four-hour periods.
+												</p>
+
+												<p>Aside that policy, <b>no late submissions are accepted</b>. If you used up all your grace tokens, or you want to save them for another assignment, you should hand in a working (and tested) version of a program that accomplishes a subset of the requirements. This will be easy to do if you have written and debugged a series of programs that accomplish more and more of the assigned problem.
+												</p>
+
+												<p>Note that the grace token policy <b>only applies to assignments</b>. Therefore, weekly prep exercises do <b>not</b> have grace tokens or late submissions.  </p>
+											</div>
+										</div>
+
+
+										<div class="tab_panel_section">
+											<div class="tab_panel_title">Remark Policy</div>
+											<div class="tab_panel_text">
+												<p>If you feel there was an error in the marking of an assignment, you may request a remark directly on Markus. You must give a specific reason for the request, referring to a possible error or omission by the marker. Stating specific potential grading errors for your remark request is mandatory for us to even consider your request. However, we will review your entire work, not just the items you pointed out. Please keep in mind that your grade may stay the same, may increase, or may even decrease, after your remark request is assessed. Remark requests must be received <strong>within three days</strong> of when you received the grade for that item.
+												</p>
+											</div>
+										</div>
+
+										<div class="tab_panel_section">
+											<div class="tab_panel_title">Missed Term Work</div>
+											<div class="tab_panel_text">
+												<p>
+													To request special consideration, bring supporting documentation to the instructor in person during office hours at least one week in advance.
+</p><p>
+													In the event of an illness or other catastrophe, please contact me and provide supporting documentation within one week of the missed work. You must also declare your absence on Acorn. Do not wait until the due date has passed. It is always easier to make alternate arrangements before the due date.
+												</p>
+											</div>
+										</div>
+
+										<div class="tab_panel_section">
+											<div class="tab_panel_title">Missed final exam</div>
+											<div class="tab_panel_text">
+												<p>
+													Students who cannot complete their final examination due to illness or other serious causes must file an <a href="https://www.utm.utoronto.ca/registrar/current-students/petitions">online petition</a> <b>within 72 hours</b> of the missed examination. Late petitions will <b>not</b> be considered. Students must also record their absence on Acorn on the day of the missed exam or by the day after at the latest. Upon approval of a deferred exam request, a non-refundable fee of $70 is required for each examination approved.
+
+
+											</p>
+											</div>
+										</div>
+
+										<div class="tab_panel_section">
+											<div class="tab_panel_title">Academic Integrity</div>
+											<div class="tab_panel_text">
+												<p>
+													Honesty and fairness are fundamental to the University of Toronto’s mission. Plagiarism is a form of academic fraud and is treated very seriously.
+
+													You are also expected to read the handout <a href="http://www.writing.utoronto.ca/advice/using-sources/how-not-to-plagiarize">How not to plagiarize</a> and to be familiar with the Code of behaviour on academic matters, which is linked from the UTM calendar under the link Codes and policies.
+
+													</p>
+											</div>
+											<br>
+											<div class="tab_panel_text">
+												<p>
+													Assignments are <strong>individual work</strong> which means that you will not be allowed to seek advice from other students or copy/paste someone else's code, even open source codes from the internet. However, you are allowed to look at online resources, tutorials, and Q&A websites over the course of solving the problems. The entire code must be written by yourself.
+												</p>
+											</div>
+											<br>
+										</div>
+
+
+									</div>
+								</div>
+
+								<!-- Curriculum -->
+								<div class="tab_panel tab_panel_2">
+									<div class="tab_panel_content">
+										<div class="tab_panel_content">
+
+											<!-- Dropdowns -->
+											<ul class="dropdowns">
+													<div class="dropdown_item">
+														<div class="dropdown_title_container">
+															<div class="dropdown_item_title">Lecture 1:<span> Intro & bitwise operations </span></div>
+															<div class="dropdown_title_date">May 10th | <a href="resources/slides/lecture1.pdf">slides</a></div>
+
+														</div>
+														<div class="dropdown_item_text">
+															<p>Course intro, binary logic, gates, bitwise operations, comparison</p>
+														</div>
+													</div>
+													<hr>
+													<div class="dropdown_item">
+														<div class="dropdown_title_container">
+															<div class="dropdown_item_title">Lecture 2:<span> C, Unix, and makefile </span></div>
+															<div class="dropdown_title_date">May 17th | <a href="resources/slides/lecture2.pdf">slides</a> | <a href="https://docs.google.com/presentation/d/1ZW-81qhl9AzZQApHHMB8Ss7ZTCzdOh3gnvmxM7ksiI0/edit?usp=sharing ">labs</a> | <a href="resources/files/week2-reading.zip">readings</a></div>
+														</div>
+														<div class="dropdown_item_text">
+															<p> Assembly & machine code, C, variables, loops, functions, Unix & Linux, terminal & commands, gnu compiler, makefile</p>
+														</div>
+													</div>
+													<hr>
+													<div class="dropdown_item">
+														<div class="dropdown_title_container">
+															<div class="dropdown_item_title">Lecture 3:<span> Arrays and pointers (1) </span></div>
+															<div class="dropdown_title_date">May 24th | <a href="resources/slides/lecture3.pdf">slides</a> | <a href="https://docs.google.com/presentation/d/1___VQ2kUwLZi76iJTEwaLQ2XrSFztFZ9Z8dx_fOHq0I/edit#slide=id.g35f391192_00">lab slides</a> | <a href="resources/files/lab-2-starter-code.zip">lab code</a>
+															</div>
+														</div>
+														<div class="dropdown_item_text">
+															<p> Arrays, memory safety, the "&" operator, call by value and reference, pointers, the "*" operator </p>
+														</div>
+													</div>
+													<hr>
+													<div class="dropdown_item">
+														<div class="dropdown_title_container">
+															<div class="dropdown_item_title">Lecture 4:<span> Arrays and pointers (2) </span></div>
+															<div class="dropdown_title_date">May 31st | <a href="resources/slides/lecture4.pdf">slides</a> | <a href="resources/files/pointer.zip"> lecture codes </a> | <a href="https://docs.google.com/presentation/d/10iz1kFUwepPICtknO-WI5aC0Qb-iTiVYYFLHwSZA1Hg/edit#slide=id.g35f391192_00">lab slides</a> | <a href="resources/files/lab-3-starter-code.zip">lab code</a>
+															</div>
+														</div>
+														<div class="dropdown_item_text">
+															<p>More pointers, casting, dynamic memory allocation, freeing and memory leaks, command line arguments</p>
+														</div>
+													</div>
+													<hr>
+													<div class="dropdown_item">
+														<div class="dropdown_title_container">
+															<div class="dropdown_item_title">Lecture 5:<span> Strings </span></div>
+															<div class="dropdown_title_date">June 7th | <a href="resources/slides/lecture5.pdf">slides</a> | <a href="resources/files/lecture5.c">codes</a>
+																| <a href="resources/files/lab4.zip">labs</a>
+															</div>
+														</div>
+														<div class="dropdown_item_text">
+															<p>Strings definition, String manipulation, memory safety</p>
+														</div>
+													</div>
+													<hr>
+													<div class="dropdown_item">
+														<div class="dropdown_title_container">
+															<div class="dropdown_item_title">Lecture 6:<span> Structs and file I/O </span></div>
+															<div class="dropdown_title_date">June 14th | <a href="resources/slides/lecture6.pdf">slides</a> | <a href="resources/files/structs-io.zip"> lecture codes </a> | <a href="resources/files/lab-5-slides.pdf">lab slides</a> | <a href="resources/files/lab-5-starter-code.zip">lab code</a>
+															</div>
+														</div>
+														<div class="dropdown_item_text">
+															<p>Struct definition and usage, padding, attribute access, file I/O tools and funtions</p>
+														</div>
+													</div>
+													<hr>
+													<div class="dropdown_item">
+														<div class="dropdown_title_container">
+															<div class="dropdown_item_title">Lecture 7:<span> Midterm </span></div>
+															<div class="dropdown_title_date">July 5th | <a href="resources/handouts/csc209_midterm.pdf">exam</a> | <a href="resources/handouts/csc209_midterm-solutions.pdf"> solutions | <a href="https://docs.google.com/presentation/d/1y1plS3AuC3vH8ySKSEgTVzwC3xpAQTGxkyYf5o7iGLs/edit?usp=sharing">labs</a></a>
+															</div>
+														</div>
+														<div class="dropdown_item_text">
+															<p>Midterm</p>
+														</div>
+													</div>
+													<hr>
+													<div class="dropdown_item">
+														<div class="dropdown_title_container">
+															<div class="dropdown_item_title">Lecture 8:<span> Processes, forking and file descriptors </span></div>
+															<div class="dropdown_title_date">July 12th | <a href="resources/slides/lecture8.pdf">slides</a> | <a href="resources/files/lecture8.zip"> lecture codes</a> | <a href="resources/files/lab-7-starter-code.zip">labs</a>
+															</div>
+														</div>
+														<div class="dropdown_item_text">
+															<p>Syscalls, processes, memory model, forking, exec, wait, low-level I/O, file descriptors</p>
+														</div>
+													</div>
+													<hr>
+													<div class="dropdown_item">
+														<div class="dropdown_title_container">
+															<div class="dropdown_item_title">Lecture 9:<span> Pipes and signals </span></div>
+															<div class="dropdown_title_date">July 19th | <a href="resources/slides/lecture9.pdf">slides</a> | <a href="resources/files/lecture9.zip"> lecture codes</a> | <a href="resources/files/lab-8-starter-code.zip">labs</a> </div>
+														</div>
+														<div class="dropdown_item_text">
+															<p>Inter-process communication, pipes, known signals, signal handling</p>
+														</div>
+													</div>
+													<hr>
+													<div class="dropdown_item">
+														<div class="dropdown_title_container">
+															<div class="dropdown_item_title">Lecture 10:<span> Sockets </span></div>
+															<div class="dropdown_title_date">July 26th | <a href="resources/slides/lecture10.pdf">slides</a> | <a href="resources/files/lecture10.zip"> lecture codes</a> | <a href="resources/files/lab-9-starter-code.zip">labs</a>
+															</div>
+														</div>
+														<div class="dropdown_item_text">
+															<p>UDP, TCP, sockets, server & client, IP addresses, endianness</p>
+														</div>
+													</div>
+													<hr>
+													<div class="dropdown_item">
+														<div class="dropdown_title_container">
+															<div class="dropdown_item_title">Lecture 11:<span> Multiplexing I/O </span></div>
+															<div class="dropdown_title_date">Aug 2nd  | <a href="resources/slides/lecture11.pdf">slides</a> | <a href="resources/files/lecture11.zip"> lecture codes</a> | <a href="resources/files/lab-10-starter-code.zip">labs</a> </div>
+														</div>
+														<div class="dropdown_item_text">
+															<p>Reading from multiple file descriptors, select, non-blocking reads</p>
+														</div>
+													</div>
+													<hr>
+													<div class="dropdown_item">
+														<div class="dropdown_title_container">
+														<div class="dropdown_item_title">Lecture 12:<span> Threads </span></div>
+															<div class="dropdown_title_date">Aug 9th  | <a href="resources/slides/lecture12.pdf">slides</a> | <a href="resources/files/lecture12.c"> lecture codes</a> | <a href="resources/files/lab-11-starter-code.zip">labs</a> </div>
+														</div>
+														<div class="dropdown_item_text">
+															<p>Threads vs Processes, thread creation & termination, joining, shared variables, mutexes, condition variables</p>
+														</div>
+													</div>
+
+											</ul>
+										</div>
+									</div>
+								</div>
+
+								<!-- Reviews -->
+								<div class="tab_panel tab_panel_3">
+									<!-- Comments -->
+									<div class="comments_container">
+										<ul class="comments_list">
+											<li>
+												<div class="comment_item row align-items-start jutify-content-start">
+													<div class="comment_image col-lg-3"><div><img src="images/kianoosh.jpg" alt=""></div></div>
+													<div class="col-lg">
+															<div class="comment_author"><a href="https://www.cs.toronto.edu/~kianoosh">Kianoosh Abbasi (Instructor)</a></div>
+															<div class="comment_time"><a href="mailto:kianoosh@cs.toronto.edu">kianoosh@cs.toronto.edu</a></div>
+														<div class="comment_text">
+															<p>I taught this course to people of all sort of ages. In hindsight, perhaps it is not really meant for 7th grade students.</p>
+														</div>
+													</div>
+												</div>
+											</li>
+											<li>
+												<div class="comment_item row align-items-start jutify-content-start">
+													<div class="comment_image col-lg-3"><div><img src="images/howie.jpg" alt=""></div></div>
+													<div class="col-lg">
+														<div class="comment_author"><a href="#">Han Xian Xu Huang</a></div>
+														<div class="comment_time"><a href="mailto:hanxianxu.huang@utoronto.ca">hanxianxu.huang@utoronto.ca</a></div>
+														<div class="comment_text">
+															<p>Finally, I realize winter break and summer break mean so much to me. Unfortunately, it's probably too late.</p>
+														</div>
+													</div>
+												</div>
+											</li>
+											<li>
+												<div class="comment_item row align-items-start jutify-content-start">
+													<div class="comment_image col-lg-3"><div><img src="images/michael.jpg" alt=""></div></div>
+													<div class="col-lg">
+														<div class="comment_author"><a href="#">Michael Orenstrakh</a></div>
+														<div class="comment_time"><a href="mailto:michael.sheinmanorenstrakh@mail.utoronto.ca">michael.sheinmanorenstrakh@mail.utoronto.ca</a></div>
+														<div class="comment_text">
+															<p>Yes I know my email is long, I promise it's not meant to discourage emails. Anyway hi all, CSC209 was one of my favorite courses and I hope you will enjoy it too!
+															</p>
+														</div>
+													</div>
+												</div>
+											</li>
+											<li>
+												<div class="comment_item row align-items-start jutify-content-start">
+													<div class="comment_image col-lg-3"><div><img src="images/daniel.jpg" alt=""></div></div>
+													<div class="col-lg">
+														<div class="comment_author"><a href="#">Dan Laufer</a></div>
+														<div class="comment_time"><a href="mailto:daniel.laufer@mail.utoronto.ca">daniel.laufer@mail.utoronto.ca</a></div>
+														<div class="comment_text">
+															<p>Hi, I’m Dan! A little about me, I’m a big CS nerd, I have two cats, I love being outside in nature, and this summer I’m trying to get back into running/jogging.  I’m excited to be TA-ing CSC209 again as it is honestly one of my favourite courses here at UTM. I really look forward to meeting you all and helping you to excel in this course!  💯
+															</p>
+														</div>
+													</div>
+												</div>
+											</li>
+											<li>
+												<div class="comment_item row align-items-start jutify-content-start">
+													<div class="comment_image col-lg-3"><div><img src="images/meghan.PNG" alt=""></div></div>
+													<div class="col-lg">
+														<div class="comment_author"><a href="#">Meghan Torchia</a></div>
+														<div class="comment_time"><a href="mailto:meghan.torchia@mail.utoronto.ca">meghan.torchia@mail.utoronto.ca</a></div>
+														<div class="comment_text">
+															<p>I'm a Master's student at the St. George campus. I have TAed 209 many times across all three campuses, and I am looking forward to TAing it yet again!</p>
+														</div>
+													</div>
+												</div>
+											</li>
+											<li>
+												<div class="comment_item row align-items-start jutify-content-start">
+													<div class="comment_image col-lg-3"><div><img src="images/jason.jpg" alt=""></div></div>
+													<div class="col-lg">
+														<div class="comment_author"><a href="#">Jason Van</a></div>
+														<div class="comment_time"><a href="mailto:Jayson.van@mail.utoronto.ca">Jayson.van@mail.utoronto.ca</a></div>
+														<div class="comment_text">
+															<p>I really enjoyed taking and TAing CSC209, and have full confidence this offering will live up to its reputation for being fun yet challenging!!</p>
+														</div>
+													</div>
+												</div>
+											</li>
+
+										</ul>
+									</div>
+								</div>
+
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Course Sidebar -->
+				<div class="col-lg-4">
+					<div class="sidebar">
+
+						<!-- Feature -->
+						<div class="sidebar_section">
+							<div class="sidebar_section_title">Course Links</div>
+							<div class="sidebar_feature">
+
+								<!-- Features -->
+								<div class="feature_list">
+
+									<!-- Feature -->
+									<div class="feature d-flex flex-row align-items-center justify-content-start">
+										<div class="feature_title"><i class="fa fa-question-circle-o" aria-hidden="true"></i><span>Announcement - Q&A</span></div>
+										<div class="feature_text ml-auto"><a href="https://piazza.com/utoronto.ca/summer2022/csc209/home">Piazza</a></div>
+									</div>
+
+									<!-- Feature -->
+									<div class="feature d-flex flex-row align-items-center justify-content-start">
+										<div class="feature_title"><i class="fa fa-pencil" aria-hidden="true"></i><span>Weekly prep</span></div>
+										<div class="feature_text ml-auto"><a href="https://pcrs.utm.utoronto.ca/209/">PCRS</a></div>
+									</div>
+
+									<!-- Feature -->
+									<div class="feature d-flex flex-row align-items-center justify-content-start">
+										<div class="feature_title"><i class="fa fa-address-book" aria-hidden="true"></i><span>Assignments</span></div>
+										<div class="feature_text ml-auto"><a href="https://mcsmark.utm.utoronto.ca/csc209hsummer22">Markus</a></div>
+									</div>
+
+									<!-- Feature -->
+									<div class="feature d-flex flex-row align-items-center justify-content-start">
+										<div class="feature_title"><i class="fa fa-table" aria-hidden="true"></i><span>Informal chat</span></div>
+										<div class="feature_text ml-auto"><a href="https://discord.gg/nZgaqcmMN6">Discord</a></div>
+									</div>
+
+								</div>
+							</div>
+						</div>
+
+						<!-- Feature -->
+						<div class="sidebar_section">
+							<div class="sidebar_section_title">Important dates</div>
+							<div class="sidebar_feature">
+
+								<!-- Features -->
+								<div class="feature_list">
+
+									<!-- Feature -->
+									<div class="feature d-flex flex-row align-items-center justify-content-start">
+										<div class="feature_title"><i class="fa fa-desktop" aria-hidden="true"></i><span><a href="resources/handouts/a1.html">Assignment 1 due</a></span></div>
+										<div class="feature_text ml-auto">June 26th, 22:00</div>
+									</div>
+
+									<div class="feature d-flex flex-row align-items-center justify-content-start">
+										<div class="feature_title"><i class="fa fa-keyboard-o" aria-hidden="true"></i><span><a href="resources/handouts/csc209_midterm.pdf">Midterm</a></span></div>
+										<div class="feature_text ml-auto">July 5th, 19:00</div>
+									</div>
+
+									<div class="feature d-flex flex-row align-items-center justify-content-start">
+										<div class="feature_title"><i class="fa fa-desktop" aria-hidden="true"></i><span><a href="resources/handouts/a2.html">Assignment 2 due</a></span></div>
+										<div class="feature_text ml-auto">July 24th, 22:00</div>
+									</div>
+
+									<div class="feature d-flex flex-row align-items-center justify-content-start">
+										<div class="feature_title"><i class="fa fa-desktop" aria-hidden="true"></i><span><a href="resources/handouts/a3.html">Assignment 3 due</a></span></div>
+										<div class="feature_text ml-auto">Aug 14th, 22:00</div>
+									</div>
+
+									<div class="feature d-flex flex-row align-items-center justify-content-start">
+										<div class="feature_title"><i class="fa fa-keyboard-o" aria-hidden="true"></i><span>Final exam</span></div>
+										<div class="feature_text ml-auto">Aug 18th, 13:00 (KN 137)</div>
+									</div>
+
+
+								</div>
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Footer -->
+
+	<footer class="footer">
+		<div class="container">
+			<div class="row copyright_row">
+				<div class="col">
+					<div class="copyright d-flex flex-lg-row flex-column align-items-center justify-content-start">
+						<div class="cr_text"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+</div>
+
+<script src="js/jquery-3.2.1.min.js"></script>
+<script src="styles/bootstrap4/popper.js"></script>
+<script src="styles/bootstrap4/bootstrap.min.js"></script>
+<script src="plugins/colorbox/jquery.colorbox-min.js"></script>
+<script src="js/course.js"></script>
+</body>
+</html>

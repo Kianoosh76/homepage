@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Assignment 3: Socket Programming</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="CSC209: Software Tools and System Programming - Summer 2022">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.cs.toronto.edu/~kianoosh/courses/csc209/handouts/a2.html">
+  <meta property="og:title" content="Assignment 3: Socket Programming">
+  <meta property="og:description" content="CSC209: Software Tools and System Programming - Summer 2022">
+  <meta property="og:image" content="https://www.cs.toronto.edu/~kianoosh/courses/csc209/images/card.png">
+
+  <link rel="shortcut icon" type="image/jpg" href="../../images/favicon.png"/>
+  <link rel="stylesheet" type="text/css" href="../../styles/bootstrap4/bootstrap.min.css">
+  <link href="../../plugins/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <link href="../../plugins/colorbox/colorbox.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" type="text/css" href="../../styles/handout.css?v=1.4">
+  <link rel="stylesheet" type="text/css" href="../../styles/course.css?v=1.3">
+  <link rel="stylesheet" type="text/css" href="../../styles/handout_responsive.css">
+</head>
+<body>
+
+<div class="super_container">
+
+  <!-- Header -->
+
+  <header class="header">
+
+    <!-- Header Content -->
+    <div class="header_container">
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <div class="header_content d-flex flex-row align-items-center justify-content-start">
+              <div class="logo_container">
+                <a href="../../">
+                  <div class="logo_text">CSC209: Software Tools and System Programming</div>
+                </a>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Header Search Panel -->
+    <div class="header_search_container">
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <div class="header_search_content d-flex flex-row align-items-center justify-content-end">
+              <form action="#" class="header_search_form">
+                <input type="search" class="search_input" placeholder="Search" required="required">
+                <button class="header_search_button d-flex flex-column align-items-center justify-content-center">
+                  <i class="fa fa-search" aria-hidden="true"></i>
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Home -->
+
+  <div class="home">
+    <div class="breadcrumbs_container">
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <div class="breadcrumbs">
+              <ul>
+                <li><a href="../../">Home</a></li>
+                <li><a href="#">handouts</a></li>
+                <li>Assignment 3</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Blog -->
+
+  <div class="blog">
+    <div class="container">
+      <div class="row">
+
+        <!-- Blog Content -->
+        <div class="col-lg-8">
+          <div class="blog_content">
+            <div class="blog_title">Assignment 3: Socket programming</div>
+            <div class="blog_meta">
+              <ul>
+                <li>Due date: <span id="due-date">Sun Aug 14, 2022 22:00:00</span></li>
+                <li><span id="remaining-time"></span> remaining</li>
+              </ul>
+            </div>
+
+            <div class="blog_subtitle"><b>Objective</b></div>
+
+            <p>
+              In this assignment, you'll be writing a server for a file transfer protocol called xmodem. When finished, you will be able to connect an <b>xmodem</b> client to your server and send a file to your server using the xmodem protocol. The <b>starter code</b> can be found <a href="../files/a3-starter-code.zip">here</a>.</p>
+
+            <div class="blog_subtitle">Notes</div>
+
+            <ul class="tab_panel_bullets">
+              <li>This assignment will make up 10% of your final grade.</li>
+              <li>No late submissions will be accepted after the due date. However, you are given a certain amount of <b>tokens</b> by which you can slightly extend the deadline of the assignment. Details about tokens can be found on the <a href="../../">course website</a>.</li>
+              <li>If you have any questions or problems with the assignment, please post them on Piazza.</li>
+              <li>Your code must adhere to all details provided in the handout; otherwise, you might lose marks.</li>
+              <li>You will not receive any feedback from the auto grader before the deadline has passed. So it is your responsibility to double-check your code with the handout before submission. Even minor spelling mistakes can lead to loss of marks. No remark requests will be accepted on these matters.</li>
+              <li>You must verify that your submission compiles <b> without any warnings </b> and runs on a UTM MCS lab machine, as that is
+                where we will be testing. </li>
+              <li>Only the last version of your repository will be graded. Make sure that your last commit is the one you would like to be graded. It will not be possible to ask for a checkout to a different commit. </li>
+              <li>Your <b>coding style and reliability</b> will be graded in this assignment. So it is important to write clean and standard code. </li>
+            </ul>
+
+            <div class="blog_subtitle">Academic Integrity</div>
+
+            <p>Assignments are <strong>individual work</strong> which means that you will not be allowed to seek advice from other students or copy/paste someone else's code, even open-source codes from the internet. However, you are allowed to look at online resources, tutorials, and Q&A websites to solve the problems. The entire code must be written by yourself.</p>
+
+            <hr>
+
+            <div class="blog_subtitle"><b>File Transfer Protocols</b></div>
+
+            <p>
+              A file transfer protocol is an agreement between sender and receiver for transferring a file across a (possibly unreliable) connection. You use HTTP or HTTPS to receive files every day when visiting webpages, and you may be familiar with FTP which is another popular protocol for file transfers.
+            </p>
+
+
+            <div class="blog_subtitle">What is xmodem?</div>
+
+            <p>xmodem was a popular protocol for sending and receiving files back when the majority of consumer networking occurred over phone lines using dial-up modems. It was possible for bursts of data to be garbled or lost completely because the connection was unreliable and subject to line noise. Unchecked, such garbled data would prevent you from receiving an exact copy of a file being sent to you! xmodem was introduced as a simple protocol for more reliable transfers. When the receiver detects data corruption, it signals to the sender to re-send the current packet so that each packet is received cleanly.</p>
+
+            <p>There is a lot of xmodem information out there. You can <a href="http://en.wikipedia.org/wiki/XMODEM">Read More</a>, but there are a confusing number of versions of the protocol in use. Use only what is in this handout.
+
+            <div class="blog_subtitle">CRC16</div>
+
+            <p>CRC16 is an algorithm for detecting transmission errors in a file sent from a sender to a receiver. A CRC16 of a message is 16 bits (2 bytes) long.
+              The sender of a message sends the message concatenated with its CRC16. When received, the receiver calculates its own CRC16 on the message and checks that its CRC16 matches what the sender said it should be. If it matches, it is likely that there was no transmission error. If the CRC16 doesn't match, the receiver can request that the sender re-send the message.</p>
+
+            <p>The xmodem protocol uses CRC16 to detect data corruption. We have provided an implementation of CRC16 for you to use in <code>crc16.c</code> in the <a href="../files/a3-starter-code.zip">starter code</a>.</p>
+
+            <div class="blog_subtitle">Operation of the Client</div>
+
+            <p>In this assignment, there is an xmodem client and an xmodem server. The client sends files; the server receives and stores them. You are writing the server; we are providing one sample client and your server must work with this client and other clients that satisfy the protocol. Take a look at <code>client1.c</code> (from the <a href="../files/a3-starter-code.zip">starter code</a>) for the following discussion.</p>
+
+            <p>The behaviour of an xmodem client (i.e. a sender) is governed by a state machine. In the <code>client1.c</code> sample, there are five states, each of which has associated actions and transitions to other states. The client starts in the <code>initial</code> state. We briefly describe the states here. This is important information for you because your server is the "other half" of this protocol, and you should understand what the client is doing.</p>
+
+            <ul class="tab_panel_bullets">
+              <li><code>initial</code>: in this state, the client is just beginning. It sends the filename to the server followed by a network newline. No null character is sent to terminate the filename. This state also sets the current block to 1, and then moves to the <code>handshake</code> state. (Notice here that the first block the sender sends has block number 1, not 0.)
+
+              <li><code>handshake</code>: in this state, the sender reads one character at a time from the socket, discarding the characters until a capital C is received. This C means that the server is ready to start receiving xmodem blocks. Once the C is found, the sender moves to <code>send_block</code>.
+
+              <li><code>send_block</code>: the goal of this state is to send a single block (or packet) of data to the server. The block includes the payload, which is the actual content of the file that we want to transfer. However, this is <b>not</b> all: xmodem does <b>not</b> simply send the payload by itself as then the server would have no way of knowing whether the payload has been corrupted. So, the xmodem client sends some overhead with each block. Here is what the sender sends for each block:
+                <ul>
+                  <li>An ASCII symbol known as <code>SOH</code> (start of header). This is an ASCII control character that tells the server that a block is starting.
+                  <li>The current block number, as a one-byte integer. <b>This is not an ASCII code like 49 for the number 1, but is the integer representation of 1.</b>
+                  <li>The <b>inverse</b> of the current block number. This is 255 minus the block number. The server is going to make sure that the block number and the inverse agree; for example, if the block number is 15, then the server will expect the inverse to be 240.
+                  <li>The actual payload. This is always 128 bytes. You might wonder what happens if the file being sent is not a multiple of 128 bytes. In that case, the final block is padded with another ASCII control character called <code>SUB</code>. So, every file that successfully transfers to the server will have 0 to 127 bytes of this padding.
+                  <li>The high byte of the CRC16 of the payload.
+                  <li>The low byte of the CRC16 of the payload.
+                </ul>
+                <p>Now that the client sent all this data (which is 1 byte for the block number, 1 byte for the inverse, 128 bytes for the payload, and another 2 bytes for the CRC16. 132 bytes total for each block), it has to know whether the receiving server received the block without any problems or not, so it moves to <code>wait_reply</code>. Alternatively, if the file is at EOF, then instead of sending a block and moving to <code>wait_reply</code>, the client moves to <code>finish</code>.</p>
+
+              <li><code>wait_reply</code>: in this state, the client is waiting for a reply from the server. It wants to ensure that the server received the block correctly (with the proper block number, inverse, and CRC16). If so, then the server will send the client an <code>ACK</code> (another ASCII control characters), and the client will increment the block number and go back to <code>send_block</code> to send the next block. Otherwise, the server sends the client a <code>NAK</code>, and the client will have to re-send the current block. So the client goes to <code>send_block</code> but does not increment the block number.
+
+              <li><code>finish</code>: now the client has sent all of the blocks. The only thing left is to send an <code>EOT</code> (that's an end-of-transfer ASCII control code) and wait for a final <code>ACK</code>. When the client receives that final <code>ACK</code>, we know that the server has received the entire file. If the client's <code>EOT</code> gets <code>NAK</code>'d, then the client repeats by sending another <code>EOT</code>.
+            </ul>
+
+            <p>The mentioned client is a well-behaved one. That is, it always sends the proper block numbers and inverses, and always sends the correct CRC16. It is also a simplified client, because it does not take advantage of an xmodem feature that allows a block length of 1024 bytes. The server you write will work with this simple client, but also clients that send wrong blocks or wrong CRC16s or send 1024-byte blocks in addition to 128-byte blocks.</p>
+
+
+          <div class="blog_subtitle">Operation of the Server</div>
+
+          <p>Next, let us describe the xmodem server (which receives a file from the sending client) using a state machine similar to the one we discussed above for the xmodem client. The server must keep track of which state it is in when communicating with each client. The <code>xmodemserver.h</code> file contains some important declarations including <code>struct client</code> that you will use to store the state for each client.
+          </p>
+
+              <p>The server will be reading files from clients, and it needs to store these files somewhere. To avoid cluttering up your source directory, the server will store the files in a directory called <code>filestore</code>.  A helper function is available in <code>helper.c</code> to create the directory (if it does not exist) and to open the file in the directory. <b>Do not add <code>filestore</code> or its contents to your repository.</b> </p>
+
+          <p>
+              There are five states that correspond to the states in the client, and the server starts in the <code>initial</code> state when it accepts a connection from a client:</p>
+          <ul class="tab_panel_bullets">
+              <li><code>initial</code>: in this state, the server is waiting for a filename from the client. (hint: immediately here, you are required to use <code>select</code>, because a client could take a long time to send the filename, during which another faster client could connect!) Once the server receives a complete filename, it should open that file for writing, then send a <code>C</code> to the client and transition to <code>pre_block</code>. The first block that the server expects is block number 1.
+                  <p><b>Note</b>: When receiving files, you can easily delete an existing file if you are not careful. You are <b>highly</b> advised to choose some arbitrary extension for your files, like <code>.junk</code>, and only send those files to your server. In fact, for extra precaution, you might have your server check for this extension in a filename and drop the client if an unsuitable filename is provided. The last thing you want is accidentally deleting your <code>.c</code> files for the assignment. Also, commit often to git!</p><br>
+              <li><code>pre_block</code>: in this state, the server scans incoming characters looking for one of three different characters.
+                  <ul>
+                      <li>If the server gets an <code>EOT</code>, there is nothing more to receive. Send <code>ACK</code>, transition to <code>finish</code>, and drop the client.
+                      <li>If the server gets <code>SOH</code>, it means a 128-byte payload is going to be sent by the client. This is the kind of block that our sample client sends -- the one with the block number, inverse, payload, and CRC16. Transition to <code>get_block</code>.
+                      <li>If the server gets <code>STX</code> (this is another ASCII control code; this one has integer value 2), then a 1024-byte payload is going to be sent by the client. As with <code>SOH</code>, transition to <code>get_block</code>.
+                  </ul>
+              <li><code>get_block</code>: the server now wants to read 132 bytes (<code>SOH</code>) or 1028 bytes (<code>STX</code>). Again, do not block waiting for 132 or 1028 bytes, because that will lock out other clients who want to send stuff in the meantime. Once the server has sufficient bytes, transition to <code>check_block</code>.
+              <li><code>check_block</code>: you now have the block number, inverse, packet, and CRC16. Now, some error-checking is required:
+                  <ul>
+                      <li>If the block number and inverse do not correspond, then you have a serious error, so drop the client and abort this file transfer.
+                      <li>If the block number is the same as the block number of the previous block, then the server is receiving a duplicate block. (This can happen if the client loses an <code>ACK</code> that you send to acknowledge a block.) If this happens, then just send an <code>ACK</code> in response to the duplicate.
+                      <li>If the block number is not the one that is expected to be next, then you have a serious error, so drop the client and abort this file transfer.
+                      <li>If the CRC16 is incorrect, send a <code>NAK</code>.
+                  </ul>
+                  Assuming everything is OK, then the block has been successfully received. Write the block to the file and increment the block number (watch for the wrap at 255), and send an <code>ACK</code> to the client. Move to <code>pre_block</code> to wait for the next action from the client.
+              <li><code>finish</code>: you can perform any cleanup actions here.
+          </ul>
+
+
+          <hr>
+
+            <div class="blog_subtitle"><b>Your Task: xmodem Server</b></div>
+
+            <p>Your task is to implement an xmodem server as described in this section. The server allows clients to connect and send a file to the server using the xmodem protocol.</p>
+
+              <div class="blog_subtitle">Your Ports</div>
+
+              <p>To avoid port conflicts, we are asking you to use the following number as the port on which your server will listen: take the last four digits of your student number, and add a 5 in front. For example, if your student number is 1007123456, your port would be 53456.</p>
+
+              <p>To have the operating system release your server's port as soon as your server terminates, you should put the following socket option in your server code right after you call <code>socket</code> (where <code>listenfd</code> is the server's listening socket):<br>
+              <pre>
+
+    int yes = 1;
+    if((setsockopt(listenfd, SOL_SOCKET, SO_REUSEADDR, &yes, sizeof(int))) == -1) {
+        perror("setsockopt");
+    }
+</pre>
+
+              <p>If it turns out that you still find a port in use, you may add 1 to your port number as necessary in order to use new ports (for example, the fictitious student here could also use 53457, 53458, 53459, 53460). When you shutdown your server (e.g. to compile and run it again), the OS may not release the old port immediately, so you may have to cycle through ports a bit.</p>
+
+
+
+              <div class="blog_subtitle">Using Select</div>
+
+            <p>The server must never block waiting for input from a particular client or the listening socket. It must allow multiple clients to connect simultaneously and send files to the server. The server will not know whether a client will talk next, or whether a new client will connect. And, in the former case, it will not know <b>which</b> client will talk next either. This means that you must use <code>select</code> rather than blocking on one file descriptor.</p>
+
+            <p><b>Important note</b>: a related issue is that you cannot assume that an xmodem block will be received in a single read call. For example, if you are expecting a 132-byte block, you might get 50 bytes in the first read and then 82 bytes in the second read. You must therefore buffer what a client sends until you have the required data in the buffer.</p>
+
+            <div class="blog_subtitle">Makefile</div>
+
+              <p>Create a Makefile that compiles a program called <tt>xmodemserver</tt>. In addition to building your code, your makefile must permit choosing a port at compile-time. To do this, first add a <code>#define</code> to your <code>xmodemserver.c</code> program to define the port number on which the server will expect connections (this is the port based on your student number):</p>
+            <pre>
+
+#ifndef PORT
+  #define PORT x
+#endif
+</pre>
+
+            <p>Then, in your makefile, include the following code, where <code>y</code> should be set to a number possibly different from <code>x</code></p>:
+            <br>
+            <pre>
+PORT=y
+CFLAGS= -DPORT=\$(PORT) -g -Wall
+</pre>
+
+            <p>Now, if you type <code>make PORT=53456</code> the program will be compiled with <code>PORT</code> defined as <code>53456</code>. If you type just <code>make</code>, <code>PORT</code> will be set to <code>y</code> as defined in the makefile. Finally, if you use <code>gcc</code> directly and do not use <code>-D</code> to supply a port number, it will still have the <code>x</code> value from your source code file. This method of setting a port value will make it possible for us to test your code by compiling with our desired port number. (It is also useful for you to know how to use <code>-D</code> to define macros at the command line.)</p>
+
+
+              <div class="blog_subtitle">Other Clients</div>
+
+              <p>We strongly suggest modifying our sample client to ensure that your server works when things go wrong. Note that we are using TCP (a reliable protocol), so your clients will have to intentionally "make mistakes" to properly test your server. Here is what your server must be able to handle:
+              <ul class="tab_panel_bullets">
+                  <li>Blocks with an unexpected block number or inverse. (To test this, you can have your client randomly mess up the block number of the block it is going to send next.)
+                  <li>Blocks where the CRC16 does not match the CRC16 of the payload. (Again, test this by having your client randomly mess up the CRC16 that it sends.)
+                  <li>Blocks sent across multiple TCP segments. (To do this, have your client do two or more <code>write</code> calls for a packet instead of one <code>write</code> call. Or have your client do two <code>write</code> calls to split the filename over two TCP segments! You might also insert a small time delay (<code>man 3 usleep</code>) between your <code>write</code> calls to ensure that the pieces are really being sent out separately.)
+                  <li>1024-byte payloads. (To test this, have your client sometimes send 1024-byte payloads. Remember that these blocks start with <code>STX</code>.)
+              </ul>
+
+              <div class="blog_subtitle">What to submit</div>
+
+              <p>You will commit to your repository in the <code>a3</code> directory all <code>.h</code> and <code>.c</code> files and your <code>Makefile</code>.</p>
+
+              <p>Make sure that you have done <code>git add</code> on every file that is needed by your assignment. As a final step, Checkout your repository into a new directory to verify that everything is there. There is nothing we can do if you forget to submit a file.</p>
+
+              <p> Note that you must submit your work to your git repository on Markus. That is, you cannot submit through its normal web interface.</p>
+
+
+            <div class="comments_container">
+              <div class="blog_subtitle">Comments</div>
+              <ul class="comments_list">
+                <li>
+                  <div class="comment_item d-flex flex-row align-items-start jutify-content-start">
+                    <div class="comment_content">
+                      <div class="comment_title_container d-flex flex-row align-items-center justify-content-start">
+                        <div class="comment_author"><a href="#" onclick="return false">Justin</a></div>
+                        <div class="comment_rating"><div class="rating_r rating_r_5"><i></i><i></i><i></i><i></i><i></i></div></div>
+                        <div class="comment_time ml-auto" id="date1"></div>
+                      </div>
+                      <div class="comment_text">
+                        <p>This is my fourth time taking CSC209, and inarguably, this is the best assignment I've ever seen.<br>
+                          Problems are so accurately designed that anyone with their own knowledge and experience have their own takeaways.<br>
+                          I hope next assignments will be this good, too!
+                        </p>
+                      </div>
+                      <div class="comment_extras d-flex flex-row align-items-center justify-content-start">
+                        <div class="comment_extra comment_likes"><a href="#" onclick="return false"><i class="fa fa-thumbs-up" aria-hidden="true"></i><span>108</span></a></div>
+                        <div class="comment_extra comment_reply"><a href="#" onclick="return false"><i class="fa fa-pencil-square" aria-hidden="true"></i><span>Reply</span></a></div>
+                      </div>
+                    </div>
+                  </div>
+                  <ul>
+                    <li>
+                      <div class="comment_item d-flex flex-row align-items-start jutify-content-start">
+                        <div class="comment_content">
+                          <div class="comment_title_container d-flex flex-row align-items-center justify-content-start">
+                            <div class="comment_author"><a href="#" onclick="return false">Kianoosh</a></div>
+                            <div class="comment_time ml-auto" id="date2"></div>
+                            <script>document.getElementById("date1").innerHTML = new Date().toDateString();
+                            document.getElementById("date2").innerHTML = new Date().toDateString();
+                            </script>
+
+                          </div>
+                          <div class="comment_text">
+                            <p>Thanks bro!</p>
+                          </div>
+                          <div class="comment_extras d-flex flex-row align-items-center justify-content-start">
+                            <div class="comment_extra comment_likes"><a href="#" onclick="return false"><i class="fa fa-thumbs-up" aria-hidden="true"></i><span>36</span></a></div>
+                            <div class="comment_extra comment_reply"><a href="#" onclick="return false"><i class="fa fa-pencil-square" aria-hidden="true"></i><span>Reply</span></a></div>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+              <div class="add_comment_container">
+                <div class="add_comment_title">Write a comment</div>
+                <div class="add_comment_text">Your email address will not be published. Required fields are marked *</div>
+                <form action="#" class="comment_form">
+                  <div>
+                    <div class="form_title">Review*</div>
+                    <textarea class="comment_input comment_textarea" required="required"></textarea>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-6 input_col">
+                      <div class="form_title">Name*</div>
+                      <input type="text" class="comment_input" required="required">
+                    </div>
+                    <div class="col-md-6 input_col">
+                      <div class="form_title">Email*</div>
+                      <input type="text" class="comment_input" required="required">
+                    </div>
+                  </div>
+                  <div class="comment_notify">
+                    <input type="checkbox" id="checkbox_notify" name="regular_checkbox" class="regular_checkbox checkbox_account" checked>
+                    <label for="checkbox_notify"><i class="fa fa-check" aria-hidden="true"></i></label>
+                    <span>Notify me of new posts by email</span>
+                  </div>
+                  <div>
+                    <script>
+                      function fakesubmit() {
+                        alert("Thank you so much for writing your feedback.\n\nAs you may already have guessed, your feedback is neither saved nor sent anywhere. In fact, no one will ever even know that you wrote such feedback. " +
+                                "The reason is that it is not possible for this website to store and present such stuff. \n\n" +
+                                "Now, please copy your feedback to piazza or email it to me or a TA :)")
+                      }
+                    </script>
+                    <button type="submit" onclick="fakesubmit()" class="comment_button trans_200">submit</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Blog Sidebar -->
+        <div class="col-lg-4">
+          <div class="sidebar">
+
+            <!-- Feature -->
+            <div class="sidebar_section">
+              <div class="sidebar_section_title">Course Links</div>
+              <div class="sidebar_feature">
+
+                <!-- Features -->
+                <div class="feature_list">
+
+                  <!-- Feature -->
+                  <div class="feature d-flex flex-row align-items-center justify-content-start">
+                    <div class="feature_title"><i class="fa fa-question-circle-o" aria-hidden="true"></i><span>Announcement - Q&A</span></div>
+                    <div class="feature_text ml-auto"><a href="https://piazza.com/utoronto.ca/summer2022/csc209/home">Piazza</a></div>
+                  </div>
+
+                  <!-- Feature -->
+                  <div class="feature d-flex flex-row align-items-center justify-content-start">
+                    <div class="feature_title"><i class="fa fa-pencil" aria-hidden="true"></i><span>Weekly prep</span></div>
+                    <div class="feature_text ml-auto"><a href="https://pcrs.utm.utoronto.ca/209/">PCRS</a></div>
+                  </div>
+
+                  <!-- Feature -->
+                  <div class="feature d-flex flex-row align-items-center justify-content-start">
+                    <div class="feature_title"><i class="fa fa-address-book" aria-hidden="true"></i><span>Assignments</span></div>
+                    <div class="feature_text ml-auto"><a href="https://mcsmark.utm.utoronto.ca/csc209hsummer22">Markus</a></div>
+                  </div>
+
+                  <!-- Feature -->
+                  <div class="feature d-flex flex-row align-items-center justify-content-start">
+                    <div class="feature_title"><i class="fa fa-table" aria-hidden="true"></i><span>Informal chat</span></div>
+                    <div class="feature_text ml-auto"><a href="https://discord.gg/nZgaqcmMN6">Discord</a></div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+
+  <footer class="footer">
+    <div class="container">
+      <div class="row copyright_row">
+        <div class="col">
+          <div class="copyright d-flex flex-lg-row flex-column align-items-center justify-content-start">
+            <div class="cr_text"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+              Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+              <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer></div>
+
+<script src="../../js/jquery-3.2.1.min.js"></script>
+<script src="../../styles/bootstrap4/popper.js"></script>
+<script src="../../styles/bootstrap4/bootstrap.min.js"></script>
+<script src="../../plugins/colorbox/jquery.colorbox-min.js"></script>
+<script src="../../js/handout.js?v=1"></script>
+</body>
+</html>
