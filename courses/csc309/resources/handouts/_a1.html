@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Assignment 1: HTML + CSS</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="CSC309: Programming on the Web - Fall 2022">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.cs.toronto.edu/~kianoosh/courses/csc309/handouts/a1.html">
+  <meta property="og:title" content="Assignment 1: HTML + CSS">
+  <meta property="og:description" content="CSC309: Programming on the Web - Fall 2022">
+  <meta property="og:image" content="https://www.cs.toronto.edu/~kianoosh/courses/csc309/images/card.png">
+
+  <link rel="shortcut icon" type="image/jpg" href="../../images/favicon.png"/>
+  <link rel="stylesheet" type="text/css" href="../../styles/bootstrap4/bootstrap.min.css">
+  <link href="../../plugins/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <link href="../../plugins/colorbox/colorbox.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" type="text/css" href="../../styles/handout.css?v=1.4">
+  <link rel="stylesheet" type="text/css" href="../../styles/course.css?v=1.3">
+  <link rel="stylesheet" type="text/css" href="../../styles/handout_responsive.css">
+</head>
+<body>
+
+<div class="super_container">
+
+  <!-- Header -->
+
+  <header class="header">
+
+    <!-- Header Content -->
+    <div class="header_container">
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <div class="header_content d-flex flex-row align-items-center justify-content-start">
+              <div class="logo_container">
+                <a href="../../">
+                  <div class="logo_text">CSC309: Programming on the Web</div>
+                </a>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Header Search Panel -->
+    <div class="header_search_container">
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <div class="header_search_content d-flex flex-row align-items-center justify-content-end">
+              <form action="#" class="header_search_form">
+                <input type="search" class="search_input" placeholder="Search" required="required">
+                <button class="header_search_button d-flex flex-column align-items-center justify-content-center">
+                  <i class="fa fa-search" aria-hidden="true"></i>
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Home -->
+
+  <div class="home">
+    <div class="breadcrumbs_container">
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <div class="breadcrumbs">
+              <ul>
+                <li><a href="../../">Home</a></li>
+                <li><a href="#">handouts</a></li>
+                <li>Assignment 1</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Blog -->
+
+  <div class="blog">
+    <div class="container">
+      <div class="row">
+
+        <!-- Blog Content -->
+        <div class="col-lg-8">
+          <div class="blog_content">
+            <div class="blog_title">Assignment 1: HTML + CSS</div>
+            <div class="blog_meta">
+              <ul>
+                <li>Due date: <span id="due-date">Fri January 28, 2022 23:59:00</span></li>
+                <li><span id="remaining-time"></span> remaining</li>
+              </ul>
+            </div>
+            <div class="blog_subtitle">Objectives</div>
+            <p>This assignment helps you get familiar with writing HTML and CSS code. You are asked to create
+            a very simple webpage. In the first question, you are to write a plain HTML file and then add style
+            according to question 2.</p>
+
+            <p>Note that even though what was taught in the lectures is enough "knowledge" to cover this assignment, it is quite possible
+            that some specific tags, styles, or tricks are not covered in the lecture. There are millions of features in web
+            programming, and it is really impossible to teach them all in a lecture.</p>
+
+            <p>Therefore, you are welcome to refer to the slides or online resources to lookup for specific things. However, please be mindful that
+            you will not violate academic integrity, as explained later.</p>
+
+            <div class="blog_subtitle">Notes</div>
+
+            <ul class="tab_panel_bullets">
+              <li>This assignment will make up 10% of your final grade.</li>
+              <li>The due date is <strong>Friday, January 28th at 23:59:00</strong>. Late submissions will incur a 15% penalty per day for a maximum of 3 days.</li>
+              <li>If you have any questions or problems with the assignment, please post them on Piazza.</li>
+              <li>It is recommended that you test your code on Firefox (95 or above) or Google Chrome (96 or above). You might probably not want to risk it by using Internet Explorer, Opera, or other things.</li>
+              <li>Most of your submissions will be auto-graded. Therefore, your code must adhere to all details provided in the handout; otherwise, you might lose marks.</li>
+              <li>You will not receive any feedback from the auto grader before the deadline has passed. So it is your responsibility to double-check your code with the handout before submission. Even minor spelling mistakes can lead to loss of marks. No remark requests will be accepted on these matters.</li>
+              <li>Only the last version of your repository will be graded. Make sure that your last commit is the one you would like to be graded. It will not be possible to ask for a checkout to a different commit. </li>
+            </ul>
+
+            <div class="blog_subtitle">Submission</div>
+
+            <p>You should submit your work to your git repository on Markus. That is, you cannot submit through its normal web interface.
+              Instead, commit and push your codes to your repository for assignment 1.
+              Find out your repo's URL by logging into Markus.</p>
+
+            <div class="blog_subtitle">What to submit</div>
+
+            <p>You must only submit a single HTML file named <strong>index.html</strong> and a stylesheet named <strong>style.css</strong>.
+            <br>Note that any other file you submit will be deleted by the auto tester.</p>
+
+            <p><strong>Warning</strong>: Importing any online CSS or JS code is strictly forbidden and will result in losing <strong>all marks</strong> of the assignment.
+            Examples are bootstrap, semantic, jquery, and any other code written by someone else.</p>
+
+            <div class="blog_subtitle">Academic Integrity</div>
+
+            <p>Assignments are <strong>individual work</strong> which means that you will not be allowed to seek advice from other students or copy/paste someone else's code, even open-source codes from the internet. However, you are allowed to look at online resources, tutorials, and Q&A websites to solve the problems. The entire code must be written by yourself.</p>
+
+            <hr>
+            <div class="blog_subtitle"><strong>Mastery in HTML!</strong></div>
+
+            <p>Write an HTML file named index.html that includes the following:</p>
+
+            <ul class="tab_panel_bullets">
+              <li>"<span class="quote">CSC309 Personal Website</span>" as title</li>
+              <li>"<span class="quote">Hello Visitors!</span>" directly in a &lt;div&gt; section</li>
+              <li>Your name in an &lt;h1&gt; and your UTorID in an &lt;h2&gt;</li>
+              <li>An unordered list that includes the exact following text:
+                <br>
+                •	A1 is worth 10%.<br>
+                •	A2 is worth 15%.<br>
+                •	A3 is worth 15%.<br>
+              </li>
+              <li>A widget that can be opened (default) and closed: text should look like the following image. In other words, when "<span class="quote">Fact</span>" is clicked, the rest should toggle (hide if already visible, show if already hidden). <br>
+              Pay attention to the different decorations of each part of the text.</li>
+              <img width="200" src="../images/a1-widget.png?v=1">
+              <br>
+              <br>
+              <li>A table that exactly contains the following data</li>
+              <img width="500px" src="../images/a1-table.png">
+              <br>
+              <br>
+              <li>A small feedback form that includes the following:
+                <br>
+                <ul class="tab_panel_bullets">
+                  <li>A multi-line box where users can leave feedback:
+                    should be <strong>labeled</strong> with "<span class="quote">Feedback</span>".
+                    Its placeholder should be "<span class="quote">Enter your feedback here</span>".</li>
+                  <li>A one-line box in which users can enter email.
+                    Input needs to be validated to ensure it is a proper email address.
+                    The label should be "<span class="quote">Email</span>".</li>
+                  <li>A field where users can upload one attachment: the label should be "<span class="quote">Attachment</span>".</li>
+                  <li>A checkbox where users can give consent: the label should be located to the right of the checkbox and equal to "<span class="quote">You agree to receive emails from me</span>".</li>
+                  <li>A submit button with the text "<span class="quote">Send Feedback</span>".</li>
+                  <li><strong>Note 1: </strong>Labels must be implemented via the label tag. <strong>Leaving plain text near the input is not accepted.</strong> </li>
+                  <li><strong>Note 2: </strong> All fields are mandatory. After the user fills out the form and clicks the button, a POST request would be sent with payload <code>{email: …, feedback: …, attachments: …, consent: yes}</code></li>
+                </ul>
+                </li>
+              <li>Last year's <a href="https://axiom.utm.utoronto.ca/~csc309/21s/syllabus/20211_CSC309H5S_LEC9102.pdf">course syllabus</a> as an embedded pdf file.</li>
+              <li>An automatic email link in the <strong>footer</strong>. The link should display your utoronto email, and once clicked, the default mailing app should pop up, and a new email is created (but not sent)
+              <br> There must be this pre-written data on the email:<br>
+                <ul class="tab_panel_bullets">
+                  <li>Recipient: 	*your email in the footer*</li>
+                  <li>Subject: 	"<span class="quote">Bug Found</span>"</li>
+                  <li>Body:		 "<span class="quote">I found the following bug on your website</span>"</li>
+                </ul>
+              </li>
+            </ul>
+
+            <p>Note that your HTML file must NOT contain any style or scripts, either inline or from a file (except for the style.css file you will create in the next question). Any text surrounded by <strong>double quotations</strong>
+              must be exactly copied to your file, as the auto tester will run a case-sensitive check.</p>
+
+            <p><strong>Important</strong>: make sure that you <a href="https://validator.w3.org">validate</a> your file before submitting it. The tester might not work properly if your file is malformed.</p>
+
+            <hr>
+            <div class="blog_subtitle"><strong>Style it up!</strong></div>
+            <p>Complement your HTML file with a stylesheet named style.css that fulfills the following requirements</p>
+
+            <ul class="tab_panel_bullets">
+              <li>Make the previous &lt;div&gt; section always <strong>stick</strong> to the top of screens as they scroll. That is, it should remain on top of the page no matter how much the user has scrolled down. No space to the top, left, or right. Also, set its background color to aqua.</li>
+              <li>Fit the unordered list in one line. Put at least a 5% margin to the left and right of each item.</li>
+              <li>Use <strong>Roboto Regular 400</strong> as the font for the entire HTML document.</li>
+              <li>Round the corner of the multi-line box with 5px radius. Also, the cursor should switch to <strong>grab</strong> when it hovers the "<span class="quote">Send Feedback</span>" button.</li>
+              <li>Make the previous table look like this. Pay attention to the background color, text alignment, and borders.</li>
+              <img width="500px" src="../images/a1-table2.png">
+              <li>Re-arrange your page into a two-columned grid layout. The left column contains everything except the "<span class="quote">Hello Visitors!</span>" &lt;div&gt;, the footer, and the embedded file.
+                The right column belongs to the embedded file. Both columns should occupy the same portion of the page's width.</li>
+              <li>Make everything inside the HTML file center-aligned. That includes all grid content, the header, and the footer.</li>
+              <li>Put a reasonable margin between elements so that they will not overlap or fall too close to each other.</li>
+            </ul>
+
+            <p>For your help, you can refer to the below screenshot as what your final submission should look like to receive the full marks.</p>
+            <br>
+            <img src="../images/a1-final.png?v=1.2" width="700px">
+          </div>
+
+          <hr>
+
+          <!-- Comments -->
+          <div class="comments_container">
+            <h3>Comments</h3>
+            <ul class="comments_list">
+              <li>
+                <div class="comment_item d-flex flex-row align-items-start jutify-content-start">
+                  <div class="comment_content">
+                    <div class="comment_title_container d-flex flex-row align-items-center justify-content-start">
+                      <div class="comment_author"><a href="#" onclick="return false">Justin</a></div>
+                      <div class="comment_rating"><div class="rating_r rating_r_5"><i></i><i></i><i></i><i></i><i></i></div></div>
+                      <div class="comment_time ml-auto" id="date1"></div>
+                    </div>
+                    <div class="comment_text">
+                      <p>This is my fourth time taking CSC309, and inarguably, this is the best assignment I've ever seen.<br>
+                        Problems are so accurately designed that anyone with their own knowledge and experience have their own takeaways.<br>
+                        I hope next assignments will be this good, too!
+                      </p>
+                    </div>
+                    <div class="comment_extras d-flex flex-row align-items-center justify-content-start">
+                      <div class="comment_extra comment_likes"><a href="#" onclick="return false"><i class="fa fa-thumbs-up" aria-hidden="true"></i><span>108</span></a></div>
+                      <div class="comment_extra comment_reply"><a href="#" onclick="return false"><i class="fa fa-pencil-square" aria-hidden="true"></i><span>Reply</span></a></div>
+                    </div>
+                  </div>
+                </div>
+                <ul>
+                  <li>
+                    <div class="comment_item d-flex flex-row align-items-start jutify-content-start">
+                      <div class="comment_content">
+                        <div class="comment_title_container d-flex flex-row align-items-center justify-content-start">
+                          <div class="comment_author"><a href="#" onclick="return false">Kianoosh</a></div>
+                          <div class="comment_time ml-auto" id="date2"></div>
+                          <script>document.getElementById("date1").innerHTML = new Date().toDateString();
+                          document.getElementById("date2").innerHTML = new Date().toDateString();
+                          </script>
+
+                        </div>
+                        <div class="comment_text">
+                          <p>Thanks bro!</p>
+                        </div>
+                        <div class="comment_extras d-flex flex-row align-items-center justify-content-start">
+                          <div class="comment_extra comment_likes"><a href="#" onclick="return false"><i class="fa fa-thumbs-up" aria-hidden="true"></i><span>36</span></a></div>
+                          <div class="comment_extra comment_reply"><a href="#" onclick="return false"><i class="fa fa-pencil-square" aria-hidden="true"></i><span>Reply</span></a></div>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+            <div class="add_comment_container">
+              <div class="add_comment_title">Write a comment</div>
+              <div class="add_comment_text">Your email address will not be published. Required fields are marked *</div>
+              <form action="#" class="comment_form">
+                <div>
+                  <div class="form_title">Review*</div>
+                  <textarea class="comment_input comment_textarea" required="required"></textarea>
+                </div>
+                <div class="row">
+                  <div class="col-md-6 input_col">
+                    <div class="form_title">Name*</div>
+                    <input type="text" class="comment_input" required="required">
+                  </div>
+                  <div class="col-md-6 input_col">
+                    <div class="form_title">Email*</div>
+                    <input type="text" class="comment_input" required="required">
+                  </div>
+                </div>
+                <div class="comment_notify">
+                  <input type="checkbox" id="checkbox_notify" name="regular_checkbox" class="regular_checkbox checkbox_account" checked>
+                  <label for="checkbox_notify"><i class="fa fa-check" aria-hidden="true"></i></label>
+                  <span>Notify me of new posts by email</span>
+                </div>
+                <div>
+                  <script>
+                    function fakesubmit() {
+                      alert("Thank you so much for writing your feedback.\n\nAs you may already have guessed, your feedback is neither saved nor sent anywhere. In fact, no one will ever even know that you wrote such feedback. " +
+                              "The reason is that it is not possible for this website to store and present such stuff. Throughout this course, you will learn why.\n\n" +
+                              "Now, please copy your feedback to piazza or email it to me or a TA :)")
+                    }
+                  </script>
+                  <button type="submit" onclick="fakesubmit()" class="comment_button trans_200">submit</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+
+        <!-- Blog Sidebar -->
+        <div class="col-lg-4">
+          <div class="sidebar">
+
+            <!-- Feature -->
+            <div class="sidebar_section">
+              <div class="sidebar_section_title">Course Links</div>
+              <div class="sidebar_feature">
+
+                <!-- Features -->
+                <div class="feature_list">
+
+                  <!-- Feature -->
+                  <div class="feature d-flex flex-row align-items-center justify-content-start">
+                    <div class="feature_title"><i class="fa fa-calendar" aria-hidden="true"></i><span>Schedule</span></div>
+                    <div class="feature_text ml-auto"><a href="https://calendar.google.com/calendar/u/0?cid=NWY2Zm5ia2NhZHQ0bTQyajdjamlkMnJkMzhAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ">Google Calendar</a></div>
+                  </div>
+
+                  <!-- Feature -->
+                  <div class="feature d-flex flex-row align-items-center justify-content-start">
+                    <div class="feature_title"><i class="fa fa-question-circle-o" aria-hidden="true"></i><span>Announcement - Q&A</span></div>
+                    <div class="feature_text ml-auto"><a href="https://piazza.com/utoronto.ca/winter2022/csc309">Piazza</a></div>
+                  </div>
+
+                  <!-- Feature -->
+                  <div class="feature d-flex flex-row align-items-center justify-content-start">
+                    <div class="feature_title"><i class="fa fa-address-book" aria-hidden="true"></i><span>Submissions</span></div>
+                    <div class="feature_text ml-auto"><a href="http://mcsmark.utm.utoronto.ca/csc309s22">Markus</a></div>
+                  </div>
+
+                  <!-- Feature -->
+                  <div class="feature d-flex flex-row align-items-center justify-content-start">
+                    <div class="feature_title"><i class="fa fa-table" aria-hidden="true"></i><span>Informal chat</span></div>
+                    <div class="feature_text ml-auto"><a href="https://discord.gg/VGFQN62EeY">Discord</a></div>
+                  </div>
+
+                  <!-- Feature -->
+                  <div class="feature d-flex flex-row align-items-center justify-content-start">
+                    <div class="feature_title"><i class="fa fa-flask" aria-hidden="true"></i><span>Lab sessions</span></div>
+                    <div class="feature_text ml-auto"><a href="https://utoronto.zoom.us/s/84959059534">Zoom</a></div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+
+            <!-- Feature -->
+            <div class="sidebar_section">
+              <div class="sidebar_section_title">Grading breakdown</div>
+              <div class="sidebar_feature">
+
+                <!-- Features -->
+                <div class="feature_list">
+
+                  <!-- Feature -->
+                  <div class="feature d-flex flex-row align-items-center justify-content-start">
+                    <div class="feature_title"><i class="fa fa-pencil-square-o" aria-hidden="true"></i><span>Mastery in HTML!</span></div>
+                    <div class="feature_text ml-auto">10 pts</div>
+                  </div>
+
+                  <div class="feature d-flex flex-row align-items-center justify-content-start">
+                    <div class="feature_title"><i class="fa fa-pencil-square-o" aria-hidden="true"></i><span>Style it up!</span></div>
+                    <div class="feature_text ml-auto">5 pts</div>
+                  </div>
+
+
+
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+
+  <footer class="footer">
+    <div class="container">
+      <div class="row copyright_row">
+        <div class="col">
+          <div class="copyright d-flex flex-lg-row flex-column align-items-center justify-content-start">
+            <div class="cr_text"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+              Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+              <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer></div>
+
+<script src="../../js/jquery-3.2.1.min.js"></script>
+<script src="../../styles/bootstrap4/popper.js"></script>
+<script src="../../styles/bootstrap4/bootstrap.min.js"></script>
+<script src="../../plugins/colorbox/jquery.colorbox-min.js"></script>
+<script src="../../js/handout.js?v=1"></script>
+</body>
+</html>

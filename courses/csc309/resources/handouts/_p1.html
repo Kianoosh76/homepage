@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <title>Restify: phase 1</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="CSC309: Programming on the Web Fall 2022 - Course Project">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.cs.toronto.edu/~kianoosh/courses/csc309/handouts/p1.html">
+    <meta property="og:title" content="Restify: phase 1">
+    <meta property="og:description" content="CSC309: Programming on the Web - Fall 2022">
+    <meta property="og:image" content="https://www.cs.toronto.edu/~kianoosh/courses/csc309/images/card.png">
+
+    <link rel="shortcut icon" type="image/jpg" href="../../images/favicon.png"/>
+    <link rel="stylesheet" type="text/css" href="../../styles/bootstrap4/bootstrap.min.css">
+    <link href="../../plugins/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="../../plugins/colorbox/colorbox.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="../../styles/handout.css?v=1.4">
+    <link rel="stylesheet" type="text/css" href="../../styles/course.css?v=1.3">
+    <link rel="stylesheet" type="text/css" href="../../styles/handout_responsive.css">
+</head>
+<body>
+
+<div class="super_container">
+
+    <!-- Header -->
+
+    <header class="header">
+
+        <!-- Header Content -->
+        <div class="header_container">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <div class="header_content d-flex flex-row align-items-center justify-content-start">
+                            <div class="logo_container">
+                                <a href="../../">
+                                    <div class="logo_text">CSC309: Programming on the Web</div>
+                                </a>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Header Search Panel -->
+        <div class="header_search_container">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <div class="header_search_content d-flex flex-row align-items-center justify-content-end">
+                            <form action="#" class="header_search_form">
+                                <input type="search" class="search_input" placeholder="Search" required="required">
+                                <button class="header_search_button d-flex flex-column align-items-center justify-content-center">
+                                    <i class="fa fa-search" aria-hidden="true"></i>
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Home -->
+
+    <div class="home">
+        <div class="breadcrumbs_container">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <div class="breadcrumbs">
+                            <ul>
+                                <li><a href="../../">Home</a></li>
+                                <li><a href="#">handouts</a></li>
+                                <li>Assignment 3</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Blog -->
+
+    <div class="blog">
+        <div class="container">
+            <div class="row">
+
+                <!-- Blog Content -->
+                <div class="col-lg-8">
+                    <div class="blog_content">
+                        <div class="blog_title">Restify: phase 1</div>
+                        <div class="blog_meta">
+                            <ul>
+                                <li>Due date: <span id="due-date">Fri Feb 13, 2022 23:59:00</span></li>
+                                <li><span id="remaining-time"></span> remaining</li>
+                            </ul>
+                        </div>
+                        <div class="blog_subtitle"><b>Overview</b></div>
+                        <p> Restify is the project's title that you will implement for this course. It is a social media for restaurants where users can search, follow, like, and comment on restaurants. Moreover, restaurant owners can create blog posts and upload their menus there. More details will follow in upcoming sections.</p>
+
+                        <p>The project is divided into three phases. In phase 1, you will implement the static version of Restify as a presentable demo where users can navigate and see the features. However, it is not connected to a backend or frontend server. In phase 2, you will use Django and REST to implement the APIs, and, finally, in phase 3, you finalize the website using React JS. The eventual outcome of this project is a fully-functional website that meets the <b>user stories</b> listed in an upcoming section. </p>
+
+                        <p>The project is handed out from the stakeholder's point of view. That is, imagine you are a freelance developer and someone hired you for this project. Therefore, the requirements are described in a non-technical way, and it is your job to design and implement the web application that meets them. There is much room for creativity, and you get decent freedom with respect to the details and various tools you can use for this project. In fact, there are very few general limitations. For example, you will have to use Django, REST, and React. Besides these, you can utilize online packages, libraries, or open-source codes to improve your website. </p>
+
+                        <div class="blog_subtitle">Academic Integrity</div>
+
+                        <p>Unlike the assignments, you are allowed to download packages or use open source codes from the internet for the project. However, sharing even a small piece of code to other teams is strictly prohibited (either giving to or taking from them). Online codes must include a reference to the webpage they are taken from.
+                        </p>
+
+                        <div class="blog_subtitle">Groups</div>
+
+                        <p>Register your groups on Markus as soon as you have found the teammates. The scope of the project is appropriate for a group of three members. However, if some members have already had prior knowledge in web development, groups of two would be fine as well. You can also choose to work entirely on your own, which is strongly discouraged as the load will be overwhelming. If you have a solid background in web development and want to intensify and challenge your knowledge, this could be an option.</p>
+
+                        <p><b>Note: </b>The number of members will not affect our grading criteria. That is, your submission will be graded the same way, regardless of how many team members are there. </p>
+
+                        <div class="blog_subtitle">Mentor sessions</div>
+
+                        <p>For each phase, you can sign up for two mentor sessions with a TA to discuss your ideas, ask questions, or seek help on any project-related issue. You must already have registered your teams on Markus and use the <a href="https://piazza.com/class/kwh095qkvqb2a8?cid=153">Booking system</a> to sign up for a session. Note that sessions have an availability interval. In other words, mentor session 1 is only available through the first week after the handout is released. Therefore, if you do not book one, you will lose one session and will not get two sessions in the next week. More details are explained on the booking system's docs. </p>
+
+                        <div class="blog_subtitle">Interviews</div>
+                        <p>Each phase will be graded separately through interview sessions with TAs. You should use the same API to book your interview session. Please note that if you do not book a session, you will get <b>no marks</b> for that phase. All team members must be present at the meeting, and the absent members will not get any marks for the phase. Time intervals associated with the mentor sessions and interviews will be announced on Piazza. </p>
+
+                        <div class="blog_subtitle">Submission</div>
+
+                        <p>You should submit your work to your group's git repository on Markus. That is, you cannot submit through its normal web interface.
+                            Instead, commit and push your codes to your repository for each phase. Find out your repo's URL by logging into Markus. Note that there is a separate repository for each phase.</p>
+
+                            <p>Moreover, commit your changes now and then, and do not leave your commits to the <b>very last minutes</b> before the deadline. Correct use of git is a part of your assessment for this course.
+
+                                <p>It is recommended that you test your code on Firefox (95 or above) or Google Chrome (96 or above). You might probably not want to risk it by using Internet Explorer, Opera, or other things.</p>
+                        </p>
+
+                        <div class="blog_subtitle">Participation</div>
+
+                        <p>Each team member must do a fair amount of work on this project. We will assess each member's participation by investigating the commits they created and asking detailed questions about the code at the interviews. Even though it is a group project, your final grade is <b>individual</b>.</p>
+
+                        <hr>
+                        <div class="blog_subtitle"><b>Project description</b></div>
+
+                        <p>The following paragraphs describe the features that should be included in Restify. Note that these are the full set of features, and <b>you are NOT asked to implement all of them at phase 1</b>. More details on phase one's deliverables come in an upcoming section. As stated earlier, features are explained in terms of user stories, in a non-technical form, and from an imaginary user's point of view. You should not expect the same level of detail as assignments. Details that are not discussed below are left out to you, and you get to design them. Your final grading will be done mostly based on the overall functionality of your website as if the stakeholder is testing your application.</p>
+
+                        <div class="blog_subtitle">User stories</div>
+
+
+                        <ul class="tab_panel_bullets">
+                            <p><b>Accounts</b></p>
+                            <li> As a user, I can sign up, log in, log out, and edit my profile. Profile information should include first and last name, email, avatar, and phone number.</li>
+                            <p><b>Restaurant creation & administration</b></p>
+                            <li> As a user, I can create at most one restaurant, of which I will become the <b>owner</b>. A restaurant is generally created by specifying its name, address, logo, address, postal code, and phone number. </li>
+                            <li> As an owner, I want to add/update the menu of my restaurant. A menu is effectively a list of food items, their descriptions, and prices.</li>
+                            <li> As an owner, I can edit the general information of my restaurant and add/remove pictures to it. </li>
+                            <li> As an owner, I can add/remove blog posts to my restaurant.</li>
+                            <p><b>Restaurants info & search</b></p>
+                            <li> As a user, I want to search through restaurants by their name, foods, or address. Most popular restaurants should come up first in the results.</li>
+                            <li> As a user, I can select a restaurant and move to its page, where I can see its general information, images, number of followers, likes, menu, blog posts, and comments.</li>
+                            <p><b>Social network</b></p>
+                            <li> As a user, I can like/unlike a restaurant or one or more of its blog posts.</li>
+                            <li> As a user, I can follow/unfollow a restaurant. The restaurant page should indicate whether I have already followed or liked that restaurant. </li>
+                            <li> As a user, I want to have a <b>feed</b> that lists the blog posts of all restaurants that I follow, showing the newest posts on the top. This feed is not bound to a specific restaurant. It is a separate page from the blog post section of a restaurant.</li>
+                            <li> As a user, I can post a comment on a restaurant. The comment is about the entire restaurant, not a specific blog post. </li>
+                            <p><b>Notifications</b></p>
+                            <li> As an owner, I want to see notifications. I want to be notified when someone follows, likes, and posts a comment on my restaurant. Likes could be either to the whole restaurant or a specific blog post. </li>
+                            <li> As a user, I want to see notifications. I want to be notified when a restaurant I follow makes a new blog post or updates its menu.</li>
+                        </ul>
+
+                        <hr>
+                        <div class="blog_subtitle"><b>Phase 1 deliverables</b></div>
+
+                        <p>For phase 1, you are to implement most of the HTML/CSS of your project. Your final deliverable for this website is a <b>static demo</b> of Restify. Your codes should only consist of HTML and CSS files, without any backend/frontend servers. You should not implement any JS logic at this phase, except for JS files that are imported from external sources. Also, note that you will need to refactor your files when you migrate to React at phase 3. You can find an example of static demos <a href="https://preview.colorlib.com/#summit">here</a>. A static demo showcases the design of the pages by filling them up with some random test data. Forms and buttons do not send any request, but the links point to various pages included in the application.</p>
+
+                        <p>Using a CSS framework (e.g., Bootstrap, Semantic, Bulma) is strongly recommended as plain CSS will take enormous hours to implement and debug. However, since it is a static website at this stage, you cannot use any frontend framework, including any React-dependent CSS framework. </p>
+
+
+                        <p>The detailed structure or the exact number of pages is up to you. However, your website should be navigable. That is, different pages should be connected to each other through clickable links and buttons. The general structure follows:</p>
+                        <ul class="tab_panel_bullets">
+                            <li>All pages should have a navbar that includes relevant information such as links to home, feed, log out, my restaurant's page, a dropdown for the list of notifications, and another dropdown that shows the user's profile and includes a link to the edit profile page.</li>
+                            <li>The index page is the restaurant <b>search</b> page. To showcase the search result page, you should include some test restaurant cards, as well as the search bar for the demo.</li>
+                            <li>Cards must be clickable and point to the restaurant page, including various tabs such as general information and images, menu, blog posts, and comments. You can design tab contents in a way that fits your website the most. It should contain the mentioned information about the restaurant. It is ok if different cards link to the same restaurant page for the demo.</li>
+                            <li>The feed page, as well as the blog post page, should include a list of test blog post items with like buttons.</li>
+                            <li>You should also include various form pages: login, signup, edit profile, add/edit restaurant, add/edit menu, and add a blog post. Restaurant forms must be reachable through the restaurant page. That is, for the demo, we assume that the restaurant page is always accessed from the owner's view. Edit profile must be accessible through the navbar. However, since we assume that the demo is from the perspective of a logged-in user, you can leave the login and signup forms disconnected from the rest. </li>
+                        </ul>
+
+                        <p><b>Note 1:</b> you should make your website as beautiful as possible and provide a smooth user experience even at the demo. Your website will be tested only on <b>desktop monitors</b>, but the actual screen size could vary. So it is your responsibility to make sure that your application renders well on various desktop screen sizes.</p>
+
+                        <p><b>Note 2:</b> your grade will consist of various factors, including how good your UI design is, whether requirements have been correctly implemented, and your understanding of the code. Note that the above list is just the general structure, and they are by no means the full set of requirements for phase 1. You should always think that your website is eventually going to include all the user stories described above. So it will be assessed that way. </p>
+
+                        <p><b>Note 3:</b> as potentially ambiguous as the handout gets, you can ask your questions on Piazza or discuss them with TAs at mentor sessions. Phase 1 will be graded leniently, and you will be informed about what you did wrong or was missing.  </p>
+                    </div>
+                        <hr>
+                    <!-- Comments -->
+                    <div class="comments_container">
+                        <h3>Comments</h3>
+                        <ul class="comments_list">
+                            <li>
+                                <div class="comment_item d-flex flex-row align-items-start jutify-content-start">
+                                    <div class="comment_content">
+                                        <div class="comment_title_container d-flex flex-row align-items-center justify-content-start">
+                                            <div class="comment_author"><a href="#" onclick="return false">Justin</a></div>
+                                            <div class="comment_rating"><div class="rating_r rating_r_5"><i></i><i></i><i></i><i></i><i></i></div></div>
+                                            <div class="comment_time ml-auto" id="date1"></div>
+                                        </div>
+                                        <div class="comment_text">
+                                            <p>This is my fourth time taking CSC309, and inarguably, this is the best assignment I've ever seen.<br>
+                                                Problems are so accurately designed that anyone with their own knowledge and experience have their own takeaways.<br>
+                                                I hope next assignments will be this good, too!
+                                            </p>
+                                        </div>
+                                        <div class="comment_extras d-flex flex-row align-items-center justify-content-start">
+                                            <div class="comment_extra comment_likes"><a href="#" onclick="return false"><i class="fa fa-thumbs-up" aria-hidden="true"></i><span>108</span></a></div>
+                                            <div class="comment_extra comment_reply"><a href="#" onclick="return false"><i class="fa fa-pencil-square" aria-hidden="true"></i><span>Reply</span></a></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <ul>
+                                    <li>
+                                        <div class="comment_item d-flex flex-row align-items-start jutify-content-start">
+                                            <div class="comment_content">
+                                                <div class="comment_title_container d-flex flex-row align-items-center justify-content-start">
+                                                    <div class="comment_author"><a href="#" onclick="return false">Kianoosh</a></div>
+                                                    <div class="comment_time ml-auto" id="date2"></div>
+                                                    <script>document.getElementById("date1").innerHTML = new Date().toDateString();
+                                                    document.getElementById("date2").innerHTML = new Date().toDateString();
+                                                    </script>
+
+                                                </div>
+                                                <div class="comment_text">
+                                                    <p>Thanks bro!</p>
+                                                </div>
+                                                <div class="comment_extras d-flex flex-row align-items-center justify-content-start">
+                                                    <div class="comment_extra comment_likes"><a href="#" onclick="return false"><i class="fa fa-thumbs-up" aria-hidden="true"></i><span>36</span></a></div>
+                                                    <div class="comment_extra comment_reply"><a href="#" onclick="return false"><i class="fa fa-pencil-square" aria-hidden="true"></i><span>Reply</span></a></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <div class="add_comment_container">
+                            <div class="add_comment_title">Write a comment</div>
+                            <div class="add_comment_text">Your email address will not be published. Required fields are marked *</div>
+                            <form action="#" class="comment_form">
+                                <div>
+                                    <div class="form_title">Review*</div>
+                                    <textarea class="comment_input comment_textarea" required="required"></textarea>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6 input_col">
+                                        <div class="form_title">Name*</div>
+                                        <input type="text" class="comment_input" required="required">
+                                    </div>
+                                    <div class="col-md-6 input_col">
+                                        <div class="form_title">Email*</div>
+                                        <input type="text" class="comment_input" required="required">
+                                    </div>
+                                </div>
+                                <div class="comment_notify">
+                                    <input type="checkbox" id="checkbox_notify" name="regular_checkbox" class="regular_checkbox checkbox_account" checked>
+                                    <label for="checkbox_notify"><i class="fa fa-check" aria-hidden="true"></i></label>
+                                    <span>Notify me of new posts by email</span>
+                                </div>
+                                <div>
+                                    <script>
+                                        function fakesubmit() {
+                                            alert("Thank you so much for writing your feedback.\n\nAs you may already have guessed, your feedback is neither saved nor sent anywhere. In fact, no one will ever even know that you wrote such feedback. " +
+                                                "The reason is that it is not possible for this website to store and present such stuff. Throughout this course, you will learn why.\n\n" +
+                                                "Now, please copy your feedback to piazza or email it to me or a TA :)")
+                                        }
+                                    </script>
+                                    <button type="submit" onclick="fakesubmit()" class="comment_button trans_200">submit</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Blog Sidebar -->
+                <div class="col-lg-4">
+                    <div class="sidebar">
+
+                        <!-- Feature -->
+                        <div class="sidebar_section">
+                            <div class="sidebar_section_title">Course Links</div>
+                            <div class="sidebar_feature">
+
+                                <!-- Features -->
+                                <div class="feature_list">
+
+                                    <!-- Feature -->
+                                    <div class="feature d-flex flex-row align-items-center justify-content-start">
+                                        <div class="feature_title"><i class="fa fa-calendar" aria-hidden="true"></i><span>Schedule</span></div>
+                                        <div class="feature_text ml-auto"><a href="https://calendar.google.com/calendar/u/0?cid=NWY2Zm5ia2NhZHQ0bTQyajdjamlkMnJkMzhAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ">Google Calendar</a></div>
+                                    </div>
+
+                                    <!-- Feature -->
+                                    <div class="feature d-flex flex-row align-items-center justify-content-start">
+                                        <div class="feature_title"><i class="fa fa-question-circle-o" aria-hidden="true"></i><span>Announcement - Q&A</span></div>
+                                        <div class="feature_text ml-auto"><a href="https://piazza.com/utoronto.ca/winter2022/csc309">Piazza</a></div>
+                                    </div>
+
+                                    <!-- Feature -->
+                                    <div class="feature d-flex flex-row align-items-center justify-content-start">
+                                        <div class="feature_title"><i class="fa fa-address-book" aria-hidden="true"></i><span>Submissions</span></div>
+                                        <div class="feature_text ml-auto"><a href="http://mcsmark.utm.utoronto.ca/csc309s22">Markus</a></div>
+                                    </div>
+
+                                    <!-- Feature -->
+                                    <div class="feature d-flex flex-row align-items-center justify-content-start">
+                                        <div class="feature_title"><i class="fa fa-table" aria-hidden="true"></i><span>Informal chat</span></div>
+                                        <div class="feature_text ml-auto"><a href="https://discord.gg/VGFQN62EeY">Discord</a></div>
+                                    </div>
+
+                                    <!-- Feature -->
+                                    <div class="feature d-flex flex-row align-items-center justify-content-start">
+                                        <div class="feature_title"><i class="fa fa-flask" aria-hidden="true"></i><span>Lab sessions</span></div>
+                                        <div class="feature_text ml-auto"><a href="https://utoronto.zoom.us/s/84959059534">Zoom</a></div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row copyright_row">
+                <div class="col">
+                    <div class="copyright d-flex flex-lg-row flex-column align-items-center justify-content-start">
+                        <div class="cr_text"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                            Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+                            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</div>
+
+<script src="../../js/jquery-3.2.1.min.js"></script>
+<script src="../../styles/bootstrap4/popper.js"></script>
+<script src="../../styles/bootstrap4/bootstrap.min.js"></script>
+<script src="../../plugins/colorbox/jquery.colorbox-min.js"></script>
+<script src="../../js/handout.js?v=1"></script>
+</body>
+</html>
