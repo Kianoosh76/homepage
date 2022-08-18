@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+  <title>Assignment 3: JavaScript</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="CSC309: Programming on the Web - Winter 2022">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.cs.toronto.edu/~kianoosh/courses/csc309/handouts/a3.html">
+  <meta property="og:title" content="Assignment 3: JavaScript">
+  <meta property="og:description" content="CSC309: Programming on the Web - Winter 2022">
+  <meta property="og:image" content="https://www.cs.toronto.edu/~kianoosh/courses/csc309/images/card.png">
+
+  <link rel="shortcut icon" type="image/jpg" href="../../images/favicon.png"/>
+  <link rel="stylesheet" type="text/css" href="../../styles/bootstrap4/bootstrap.min.css">
+  <link href="../../plugins/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <link href="../../plugins/colorbox/colorbox.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" type="text/css" href="../../styles/handout.css?v=1.4">
+  <link rel="stylesheet" type="text/css" href="../../styles/course.css?v=1.3">
+  <link rel="stylesheet" type="text/css" href="../../styles/handout_responsive.css">
+
+</head>
+<body>
+
+<div class="super_container">
+
+  <!-- Header -->
+
+  <header class="header">
+
+    <!-- Header Content -->
+    <div class="header_container">
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <div class="header_content d-flex flex-row align-items-center justify-content-start">
+              <div class="logo_container">
+                <a href="../../">
+                  <div class="logo_text">CSC309: Programming on the Web</div>
+                </a>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Header Search Panel -->
+    <div class="header_search_container">
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <div class="header_search_content d-flex flex-row align-items-center justify-content-end">
+              <form action="#" class="header_search_form">
+                <input type="search" class="search_input" placeholder="Search" required="required">
+                <button class="header_search_button d-flex flex-column align-items-center justify-content-center">
+                  <i class="fa fa-search" aria-hidden="true"></i>
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Home -->
+
+  <div class="home">
+    <div class="breadcrumbs_container">
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <div class="breadcrumbs">
+              <ul>
+                <li><a href="../../">Home</a></li>
+                <li><a href="#">handouts</a></li>
+                <li>Assignment 3</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Blog -->
+
+  <div class="blog">
+    <div class="container">
+      <div class="row">
+
+        <!-- Blog Content -->
+        <div class="col-lg-8">
+          <div class="blog_content">
+            <div class="blog_title">Assignment 3: JavaScript</div>
+            <div class="blog_meta">
+              <ul>
+                <li>Due date: <span id="due-date">Fri March 25, 2022 23:59:00</span></li>
+                <li><span id="remaining-time"></span> remaining</li>
+              </ul>
+            </div>
+            <div class="blog_subtitle">Objectives</div>
+            <p>In this assignment, you will create an JavaScript file to make an HTML file interactive. The question simulate some popular use cases of JavaScript that could be very well needed in implementing a website. </p>
+
+            <p>Note that even though what was taught in the lectures is enough "knowledge" to cover this assignment, it's quite possible
+            that some specific functions, queries, or tricks are not covered in the lectures. There are millions of features in web
+            programming, and it's really impossible to teach them all in a lecture.</p>
+
+            <p>Therefore, you are welcome to refer to the slides or online resources to lookup for specific things. However, please be mindful that
+            you will not violate academic integrity, as explained later on.</p>
+
+            <div class="blog_subtitle">Notes</div>
+
+            <ul class="tab_panel_bullets">
+              <li>This assignment will make up 15% of your final grade.</li>
+              <li>The due date is <strong>Friday, March 25th at 23:59:00</strong>. Late submissions will incur a 15% penalty per day for a maximum of 3 days.</li>
+              <li>If you have any questions or problems with the assignment, please post them on Piazza.</li>
+              <li>Most of your submission will be auto graded. Therefore, your code must adhere to all details provided in the handout; otherwise, you might lose marks.</li>
+              <li>You will not receive any feedback from the auto grader before the deadline has passed. So it is your responsibility to double-check your code with the handout before submission. Even minor spelling mistakes can lead to loss of marks. No remark requests will be accepted on these matters.</li>
+            </ul>
+
+            <div class="blog_subtitle">Submission</div>
+
+            <p>You should submit your work to your git repository on Markus. That is, you cannot submit through its normal web interface.
+              Instead, commit and push your codes to your repository for assignment 3. You can still see your grades. Find out your repo's url by logging into Markus. Also, do not leave your commits to the <strong>very last minutes</strong> before the deadline.
+              </p>
+
+            <div class="blog_subtitle">Academic Integrity</div>
+
+            <p>Assignments are <strong>individual work</strong> which means that you will not be allowed to seek advice from other students or copy/paste someone else's code, even open source codes from the internet. However, you are allowed to look at online resources, tutorials, and Q&A websites over the course of solving the problems. The entire code must be written by yourself.</p>
+
+            <div class="blog_subtitle">What to submit</div>
+
+            <p>You can find the starter code <a href="../files/a3-starter-code.zip">here</a>. You must only modify <span class="quote">controller.js</span> and put all of your JS logic there. This is the only file you should submit as well. Similar to previous assignments, push this file to your repo for assignment 3 on Markus.
+            </p>
+
+            <p><b>Important:</b> You should not add new files or modify other files as the auto tester will ignore them. However, you can push the whole folder (including the other files) into your repo, if it is more convenient for you. The auto tester will take the controller.js file out and ignore all other files you have pushed.</p>
+            
+            <div class="blog_subtitle">JavaScript Syntax</div>
+
+            <p>You can use all the built-in tools and syntax that exist in JavaScript ES6 (ECMAScript 2015). Moreover, jQuery 3.6.0 is already included in the start code, and you could use that as well. </p>
+
+            <p>In all questions, you can use either the plain JS functions or jQuery functions (or both of them). However, you are <b>not allowed</b> to import any other library or package.</p>
+            <hr>
+            <div class="blog_subtitle"><strong>Can you validate me?</strong></div>
+
+            <p>You are given a signup form that inputs username, password (with its repeat), email, and phone. You are asked to provide the client-side validation for this form. That is, fields should be validated offline and in realtime. Validation criteria and errors are as follows. </p>
+
+            <ul class="tab_panel_bullets">
+              <li>Username must be at least six characters long and only consist of letters (lowercase or uppercase), digits, and underscore. If at least one of these conditions does not hold, display <span class="copy"><span>Username is invalid</span><i class="fa fa-copy" aria-hidden="true"></i></span></li>
+              <li>Password must be at least eight characters long, and it must include at least one digit, one lowercase letter, one uppercase letter, and one sign (i.e., a character from the set <code><span>!@#$%^&*</span> <i class="fa fa-copy" aria-hidden="true"></i></code>). Otherwise, show <span class="copy"><span>Password is invalid</span><i class="fa fa-copy" aria-hidden="true"></i></span></li>
+              <li>Repeat password must be equal to password. Otherwise, display <span class="copy"><span>Passwords don't match</span><i class="fa fa-copy" aria-hidden="true"></i></span></li>
+              <li>Email must be a valid email address. If not, put the error message <span class="copy"><span>Email is invalid</span><i class="fa fa-copy" aria-hidden="true"></i></span></li>
+              <li>Phone must follow the following format: <code>???-???-????</code>, where each ? is a digit. That is, three digits, followed by a dash, followed by three digits, another dash, and four more digits. Unsurprisingly, the error message for this field should be <span class="copy"><span>Phone is invalid</span><i class="fa fa-copy" aria-hidden="true"></i></span></li>
+            </ul>
+
+            <p>Note that in a real-world application, these validation errors are often very bad choices because they give so little information to the user about what is wrong with their current input. However, to make things easier for you, we did not choose more detailed errors!</p>
+
+            <div class="blog_subtitle">Validation</div>
+            <p>Each field must be validated <b>everytime</b> its value changes. Repeat password should <b>also</b> be validated if password changes. If there is an error with a field, you should turn the input background red and put the corresponding validation error inside the <code>&lt;p&gt;</code> element that directly follows the input in the HTML file. For example, username error should be display inside the element with ID <code>username_notification</code>, and so on. As soon as the error is resolved, the red background and the error message should disappear.</p>
+
+            <div class="blog_subtitle">The request</div>
+            <p>When the button is clicked, you must validate all fields before sending a request. If there is an error, put <span class="copy"><span>At least one field is invalid. Please correct it before proceeding</span><i class="fa fa-copy" aria-hidden="true"></i></span> inside the <code>&lt;p&gt;</code> element with ID <code>notification</code>. Also, the problematic fields should become red and their relevant error messages should be shown. If all fields are valid, send the following request:</p>
+
+            <ul class="tab_panel_bullets">
+              <li>
+                <strong>URL: </strong> <code><span>https://mcsapps.utm.utoronto.ca/csc309s22/a3/register</span> <i class="fa fa-copy" aria-hidden="true"></i></code>
+                <br>
+                <strong>Method:</strong> <code>POST</code>
+                <br>
+                <strong>Content type:</strong> <code>application/json</code> (Send a JSON string as the body of your request)
+                <br>
+                <strong>Payload:</strong> <code>username</code>, <code>password1</code>, <code>password2</code>, <code>email</code>, <code>phone</code>
+                <br>
+                <strong>Response codes:</strong>
+                <ul>
+                  <li>200 OK: display <span class="copy"><div>User added</div> <i class="fa fa-copy" aria-hidden="true"></i></span></li>
+                  <li>404 NOT FOUND: put <span class="copy"><div>Unknown error occurred</div><i class="fa fa-copy" aria-hidden="true"></i></span></li>
+                  <li>409 CONFLICT: print <span class="copy"><div>Username has already been taken</div><i class="fa fa-copy" aria-hidden="true"></i></span> inside the paragraph element mentioned above.</li>
+                </ul>
+              </li>
+            </ul>
+
+            <p><b>Note 1:</b>The request must be sent without a page reload. Moreover, make sure that the messages are exactly the same as quoted in this handout and are placed inside the right element. The auto tester will run a case-sensitive check and will deduct marks if there is a typo or any other difference.</p>
+
+            <p><b>Note 2:</b> If you implement everything correctly, you should <b>never</b> receive 404 NOT FOUND from the server. This error (and any other status code not listed above) means that there is something wrong with your request. </p>
+
+            <p>A screenshot is shown below to help you with how the error handling should like like</p>
+
+            <img src="../images/a3-form_123jlkxXXMME.png" width="400">
+            <hr>
+            <div class="blog_subtitle"><strong>First day at Amazon</strong></div>
+
+            <p>It's early 1994, and you just found your first job. It is an unknown startup with the weird name "Amazon". Amazon is supposed to be an online shopping platform. Even though the idea sounds so stupid as only a few people have access to internet, your boss, Jeff, believes that someday it will be the greatest company in the world. Jeff has just fired the CTO as they did not believe in JavaScript and insisted that it would go obsolete in a year or two. Now, Jeff relies on you to complete his <b>shopping cart</b> page. If you do so correctly, you will become the new CTO of this startup and receive a salary of $0 per month, as well as 10% of the company's worthless shares.</p>
+
+            <p>You must keep track of the user's shopping cart, which is a list of <code>Item</code> from <span class="quote">model.js</span>. When user clicks on <b>Add/Update item</b>, you should add (or update if already exists) an item inside its shopping cart and list the cart items in the bellow table (with ID <code>cart-items</code>). The &lt;tr&gt; that encloses the row should have an ID equal to the name of the item. However, since an ID cannot contain whitespaces, you must replace them with underscores. You can assume that item names will not contain underscores. </p>
+
+            <p> Each row must include the name, price, quantity, and total price (quantity times price) of an item. Also, there are three additional columns in which you should put a minus button (with class <code>decrease</code>), plus button (with class <code>increase</code>), and delete button (with class <code>delete</code>), respectively. The plus button increments the quantity of that item, while the minus button decrements it. The delete button removes the whole row from the table.</p>
+
+            <p>Everytime the cart updates, you should calculate the subtotal (sum of prices), taxes (a fixed 13% HST), and grand total (subtotal plus taxes). These values should be placed inside the &lt;b&gt; tags with ID's <code>subtotal</code>, <code>taxes</code>, and <code>grand_total</code>, respectively.</p>
+
+            <div class="blog_subtitle">Notes</div>
+            <ul class="tab_panel_bullets">
+            <li>The <b>Add/Update Item</b> button should be ignored unless all three fields are non-empty.</li>
+            <li>Quantity must never become negative. That is, if the user keeps pressing the minus button, quantity must stop at zero. Moreover, an item whose quantity is zero should still remain on the list as the user might change their mind later on. </li>
+            <li>You can assume that the user inputs a non-negative integer for quantity and a non-negative float with at most two decimal places for price. </li>
+            <li>All displayed numbers should be rounded to two decimal places.</li>
+              <li>Only put the numbers and refrain from adding the dollar sign ($) or commas (,). These make the auto tester mad.</li>
+              <li>Pay attention to the details of buttons and rows mentioned above. You must put the buttons in the exact mentioned order, and each must occupy one table cell. Also, you should make sure that your elements adhere to all specified classes and IDs. Failure to do so would cause a lot of confusion for the auto tester, and it will deduct your marks significantly. </li>
+            </ul>
+
+            <p><b>Add vs update:</b> Whenever the user clicked on <b>Add/Update Item</b>, if the item's name is not already present in its cart, you should create a new item and add a new row to the table. However, if there is already an item with the same name, you must update its price and quantity according to the new input. </p>
+
+            <p>The below screenshot is an example on how the cart should look like.</p>
+
+            <img src="../images/a3-cart-dejkldk@%23e4xsXKE.png" width="400">
+            <br>
+            <p>The HTML code for the first row should look like the following:</p>
+            <pre>
+&lt;tr id="Kinder_Chocolate_Single_Bars"&gt;
+  &lt;td&gt; Kinder Chocolate Single Bars &lt;/td&gt;
+  &lt;td&gt; 0.54 &lt;/td&gt;
+  &lt;td&gt; 36 &lt;/td&gt;
+  &lt;td&gt; 19.44 &lt;/td&gt;
+  &lt;td&gt; &lt;button class="decrease"&gt; - &lt;/button&gt; &lt;/td&gt;
+  &lt;td&gt; &lt;button class="increase"&gt; + &lt;/button&gt; &lt;/td&gt;
+  &lt;td&gt; &lt;button class="delete"&gt; delete &lt;/button&gt; &lt;/td&gt;
+&lt;/tr&gt;
+            </pre>
+            <hr>
+            <div class="blog_subtitle"><strong>Scroll to death</strong></div>
+
+            <p>Infinite scrolls brought about major changes in the way users interact with web/mobile applications. <b>Paginated</b> content, which is a list of items that is too big to render in one fetch, used to be broken down into <b>pages</b>. Each page would be fetched separately, and the user could move to the next or previous page. However, this requires an <b>active</b> action from the user (Clicking or touching the next page button). The solution here was to make it <b>seamless</b> so that the user would not need to actively make a decision about staying on the app or leaving it. Therefore, infinite scrolls came about. In other words, once you are <b>close enough</b> to the end of the page, the new page will be fetched and rendered so that you preferably don't even realize that you moved to a new page.</p>
+
+            <p>In this question, you are to implement such a scroll for pieces of text. When the page loads, you should fetch the first page (paragraphs 1 to 5), and everytime the user reaches the <b>bottom</b> of the page, you should fetch and render the next page (basically the next five items). When there is no more content to show, you should tell the user that they have reached the end. </p>
+
+            <div class="blog_subtitle">Rendering instructions</div>
+
+            <p>You should render all paragraphs inside the <code>&lt;div&gt;</code> with ID <code>data</code>. Each paragraph must be wrapped with a &lt;div&gt; with ID <code>paragraph_&lt;number&gt;</code>. Paragraph's <b>content</b> should then follow as a child &lt;p&gt; element. At the end of the paragraph, print <span class="copy"><span>(Paragraph: &lt;number&gt;)</span><i class="fa fa-copy" aria-hidden="true"></i></span> in <b>bold</b>. After the paragraph, render a button with class <code>like</code> that shows the current number of <b>likes</b> for that paragraph. When that button is clicked, you must send a request to the server to add a new like. Upon server's response, you should extract the new number of likes and replace the current number with that. You can refer to the screenshot at the end of the question as an example. </p>
+
+            <p>If the response indicates that there is no more page to show, add a new paragraph whose content is the following text in bold (wrapped by the &lt;b&gt; tag): <span class="copy"><span>You have reached the end</span><i class="fa fa-copy" aria-hidden="true"></i></span>. From that point on, you should not send any additional requests to the server for the next pages.</p>
+
+            <div class="blog_subtitle">APIs</div>
+
+            <ul class="tab_panel_bullets">
+              <li>
+                <strong>URL: </strong><code><span>https://mcsapps.utm.utoronto.ca/csc309s22/a3/text/data?paragraph=&lt;number&gt;</span> <i class="fa fa-copy" aria-hidden="true"></i></code>
+                <br>
+                <strong>Method:</strong> <code>GET</code>
+                <br>
+                <strong>Payload:</strong> <code>paragraph</code>, <code>likes</code>, <code>content</code>
+                <br>
+                <strong>Example response:</strong>
+                <br>
+                <pre>
+{"data":[
+  {"paragraph": 1, "likes": 70, "content": "some long text...."},
+  {"paragraph": 2, "likes": 35, "content": "some very long text..."},
+  {"paragraph": 3, "likes": 0, "content": "another long text. come on you can imagine it."},
+  {"paragraph": 4, "likes": 0, "content": "please be patient until I show you some long text"},
+  {"paragraph": 5, "likes": 0, "content": "technical problems stop me from being successful"}
+], "next": true
+}
+                </pre>
+                <strong>Note 1:</strong> The server returns the page that starts with paragraph number sent in the query parameters. For example, if <code>number</code> is set to 6, the server returns paragraphs 6 to 10 (inclusive). The first paragraph is <b>paragraph 1</b> (not paragraph 0).
+                <br>
+                <strong>Note 2:</strong> The value associated with "next" indicates if there is more data to come. In this example, <code>true</code> means that at least the paragraph number 6 exists. Therefore, you must fetch the next page when the user reaches the end of the page.
+              </li>
+              <hr>
+              <li>
+                <strong>URL: </strong><code><span>https://mcsapps.utm.utoronto.ca/csc309s22/a3/text/likes </span><i class="fa fa-copy" aria-hidden="true"></i> </code>
+                <br>
+                <strong>Method:</strong> <code>POST</code>
+                <br>
+                <strong>Content type:</strong> <code>application/json</code>
+                <br>
+                <strong>Payload:</strong> <code>paragraph</code> (the paragraph number)
+                <br>
+                <strong>Example response:</strong>
+                <pre>
+{"data": {"likes": 77}}
+                </pre>
+              </li>
+            </ul>
+
+            <p><b>Note:</b> be careful that you precisely follow the rendering instructions above as the auto tester will look for the exact set of elements described. A screenshot of the list and the corresponding elements is shown below. Note that the picture is only meant to show you the structure of the elements and their respective classes and IDs. So the actual data you receive from the server might be different.</p>
+            <p><b>Note 2:</b> do not forget to set the proper ID for the &lt;div&gt; that encloses each paragraph. Also, remember to add class "like" to your like buttons.</p>
+            <br>
+            <img src="../images/a3-scroll_!@%23JMXMX%23332KSD.png" width="600">
+          </div>
+
+          <!-- Comments -->
+          <div class="comments_container">
+            <h3>Comments</h3>
+            <ul class="comments_list">
+              <li>
+                <div class="comment_item d-flex flex-row align-items-start jutify-content-start">
+                  <div class="comment_content">
+                    <div class="comment_title_container d-flex flex-row align-items-center justify-content-start">
+                      <div class="comment_author"><a href="#" onclick="return false">Justin</a></div>
+                      <div class="comment_rating"><div class="rating_r rating_r_5"><i></i><i></i><i></i><i></i><i></i></div></div>
+                      <div class="comment_time ml-auto" id="date1"></div>
+                    </div>
+                    <div class="comment_text">
+                      <p>This is my fourth time taking CSC309, and inarguably, this is the best assignment I've ever seen.<br>
+                        Problems are so accurately designed that anyone with their own knowledge and experience have their own takeaways.<br>
+                        I hope next assignments will be this good, too!
+                      </p>
+                    </div>
+                    <div class="comment_extras d-flex flex-row align-items-center justify-content-start">
+                      <div class="comment_extra comment_likes"><a href="#" onclick="return false"><i class="fa fa-thumbs-up" aria-hidden="true"></i><span>108</span></a></div>
+                      <div class="comment_extra comment_reply"><a href="#" onclick="return false"><i class="fa fa-pencil-square" aria-hidden="true"></i><span>Reply</span></a></div>
+                    </div>
+                  </div>
+                </div>
+                <ul>
+                  <li>
+                    <div class="comment_item d-flex flex-row align-items-start jutify-content-start">
+                      <div class="comment_content">
+                        <div class="comment_title_container d-flex flex-row align-items-center justify-content-start">
+                          <div class="comment_author"><a href="#" onclick="return false">Kianoosh</a></div>
+                          <div class="comment_time ml-auto" id="date2"></div>
+                          <script>document.getElementById("date1").innerHTML = new Date().toDateString();
+                          document.getElementById("date2").innerHTML = new Date().toDateString();
+                          </script>
+
+                        </div>
+                        <div class="comment_text">
+                          <p>Thanks bro!</p>
+                        </div>
+                        <div class="comment_extras d-flex flex-row align-items-center justify-content-start">
+                          <div class="comment_extra comment_likes"><a href="#" onclick="return false"><i class="fa fa-thumbs-up" aria-hidden="true"></i><span>36</span></a></div>
+                          <div class="comment_extra comment_reply"><a href="#" onclick="return false"><i class="fa fa-pencil-square" aria-hidden="true"></i><span>Reply</span></a></div>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+            <div class="add_comment_container">
+              <div class="add_comment_title">Write a comment</div>
+              <div class="add_comment_text">Your email address will not be published. Required fields are marked *</div>
+              <form action="#" class="comment_form">
+                <div>
+                  <div class="form_title">Review*</div>
+                  <textarea class="comment_input comment_textarea" required="required"></textarea>
+                </div>
+                <div class="row">
+                  <div class="col-md-6 input_col">
+                    <div class="form_title">Name*</div>
+                    <input type="text" class="comment_input" required="required">
+                  </div>
+                  <div class="col-md-6 input_col">
+                    <div class="form_title">Email*</div>
+                    <input type="text" class="comment_input" required="required">
+                  </div>
+                </div>
+                <div class="comment_notify">
+                  <input type="checkbox" id="checkbox_notify" name="regular_checkbox" class="regular_checkbox checkbox_account" checked>
+                  <label for="checkbox_notify"><i class="fa fa-check" aria-hidden="true"></i></label>
+                  <span>Notify me of new posts by email</span>
+                </div>
+                <div>
+                  <script>
+                    function fakesubmit() {
+                      alert("Thank you so much for writing your feedback.\n\nAs you may already have guessed, your feedback is neither saved nor sent anywhere. In fact, no one will ever even know that you wrote such feedback. " +
+                              "The reason is that it is not possible for this website to store and present such stuff. Throughout this course, you will learn why.\n\n" +
+                              "Now, please copy your feedback to piazza or email it to me or a TA :)")
+                    }
+                  </script>
+                  <button type="submit" onclick="fakesubmit()" class="comment_button trans_200">submit</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+
+        <!-- Blog Sidebar -->
+        <div class="col-lg-4">
+          <div class="sidebar">
+
+            <!-- Feature -->
+            <div class="sidebar_section">
+              <div class="sidebar_section_title">Course Links</div>
+              <div class="sidebar_feature">
+
+                <!-- Features -->
+                <div class="feature_list">
+
+                  <!-- Feature -->
+                  <div class="feature d-flex flex-row align-items-center justify-content-start">
+                    <div class="feature_title"><i class="fa fa-calendar" aria-hidden="true"></i><span>Schedule</span></div>
+                    <div class="feature_text ml-auto"><a href="https://calendar.google.com/calendar/u/0?cid=NWY2Zm5ia2NhZHQ0bTQyajdjamlkMnJkMzhAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ">Google Calendar</a></div>
+                  </div>
+
+                  <!-- Feature -->
+                  <div class="feature d-flex flex-row align-items-center justify-content-start">
+                    <div class="feature_title"><i class="fa fa-question-circle-o" aria-hidden="true"></i><span>Announcement - Q&A</span></div>
+                    <div class="feature_text ml-auto"><a href="https://piazza.com/utoronto.ca/winter2022/csc309">Piazza</a></div>
+                  </div>
+
+                  <!-- Feature -->
+                  <div class="feature d-flex flex-row align-items-center justify-content-start">
+                    <div class="feature_title"><i class="fa fa-address-book" aria-hidden="true"></i><span>Submissions</span></div>
+                    <div class="feature_text ml-auto"><a href="http://mcsmark.utm.utoronto.ca/csc309s22">Markus</a></div>
+                  </div>
+
+                  <!-- Feature -->
+                  <div class="feature d-flex flex-row align-items-center justify-content-start">
+                    <div class="feature_title"><i class="fa fa-table" aria-hidden="true"></i><span>Informal chat</span></div>
+                    <div class="feature_text ml-auto"><a href="https://discord.gg/VGFQN62EeY">Discord</a></div>
+                  </div>
+
+                  <!-- Feature -->
+                  <div class="feature d-flex flex-row align-items-center justify-content-start">
+                    <div class="feature_title"><i class="fa fa-flask" aria-hidden="true"></i><span>Lab sessions</span></div>
+                    <div class="feature_text ml-auto"><a href="https://utoronto.zoom.us/s/84959059534">Zoom</a></div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+
+            <!-- Feature -->
+            <div class="sidebar_section">
+              <div class="sidebar_section_title">Grading breakdown</div>
+              <div class="sidebar_feature">
+
+                <!-- Features -->
+                <div class="feature_list">
+
+                  <!-- Feature -->
+                  <div class="feature d-flex flex-row align-items-center justify-content-start">
+                    <div class="feature_title"><i class="fa fa-pencil-square-o" aria-hidden="true"></i><span>Can you validate me?</span></div>
+                    <div class="feature_text ml-auto">5 pts</div>
+                  </div>
+
+                  <div class="feature d-flex flex-row align-items-center justify-content-start">
+                    <div class="feature_title"><i class="fa fa-pencil-square-o" aria-hidden="true"></i><span>First day at Amazon</span></div>
+                    <div class="feature_text ml-auto">5 pts</div>
+                  </div>
+
+                  <div class="feature d-flex flex-row align-items-center justify-content-start">
+                    <div class="feature_title"><i class="fa fa-pencil-square-o" aria-hidden="true"></i><span>Scroll to death</span></div>
+                    <div class="feature_text ml-auto">5 pts</div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+
+  <footer class="footer">
+    <div class="container">
+      <div class="row copyright_row">
+        <div class="col">
+          <div class="copyright d-flex flex-lg-row flex-column align-items-center justify-content-start">
+            <div class="cr_text"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+              Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+              <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+</div>
+
+<script src="../../js/jquery-3.2.1.min.js"></script>
+<script src="../../styles/bootstrap4/popper.js"></script>
+<script src="../../styles/bootstrap4/bootstrap.min.js"></script>
+<script src="../../plugins/colorbox/jquery.colorbox-min.js"></script>
+<script src="../../js/handout.js?v=1.2"></script>
+</body>
+</html>
