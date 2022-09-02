@@ -237,5 +237,10 @@ $(document).ready(function()
 	})
 
 	$(function () {
+		let options = {
+			weekday: "long", year: "numeric", month: "short",
+			day: "numeric", hour: "2-digit", minute: "2-digit"
+		};
+		$("#due-date2").html(new Date(dueDate).toLocaleDateString("en-us", options	))
 	})
 });

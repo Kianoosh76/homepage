@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Assignment 2: Django</title>
+  <title>Assignment 3: Django</title>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="description" content="CSC309: Programming on the Web - Fall 2022">
@@ -9,8 +9,8 @@
 
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://www.cs.toronto.edu/~kianoosh/courses/csc309/handouts/a2.html">
-  <meta property="og:title" content="Assignment 2: Django">
+  <meta property="og:url" content="https://www.cs.toronto.edu/~kianoosh/courses/csc309/handouts/a3.html">
+  <meta property="og:title" content="Assignment 3: Django">
   <meta property="og:description" content="CSC309: Programming on the Web - Fall 2022">
   <meta property="og:image" content="https://www.cs.toronto.edu/~kianoosh/courses/csc309/images/card.png">
 
@@ -78,7 +78,7 @@
               <ul>
                 <li><a href="../../">Home</a></li>
                 <li><a href="#">handouts</a></li>
-                <li>Assignment 2</li>
+                <li>Assignment 3</li>
               </ul>
             </div>
           </div>
@@ -96,10 +96,10 @@
         <!-- Blog Content -->
         <div class="col-lg-8">
           <div class="blog_content">
-            <div class="blog_title">Assignment 2: Django</div>
+            <div class="blog_title">Assignment 3: Django</div>
             <div class="blog_meta">
               <ul>
-                <li>Due date: <span id="due-date">Fri February 25, 2022 23:59:00</span></li>
+                <li>Due date: <span id="due-date">Sun October 30, 2022 22:00</span></li>
                 <li><span id="remaining-time"></span> remaining</li>
               </ul>
             </div>
@@ -116,8 +116,10 @@
             <div class="blog_subtitle">Notes</div>
 
             <ul class="tab_panel_bullets">
-              <li>This assignment will make up 15% of your final grade.</li>
-              <li>The due date is <strong>Friday, February 25th at 23:59:00</strong>. Late submissions will incur a 15% penalty per day for a maximum of 3 days.</li>
+              <li>This assignment will make up 20% of your final grade.</li>
+              <li>The due date is <strong id="due-date2"></strong>. Late submissions of <code>x</code> hours (starting from 1) will deduct following percentage from your grades.<br>
+                <img width="150" style="margin-left: 10em" src="../images/penalty-decay.png" alt="0.0002 * x ^ 3.06">
+              </li>
               <li>If you have any questions or problems with the assignment, please post them on Piazza.</li>
               <li>Your submissions will be mostly auto-graded. Therefore, your code must adhere to all details provided in the handout; otherwise, you might lose marks.</li>
               <li>You will not receive any feedback from the auto grader before the deadline has passed. So it is your responsibility to double-check your code with the handout before submission. Even minor spelling mistakes can lead to loss of marks. No remark requests will be accepted on these matters.</li>
@@ -126,7 +128,7 @@
             <div class="blog_subtitle">Submission</div>
 
             <p>You should submit your work to your git repository on Markus. That is, you cannot submit through its normal web interface.
-              Instead, commit and push your codes to your repository and the corresponding folder for assignment 2. Find out your repo's URL by logging into Markus. Also, do not leave your commits to the <strong>final minutes</strong> before the deadline.
+              Instead, commit and push your codes to your repository and the corresponding folder for assignment 3. Find out your repo's URL by logging into Markus. Also, do not leave your commits to the <strong>final minutes</strong> before the deadline.
               </p>
 
             <div class="blog_subtitle">Academic Integrity</div>
@@ -136,7 +138,7 @@
 
             <div class="blog_subtitle">What to submit</div>
 
-            <p>You must push your entire Django project to your repo. That includes migrations files, manage.py, and templates. Do not push your database (db.sqlite3) or virtual environment, as the tester will ignore them. Instead, put those on the gitignore file.
+            <p>You must push your entire Django project to your repo. That includes migrations files, manage.py, and templates. Do not push your database (db.sqlite3). Instead, put it on the gitignore file.
 
             <p>Please carefully follow the instructions in the upcoming sections on creating the Django project, the list of apps, and what packages to install. Also, do not change any default configuration at settings.py (except for <code>INSTALLED_APPS</code> and <code>ALLOWED_HOSTS</code> that are described later on) as it may confuse the tester. </p>
             <p><b>Please be very careful that you exactly copy/paste the error messages, URLs, and field names. The auto tester will look for the exact matches, and even slight mis-spellings or lowercase/uppercase problems will lead to loss of marks. This time, no exceptions will be considered.</b> For your help, copy buttons are attached to long error messages and URLs. However, they do <b>not</b> indicate the complete list of strings that must exactly match the handout.</p>
@@ -154,9 +156,9 @@
 
             <div class="blog_subtitle">Creating the project</div>
 
-            <p>Create a virtual environment with Python 3.8, 3.9, or 3.10. <strong>Only</strong> install Django version 4.0.1 or 4.0.2 in your environment. It is the <b>only</b> package the auto tester will install, and your code will not run if you have used other external packages.</p>
+            <p>If you are using your own computer, run your coded with Python 3.8, 3.9, or 3.10 and Django version 4.1. You are <b>not</b> allowed to use any additional packages. Therefore, your code will not run if you have used other external packages.</p>
 
-            <p>Follow the instructions from the lectures to create a Django project named <strong>a2</strong> (lowercase). Create two apps: <strong>accounts</strong> and <strong>banks</strong>. Do not forget to append the app names to <code>INSTALLED_APPS</code> at <span class="quote">settings.py</span>. You are to create two models: Bank and Branch. </p>
+            <p>Follow the instructions from the lectures to create a Django project named <strong>a3</strong> (lowercase). Create two apps: <strong>accounts</strong> and <strong>banks</strong>. Do not forget to append the app names to <code>INSTALLED_APPS</code> at <span class="quote">settings.py</span>. You are to create two models: Bank and Branch. </p>
 
             <p>A bank has a name, swift code, institution number, and description. All of them are strings that do not exceed 200 characters and cannot be null. Moreover, each bank has an owner that points to Django's User model. A bank also has a set of <strong>branches</strong>.</p>
 
@@ -500,32 +502,46 @@
 
                   <!-- Feature -->
                   <div class="feature d-flex flex-row align-items-center justify-content-start">
-                    <div class="feature_title"><i class="fa fa-calendar" aria-hidden="true"></i><span>Schedule</span></div>
-                    <div class="feature_text ml-auto"><a href="https://calendar.google.com/calendar/u/0?cid=NWY2Zm5ia2NhZHQ0bTQyajdjamlkMnJkMzhAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ">Google Calendar</a></div>
+                    <div class="feature_title">
+                      <i class="fa fa-question-circle-o" aria-hidden="true"></i>
+                      <span>Announcement - Q&amp;A</span>
+                    </div>
+                    <div class="feature_text ml-auto">
+                      <a href="https://piazza.com/utoronto.ca/fall2022/csc309">Piazza</a>
+                    </div>
                   </div>
 
                   <!-- Feature -->
                   <div class="feature d-flex flex-row align-items-center justify-content-start">
-                    <div class="feature_title"><i class="fa fa-question-circle-o" aria-hidden="true"></i><span>Announcement - Q&A</span></div>
-                    <div class="feature_text ml-auto"><a href="https://piazza.com/utoronto.ca/winter2022/csc309">Piazza</a></div>
+                    <div class="feature_title">
+                      <i class="fa fa-address-book" aria-hidden="true"></i>
+                      <span>Submissions</span>
+                    </div>
+                    <div class="feature_text ml-auto">
+                      <a href="">Markus</a>
+                    </div>
                   </div>
 
                   <!-- Feature -->
                   <div class="feature d-flex flex-row align-items-center justify-content-start">
-                    <div class="feature_title"><i class="fa fa-address-book" aria-hidden="true"></i><span>Submissions</span></div>
-                    <div class="feature_text ml-auto"><a href="http://mcsmark.utm.utoronto.ca/csc309s22">Markus</a></div>
+                    <div class="feature_title">
+                      <i class="fa fa-slideshare" aria-hidden="true"></i>
+                      <span>Informal chat</span>
+                    </div>
+                    <div class="feature_text ml-auto">
+                      <a href="https://discord.gg/6RgTVxYzyA">Discord</a>
+                    </div>
                   </div>
 
                   <!-- Feature -->
                   <div class="feature d-flex flex-row align-items-center justify-content-start">
-                    <div class="feature_title"><i class="fa fa-table" aria-hidden="true"></i><span>Informal chat</span></div>
-                    <div class="feature_text ml-auto"><a href="https://discord.gg/VGFQN62EeY">Discord</a></div>
-                  </div>
-
-                  <!-- Feature -->
-                  <div class="feature d-flex flex-row align-items-center justify-content-start">
-                    <div class="feature_title"><i class="fa fa-flask" aria-hidden="true"></i><span>Lab sessions</span></div>
-                    <div class="feature_text ml-auto"><a href="https://utoronto.zoom.us/s/84959059534">Zoom</a></div>
+                    <div class="feature_title">
+                      <i class="fa fa-microphone" aria-hidden="true"></i>
+                      <span>Interviews and grades</span>
+                    </div>
+                    <div class="feature_text ml-auto">
+                      <a href="https://csc309.teach.cs.toronto.edu/">IBS</a>
+                    </div>
                   </div>
 
                 </div>

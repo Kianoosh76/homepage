@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
-  <title>Assignment 3: JavaScript</title>
+  <title>Assignment 2: JavaScript</title>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="description" content="CSC309: Programming on the Web - Fall 2022">
@@ -9,8 +9,8 @@
 
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://www.cs.toronto.edu/~kianoosh/courses/csc309/handouts/a3.html">
-  <meta property="og:title" content="Assignment 3: JavaScript">
+  <meta property="og:url" content="https://www.cs.toronto.edu/~kianoosh/courses/csc309/handouts/a2.html">
+  <meta property="og:title" content="Assignment 2: JavaScript">
   <meta property="og:description" content="CSC309: Programming on the Web - Fall 2022">
   <meta property="og:image" content="https://www.cs.toronto.edu/~kianoosh/courses/csc309/images/card.png">
 
@@ -79,7 +79,7 @@
               <ul>
                 <li><a href="../../">Home</a></li>
                 <li><a href="#">handouts</a></li>
-                <li>Assignment 3</li>
+                <li>Assignment 2</li>
               </ul>
             </div>
           </div>
@@ -97,10 +97,10 @@
         <!-- Blog Content -->
         <div class="col-lg-8">
           <div class="blog_content">
-            <div class="blog_title">Assignment 3: JavaScript</div>
+            <div class="blog_title">Assignment 2: JavaScript</div>
             <div class="blog_meta">
               <ul>
-                <li>Due date: <span id="due-date">Fri March 25, 2022 23:59:00</span></li>
+                <li>Due date: <span id="due-date">Sun Oct 16, 2022 22:00</span></li>
                 <li><span id="remaining-time"></span> remaining</li>
               </ul>
             </div>
@@ -118,7 +118,9 @@
 
             <ul class="tab_panel_bullets">
               <li>This assignment will make up 15% of your final grade.</li>
-              <li>The due date is <strong>Friday, March 25th at 23:59:00</strong>. Late submissions will incur a 15% penalty per day for a maximum of 3 days.</li>
+              <li>The due date is <strong id="due-date2"></strong>.. Late submissions of <code>x</code> hours (starting from 1) will deduct following percentage from your grades.<br>
+                <img width="150" style="margin-left: 10em" src="../images/penalty-decay.png" alt="0.0002 * x ^ 3.06">
+              </li>
               <li>If you have any questions or problems with the assignment, please post them on Piazza.</li>
               <li>Most of your submission will be auto graded. Therefore, your code must adhere to all details provided in the handout; otherwise, you might lose marks.</li>
               <li>You will not receive any feedback from the auto grader before the deadline has passed. So it is your responsibility to double-check your code with the handout before submission. Even minor spelling mistakes can lead to loss of marks. No remark requests will be accepted on these matters.</li>
@@ -127,7 +129,7 @@
             <div class="blog_subtitle">Submission</div>
 
             <p>You should submit your work to your git repository on Markus. That is, you cannot submit through its normal web interface.
-              Instead, commit and push your codes to your repository for assignment 3. You can still see your grades. Find out your repo's url by logging into Markus. Also, do not leave your commits to the <strong>very last minutes</strong> before the deadline.
+              Instead, commit and push your codes to your repository for assignment 2. You can still see your grades. Find out your repo's url by logging into Markus. Also, do not leave your commits to the <strong>very last minutes</strong> before the deadline.
               </p>
 
             <div class="blog_subtitle">Academic Integrity</div>
@@ -136,7 +138,7 @@
 
             <div class="blog_subtitle">What to submit</div>
 
-            <p>You can find the starter code <a href="../files/a3-starter-code.zip">here</a>. You must only modify <span class="quote">controller.js</span> and put all of your JS logic there. This is the only file you should submit as well. Similar to previous assignments, push this file to your repo for assignment 3 on Markus.
+            <p>You can find the starter code <a href="../files/a2-starter-code.zip">here</a>. You must only modify <span class="quote">controller.js</span> and put all of your JS logic there. This is the only file you should submit as well. Similar to previous assignments, push this file to your repo for assignment 2 on Markus.
             </p>
 
             <p><b>Important:</b> You should not add new files or modify other files as the auto tester will ignore them. However, you can push the whole folder (including the other files) into your repo, if it is more convenient for you. The auto tester will take the controller.js file out and ignore all other files you have pushed.</p>
@@ -169,7 +171,7 @@
 
             <ul class="tab_panel_bullets">
               <li>
-                <strong>URL: </strong> <code><span>https://mcsapps.utm.utoronto.ca/csc309s22/a3/register</span> <i class="fa fa-copy" aria-hidden="true"></i></code>
+                <strong>URL: </strong> <code><span>https://csc309.teach.cs.toronto.edu/a2/register</span> <i class="fa fa-copy" aria-hidden="true"></i></code>
                 <br>
                 <strong>Method:</strong> <code>POST</code>
                 <br>
@@ -192,7 +194,7 @@
 
             <p>A screenshot is shown below to help you with how the error handling should like like</p>
 
-            <img src="../images/a3-form_123jlkxXXMME.png" width="400">
+            <img src="../images/a2-form.png" width="400">
             <hr>
             <div class="blog_subtitle"><strong>First day at Amazon</strong></div>
 
@@ -218,7 +220,7 @@
 
             <p>The below screenshot is an example on how the cart should look like.</p>
 
-            <img src="../images/a3-cart-dejkldk@%23e4xsXKE.png" width="400">
+            <img src="../images/a2-cart.png" width="400">
             <br>
             <p>The HTML code for the first row should look like the following:</p>
             <pre>
@@ -249,7 +251,7 @@
 
             <ul class="tab_panel_bullets">
               <li>
-                <strong>URL: </strong><code><span>https://mcsapps.utm.utoronto.ca/csc309s22/a3/text/data?paragraph=&lt;number&gt;</span> <i class="fa fa-copy" aria-hidden="true"></i></code>
+                <strong>URL: </strong><code><span>https://csc309.teach.cs.toronto.edu/a2/text/data?paragraph=&lt;number&gt;</span> <i class="fa fa-copy" aria-hidden="true"></i></code>
                 <br>
                 <strong>Method:</strong> <code>GET</code>
                 <br>
@@ -273,7 +275,7 @@
               </li>
               <hr>
               <li>
-                <strong>URL: </strong><code><span>https://mcsapps.utm.utoronto.ca/csc309s22/a3/text/likes </span><i class="fa fa-copy" aria-hidden="true"></i> </code>
+                <strong>URL: </strong><code><span>https://csc309.teach.cs.toronto.edu/a2/text/likes </span><i class="fa fa-copy" aria-hidden="true"></i> </code>
                 <br>
                 <strong>Method:</strong> <code>POST</code>
                 <br>
@@ -291,7 +293,7 @@
             <p><b>Note:</b> be careful that you precisely follow the rendering instructions above as the auto tester will look for the exact set of elements described. A screenshot of the list and the corresponding elements is shown below. Note that the picture is only meant to show you the structure of the elements and their respective classes and IDs. So the actual data you receive from the server might be different.</p>
             <p><b>Note 2:</b> do not forget to set the proper ID for the &lt;div&gt; that encloses each paragraph. Also, remember to add class "like" to your like buttons.</p>
             <br>
-            <img src="../images/a3-scroll_!@%23JMXMX%23332KSD.png" width="600">
+            <img src="../images/a2-scroll.png" width="600">
           </div>
 
           <!-- Comments -->
@@ -395,32 +397,46 @@
 
                   <!-- Feature -->
                   <div class="feature d-flex flex-row align-items-center justify-content-start">
-                    <div class="feature_title"><i class="fa fa-calendar" aria-hidden="true"></i><span>Schedule</span></div>
-                    <div class="feature_text ml-auto"><a href="https://calendar.google.com/calendar/u/0?cid=NWY2Zm5ia2NhZHQ0bTQyajdjamlkMnJkMzhAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ">Google Calendar</a></div>
+                    <div class="feature_title">
+                      <i class="fa fa-question-circle-o" aria-hidden="true"></i>
+                      <span>Announcement - Q&amp;A</span>
+                    </div>
+                    <div class="feature_text ml-auto">
+                      <a href="https://piazza.com/utoronto.ca/fall2022/csc309">Piazza</a>
+                    </div>
                   </div>
 
                   <!-- Feature -->
                   <div class="feature d-flex flex-row align-items-center justify-content-start">
-                    <div class="feature_title"><i class="fa fa-question-circle-o" aria-hidden="true"></i><span>Announcement - Q&A</span></div>
-                    <div class="feature_text ml-auto"><a href="https://piazza.com/utoronto.ca/winter2022/csc309">Piazza</a></div>
+                    <div class="feature_title">
+                      <i class="fa fa-address-book" aria-hidden="true"></i>
+                      <span>Submissions</span>
+                    </div>
+                    <div class="feature_text ml-auto">
+                      <a href="">Markus</a>
+                    </div>
                   </div>
 
                   <!-- Feature -->
                   <div class="feature d-flex flex-row align-items-center justify-content-start">
-                    <div class="feature_title"><i class="fa fa-address-book" aria-hidden="true"></i><span>Submissions</span></div>
-                    <div class="feature_text ml-auto"><a href="http://mcsmark.utm.utoronto.ca/csc309s22">Markus</a></div>
+                    <div class="feature_title">
+                      <i class="fa fa-slideshare" aria-hidden="true"></i>
+                      <span>Informal chat</span>
+                    </div>
+                    <div class="feature_text ml-auto">
+                      <a href="https://discord.gg/6RgTVxYzyA">Discord</a>
+                    </div>
                   </div>
 
                   <!-- Feature -->
                   <div class="feature d-flex flex-row align-items-center justify-content-start">
-                    <div class="feature_title"><i class="fa fa-table" aria-hidden="true"></i><span>Informal chat</span></div>
-                    <div class="feature_text ml-auto"><a href="https://discord.gg/VGFQN62EeY">Discord</a></div>
-                  </div>
-
-                  <!-- Feature -->
-                  <div class="feature d-flex flex-row align-items-center justify-content-start">
-                    <div class="feature_title"><i class="fa fa-flask" aria-hidden="true"></i><span>Lab sessions</span></div>
-                    <div class="feature_text ml-auto"><a href="https://utoronto.zoom.us/s/84959059534">Zoom</a></div>
+                    <div class="feature_title">
+                      <i class="fa fa-microphone" aria-hidden="true"></i>
+                      <span>Interviews and grades</span>
+                    </div>
+                    <div class="feature_text ml-auto">
+                      <a href="https://csc309.teach.cs.toronto.edu/">IBS</a>
+                    </div>
                   </div>
 
                 </div>
