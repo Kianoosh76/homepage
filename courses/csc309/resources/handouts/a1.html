@@ -188,7 +188,8 @@
                   <li>A checkbox where users can give consent: the label should be located to the right of the checkbox and equal to <span class="copy"><span>You agree to receive emails from me</span><i class="fa fa-copy" aria-hidden="true"></i></span>.</li>
                   <li>A submit button with the text <span class="copy"><span>Send Feedback</span><i class="fa fa-copy" aria-hidden="true"></i></span>.</li>
                   <li><strong>Note 1: </strong>Labels must be implemented via the label tag. <strong>Leaving plain text near the input is not accepted.</strong> </li>
-                  <li><strong>Note 2: </strong> All fields are mandatory. After the user fills out the form and clicks the button, a POST request would be sent with payload <code>{email: …, feedback: …, attachments: …, consent: yes}</code></li>
+                  <li><strong>Note 2: </strong> All fields are mandatory. After the user fills out the form and clicks the button, a POST request should be sent with payload <code>{email: …, feedback: …, attachments: …, consent: yes}</code> to the IBS system at <code><span>https://csc309.teach.cs.toronto.edu/a1/submit/</span> <i class="fa fa-copy" aria-hidden="true"></i></code>. </li>
+                  <li><strong>Note 3: </strong> The server simply acknowledges the request and payload you sent. It might give you an error response if your request is malformed. However, it is still <b>your responsibility</b> to ensure that you are sending the correct request at all times, and the server is just a helper tool.</li>
                 </ul>
                 </li>
               <li>Last year's <a href="https://axiom.utm.utoronto.ca/~csc309/21s/syllabus/20211_CSC309H5S_LEC9102.pdf">course syllabus</a> as an embedded pdf file.</li>
@@ -203,7 +204,7 @@
             </ul>
 
             <p>Note that your HTML file must NOT contain any style or scripts, either inline or from a file (except for the style.css file you will create in the next question). Any text surrounded by <strong>double quotations</strong>
-              must be exactly copied to your file, as the auto tester will run a case-sensitive check.</p>
+              must be exactly copied to your file, as the auto tester will run a case-sensitive check. You can put additional elements (div, span, etc.) in your file, but make sure that you follow the format above. </p>
 
             <p><strong>Important</strong>: make sure that you <a href="https://validator.w3.org">validate</a> your file before submitting it. The tester might not work properly if your file is malformed.</p>
 
