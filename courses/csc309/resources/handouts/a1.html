@@ -188,7 +188,7 @@
                   <li>A checkbox where users can give consent: the label should be located to the right of the checkbox and equal to <span class="copy"><span>You agree to receive emails from me</span><i class="fa fa-copy" aria-hidden="true"></i></span>.</li>
                   <li>A submit button with the text <span class="copy"><span>Send Feedback</span><i class="fa fa-copy" aria-hidden="true"></i></span>.</li>
                   <li><strong>Note 1: </strong>Labels must be implemented via the label tag. <strong>Leaving plain text near the input is not accepted.</strong> </li>
-                  <li><strong>Note 2: </strong> All fields are mandatory. After the user fills out the form and clicks the button, a POST request should be sent with payload <code>{email: …, feedback: …, attachments: …, consent: yes}</code> to the IBS system at <code><span>https://csc309.teach.cs.toronto.edu/a1/submit/</span> <i class="fa fa-copy" aria-hidden="true"></i></code>. </li>
+                  <li><strong>Note 2: </strong> All fields are mandatory. After the user fills out the form and clicks the button, a POST request should be sent with payload <code>{feedback: …, email: …, attachments: …, consent: yes}</code> to the IBS system at <code><span>https://csc309.teach.cs.toronto.edu/a1/submit/</span> <i class="fa fa-copy" aria-hidden="true"></i></code>. </li>
                   <li><strong>Note 3: </strong> The server simply acknowledges the request and payload you sent. It might give you an error response if your request is malformed. However, it is still <b>your responsibility</b> to ensure that you are sending the correct request at all times, and the server is just a helper tool.</li>
                 </ul>
                 </li>
