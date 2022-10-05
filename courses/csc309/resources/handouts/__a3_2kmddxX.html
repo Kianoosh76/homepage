@@ -242,7 +242,7 @@
                 <br>
                 <strong>Fields:</strong> <code>id</code>, <code>username</code>, <code>email</code>, <code>first_name</code>, <code>last_name</code>
                 <br>
-                <strong>Description:</strong> Return a JSON string with the above fields, disclosing data on the logged-in user.
+                <strong>Description:</strong> Return a <a href="https://en.wikipedia.org/wiki/JSON">JSON</a> string with the above fields, disclosing data on the logged-in user.
                 <br>
                 <strong>Example response:</strong><pre>{"id": 1, "username": "Demon", "email": "demon@gmail.com", "first_name": "", "last_name": ""}</pre>
               </li>
@@ -319,7 +319,7 @@
 
             <div class="blog_subtitle"><strong>JSON is all you ever need</strong></div>
 
-            <p>In this question, you will create two views that return JSON responses. One of them returns the info of a specific branch, and the other returns <strong>all</strong> branches belonging to a specific bank. Note that these views should be accessible by everyone, even unauthenticated requests. Also, if the given ID is not associated with any bank or branch, you should return a 404 NOT FOUND response.</p>
+            <p>In this question, you will create two views that return <a href="https://en.wikipedia.org/wiki/JSON">JSON</a> responses. One of them returns the info of a specific branch, and the other returns <strong>all</strong> branches belonging to a specific bank. Note that these views should be accessible by everyone, even unauthenticated requests. Also, if the given ID is not associated with any bank or branch, you should return a 404 NOT FOUND response.</p>
 
             <ul class="tab_panel_bullets">
               <li>
@@ -374,27 +374,6 @@
                 <br>
                 <strong>Description:</strong> An HTML response must be returned that contains the information of a specific bank (or a 404 NOT FOUND if it does not exist). The information to be shown are the bank <b>name</b> (wrapped by an &lt;h1&gt;), its <b>swift code</b>, <b>institution number</b>, and <b>description</b>.
                 <br>
-              </li>
-              <hr>
-              <li>
-                <strong>Endpoint: </strong> <code><span>/banks/branch/&lt;branch_id&gt;/edit/</span> <i class="fa fa-copy" aria-hidden="true"></i></code>
-                <br>
-                <strong>Methods:</strong> <code>GET</code>, <code>POST</code>
-                <br>
-                <strong>View class:</strong> <code>UpdateView</code>
-                <br>
-                <strong>Authenticated:</strong> YES (return 401 UNAUTHORIZED otherwise)
-                <br>
-                <strong>Fields/payload:</strong> <code>name</code>, <code>transit_num</code>, <code>address</code>, <code>email</code>, <code>capacity</code>
-                <br>
-                <strong>Success URL:</strong> <code><span>/banks/branch/&lt;branch_id&gt;/details/</span> <i class="fa fa-copy" aria-hidden="true"></i></code>
-                <br>
-                <strong>Validation errors:</strong>
-                <ul>
-                  <li><div class="copy"><div>This field is required </div><i class="fa fa-copy" aria-hidden="true"></i></div> (for all fields except for capacity)</li>
-                  <li><div class="copy"><div>Enter a valid email address</div><i class="fa fa-copy" aria-hidden="true"></i></div></li>
-                </ul>
-                <strong>Additional notes:</strong> The form must be pre-filled with the current values of the branch instance. Moreover, the branch's bank is not changeable; hence it should not be a part of the form. The user must be the <strong>owner</strong> of the corresponding bank; otherwise, a 403 FORBIDDEN response must be returned (both GET and POST). In other words, users must not be able to modify someone else's branches.
               </li>
             </ul>
 
@@ -559,27 +538,27 @@
                   <!-- Feature -->
                   <div class="feature d-flex flex-row align-items-center justify-content-start">
                     <div class="feature_title"><i class="fa fa-pencil-square-o" aria-hidden="true"></i><span>As simple as Auth!</span></div>
-                    <div class="feature_text ml-auto">10 pts</div>
+                    <div class="feature_text ml-auto">20 pts</div>
                   </div>
 
                   <div class="feature d-flex flex-row align-items-center justify-content-start">
                     <div class="feature_title"><i class="fa fa-pencil-square-o" aria-hidden="true"></i><span>Profilers</span></div>
-                    <div class="feature_text ml-auto">15 pts</div>
+                    <div class="feature_text ml-auto">30 pts</div>
                   </div>
 
                   <div class="feature d-flex flex-row align-items-center justify-content-start">
                     <div class="feature_title"><i class="fa fa-pencil-square-o" aria-hidden="true"></i><span>If you know forms, you know.</span></div>
-                    <div class="feature_text ml-auto">15 pts</div>
+                    <div class="feature_text ml-auto">20 pts</div>
                   </div>
 
                   <div class="feature d-flex flex-row align-items-center justify-content-start">
                     <div class="feature_title"><i class="fa fa-pencil-square-o" aria-hidden="true"></i><span>JSON is all you ever need</span></div>
-                    <div class="feature_text ml-auto">5 pts</div>
+                    <div class="feature_text ml-auto">10 pts</div>
                   </div>
 
                   <div class="feature d-flex flex-row align-items-center justify-content-start">
                     <div class="feature_title"><i class="fa fa-pencil-square-o" aria-hidden="true"></i><span>Wrong Crawd!</span></div>
-                    <div class="feature_text ml-auto">15 pts</div>
+                    <div class="feature_text ml-auto">20 pts</div>
                   </div>
 
 
