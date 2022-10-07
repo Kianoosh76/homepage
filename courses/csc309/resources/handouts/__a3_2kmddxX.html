@@ -104,11 +104,11 @@
               </ul>
             </div>
             <div class="blog_subtitle">Objectives</div>
-            <p>In this assignment, you will create a small Django application. Since it's an educational assignment, many details and nuances have been simplified for you. For example, the overall app structure, views, and URLs will be set out for you in this handout. The overall goal is to obtain an initial experience at backend development and Django so that you will be prepared for Project phase 2.</p>
+            <p>In this assignment, you will create a small Django application. Since it is an educational assignment, many details and nuances have been simplified for you. For example, the overall app structure, views, and URLs will be set out for you in this handout. The overall goal is to obtain an initial experience at backend development and Django so that you will be prepared for the project.</p>
 
-            <p>Note that even though what was taught in the lectures is enough "knowledge" to cover this assignment, it's quite possible
+            <p>Note that even though what was taught in the lectures is enough "knowledge" to cover this assignment, it is quite possible
             that some specific views, functions, and tricks are not covered in the lectures. There are millions of features in web
-            programming, and it's really impossible to teach them all in a lecture.</p>
+            programming, and it is really impossible to teach them all in a lecture.</p>
 
             <p>Therefore, you are welcome to refer to the slides or online resources to lookup for specific things. However, please be mindful that
             you will not violate academic integrity, as explained later on.</p>
@@ -121,8 +121,11 @@
                 <img width="150" style="margin-left: 10em" src="../images/penalty-decay.png" alt="0.0002 * x ^ 3.06">
               </li>
               <li>If you have any questions or problems with the assignment, please post them on Piazza.</li>
-              <li>Your submissions will be mostly auto-graded. Therefore, your code must adhere to all details provided in the handout; otherwise, you might lose marks.</li>
+              <li>Your submissions will be auto-graded. Therefore, your code must adhere to all details provided in the handout; otherwise, you might lose marks.</li>
+              <li>It is recommended that you run your server on a machine that runs Ubuntu 20.04 or 18.04. Running your server on Windows is strongly discouraged, as you are risking that your code may not run correctly on the target environment. </li>
+              <li>It is crucially important for the auto-tester that your server returns the <b>exact same strings</b> as in the handout (exact case, number of whitespaces, punctuation marks, etc.). Therefore, please use the copy buttons to copy-paste the text from their boxes. Do <b>not</b> re-type them on your own. This applies to all error messages, URLs, and field names as well. </li>
               <li>You will not receive any feedback from the auto grader before the deadline has passed. So it is your responsibility to double-check your code with the handout before submission. Even minor spelling mistakes can lead to loss of marks. No remark requests will be accepted on these matters.</li>
+              <li>Some questions of this assignment are prerequisites for others. For example, if the auto-tester is unable to register a new user or log it in, it cannot test any other functionality as they require a signed-in user. Moreover, if the user cannot create a bank, all tests related to banks and branches will fail. The pre-tester will help you ensure that most dependencies will work.</li>
             </ul>
 
             <div class="blog_subtitle">Submission</div>
@@ -133,7 +136,7 @@
 
             <div class="blog_subtitle">Academic Integrity</div>
 
-            <p>Assignments are <strong>individual work</strong> which means that you will not be allowed to seek advice from other students or copy/paste someone else's code, even open-source codes from the internet. However, you are allowed to look at online resources, tutorials, and Q&A websites over the course of solving the problems. The entire code must be written by yourself.</p>
+            <p>Assignments are <strong>individual work</strong> which means that you are not allowed to seek advice from other students or copy/paste someone else's code, even open-source codes from the internet. However, you are allowed to look at online resources, tutorials, and Q&A websites over the course of solving the problems. The entire code must be written by yourself.</p>
 
 
             <div class="blog_subtitle">What to submit</div>
@@ -141,34 +144,78 @@
             <p>You must push your entire Django project to your repo. That includes migrations files, manage.py, and templates. Do not push your database (db.sqlite3). Instead, put it on the gitignore file.
 
             <p>Please carefully follow the instructions in the upcoming sections on creating the Django project, the list of apps, and what packages to install. Also, do not change any default configuration at settings.py (except for <code>INSTALLED_APPS</code> and <code>ALLOWED_HOSTS</code> that are described later on) as it may confuse the tester. </p>
-            <p><b>Please be very careful that you exactly copy/paste the error messages, URLs, and field names. The auto tester will look for the exact matches, and even slight mis-spellings or lowercase/uppercase problems will lead to loss of marks. This time, no exceptions will be considered.</b> For your help, copy buttons are attached to long error messages and URLs. However, they do <b>not</b> indicate the complete list of strings that must exactly match the handout.</p>
 
-            <p><strong>Warning</strong>: The tester runs your code in a clean environment. So it's crucial to make sure that your migrations are <strong>correct and runnable</strong>. You can move your database file to another folder and run <code>./manage.py migrate</code> to check if it works. If your migrations don't work or your server fails to start, the auto tester will not be able to test your code, and you will not get <strong>any marks</strong>.</p>
+            <p><strong>Warning</strong>: The tester runs your code in a clean environment. So you must make sure that your migrations are <strong>correct and runnable</strong>. You can move your database file to another folder and run <code>./manage.py migrate</code> to check if it works. If your migrations do not work, or your server fails to start, the auto-tester will not be able to test your code, and you will not get <strong>any marks</strong>.</p>
 
-            <div class="blog_subtitle">Virtual machine</div>
-
-            <p>A <a href="https://piazza.com/class/kwh095qkvqb2a8?cid=163">virtual machine</a> has already been offered to you. It is the environment in which the auto tester will run your code. So, to avoid unexpected issues, you are advised to use that environment to run your code. However, you are allowed to work on other operating systems and environments as well, but <b>at your own risk</b>. It is crucially important for you to at least double-check your whole project in that virtual machine before submitting it. Therefore, if, for any reason, your code does not run, you will not get any marks.</p>
-
-            <p><b>Important Note:</b> If you downloaded the virtual machine before <b>Feb. 15th</b>, make sure you read instructions listed <a href="https://piazza.com/class/kwh095qkvqb2a8?cid=244">here</a> to install additional packages. Moreover, to access your website, you might need to modify <code>ALLOWED_HOSTS</code> in <span class="quote">settings.py</span>. More information can be found <a href="https://piazza.com/class/kwh095qkvqb2a8?cid=163">here</a> at the bottom of the page.</p>
             <div class="blog_subtitle">Pre-tester</div>
 
-            <p>For your help, a pre-tester is given to you that runs some basic checks on your project. For example, it checks the endpoints and sends some simple requests to them. Before submitting, you might want to run the pre-tests and make sure that all of them pass. However, note that the pre-tests include a very small set of test cases, and passing them <b>will not guarantee</b> full or even partial marks at final tests. They are only provided to you to avoid losing marks because of simple differences in endpoints or fields. However, you are still responsible for making sure that all your endpoints, fields, and error messages exactly match the handout. You can find the instructions on running the pre-tests <a href="https://piazza.com/class/kwh095qkvqb2a8?cid=242">here</a>.</p>
+            <p>For your help, a pre-tester is given to you that runs some basic checks on your project. For example, it checks the endpoints and sends some simple requests to them. Before submitting, you might want to run the pre-tests and make sure that all of them pass. However, note that the pre-tests include a very small set of test cases, and passing them <b>will not guarantee</b> full or even partial marks at final tests. They are only provided to help you avoid losing marks because of simple discrepancies in endpoints or fields. However, you are still responsible for making sure that all your endpoints, fields, and error messages exactly match the handout. You can find the instructions on running the pre-tests <a href="">here</a>.</p>
 
             <div class="blog_subtitle">Creating the project</div>
 
-            <p>If you are using your own computer, run your coded with Python 3.8, 3.9, or 3.10 and Django version 4.1. You are <b>not</b> allowed to use any additional packages. Therefore, your code will not run if you have used other external packages.</p>
+            <p>Run your coded with Python 3.8, 3.9, or 3.10 and Django version 4.1. You are <b>not</b> allowed to use any additional packages. The auto-tester can not run your server if you have used other external packages.</p>
 
-            <p>Follow the instructions from the lectures to create a Django project named <strong>a3</strong> (lowercase). Create two apps: <strong>accounts</strong> and <strong>banks</strong>. Do not forget to append the app names to <code>INSTALLED_APPS</code> at <span class="quote">settings.py</span>. You are to create two models: Bank and Branch. </p>
+            <p>Create a Django project named <strong>A3</strong> (uppercase) in the directory that belongs to this assignment. Create two apps: <strong>accounts</strong> and <strong>banks</strong>. Note that your project should <b>not</b> start from a stand-alone A3 directory inside the original A3 directory of your repository. In other words, your repository should initially look like the following: </p>
 
-            <p>A bank has a name, swift code, institution number, and description. All of them are strings that do not exceed 200 characters and cannot be null. Moreover, each bank has an owner that points to Django's User model. A bank also has a set of <strong>branches</strong>.</p>
+            <pre>
+              .
+├── A1
+├── A2
+└── A3
+    ├── A3
+    │   ├── __init__.py
+    │   ├── asgi.py
+    │   ├── settings.py
+    │   ├── urls.py
+    │   └── wsgi.py
+    ├── accounts
+    │   ├── __init__.py
+    │   ├── admin.py
+    │   ├── apps.py
+    │   ├── migrations
+    │   │   └── __init__.py
+    │   ├── models.py
+    │   ├── tests.py
+    │   └── views.py
+    ├── banks
+    │   ├── __init__.py
+    │   ├── admin.py
+    │   ├── apps.py
+    │   ├── migrations
+    │   │   └── __init__.py
+    │   ├── models.py
+    │   ├── tests.py
+    │   └── views.py
+    ├── db.sqlite3
+    └── manage.py
+
+            </pre>
+
+            <p>Then, make the following changes to <span class="quote">settings.py</span>:</p>
+
+            <ul class="tab_panel_bullets">
+              <li>Append the two app names to <code>INSTALLED_APPS</code>.</li>
+              <li>Remove <code>'django.middleware.csrf.CsrfViewMiddleware'</code> from <code>MIDDLEWARE</code> to disable CSRF checking. Otherwise, the pre-tester and auto-tester cannot send any POST requests.</li>
+              <li>If you are running the server on a computer other than your local machine, you can update <code>ALLOWED_HOSTS</code> accordingly. You do not need to revert it before submitting.</li>
+            </ul>
+
+            <p> You are to create two models: Bank and Branch. A bank has a name, swift code, institution number, and description. All of them are strings that do not exceed 200 characters and cannot be null. Moreover, each bank has an owner that points to Django's User model. A bank also has a set of <strong>branches</strong>.</p>
 
             <p>A branch has a name, transit number, and address, all of which are strings that do not exceed 200 characters and cannot be null. Moreover, every branch has an email (with its specific validations) which is by default set to <code><span>admin@utoronto.ca</span> <i class="fa fa-copy" aria-hidden="true"></i></code>. Each branch has a capacity (non-negative integer) that could be left unspecified. It should also have <strong>last_modified</strong>, a field that stores the last modification time. The primary key for both models must remain the default auto-incrementing integers. </p>
 
-            <div class="blog_subtitle">General note on forms</div>
+            <div class="blog_subtitle">General behavior of forms</div>
 
-            <p> For every <strong>endpoint</strong>, every time a URL is associated with both GET and POST, the following rule applies: The GET request expects an HTML form with the fields listed by the <strong>payload</strong>. That is, each payload field must appear as an &lt;input&gt; with the appropriate type and name.</p><p> Upon submission, a POST request should be sent to the same endpoint. If data is valid, the specific task should be fulfilled, and the user is redirected to the <strong>success URL</strong>. Otherwise, the same form must be rendered with relevant error messages listed in <strong>validation errors</strong>. Note that all user inputs (except for password) must be <strong>preserved</strong> so that the user will not have to re-enter everything again.</p>
-            <p>Furthermore, input types must adhere to the original field type of their models. For example, the password fields should be rendered with <code>&lt;input type="password"&gt;</code>; email fields should be rendered <code>&lt;input type="email"&gt;</code> and so on. However, note that this (or adding the required attribute to the form) is merely for UX purposes and has nothing to do with your backend. That is, your backend code must still check for the required fields and validations.</p>
-            <p><b>Note</b>: Your code must be resilient to invalid/malicious requests. For example, the client might intentionally discard some fields and not send them (note that this is different from sending empty or blank values). Moreover, it can send additional fields that are not listed. In either case, your code must not break. That is, the server should not return a 500 INTERNAL SERVER ERROR. Instead, it should treat missing values as blanks and ignore extra fields. </p>
+            <p> The following general rules applies to every <strong>endpoint</strong> that accepts both GET and POST methodsL:</p>
+
+            <ul class="tab_panel_bullets">
+              <li>The GET request expects an HTML form with the fields listed by <strong>payload</strong>. That is, each payload field must appear as an &lt;input&gt; with the appropriate type and name.</li>
+              <li>Upon submission, a POST request should be sent to the same endpoint. If data is valid, the specified task should be fulfilled, and the user is redirected to the <strong>success URL</strong>. Otherwise, the same form must be rendered with relevant error messages listed in <strong>validation errors</strong>.</li>
+              <li>In case of invalid data, all user inputs (except for passwords) must be <strong>preserved</strong> so that the user will not have to re-enter everything again.</li>
+              <li>Input types must adhere to the original field type of their models. For example, the password fields should be rendered with <code>&lt;input type="password"&gt;</code>, email fields should be rendered <code>&lt;input type="email"&gt;</code>, etc.</li>
+              <li>The above rule (or, in general, adding attributes to the form) is merely for UX purposes and has nothing to do with your backend. That is, your backend code must still check for the required fields and validations.</li>
+            </ul>
+
+            <p><b>Note</b>: Your code must be resilient towards invalid/malicious requests. For example, the client might intentionally discard some fields and not send them (note that this is different from sending empty or blank values). Moreover, it can send additional fields that are not listed. In either case, your code must not break. Instead, it should treat missing values as blanks and ignore extra fields. </p>
 
             <div class="blog_subtitle">HTTP status codes</div>
 
@@ -179,7 +226,7 @@
 
             <p>You will start off with the authentication views. You are to implement views for register, login, and logout. You are very well allowed to use the default <strong>User</strong> model in Django. In fact, you are strongly advised <strong>against</strong> creating your own custom auth model as it may mess with Django's default User model. Moreover, why bother yourselves?</p>
 
-              <p>In this question, you are allowed to use function-based, class-based views, or generic CRUD views. You can also use any built-in tool that is already provided by Django.</p>
+              <p>In this question, you are allowed to use function-based, class-based views, or CRUD views. You can also use any built-in tool that is already provided by Django.</p>
 
             <ul class="tab_panel_bullets">
               <li>
@@ -199,7 +246,7 @@
                   <li><div class="copy"><div>Enter a valid email address</div><i class="fa fa-copy" aria-hidden="true"></i></div></li>
                   <li>Username, password, and repeat password are required. If empty, show the following error above the problematic field: <div class="copy"><div>This field is required</div><i class="fa fa-copy" aria-hidden="true"></i></div></li>
                 </ul>
-                <strong>Additional notes:</strong> In our tests, no field will be more than 120 characters long.
+                <strong>Additional notes:</strong> Only <code>username</code>, <code>password1</code>, and <code>password2</code> are required. The other fields are optional. Moreover, no field will be more than 120 characters long in our tests.
               </li>
             </ul>
             <hr>
@@ -227,7 +274,7 @@
                 <br>
                 <strong>Methods:</strong> <code>GET</code>
                 <br>
-                <strong>Description:</strong> Log the user's session out of Django. If the user is unauthenticated, simply ignore the request. In either case, return a redirect to <code>/accounts/login</code>
+                <strong>Description:</strong> Log the user's session out of Django. If the user is unauthenticated, simply ignore the request. In either case, return a redirect to <code>/accounts/login/</code>
               </li>
             </ul>
             <hr>
@@ -242,7 +289,7 @@
                 <br>
                 <strong>Fields:</strong> <code>id</code>, <code>username</code>, <code>email</code>, <code>first_name</code>, <code>last_name</code>
                 <br>
-                <strong>Description:</strong> Return a <a href="https://en.wikipedia.org/wiki/JSON">JSON</a> string with the above fields, disclosing data on the logged-in user.
+                <strong>Description:</strong> Return a <a href="https://en.wikipedia.org/wiki/JSON">JSON</a> string with the above fields, disclosing data of the logged-in user. Note that your response should <b>not</b> contain return any HTML at all.
                 <br>
                 <strong>Example response:</strong><pre>{"id": 1, "username": "Demon", "email": "demon@gmail.com", "first_name": "", "last_name": ""}</pre>
               </li>
@@ -265,12 +312,13 @@
                   <li><div class="copy"><div>Enter a valid email address</div><i class="fa fa-copy" aria-hidden="true"></i></div></li>
                 </ul>
 
-                <strong>Additional notes:</strong> At GET requests, the form (except for the password fields) must be already filled out with the current user's values. At the POST request, if <code>password1</code> is empty, it means that the user did not want to change its password. Therefore, <code>password2</code> should be ignored, and no changes will be made to the user's password.
+                <strong>Note 1:</strong> At GET requests, the form (except for the password fields) must be already filled out with the current user's values. At the POST requests, no field is required. If any field is empty or missing, the corresponding value should be updated to empty, with the only exception of <code>password1</code>. If <code>password1</code> is empty, it means that the user did not want to change its password; therefore, <code>password2</code> should be ignored, and no changes will be made to the user's password.<br>
+                <strong>Note 2:</strong> The redirect should show the user's info without having to log in again.
               </li>
             </ul>
             <hr>
             <div class="blog_subtitle"><strong>If you know forms, you know.</strong></div>
-            <p>Now, let's move to the banks app. You will implement two important forms; one for creating a new bank and another one for creating a new branch. Note that, in this question, you are <strong>not allowed</strong> to use function-based views. Instead, your views must be subclasses of <code>FormView</code>. Moreover, you should create a <strong>forms</strong> directory in your app and put a Form (or ModelForm) class for each view there. If you do not follow that rule, you will not get any marks for this question. </p>
+            <p>Now, let us move to the banks app. You will implement two important forms; one for creating a new bank and another one for creating a new branch. Note that, in this question, you are <strong>not allowed</strong> to use function-based views. Instead, your views must be subclasses of <code>FormView</code>. Moreover, you should create a <strong>forms</strong> directory in your app and put a Form class for each view there. If you do not follow that rule, you will not get any marks for this question. </p>
 
             <p>Moreover, the below views are <b>login required</b>. If the request is unauthenticated, a 401 UNAUTHORIZED response must be returned.</p>
 
@@ -289,7 +337,7 @@
                   <li><div class="copy"><div>This field is required</div><i class="fa fa-copy" aria-hidden="true"></i></div></li>
                 </ul>
 
-                <strong>Additional notes:</strong> Your code must infer the owner of the new account from the current user logged in to the session. Therefore, you <strong>must not</strong> include an owner field in your form. Moreover, <code>bank_id</code> is the ID of the newly-created bank.
+                <strong>Additional notes:</strong> Your code must infer the owner of the new account from the current logged-in user of the session. Therefore, you <strong>must not</strong> include an owner field in your form. Moreover, <code>bank_id</code> is the ID of the newly-created bank.
               </li>
               <hr>
               <li>
@@ -317,9 +365,39 @@
             </ul>
             <hr>
 
-            <div class="blog_subtitle"><strong>JSON is all you ever need</strong></div>
+            <div class="blog_subtitle"><strong>Wrong Crawd!</strong></div>
 
-            <p>In this question, you will create two views that return <a href="https://en.wikipedia.org/wiki/JSON">JSON</a> responses. One of them returns the info of a specific branch, and the other returns <strong>all</strong> branches belonging to a specific bank. Note that these views should be accessible by everyone, even unauthenticated requests. Also, if the given ID is not associated with any bank or branch, you should return a 404 NOT FOUND response.</p>
+            <p>Now, it is time for some CRUD views. You are only allowed to use the specified class for each endpoint. Note that these views should be accessible by everyone, even unauthenticated requests. </p>
+
+            <ul class="tab_panel_bullets">
+              <li>
+                <strong>Endpoint: </strong> <code><span>/banks/all/</span> <i class="fa fa-copy" aria-hidden="true"></i></code>
+                <br>
+                <strong>Methods:</strong> <code>GET</code>
+                <br>
+                <strong>View class:</strong> <code>ListView</code>
+                <br>
+                <strong>Description:</strong> An HTML response must be returned that lists all banks. The page should show the <b>ID</b> and the <b>name</b> of each bank in an unordered list.
+                <br>
+              </li>
+              <hr>
+              <li>
+                <strong>Endpoint: </strong> <code><span>/banks/&lt;bank_id&gt;/details/</span> <i class="fa fa-copy" aria-hidden="true"></i></code>
+                <br>
+                <strong>Methods:</strong> <code>GET</code>
+                <br>
+                <strong>View class:</strong> <code>DetailView</code>
+                <br>
+                <strong>Description:</strong> An HTML response must be returned that contains the information of a specific bank (or a 404 NOT FOUND if it does not exist). The information to be shown is the bank <b>name</b> (wrapped by an &lt;h1&gt;), its <b>swift code</b>, <b>institution number</b>, and <b>description</b>.
+                <br>
+              </li>
+            </ul>
+
+          <hr>
+
+            <div class="blog_subtitle"><strong>JSON is better, isn't it?</strong></div>
+
+            <p>Finally, you will create two views that return <a href="https://en.wikipedia.org/wiki/JSON">JSON</a> responses (i.e., the entire HTTP response is a JSON string). One of them returns the info of a specific branch, and the other returns <strong>all</strong> branches belonging to a specific bank. Similar to the previous question, these views do <b>not</b> required a logged-in user. Also, if the given ID is not associated with any bank or branch, you should return a 404 NOT FOUND response.</p>
 
             <ul class="tab_panel_bullets">
               <li>
@@ -343,42 +421,11 @@
                 <strong>Example response:</strong> <br><pre>[{"id": 1, "name": "jkl", "transit_num": "12", "address": "jlk", "email": "admin@utoronto.ca", "capacity": 12, "last_modified": "2022-01-08T22:30:40.419Z"}]</pre>
                 <br>
               </li>
-              <hr>
             </ul>
-            <div class="blog_subtitle"><strong>Wrong Crawd!</strong></div>
-
-            <p>Finally, it's time for some generic views. You are only allowed to use the specified class for each endpoint. The views entail reading or modification of a model object. </p>
-
-            <ul class="tab_panel_bullets">
-              <li>
-                <strong>Endpoint: </strong> <code><span>/banks/all/</span> <i class="fa fa-copy" aria-hidden="true"></i></code>
-                <br>
-                <strong>Methods:</strong> <code>GET</code>
-                <br>
-                <strong>View class:</strong> <code>ListView</code>
-                <br>
-                <strong>Authenticated:</strong> NO
-                <br>
-                <strong>Description:</strong> An HTML response must be returned that lists all banks. The page should show the <b>ID</b> and the <b>name</b> of each bank in an ordered or unordered list.
-                <br>
-              </li>
-              <hr>
-              <li>
-                <strong>Endpoint: </strong> <code><span>/banks/&lt;bank_id&gt;/details/</span> <i class="fa fa-copy" aria-hidden="true"></i></code>
-                <br>
-                <strong>Methods:</strong> <code>GET</code>
-                <br>
-                <strong>View class:</strong> <code>DetailView</code>
-                <br>
-                <strong>Authenticated:</strong> NO
-                <br>
-                <strong>Description:</strong> An HTML response must be returned that contains the information of a specific bank (or a 404 NOT FOUND if it does not exist). The information to be shown are the bank <b>name</b> (wrapped by an &lt;h1&gt;), its <b>swift code</b>, <b>institution number</b>, and <b>description</b>.
-                <br>
-              </li>
-            </ul>
-
-          </div>
           <hr>
+          </div>
+
+
 
           <!-- Comments -->
           <div class="comments_container">
@@ -388,18 +435,18 @@
                 <div class="comment_item d-flex flex-row align-items-start jutify-content-start">
                   <div class="comment_content">
                     <div class="comment_title_container d-flex flex-row align-items-center justify-content-start">
-                      <div class="comment_author"><a href="#" onclick="return false">Justin</a></div>
+                      <div class="comment_author"><a href="#" onclick="return false">Fred</a></div>
                       <div class="comment_rating"><div class="rating_r rating_r_5"><i></i><i></i><i></i><i></i><i></i></div></div>
                       <div class="comment_time ml-auto" id="date1"></div>
                     </div>
                     <div class="comment_text">
-                      <p>This is my fourth time taking CSC309, and inarguably, this is the best assignment I've ever seen.<br>
+                      <p>This is my sixth time taking CSC309, and inarguably, this is the best assignment I've ever seen.<br>
                         Problems are so accurately designed that anyone with their own knowledge and experience have their own takeaways.<br>
                         I hope next assignments will be this good, too!
                       </p>
                     </div>
                     <div class="comment_extras d-flex flex-row align-items-center justify-content-start">
-                      <div class="comment_extra comment_likes"><a href="#" onclick="return false"><i class="fa fa-thumbs-up" aria-hidden="true"></i><span>108</span></a></div>
+                      <div class="comment_extra comment_likes"><a href="#" onclick="return false"><i class="fa fa-thumbs-up" aria-hidden="true"></i><span>2</span></a></div>
                       <div class="comment_extra comment_reply"><a href="#" onclick="return false"><i class="fa fa-pencil-square" aria-hidden="true"></i><span>Reply</span></a></div>
                     </div>
                   </div>
@@ -420,7 +467,7 @@
                           <p>Thanks bro!</p>
                         </div>
                         <div class="comment_extras d-flex flex-row align-items-center justify-content-start">
-                          <div class="comment_extra comment_likes"><a href="#" onclick="return false"><i class="fa fa-thumbs-up" aria-hidden="true"></i><span>36</span></a></div>
+                          <div class="comment_extra comment_likes"><a href="#" onclick="return false"><i class="fa fa-thumbs-up" aria-hidden="true"></i><span>1</span></a></div>
                           <div class="comment_extra comment_reply"><a href="#" onclick="return false"><i class="fa fa-pencil-square" aria-hidden="true"></i><span>Reply</span></a></div>
                         </div>
                       </div>
@@ -538,29 +585,28 @@
                   <!-- Feature -->
                   <div class="feature d-flex flex-row align-items-center justify-content-start">
                     <div class="feature_title"><i class="fa fa-pencil-square-o" aria-hidden="true"></i><span>As simple as Auth!</span></div>
-                    <div class="feature_text ml-auto">20 pts</div>
+                    <div class="feature_text ml-auto">5 pts</div>
                   </div>
 
                   <div class="feature d-flex flex-row align-items-center justify-content-start">
                     <div class="feature_title"><i class="fa fa-pencil-square-o" aria-hidden="true"></i><span>Profilers</span></div>
-                    <div class="feature_text ml-auto">30 pts</div>
+                    <div class="feature_text ml-auto">15 pts</div>
                   </div>
 
                   <div class="feature d-flex flex-row align-items-center justify-content-start">
                     <div class="feature_title"><i class="fa fa-pencil-square-o" aria-hidden="true"></i><span>If you know forms, you know.</span></div>
-                    <div class="feature_text ml-auto">20 pts</div>
-                  </div>
-
-                  <div class="feature d-flex flex-row align-items-center justify-content-start">
-                    <div class="feature_title"><i class="fa fa-pencil-square-o" aria-hidden="true"></i><span>JSON is all you ever need</span></div>
                     <div class="feature_text ml-auto">10 pts</div>
                   </div>
 
                   <div class="feature d-flex flex-row align-items-center justify-content-start">
                     <div class="feature_title"><i class="fa fa-pencil-square-o" aria-hidden="true"></i><span>Wrong Crawd!</span></div>
-                    <div class="feature_text ml-auto">20 pts</div>
+                    <div class="feature_text ml-auto">5 pts</div>
                   </div>
 
+                  <div class="feature d-flex flex-row align-items-center justify-content-start">
+                    <div class="feature_title"><i class="fa fa-pencil-square-o" aria-hidden="true"></i><span>JSON is better, isn't it?</span></div>
+                    <div class="feature_text ml-auto">5 pts</div>
+                  </div>
 
 
                 </div>
