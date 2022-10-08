@@ -214,7 +214,7 @@ $(document).ready(function()
 	}
 
 	$("i.fa-copy").click(function(){
-		const text = $(this).prev().html().replace("&lt;", "<").replace("&gt;", ">").trim();
+		const text = $(this).prev().html().replace("&lt;", "<").replace("&gt;", ">").replace("&amp;", "&").trim();
 		const obj = this;
 
 		const success = function() {
