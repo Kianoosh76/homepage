@@ -141,7 +141,7 @@
 
                         <div class="blog_subtitle">Environment</div>
 
-                        <p>TODO</p>
+                        <p>Your code must run in an Ubuntu 20.04 machine that has python 3.10 and virtualenv already installed. It is fine if you are developing your code on other environments, although Windows is not encouraged. However, you <b>must</b> make sure that your server and scripts (described later) run without any problem on Ubuntu 20.04 before submitting. The teach.cs accounts are good examples of such environments.</p>
 
                         <div class="blog_subtitle">Participation</div>
 
@@ -194,29 +194,28 @@
                         </ul>
 
                         <hr>
-                        <div class="blog_subtitle"><b>part 1 deliverables</b></div>
+                        <div class="blog_subtitle"><b>Part 1 deliverables</b></div>
 
-                        <p>TBD</p>
+                        <p>In this part, you will implement the Django backend for the project. All the admin user stories must be implemented in the Django <b>admin panel</b>, which saves your effort and time significantly. Refer to the <a href="https://docs.djangoproject.com/en/4.1/ref/contrib/admin/">docs</a> for a full list of options and tools provided in the admin panel. Django's admin panel is so powerful, and you will be able to implement all the admin user stories using it. All other user stories are implemented with one or more REST APIs. Your APIs should not have any template or HTML response. The project should run in a <b>virtual environment</b>, with all the packages listed in the requirements file. Ideally, your backend server should not go through many changes at the next part (this will not happen in practice).
+                        </p>
 
-<!--                        <p>For part 1, you are to implement most of the HTML/CSS of your project. Your final deliverable for this website is a <b>static demo</b> of Restify. Your codes should only consist of HTML and CSS files, without any backend/frontend servers. You should not implement any JS logic at this part, except for JS files that are imported from external sources. Also, note that you will need to refactor your files when you migrate to React at part 3. You can find an example of static demos <a href="https://preview.colorlib.com/#summit">here</a>. A static demo showcases the design of the pages by filling them up with some random test data. Forms and buttons do not send any request, but the links point to various pages included in the application.</p>-->
+                        <p>You should implement proper authentication and authorization for the user stories as well.</p>
 
-<!--                        <p>Using a CSS framework (e.g., Bootstrap, Semantic, Bulma) is strongly recommended as plain CSS will take enormous hours to implement and debug. However, since it is a static website at this stage, you cannot use any frontend framework, including any React-dependent CSS framework. </p>-->
+                        <p><b>Note 1:</b> As potentially ambiguous as the handout gets, you can ask your questions on Piazza or discuss them with TAs at mentor sessions. </p>
+
+                        <p><b>Note 2:</b> It is recommended that you replace the Django's default User model with a custom model that meets the requirements of this handout. Your new model can extend the default one, or have a one-to-one relation with it. <a href="https://docs.djangoproject.com/en/4.1/topics/auth/customizing/#substituting-a-custom-user-model">These instructions</a> helps Django recognize your custom model as the auth model so that all User-specific functionalities (sessions, tokens, etc.) still work. </p>
+
+                        <p><b>Note 3:</b> All API views that return a potentially long list of items (e.g., list of studios, classes, comments, etc.) must be <b>paginated</b> so that a reasonable amount of data is returned in one response. Read more information <a href="https://www.django-rest-framework.org/api-guide/pagination/">here</a>. </p>
+
+                        <div class="blog_subtitle"><b>What to submit</b></div>
+
+                        <p>You should push your entire Django project to your repo, accompanied by a <span class="quote">startup.sh</span> script, a <span class="quote">run.sh</span> script, and a <span class="quote">docs.pdf</span> file. These files should be located in the root folder of your repository.</p>
+
+                        <p>The <b>startup</b> should run any preparation needed for your code to run in a new environment. It should create the virtual environment, install all required packages with pip, and run all migrations. The <b>run</b> script should start your server. Finally, your documentation must include your design of models, as well as the full list of all API endpoints, a short <b>description</b>, their methods, and the payloads. You can use packages that automatically generate the API docs from your code. The TA will send requests based on the information you provide on that document. Therefore, it is important to have a usable and clear document.</p>
+
+                        <p><b>Note: </b> Before submitting, make sure that your startup and run scripts work well on the virtual machines given to you. The TAs will run your application on clean instances of that virtual machine. If you have worked with another operating system, it is your absolute <b>responsibility</b> to double-check that your project works fine within the virtual machine as well. </p>
 
 
-<!--                        <p>The detailed structure or the exact number of pages is up to you. However, your website should be navigable. That is, different pages should be connected to each other through clickable links and buttons. The general structure follows:</p>-->
-                        <ul class="tab_panel_bullets">
-                            <li>All pages should have a navbar that includes relevant information such as links to home, feed, log out, my restaurant's page, a dropdown for the list of notifications, and another dropdown that shows the user's profile and includes a link to the edit profile page.</li>
-                            <li>The index page is the restaurant <b>search</b> page. To showcase the search result page, you should include some test restaurant cards, as well as the search bar for the demo.</li>
-                            <li>Cards must be clickable and point to the restaurant page, including various tabs such as general information and images, menu, blog posts, and comments. You can design tab contents in a way that fits your website the most. It should contain the mentioned information about the restaurant. It is ok if different cards link to the same restaurant page for the demo.</li>
-                            <li>The feed page, as well as the blog post page, should include a list of test blog post items with like buttons.</li>
-                            <li>You should also include various form pages: login, signup, edit profile, add/edit restaurant, add/edit menu, and add a blog post. Restaurant forms must be reachable through the restaurant page. That is, for the demo, we assume that the restaurant page is always accessed from the owner's view. Edit profile must be accessible through the navbar. However, since we assume that the demo is from the perspective of a logged-in user, you can leave the login and signup forms disconnected from the rest. </li>
-                        </ul>
-
-                        <p><b>Note 1:</b> you should make your website as beautiful as possible and provide a smooth user experience even at the demo. Your website will be tested only on <b>desktop monitors</b>, but the actual screen size could vary. So it is your responsibility to make sure that your application renders well on various desktop screen sizes.</p>
-
-                        <p><b>Note 2:</b> your grade will consist of various factors, including how good your UI design is, whether requirements have been correctly implemented, and your understanding of the code. Note that the above list is just the general structure, and they are by no means the full set of requirements for part 1. You should always think that your website is eventually going to include all the user stories described above. So it will be assessed that way. </p>
-
-                        <p><b>Note 3:</b> as potentially ambiguous as the handout gets, you can ask your questions on Piazza or discuss them with TAs at mentor sessions. part 1 will be graded leniently, and you will be informed about what you did wrong or was missing.  </p>
                     </div>
                         <hr>
                     <!-- Comments -->
