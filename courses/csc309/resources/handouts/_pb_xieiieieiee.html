@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
-    <title>Toronto Fitness Club: phase 1</title>
+    <title>Toronto Fitness Club: part 1</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="CSC309: Programming on the Web Fall 2022 - Course Project">
@@ -10,7 +10,7 @@
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.cs.toronto.edu/~kianoosh/courses/csc309/handouts/p1.html">
-    <meta property="og:title" content="Restify: phase 1">
+    <meta property="og:title" content="Restify: part 1">
     <meta property="og:description" content="CSC309: Programming on the Web - Fall 2022">
     <meta property="og:image" content="https://www.cs.toronto.edu/~kianoosh/courses/csc309/images/card.png">
 
@@ -104,41 +104,44 @@
                             </ul>
                         </div>
                         <div class="blog_subtitle"><b>Overview</b></div>
-                        <p> Toronto Fitness Club (TFC) is the new rival for GoodLife Fitness and LA Fitness in Toronto. The Canada-based business owners founded a new chain fitness club in Toronto aiming to expand their business to other major cities in North America. A successful business requires smart investment, perspective, and planning. That is why the business owners  </p>
+                        <p> Toronto Fitness Club (TFC) is the new rival for GoodLife Fitness and LA Fitness in Toronto. The Canada-based business owners founded a new chain fitness club in Toronto aiming to expand their business to other major cities in North America. A successful business requires smart investment, perspective, and planning. It is why the business owners understand the significance of a having perfect website from the very first stages. They hired you to build their website. For some reason, the owners lack patience, so you need to deliver the website very quickly. In return, they are going to give you life-time free admission to all yoga classes, group meditation, and therapy sessions held by TFC. </p>
 
                         <img style="display: block; margin: auto; " src="../images/tfc.png" height="150">
 
-                        <p>The project is divided into three phases. In phase 1, you will implement the static version of Restify as a presentable demo where users can navigate and see the features. However, it is not connected to a backend or frontend server. In phase 2, you will use Django and REST to implement the APIs, and, finally, in phase 3, you finalize the website using React JS. The eventual outcome of this project is a fully-functional website that meets the <b>user stories</b> listed in an upcoming section. </p>
+                        <p>The project is divided into <b>two parts</b>. Firstly, you will use Django and REST Framework to implement the backend of the project. Secondly, you will build the frontend using React JS and connect the backend to it. The eventual outcome of this project is a fully-functional website that meets the <b>user stories</b> listed in an upcoming section. </p>
 
-                        <p>The project is handed out from the stakeholder's point of view. That is, imagine you are a freelance developer and someone hired you for this project. Therefore, the requirements are described in a non-technical way, and it is your job to design and implement the web application that meets them. There is much room for creativity, and you get decent freedom with respect to the details and various tools you can use for this project. In fact, there are very few general limitations. For example, you will have to use Django, REST, and React. Besides these, you can utilize online packages, libraries, or open-source codes to improve your website. </p>
+                        <p>The project is handed out from the business owner's point of view. That is, those people do not necessarily have a computer science background. Therefore, the requirements are described in a non-technical way, and it is your job to design and implement the web application that meets them. There is much room for creativity, and you get decent freedom with respect to the details and various tools you can use for this project. In fact, there are very few general limitations. For example, you will have to use <b>Django, REST, and React</b>. Beside these, you can utilize any online packages, library, or open-source code and template to improve your website. </p>
 
                         <div class="blog_subtitle">Academic Integrity</div>
 
-                        <p>Unlike the assignments, you are allowed to download packages or use open source codes from the internet for the project. However, sharing even a small piece of code to other teams is strictly prohibited (either giving to or taking from them). Online codes must include a reference to the webpage they are taken from.
+                        <p>Unlike the assignments, you are allowed to download packages or use open source codes from the internet for the project. However, <b>sharing or publishing</b> even a small piece of code to other teams is strictly prohibited (either giving to or taking from them). Online codes must include a reference to the webpage they are taken from.
                         </p>
 
                         <div class="blog_subtitle">Groups</div>
 
-                        <p>Register your groups on Markus as soon as you have found the teammates. The scope of the project is appropriate for a group of three members. However, if some members have already had prior knowledge in web development, groups of two would be fine as well. You can also choose to work entirely on your own, which is strongly discouraged as the load will be overwhelming. If you have a solid background in web development and want to intensify and challenge your knowledge, this could be an option.</p>
+                        <p>Register your groups on Markus as soon as you have found the teammates. The scope of the project is appropriate for a group of three members. However, if some members have already had prior knowledge in web development, groups of two would be fine as well. You can also choose to work entirely on your own, which is strongly discouraged as the load will be overwhelming. If you have a solid background in web development and want to intensify and challenge your knowledge, working alone could be an option.</p>
 
                         <p><b>Note: </b>The number of members will not affect our grading criteria. That is, your submission will be graded the same way, regardless of how many team members are there. </p>
 
                         <div class="blog_subtitle">Mentor sessions</div>
 
-                        <p>For each phase, you can sign up for two mentor sessions with a TA to discuss your ideas, ask questions, or seek help on any project-related issue. You must already have registered your teams on Markus and use the <a href="https://piazza.com/class/kwh095qkvqb2a8?cid=153">Booking system</a> to sign up for a session. Note that sessions have an availability interval. In other words, mentor session 1 is only available through the first week after the handout is released. Therefore, if you do not book one, you will lose one session and will not get two sessions in the next week. More details are explained on the booking system's docs. </p>
+                        <p>For each part, you can sign up for two mentor sessions with a TA to discuss your ideas, ask questions, or seek help on any project-related issue. You must already have registered your teams on Markus and use the <a href="https://csc309.teach.cs.toronto.edu/">IBS</a> to sign up for a session. Note that sessions have an availability interval. For example, the first mentor session is available only in specific dates (e.g., two weeks before the deadline). Therefore, if you do not book one, you will lose one session and will not get two sessions in the next week. More details are explained on the IBS docs. </p>
 
                         <div class="blog_subtitle">Interviews</div>
-                        <p>Each phase will be graded separately through interview sessions with TAs. You should use the same API to book your interview session. Please note that if you do not book a session, you will get <b>no marks</b> for that phase. All team members must be present at the meeting, and the absent members will not get any marks for the phase. Time intervals associated with the mentor sessions and interviews will be announced on Piazza. </p>
+                        <p>Each part will be graded separately through interview sessions with TAs. Interviews are unsurprisingly booked through the IBS system (after all, that is why it is called IBS in the first place). Please note that if you do not book a session, you will get <b>no marks</b> for that part. All team members must be present at the meeting, and the absent members will not get any marks for the part. Time intervals associated with the mentor sessions and interviews will be announced on Piazza. </p>
 
                         <div class="blog_subtitle">Submission</div>
 
                         <p>You should submit your work to your group's git repository on Markus. That is, you cannot submit through its normal web interface.
-                            Instead, commit and push your codes to your repository for each phase. Find out your repo's URL by logging into Markus. Note that there is a separate repository for each phase.</p>
+                            Instead, commit and push your codes to your repository for each part. Find out your repo's URL by logging into Markus. Note that there is a separate repository for each part.</p>
 
                             <p>Moreover, commit your changes now and then, and do not leave your commits to the <b>very last minutes</b> before the deadline. Correct use of git is a part of your assessment for this course.
 
-                                <p>It is recommended that you test your code on Firefox (95 or above) or Google Chrome (96 or above). You might probably not want to risk it by using Internet Explorer, Opera, or other things.</p>
                         </p>
+
+                        <div class="blog_subtitle">Environment</div>
+
+                        <p>TODO</p>
 
                         <div class="blog_subtitle">Participation</div>
 
@@ -147,7 +150,7 @@
                         <hr>
                         <div class="blog_subtitle"><b>Project description</b></div>
 
-                        <p>The following paragraphs describe the features that should be included in Restify. Note that these are the full set of features, and <b>you are NOT asked to implement all of them at phase 1</b>. More details on phase one's deliverables come in an upcoming section. As stated earlier, features are explained in terms of user stories, in a non-technical form, and from an imaginary user's point of view. You should not expect the same level of detail as assignments. Details that are not discussed below are left out to you, and you get to design them. Your final grading will be done mostly based on the overall functionality of your website as if the stakeholder is testing your application.</p>
+                        <p>The following paragraphs describe the features that should be included in TFC. As stated earlier, features are explained in terms of user stories, in a non-technical form, and from an imaginary user's point of view. You should not expect the same level of detail as assignments. Details that are not discussed below are left out to you, and you get to design them. Your final grading will be done mostly based on the overall functionality of your website as if the business owner is testing your application.</p>
 
                         <div class="blog_subtitle">User stories</div>
 
@@ -155,33 +158,52 @@
                         <ul class="tab_panel_bullets">
                             <p><b>Accounts</b></p>
                             <li> As a user, I can sign up, log in, log out, and edit my profile. Profile information should include first and last name, email, avatar, and phone number.</li>
-                            <p><b>Restaurant creation & administration</b></p>
-                            <li> As a user, I can create at most one restaurant, of which I will become the <b>owner</b>. A restaurant is generally created by specifying its name, address, logo, address, postal code, and phone number. </li>
-                            <li> As an owner, I want to add/update the menu of my restaurant. A menu is effectively a list of food items, their descriptions, and prices.</li>
-                            <li> As an owner, I can edit the general information of my restaurant and add/remove pictures to it. </li>
-                            <li> As an owner, I can add/remove blog posts to my restaurant.</li>
-                            <p><b>Restaurants info & search</b></p>
-                            <li> As a user, I want to search through restaurants by their name, foods, or address. Most popular restaurants should come up first in the results.</li>
-                            <li> As a user, I can select a restaurant and move to its page, where I can see its general information, images, number of followers, likes, menu, blog posts, and comments.</li>
-                            <p><b>Social network</b></p>
-                            <li> As a user, I can like/unlike a restaurant or one or more of its blog posts.</li>
-                            <li> As a user, I can follow/unfollow a restaurant. The restaurant page should indicate whether I have already followed or liked that restaurant. </li>
-                            <li> As a user, I want to have a <b>feed</b> that lists the blog posts of all restaurants that I follow, showing the newest posts on the top. This feed is not bound to a specific restaurant. It is a separate page from the blog post section of a restaurant.</li>
-                            <li> As a user, I can post a comment on a restaurant. The comment is about the entire restaurant, not a specific blog post. </li>
+
+                            <p><b>Studios</b></p>
+                            <li>As the <b>website admin</b> (i.e., an account that has access to the admin panel), I can create/edit/delete studios. A studio has a name, address, geographical location, postal code, phone number, and a set of images.</li>
+                            <li> As the <b>website admin</b>, I can update the amenities of a studio (type and quantity). </li>
+                            <li> As a user, I want to list studios based on geographical proximity to a specific location (e.g., my current location, a pinpoint on map, or a postal code). Studios must list starting from the closest one, each having a drop pin on the map. </li>
+                            <li> As a user, I can click on each of the studios and move to the studio page. This page should contain the general information of that studio, along with its address, location, and a link to get the directions.</li>
+
+                            <p><b>Classes</b></p>
+                            <li> As the <b>website admin</b>, I can create/edit a class in a specific studio. A class has a name, description, coach, a list of keywords (e.g., upper-body, core, etc.), capacity, and times. Times indicate the recurring instances of the class. For example, a HIIT session is held on Mondays from 8:00-9:00am. </li>
+                            <li> As the <b>website admin</b>, I can cancel a specific class; either one instance or all the future occurrences of the class. </li>
+                            <li> As a user, I want to see the class schedule of a specific studio on its page. Classes must appear in the order of their start time (from now), and the class information must be shown. Past or cancelled classes should not be listed.</li>
+                            <li> As a user, I can enrol/drop a class (either one instance or all future occurrences) that has not started yet and has not reached its capacity. This can only happen if I have an active subscription. </li>
+                            <li> As a user, I want to see my class schedule and history in chronological order</li>
+
+                            <p><b>Coaches</b></p>
+
+                            <li> As the <b>website admin</b>, I can create/edit/delete a coach. Each coach has a name, photo, email, and phone number.</li>
+                            <li> As a user, I can access a coach's page (through a course page) and see the general information of the coach. It includes the average star-rating and the feedbacks for that coach.</li>
+                            <li> As a user, I can give a star-rating and leave feedback for a specific coach</li>
+
+                            <p><b>Searching and filtering</b></p>
+                            <li> As a user, I want to search/filter through the listed studios (mentioned earlier). Search/filter includes stdio name, amenities, class names, and coaches that work in those studios.</li>
+                            <li> As a user, I want to search/filter a studio's class schedule. The search/filter can be based on the class name, coach name, date, and time range.</li>
+
+                            <p><b>Subscriptions</b></p>
+                            <li> As the <b>website admin</b> I can create/edit/delete the gym subscription plans (e.g., 14.99$ per month or $149.99 per year). </li>
+                            <li> As a user, I can subscribe to one of the options; the first payment is made immediately after subscription, and each upcoming payment will be automatically made in the beginning of their period.   </li>
+                            <li> As a user, I can update my credit/debit card information. All subsequent payments must be made to the updated card. </li>
+                            <li> As a user, I can see my payment history (amount, card info, date and time, etc.), as well as my future payments. </li>
+                            <li> As a user, I can cancel or update my current subscription. The next payment will be either cancelled or updated. In case of cancellation, all class booking after the current billing period will be invalid.</li>
                             <p><b>Notifications</b></p>
-                            <li> As an owner, I want to see notifications. I want to be notified when someone follows, likes, and posts a comment on my restaurant. Likes could be either to the whole restaurant or a specific blog post. </li>
-                            <li> As a user, I want to see notifications. I want to be notified when a restaurant I follow makes a new blog post or updates its menu.</li>
+                            <li> As a user, I want to get notified once I book a class, the class is about to start, and also if it got cancelled.  </li>
+                            <li> As a user, I want to get notified if my current subscription plan is edited or no longer available. In this case, only the future payments will be impacted, and all past payments remain unchanged.</li>
                         </ul>
 
                         <hr>
-                        <div class="blog_subtitle"><b>Phase 1 deliverables</b></div>
+                        <div class="blog_subtitle"><b>part 1 deliverables</b></div>
 
-                        <p>For phase 1, you are to implement most of the HTML/CSS of your project. Your final deliverable for this website is a <b>static demo</b> of Restify. Your codes should only consist of HTML and CSS files, without any backend/frontend servers. You should not implement any JS logic at this phase, except for JS files that are imported from external sources. Also, note that you will need to refactor your files when you migrate to React at phase 3. You can find an example of static demos <a href="https://preview.colorlib.com/#summit">here</a>. A static demo showcases the design of the pages by filling them up with some random test data. Forms and buttons do not send any request, but the links point to various pages included in the application.</p>
+                        <p>TBD</p>
 
-                        <p>Using a CSS framework (e.g., Bootstrap, Semantic, Bulma) is strongly recommended as plain CSS will take enormous hours to implement and debug. However, since it is a static website at this stage, you cannot use any frontend framework, including any React-dependent CSS framework. </p>
+<!--                        <p>For part 1, you are to implement most of the HTML/CSS of your project. Your final deliverable for this website is a <b>static demo</b> of Restify. Your codes should only consist of HTML and CSS files, without any backend/frontend servers. You should not implement any JS logic at this part, except for JS files that are imported from external sources. Also, note that you will need to refactor your files when you migrate to React at part 3. You can find an example of static demos <a href="https://preview.colorlib.com/#summit">here</a>. A static demo showcases the design of the pages by filling them up with some random test data. Forms and buttons do not send any request, but the links point to various pages included in the application.</p>-->
+
+<!--                        <p>Using a CSS framework (e.g., Bootstrap, Semantic, Bulma) is strongly recommended as plain CSS will take enormous hours to implement and debug. However, since it is a static website at this stage, you cannot use any frontend framework, including any React-dependent CSS framework. </p>-->
 
 
-                        <p>The detailed structure or the exact number of pages is up to you. However, your website should be navigable. That is, different pages should be connected to each other through clickable links and buttons. The general structure follows:</p>
+<!--                        <p>The detailed structure or the exact number of pages is up to you. However, your website should be navigable. That is, different pages should be connected to each other through clickable links and buttons. The general structure follows:</p>-->
                         <ul class="tab_panel_bullets">
                             <li>All pages should have a navbar that includes relevant information such as links to home, feed, log out, my restaurant's page, a dropdown for the list of notifications, and another dropdown that shows the user's profile and includes a link to the edit profile page.</li>
                             <li>The index page is the restaurant <b>search</b> page. To showcase the search result page, you should include some test restaurant cards, as well as the search bar for the demo.</li>
@@ -192,9 +214,9 @@
 
                         <p><b>Note 1:</b> you should make your website as beautiful as possible and provide a smooth user experience even at the demo. Your website will be tested only on <b>desktop monitors</b>, but the actual screen size could vary. So it is your responsibility to make sure that your application renders well on various desktop screen sizes.</p>
 
-                        <p><b>Note 2:</b> your grade will consist of various factors, including how good your UI design is, whether requirements have been correctly implemented, and your understanding of the code. Note that the above list is just the general structure, and they are by no means the full set of requirements for phase 1. You should always think that your website is eventually going to include all the user stories described above. So it will be assessed that way. </p>
+                        <p><b>Note 2:</b> your grade will consist of various factors, including how good your UI design is, whether requirements have been correctly implemented, and your understanding of the code. Note that the above list is just the general structure, and they are by no means the full set of requirements for part 1. You should always think that your website is eventually going to include all the user stories described above. So it will be assessed that way. </p>
 
-                        <p><b>Note 3:</b> as potentially ambiguous as the handout gets, you can ask your questions on Piazza or discuss them with TAs at mentor sessions. Phase 1 will be graded leniently, and you will be informed about what you did wrong or was missing.  </p>
+                        <p><b>Note 3:</b> as potentially ambiguous as the handout gets, you can ask your questions on Piazza or discuss them with TAs at mentor sessions. part 1 will be graded leniently, and you will be informed about what you did wrong or was missing.  </p>
                     </div>
                         <hr>
                     <!-- Comments -->
