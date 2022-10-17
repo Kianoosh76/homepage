@@ -10,7 +10,7 @@
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.cs.toronto.edu/~kianoosh/courses/csc309/handouts/p1.html">
-    <meta property="og:title" content="Restify: part 1">
+    <meta property="og:title" content="Toronto Fitness Club">
     <meta property="og:description" content="CSC309: Programming on the Web - Fall 2022">
     <meta property="og:image" content="https://www.cs.toronto.edu/~kianoosh/courses/csc309/images/card.png">
 
@@ -112,6 +112,11 @@
 
                         <p>The project is handed out from the business owner's point of view. That is, those people do not necessarily have a computer science background. Therefore, the requirements are described in a non-technical way, and it is your job to design and implement the web application that meets them. There is much room for creativity, and you get decent freedom with respect to the details and various tools you can use for this project. In fact, there are very few general limitations. For example, you will have to use <b>Django, REST, and React</b>. Beside these, you can utilize any online packages, library, or open-source code and template to improve your website. </p>
 
+                        <div class="blog_subtitle">Deadline</div>
+
+                        <p>This part is due on <strong id="due-date2"></strong>. Late submissions of <code>x</code> hours (starting from 1) will deduct following percentage from your grades.<br>
+                            <img width="150" style="margin-left: 10em" src="../images/penalty-decay.png" alt="0.0002 * x ^ 3.06"></p>
+
                         <div class="blog_subtitle">Academic Integrity</div>
 
                         <p>Unlike the assignments, you are allowed to download packages or use open source codes from the internet for the project. However, <b>sharing or publishing</b> even a small piece of code to other teams is strictly prohibited (either giving to or taking from them). Online codes must include a reference to the webpage they are taken from.
@@ -196,7 +201,8 @@
                         <hr>
                         <div class="blog_subtitle"><b>Part 1 deliverables</b></div>
 
-                        <p>In this part, you will implement the Django backend for the project. All the admin user stories must be implemented in the Django <b>admin panel</b>, which saves your effort and time significantly. Refer to the <a href="https://docs.djangoproject.com/en/4.1/ref/contrib/admin/">docs</a> for a full list of options and tools provided in the admin panel. Django's admin panel is so powerful, and you will be able to implement all the admin user stories using it. All other user stories are implemented with one or more REST APIs. Your APIs should not have any template or HTML response. The project should run in a <b>virtual environment</b>, with all the packages listed in the requirements file. Ideally, your backend server should not go through many changes at the next part (this will not happen in practice).
+                        <p>In this part, you will implement the Django backend for the project. All the admin user stories must be implemented in the Django <b>admin panel</b>, which saves your effort and time significantly. Refer to the <a href="https://docs.djangoproject.com/en/4.1/ref/contrib/admin/">docs</a> for a full list of options and tools provided in the admin panel. Django's admin panel is so powerful, and you will be able to implement all the admin user stories using it. All other user stories are implemented with one or more REST APIs. Your APIs should not have any template or HTML response.</p>
+                        <p>The project should run in a <b>virtual environment</b>, with all the packages listed in the requirements file. Ideally, your backend server should not go through many changes at the next part (this will not happen in practice).
                         </p>
 
                         <p>You should implement proper authentication and authorization for the user stories as well.</p>
