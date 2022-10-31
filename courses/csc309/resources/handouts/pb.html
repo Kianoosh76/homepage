@@ -177,14 +177,8 @@
                             <li> As a user, I can enrol/drop a class (either one instance or all future occurrences) that has not started yet and has not reached its capacity. This can only happen if I have an active subscription. </li>
                             <li> As a user, I want to see my class schedule and history in chronological order</li>
 
-                            <p><b>Coaches</b></p>
-
-                            <li> As the <b>website admin</b>, I can create/edit/delete a coach. Each coach has a name, photo, email, and phone number.</li>
-                            <li> As a user, I can access a coach's page (through a course page) and see the general information of the coach. It includes the average star-rating and the feedbacks for that coach.</li>
-                            <li> As a user, I can give a star-rating and leave feedback for a specific coach</li>
-
                             <p><b>Searching and filtering</b></p>
-                            <li> As a user, I want to search/filter through the listed studios (mentioned earlier). Search/filter includes stdio name, amenities, class names, and coaches that work in those studios.</li>
+                            <li> As a user, I want to search/filter through the listed studios (mentioned earlier). Search/filter includes stdio name, amenities, class names, and coaches that hold classes in those studios.</li>
                             <li> As a user, I want to search/filter a studio's class schedule. The search/filter can be based on the class name, coach name, date, and time range.</li>
 
                             <p><b>Subscriptions</b></p>
@@ -193,9 +187,6 @@
                             <li> As a user, I can update my credit/debit card information. All subsequent payments must be made to the updated card. </li>
                             <li> As a user, I can see my payment history (amount, card info, date and time, etc.), as well as my future payments. </li>
                             <li> As a user, I can cancel or update my current subscription. The next payment will be either cancelled or updated. In case of cancellation, all class booking after the current billing period will be invalid.</li>
-<!--                            <p><b>Notifications</b></p>-->
-<!--                            <li> As a user, I want to get notified once I book a class, the class is about to start, and also if it got cancelled.  </li>-->
-<!--                            <li> As a user, I want to get notified if my current subscription plan is edited or no longer available. In this case, only the future payments will be impacted, and all past payments remain unchanged.</li>-->
                         </ul>
 
                         <hr>
@@ -215,11 +206,11 @@
 
                         <div class="blog_subtitle"><b>What to submit</b></div>
 
-                        <p>You should push your entire Django project to your repo, accompanied by a <span class="quote">startup.sh</span> script, a <span class="quote">run.sh</span> script, and a <span class="quote">docs.pdf</span> file. These files should be located in the root folder of your repository.</p>
+                        <p>You should push your entire Django project to your repo, accompanied by a <span class="quote">startup.sh</span> script, a <span class="quote">run.sh</span> script, a <span class="quote">docs.pdf</span> file, and a <span class="quote">postman.json</span> collection. These files should be located in the root folder of your repository.</p>
 
-                        <p>The <b>startup</b> should run any preparation needed for your code to run in a new environment. It should create the virtual environment, install all required packages with pip, and run all migrations. The <b>run</b> script should start your server. Finally, your documentation must include your design of models, as well as the full list of all API endpoints, a short <b>description</b>, their methods, and the payloads. You can use packages that automatically generate the API docs from your code. The TA will send requests based on the information you provide on that document. Therefore, it is important to have a usable and clear document.</p>
+                        <p>The <b>startup</b> should run any preparation needed for your code to run in a new environment. It should create the virtual environment, install all required packages with pip, and run all migrations. The <b>run</b> script should start your server. Finally, your documentation must include your design of models, as well as the full list of all API endpoints, a short <b>description</b>, their methods, and the payloads. You can use packages that automatically generate the API docs from your code. The TA will send requests based on the information you provide on that document. Therefore, it is important to have a usable and clear document. The <b>postman</b> collection must be an export of all the APIs (not the admin panel views) that are importable into Postman. The TA will use Postman to test your APIs, so it is important that your collection is comprehensive, well-organized, and self-explanatory. All the POST data, headers, and GET query parameters must be pre-filled and editable in that collection.</p>
 
-                        <p><b>Note: </b> Before submitting, make sure that your startup and run scripts work well on the virtual machines given to you. The TAs will run your application on clean instances of that virtual machine. If you have worked with another operating system, it is your absolute <b>responsibility</b> to double-check that your project works fine within the virtual machine as well. </p>
+                        <p><b>Note: </b> Before submitting, make sure that your startup and run scripts work well on the virtual machines given to you, and your collection can be imported into Postman without any issues. The TAs will run your application on clean instances of that virtual machine. If you have worked with another operating system, it is your absolute <b>responsibility</b> to double-check that your project works fine within the virtual machine as well. </p>
 
 
                     </div>
