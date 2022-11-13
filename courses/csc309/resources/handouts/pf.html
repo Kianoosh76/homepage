@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
-    <title>Restify: phase 2</title>
+    <title>Toronto Fitness Club: part 2</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="CSC309: Programming on the Web Fall 2022 - Course Project">
@@ -10,7 +10,7 @@
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.cs.toronto.edu/~kianoosh/courses/csc309/handouts/p1.html">
-    <meta property="og:title" content="Restify: phase 2">
+    <meta property="og:title" content="Toronto Fitness Club: part 2">
     <meta property="og:description" content="CSC309: Programming on the Web - Fall 2022">
     <meta property="og:image" content="https://www.cs.toronto.edu/~kianoosh/courses/csc309/images/card.png">
 
@@ -78,7 +78,7 @@
                             <ul>
                                 <li><a href="../../">Home</a></li>
                                 <li><a href="#">handouts</a></li>
-                                <li>Assignment 3</li>
+                                <li>Project Frontend</li>
                             </ul>
                         </div>
                     </div>
@@ -96,32 +96,62 @@
                 <!-- Blog Content -->
                 <div class="col-lg-8">
                     <div class="blog_content">
-                        <div class="blog_title">Restify: phase 2</div>
+                        <div class="blog_title">Toronto Fitness Club: part 2</div>
                         <div class="blog_meta">
                             <ul>
-                                <li>Due date: <span id="due-date">Fri March 11, 2022 23:59:00</span></li>
+                                <li>Due date: <span id="due-date">Thu Dec 8, 2022 22:00:00</span></li>
                                 <li><span id="remaining-time"></span> remaining</li>
                             </ul>
                         </div>
                         <div class="blog_subtitle"><b>Overview</b></div>
-                        <p>Please find the general information about the project and its features on the <a href="pb.html">phase 1 handout</a>.</p>
+                        <p>Please find the general information about the project, features, interviews, rules, etc. on the <a href="pb.html">part 1 handout</a>. All rules and restrictions apply to this part as well.</p>
+                        <p>
+                            In this part, you are to implement the React frontend of TFC and connect it
+                            to your backend server. The deliverable is a fully-functional
+                        website that is shippable, presentable, self-explanatory,
+                        smooth, and beautiful.
 
-                        <div class="blog_subtitle"><b>Submission</b></div>
-                        <p>TAs will clone and run your codes on their own machines. Therefore, you must make sure that your code can run well on other computers. A <a>virtual machine</a> has already been offered to you. It is the environment in which your code will be run in phases 2 and 3. So, to avoid unexpected issues, you are advised to use that environment to run your code. However, you are allowed to work on other operating systems and environments as well, but <b>at your own risk</b>. It is crucially important for you to at least double-check your whole project in that virtual machine before submitting it. You will not be allowed to modify your code at the interview sessions. Therefore, if, for any reason, your code does not run, you will not get any marks. </p>
+                        <div class="blog_subtitle">Deadline</div>
 
-                        Add notes about user model: https://docs.djangoproject.com/en/4.0/topics/auth/customizing/#substituting-a-custom-user-model
-                        <br>Talk about pagination
-                        <div class="blog_subtitle"><b>Phase 2 deliverables</b></div>
+                        <p>This part is due on <strong id="due-date2"></strong>. Late submissions of <code>x</code> hours (starting from 1) will deduct following percentage from your group's grades.<br>
+                            <img width="150" style="margin-left: 10em" src="../images/penalty-decay.png" alt="0.0002 * x ^ 3.06"></p>
 
-                        <p>In this phase, you are to implement the Django backend for the project. All your APIs must be Restful, and you must not have any template or HTML response. You should push your entire Django project to your repo, accompanied by a <span class="quote">startup.sh</span> script, a <span class="quote">run.sh</span> script, and a <span class="quote">docs.pdf</span> file. These files should be located in the root folder of your repository.</p>
 
-                        <p>The <b>startup</b> should run any preparation needed for your code to run in a new environment. It should create the virtual environment, install all required packages with pip, and run all migrations. The <b>run</b> script should start your server. Finally, your documentation must include your design of models, as well as the full list of all API endpoints, a short <b>description</b>, their methods, and the payloads. You can use packages that automatically generate the API docs from your code. The TA will send requests based on the information you provide on that document. Therefore, it is important to have a usable and clear document.</p>
+                        <div class="blog_subtitle">Notes</div>
 
-                        <p>Ideally, you should not touch your backend server at phase 3, but this will not happen in practice. However, you should implement the backend views for <b>all</b> user stories described in phase 1's handout. Moreover, you should implement proper authentication and authorization for the APIs. </p>
+                        <ul class="tab_panel_bullets">
+                            <li>The interviews will simulate the real-world delivery of your application to the business owner. That is, the business owner is looking for a <b>complete website</b> that has a <b>very smooth and bug-free UX</b> and a <b>beautiful UI</b>. Pay utmost attention to the UX, where users should be able to navigate around without any problem or any need for instructions from someone else. You certainly remember websites that you left before a minute because you could not find a page you where looking for, or parts of a button was not clickable because of a simple frontend bug. You certainly did not have any empathy for the potentially countless hours the backend and frontend engineers spent on building that website and whether other parts worked well or not. You left the website, and that was the loss of a potential customer for that business. </li>
+                            <li>In our interviews, we will not be as harsh as mentioned above, but you should expect that the marking scheme is different from a classic project where the only important thing is that the code somehow <i>works</i>. You will lose marks is your website is incomplete (lacks some functionalities) or has major or minor UI/UX issues. Smooth UX is also about single-page experience, front-end validations, in-place error-handling, asynchronous requests, and clean re-renders; all of which offered by React.</li>
+                            <li>This course is not about UI design; so you can freely choose any UI templates that is available outside. However, you must adhere to the common sense when it comes to your UI. Your UI must give a good first impression to users. Exploring your website should be delightful for users. A basic UI that everyone can tell it is the default of a framework (e.g., bootstrap) is <b>not</b> delightful to explore.</li>
+                            <li>Your website should include pages. That is, even though you are building a single-page application, you should change the browser's URL accordingly so that users will be able to navigate through different places with the back/forward button or re-visit a specific page through its URL. Please refer to lecture 11 to find out about pages in React.</li>
+                            <li>Different sections of your website must be reachable by a navigation bar. A user dropdown to see/edit profile, manage subscriptions, and logout is also required. The user must <b>never</b> need to manually change the URL (except for accessing the admin panel). Besides those requirements, the exact content of pages and the choice of first page (or landing page) is up to you. We recommend that your first page includes the search functionality, and also includes (or links) to the subscription plans. </li>
 
-                        <p><b>Note: </b> Before submitting, make sure that your startup and run scripts work well on the virtual machines given to you. The TAs will run your application on clean instances of that virtual machine. If you have worked with another operating system, it is your absolute <b>responsibility</b> to double-check that your project works fine within the virtual machine as well. </p>
+                        </ul>
+
+                        <div class="blog_subtitle"><b>Pre-populated database</b></div>
+
+                        <p>Unlike last part, you should push your database/media files to your repository.
+                        The reason is pre-existing data improves your presentation a lot. The business owner certainly does not want to navigate a blank website that contains only a couple of studios. To showcase your project, it is suggested that you include at least 10-20 studios with their full information (location, classes, images, amenities, coaches, etc.)
+                        Obviously, your strings, images, phone numbers, etc. cannot be random sequences of characters/bytes. You can enter data manually, or use online datasets (recommended), or even crawl similar websites.</p>
+
+                        <p><b>Note 1</b>: The data does not have to be original or genuine. For example, if you show the phone number (647) 643-6710, it does not have to be a real phone number associated with a gym. However, a blank number or something like (111) 111-1111 is obviously unacceptable.</p>
+
+                        <p><b>Note 2</b>: Make sure that your database/media is not too big that it would take a lot of time to clone/load.</p>
+
+                        <div class="blog_subtitle"><b>Pagination</b></div>
+
+                        <p>As mentioned in part 1 handout, every API that returns a list of objects should be paginated. (e.g., list of studios, upcoming class schedule, past payments). However, depending on your database size, you should choose your page size so that the TA can test that you implemented pagination correctly. For example, a page size of 200 when you only have 100 gyms means that the TA should create 100 new studios to check this feature, which is impossible. You can implement pagination via regular buttons (like google search on Desktops) or through infinite scrolls. Also, different endpoints can have different page sizes.</p>
+
+                        <div class="blog_subtitle"><b>What to submit</b></div>
+
+                        <p>You must push both your frontend and backend servers to your repository. Push two scripts as well: startup.sh and run.sh. The <b>startup</b> script should run all preparations such as creating the virtual env, pip installing all packages, migrations, npm install, etc. The <b>run</b> script should run both backend and frontend servers. The TA will clone your application and work with your frontend interface like an ordinary user and will check all the required features. It should be a fully-functional website where users interact without any help from other people. This time, there is no need for pushing documentation or Postman collections.</p>
+
+                        <p><b>Note 1</b>: You can very make any improvements you want to your submissions for the previous phases. You can even write them from scratch (not recommended because there is not that much time). We will not look at what you submitted for those phases and will only assess the files under the PF folder.</p>
+
+                        <p><b>Note 2</b>: Before submitting, make sure that your startup and run scripts work well on the virtual machines given to you. The TAs will run your application on clean instances of that virtual machine. If you have worked with another operating system, it is your absolute responsibility to double-check that your project works fine within the virtual machine as well.</p>
 
                         <hr>
+
                     </div>
 
                     <!-- Comments -->
@@ -132,14 +162,12 @@
                                 <div class="comment_item d-flex flex-row align-items-start jutify-content-start">
                                     <div class="comment_content">
                                         <div class="comment_title_container d-flex flex-row align-items-center justify-content-start">
-                                            <div class="comment_author"><a href="#" onclick="return false">Justin</a></div>
+                                            <div class="comment_author"><a href="#" onclick="return false">Captain WiFi</a></div>
                                             <div class="comment_rating"><div class="rating_r rating_r_5"><i></i><i></i><i></i><i></i><i></i></div></div>
                                             <div class="comment_time ml-auto" id="date1"></div>
                                         </div>
                                         <div class="comment_text">
-                                            <p>This is my fourth time taking CSC309, and inarguably, this is the best assignment I've ever seen.<br>
-                                                Problems are so accurately designed that anyone with their own knowledge and experience have their own takeaways.<br>
-                                                I hope next assignments will be this good, too!
+                                            <p>I've always dreamed of being a web developer. Now my dream has come true, but ... I just wish the free healthcare sessions were actually offered by TFC; I really need it.
                                             </p>
                                         </div>
                                         <div class="comment_extras d-flex flex-row align-items-center justify-content-start">
@@ -148,29 +176,6 @@
                                         </div>
                                     </div>
                                 </div>
-                                <ul>
-                                    <li>
-                                        <div class="comment_item d-flex flex-row align-items-start jutify-content-start">
-                                            <div class="comment_content">
-                                                <div class="comment_title_container d-flex flex-row align-items-center justify-content-start">
-                                                    <div class="comment_author"><a href="#" onclick="return false">Kianoosh</a></div>
-                                                    <div class="comment_time ml-auto" id="date2"></div>
-                                                    <script>document.getElementById("date1").innerHTML = new Date().toDateString();
-                                                    document.getElementById("date2").innerHTML = new Date().toDateString();
-                                                    </script>
-
-                                                </div>
-                                                <div class="comment_text">
-                                                    <p>Thanks bro!</p>
-                                                </div>
-                                                <div class="comment_extras d-flex flex-row align-items-center justify-content-start">
-                                                    <div class="comment_extra comment_likes"><a href="#" onclick="return false"><i class="fa fa-thumbs-up" aria-hidden="true"></i><span>36</span></a></div>
-                                                    <div class="comment_extra comment_reply"><a href="#" onclick="return false"><i class="fa fa-pencil-square" aria-hidden="true"></i><span>Reply</span></a></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </li>
-                                </ul>
                             </li>
                         </ul>
                         <div class="add_comment_container">
