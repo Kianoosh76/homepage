@@ -105,130 +105,86 @@
                 <li><span id="remaining-time"></span> remaining</li>
               </ul>
             </div>
-            <div class="blog_subtitle">Objectives</div>
-            <p>This assignment helps you get familiar with writing HTML and CSS code. You are asked to create
-            a very simple webpage. In the first question, you are to write a plain HTML file and then add style
-            according to question 2.</p>
-
-            <p>Note that even though what was taught in the lectures is enough "knowledge" to cover this assignment, it is quite possible
-            that some specific tags, styles, or tricks are not covered in the lecture. There are millions of features in web
-            programming, and it is really impossible to teach them all in a lecture.</p>
-
-            <p>Therefore, you are welcome to refer to the slides or online resources to lookup for specific things. However, please be mindful that
-            you will not violate academic integrity, as explained later.</p>
-
-            <div class="blog_subtitle">Notes</div>
-
-            <ul class="tab_panel_bullets">
-              <li>This assignment will make up 10% of your final grade.</li>
-              <li>The due date is <strong id="due-date2"></strong>. Late submissions of <code>x</code> hours (starting from 1) will deduct following percentage from your grades.<br>
-              <img width="150" style="margin-left: 10em" src="../images/penalty-decay.png" alt="0.0002 * x ^ 3.06">
-              </li>
-              <li>If you have any questions or problems with the assignment, please post them on Piazza.</li>
-              <li>It is recommended that you test your code on Firefox (103 or above) or Google Chrome (104 or above). You might probably not want to risk it by using Internet Explorer, Opera, or other things.</li>
-              <li>Most of your submissions will be auto-graded. Therefore, your code must adhere to all details provided in the handout; otherwise, you might lose marks.</li>
-              <li><b>Important</b>: It is crucially important for the auto-tester that your file contains the <b>exact same strings</b> as in the handout (exact case, number of whitespaces, punctuation marks, etc.). Therefore, please use the copy buttons to copy-paste the text from their boxes. Do <b>not</b> re-type them on your own. </li>
-              <li>You will not receive any feedback from the auto grader before the deadline has passed. So it is your responsibility to double-check your code with the handout before submission. Even minor spelling mistakes can lead to loss of marks. No remark requests will be accepted on these matters.</li>
-              <li>Only the last version of your repository will be graded. Make sure that your last commit is the one you would like to be graded. It will not be possible to ask for a checkout to a different commit. </li>
-            </ul>
-
-            <div class="blog_subtitle">Submission</div>
-
-            <p>You should submit your work to your git repository on Markus. That is, you cannot submit through its normal web interface.
-              Instead, commit and push your codes to your repository for assignment 1.
-              Find out your repo's URL by logging into Markus.</p>
-
-            <div class="blog_subtitle">What to submit</div>
-
-            <p>You must only submit a single HTML file named <strong>index.html</strong> and a stylesheet named <strong>style.css</strong>.
-            <br>Note that any other file you submit will be deleted by the auto tester.</p>
-
-            <p><strong>Warning</strong>: Importing any online CSS or JS code is strictly forbidden and will result in losing <strong>all marks</strong> of the assignment.
-            Examples are bootstrap, semantic, jquery, and any other code written by someone else.</p>
-
-            <div class="blog_subtitle">Academic Integrity</div>
-
-            <p>Assignments are <strong>individual work</strong> which means that you will not be allowed to seek advice from other students or copy/paste someone else's code, even open-source codes from the internet. However, you are allowed to look at online resources, tutorials, and Q&A websites to solve the problems. The entire code must be written by yourself.</p>
-
-            <hr>
-            <div class="blog_subtitle"><strong>Mastery in HTML!</strong></div>
-
-            <p>Write an HTML file named index.html that includes the following:</p>
-
-            <ul class="tab_panel_bullets">
-              <li><span class="copy"><span>CSC309 Personal Website</span><i class="fa fa-copy" aria-hidden="true"></i></span> as title</li>
-              <li> <span class="copy"><span>Hello Visitors!</span><i class="fa fa-copy" aria-hidden="true"></i></span> directly in a &lt;div&gt; section</li>
-              <li>Your name in an &lt;h1&gt; and your UTorID in an &lt;h2&gt;</li>
-              <li>An unordered list that includes the exact following text:
-                <br>
-                <span class="copy"><span>A1 is worth 10%.</span><i class="fa fa-copy" aria-hidden="true"></i></span><br>
-                <span class="copy"><span>A2 is worth 20%.</span><i class="fa fa-copy" aria-hidden="true"></i></span><br>
-                <span class="copy"><span>A3 is worth 15%.</span><i class="fa fa-copy" aria-hidden="true"></i></span><br>
-              </li>
-              <li>A widget that can be opened (default) and closed: text should look like the following image. In other words, when    <span class="copy"><span>Fact</span><i class="fa fa-copy" aria-hidden="true"></i></span>
-                is clicked, the following sentence should toggle (hide if already visible, show if already hidden). <br>
-              Pay attention to the different decorations of each part of the text.</li>
-              <img width="200" src="../images/a1-widget.png?v=1">
-              <br>
-              <br>
-              <li>A table that exactly contains the following data</li>
-              <img width="500px" src="../images/a1-table.png">
-              <br>
-              <br>
-              <li>A small feedback form that includes the following:
-                <br>
-                <ul class="tab_panel_bullets">
-                  <li>A multi-line box where users can leave feedback:
-                    should be <strong>labeled</strong> with <span class="copy"><span>Feedback</span><i class="fa fa-copy" aria-hidden="true"></i></span>.
-                    Its placeholder should be <span class="copy"><span>Enter your feedback here</span><i class="fa fa-copy" aria-hidden="true"></i></span>.</li>
-                  <li>A one-line box in which users can enter email.
-                    Your webpage should not allow non-email inputs.
-                    The label should be <span class="copy"><span>Email</span><i class="fa fa-copy" aria-hidden="true"></i></span>.</li>
-                  <li>A field where users can upload one attachment: the label should be <span class="copy"><span>Attachment</span><i class="fa fa-copy" aria-hidden="true"></i></span>.</li>
-                  <li>A checkbox where users can give consent: the label should be located to the right of the checkbox and equal to <span class="copy"><span>You agree to receive emails from me</span><i class="fa fa-copy" aria-hidden="true"></i></span>.</li>
-                  <li>A submit button with the text <span class="copy"><span>Send Feedback</span><i class="fa fa-copy" aria-hidden="true"></i></span>.</li>
-                  <li><strong>Note 1: </strong>Labels must be implemented via the label tag. <strong>Leaving plain text near the input is not accepted.</strong> </li>
-                  <li><strong>Note 2: </strong> All fields are mandatory. After the user fills out the form and clicks the button, a POST request should be sent with payload <code>{feedback: …, email: …, attachments: …, consent: yes}</code> to the IBS system at <code><span>https://csc309.teach.cs.toronto.edu/a1/submit/</span> <i class="fa fa-copy" aria-hidden="true"></i></code>. </li>
-                  <li><strong>Note 3: </strong> The server simply acknowledges the request and payload you sent. It might give you an error response if your request is malformed. However, it is still <b>your responsibility</b> to ensure that you are sending the correct request at all times, and the server is just a helper tool.</li>
-                </ul>
+            <div class="blog_content">
+              <p>This assignment helps you get familiar with writing HTML and CSS code. You are asked to create a very simple webpage. In the first question, you are to write a plain HTML file and then add style according to question 2.</p>
+              <p>Note that even though what was taught in the lectures is enough <em>knowledge</em> to cover this assignment, it is quite possible that some specific tags, styles, or tricks are not covered in the lecture. There are millions of features in web programming, and it is really impossible to teach them all in a lecture.</p>
+              <p>Therefore, you are welcome to refer to the slides or online resources to lookup for specific things. However, please be mindful that you will not violate academic integrity, as explained later.</p>
+              <h3 class="blog_subtitle">Notes</h3>
+              <ul class="tab_panel_bullets">
+                <li>This assignment will make up 10% of your final grade.</li>
+                <li>If you have any questions or problems with the assignment, please post them on Piazza.</li>
+                <li>No late submissions are accepted. However, you are given limited grace tokens which can be used to extend the course deadlines. Refer to the front page to find more information about the tokens and their restrictions.&nbsp;</li>
+                <li>It is recommended that you test your code on Firefox (108 or above) or Google Chrome (108 or above). You might probably not want to risk it by using Internet Explorer, Opera, or other things.</li>
+                <li>Most of your submissions will be auto-graded. Therefore, your code must adhere to all details provided in the handout; otherwise, you might lose marks.</li>
+                <li><strong>Important</strong>: It is crucially important for the auto-tester that your file contains the <strong>exact same strings</strong> as in the handout (exact case, number of whitespaces, punctuation marks, etc.). <span>Therefore, please copy whatever that's highlighted like </span><code>this</code>. Do <strong>NOT</strong> re-type them on your own.</li>
+                <li>You will not receive any feedback from the auto grader before the deadline has passed. So it is your responsibility to double-check your code with the handout before submission. Even minor spelling mistakes can lead to loss of marks. No remark requests will be accepted on these matters.</li>
+                <li>Only the last version of your repository will be graded. Make sure that your last commit is the one you would like to be graded. It will not be possible to ask for a checkout to a different commit.</li>
+              </ul>
+              <h3 class="blog_subtitle">Submission</h3>
+              <p>You will submit your work by pushing your code to a Gitlab repository. Find out your repo's URL by logging into the <a title="The IBS system (grades and interviews)" href="https://q.utoronto.ca/courses/291539/pages/the-ibs-system-submissions-grades-and-interviews" data-api-endpoint="https://q.utoronto.ca/api/v1/courses/291539/pages/the-ibs-system-submissions-grades-and-interviews" data-api-returntype="Page">IBS</a>. For this assignment,&nbsp;you must only submit one HTML file named <strong>index.html</strong> and one stylesheet named <strong>style.css</strong>. Note that any other file you submit will be ignored by the auto tester.</p>
+              <p><strong>Warning</strong>: Importing any online CSS or JS code is strictly forbidden and will result in losing <strong>all marks</strong> of the assignment. Examples are bootstrap, semantic, jquery, and any other code written by someone else.</p>
+              <h3 class="blog_subtitle">Academic Integrity</h3>
+              <p>Assignments are <strong>individual work</strong> which means that you will not be allowed to seek advice from other students or copy/paste someone else's code, even open-source codes from the internet. However, you are allowed to look at online resources, tutorials, and Q&amp;A websites to solve the problems. The entire code must be written by yourself.</p>
+              <hr />
+              <h2 class="blog_subtitle"><strong>Mastery at HTML!</strong></h2>
+              <p>Write an HTML file named index.html that includes the following:</p>
+              <ul class="tab_panel_bullets">
+                <li><code>CSC309 Personal Website</code> as title</li>
+                <li><code>Hello Visitors</code> directly in a &lt;div&gt; section</li>
+                <li>Your name in an &lt;h1&gt; and your UTorID in an &lt;h2&gt;</li>
+                <li>An unordered list that includes the exact following text: <br /><code>A1 is worth 10%</code><br /><code>A2 is worth 20%</code><br /><code>A3 is worth 15%</code></li>
+                <li>A widget that can be opened (default) and closed: text should look like the following image. In other words, when <code>Fact</code> is clicked, the following sentence should toggle (hide if already visible, show if already hidden).&nbsp;<br /><img src="https://q.utoronto.ca/courses/291539/files/24058273/preview" alt="Screenshot 2022-12-28 at 5.13.38 PM.png" data-api-endpoint="https://q.utoronto.ca/api/v1/courses/291539/files/24058273" data-api-returntype="File" /><br />Pay careful attention to the different decorations of each part of the text.</li>
+                <li>
+                  <p>A progress bar that shows 1/12 done, labeled (using the label tag) with <code>CSC309 progress so far</code>. When mouse hovers <code>CSC309</code>, a small tooltip should appear showing the full name of the course: <code>Programming on the web</code>. &nbsp;</p>
+                  &nbsp;
                 </li>
-              <li>Last year's <a href="https://csc309.teach.cs.toronto.edu/a1/20211_CSC309H5S_LEC9102.pdf">course syllabus</a> as an embedded pdf file.</li>
-              <li>An automatic email link in the <strong>footer</strong>. The link should display your utoronto email, and once clicked, the default mailing app should pop up, and a new email is created (but not sent)
-              <br> There must be this pre-written data on the email:<br>
-                <ul class="tab_panel_bullets">
-                  <li>Recipient: 	*your email in the footer*</li>
-                  <li>Subject: <span class="copy"><span>Bug Found</span><i class="fa fa-copy" aria-hidden="true"></i></span></li>
-                  <li>Body:		<span class="copy"><span>I found the following bug on your website</span><i class="fa fa-copy" aria-hidden="true"></i></span></li>
-                </ul>
-              </li>
-            </ul>
-
-            <p>Note that your HTML file must NOT contain any style or scripts, either inline or from a file (except for the style.css file you will create in the next question). Any text surrounded by <strong>double quotations</strong>
-              must be exactly copied to your file, as the auto tester will run a <strong>case-sensitive check</strong>. You can put additional elements (div, span, etc.) in your file, but make sure that you follow the format above. </p>
-
-            <p><strong>Important</strong>: make sure that you <a href="https://validator.w3.org">validate</a> your file before submitting it. The tester might not work properly if your file is malformed.</p>
-
-            <hr>
-            <div class="blog_subtitle"><strong>Style it up!</strong></div>
-            <p>Complement your HTML file with a stylesheet named style.css that fulfills the following requirements</p>
-
-            <ul class="tab_panel_bullets">
-              <li>Make the previous &lt;div&gt; section always <strong>stick</strong> to the top of screens as they scroll. That is, it should remain on top of the page no matter how much the user has scrolled down. No space to the top, left, or right. Also, set its background color to aqua.</li>
-              <li>Fit the unordered list in one line. Put at least a 5% margin to the left and right of each item.</li>
-              <li>Use <strong>Roboto Regular 400</strong> as the font for the entire HTML document.</li>
-              <li>Round the corner of the multi-line box with 5px radius. Also, the cursor should switch to <strong>grab</strong> when it hovers the <span class="copy"><span>Send Feedback</span><i class="fa fa-copy" aria-hidden="true"></i></span> button.</li>
-              <li>Make the previous table look like this. Pay attention to the background color, text alignment, and borders.</li>
-              <img width="500px" src="../images/a1-table2.png">
-              <li>Re-arrange your page into a two-columned grid layout. The left column contains everything except the <span class="copy"><span>Hello Visitors!</span><i class="fa fa-copy" aria-hidden="true"></i></span> &lt;div&gt;, the footer, and the embedded file.
-                The right column belongs to the embedded file. Both columns should occupy the same portion of the page's width.</li>
-              <li>Make everything inside the HTML file center-aligned. That includes all grid content, the header, and the footer.</li>
-              <li>Put a reasonable margin between elements so that they will not overlap or fall too close to each other.</li>
-            </ul>
-
-            <p>For your help, you can refer to the below screenshot as what your final submission should look like to receive the full marks. Note that the file upload button and the exact rendering of the embedded PDF may look different from the example, depending on your browser. </p>
-            <p><strong>Important: </strong> The below picture describes <b>necessity</b>, not sufficiency. In other words, a working solution looks similar to the picture, but it does not mean that you will necessarily get full marks if your solution looks like it. To obtain full marks, your code must adhere to <b>all</b> rules listed in the handout .</p>
-            <br>
-            <img src="../images/a1-final.png?v=1.4" width="700px">
+                <li>A table that exactly contains the following data</li>
+              </ul>
+              <img src="https://q.utoronto.ca/courses/291539/files/24057834/preview" alt="Screenshot 2022-12-28 at 3.57.47 PM.png" width="427" height="150" data-api-endpoint="https://q.utoronto.ca/api/v1/courses/291539/files/24057834" data-api-returntype="File" /><br />
+              <ul class="tab_panel_bullets">
+                <li>A small feedback form that includes the following: <br />
+                  <ul class="tab_panel_bullets">
+                    <li>A multi-line box where users can leave feedback: should be <strong>labeled</strong> with <code>Feedback</code>. Its placeholder should be <code>Enter your feedback here</code>.</li>
+                    <li>A one-line box in which users can enter email. Your webpage should not allow non-email inputs. The label should be <code>Email</code>.</li>
+                    <li>A dropdown labeled with <code>Country</code>&nbsp;where the options are <code>----</code> (default), <code>Canada</code>, and <code>United States</code>.&nbsp;</li>
+                    <li>A field where users can upload one attachment: the label should be <code>Attachment</code>.</li>
+                    <li>A checkbox where users can acknowledge the terms: the label should be located to the right of the checkbox and equal to &nbsp;<code>I agree to the terms and conditions</code>.</li>
+                    <li>A submit button with the text <code>Send Feedback</code>.</li>
+                    <li><strong>Note 1: </strong>Labels must be implemented via the label tag. <strong>Leaving plain text near the input is not accepted.</strong></li>
+                    <li><strong>Note 2: </strong>All fields are mandatory. The form should not allow submitting without choosing one of the two countries. After the user fills out the form and clicks the button, a POST request should be sent with payload <code>{feedback: &hellip;, email: &hellip;, country: ca or us, attachments: &hellip;, acknowledge: yes}</code> to the IBS system at <code><span>/a1/submit/</span><i class="fa fa-copy" aria-hidden="true" data-placement="top" data-original-title="copy"></i></code>.</li>
+                    <li><strong>Note 3: </strong>The server will return an error response if your request is malformed. Make sure to try different inputs and values and always get 200 OK &nbsp;from the server. It is still your responsibility to ensure that you are sending the correct request at all times, and the server is just a helper tool.</li>
+                  </ul>
+                </li>
+                <li>Commander Erwin's <a class="inline_disabled" href="https://www.youtube.com/watch?v=9hh8qaajIXk" target="_blank" rel="noopener">historic speech</a>&nbsp;as an embedded video. (<strong>Spoiler alert</strong>: the video is from Attack on Titan season 3). Leave all the config options unchanged.</li>
+                <li>An automatic email link in the <strong>footer</strong>. The link should display your utoronto email, and once clicked, the default mailing app should pop up, and a new email is created (but not sent).<br />There must be this pre-written data on the email:<br />
+                  <ul class="tab_panel_bullets">
+                    <li>Recipient: *your email in the footer*</li>
+                    <li>Subject: <code>Bug Found!</code></li>
+                    <li>Body: <code>I found the following bug on your website</code></li>
+                  </ul>
+                </li>
+              </ul>
+              <p>Note that your HTML file must NOT contain any style or scripts, either inline or from a file (except for the style.css file you will create in the next question). All the requirements of this part must be fullfilled by using pure HTML code (no CSS styles).</p>
+              <p>Any text formatted like <code>this</code>&nbsp;must be exactly copied to your file, as the auto tester will run a <strong>case-sensitive check</strong>. You can put additional elements (div, span, etc.) in your file, but make sure that you follow the format above.</p>
+              <p><strong>Important</strong>: make sure that you <a href="https://validator.w3.org/">validate</a> your file before submitting it. The tester might not work properly if your file is malformed.</p>
+              <hr />
+              <h2 class="blog_subtitle"><strong>Style it up!</strong></h2>
+              <p>Complement your HTML file with a stylesheet named style.css that fulfills the following requirements</p>
+              <ul class="tab_panel_bullets">
+                <li>Make the previous &lt;div&gt; section always <strong>stick</strong> to the top of screens as they scroll. That is, it should remain on top of the page no matter how much the user has scrolled down. It should have no space to the top, left, or right. Also, set its background color to <em>aqua</em>.</li>
+                <li>Fit the unordered list in one line. Put at least a 5% margin to the left and right of each item.</li>
+                <li>Use <strong>Roboto Regular 400</strong> as the font for the entire HTML document.</li>
+                <li>Make the previous table look like this. Pay attention to the background color, text alignment, and borders. <br /><img src="https://q.utoronto.ca/courses/291539/files/24057835/preview" alt="Screenshot 2022-12-28 at 4.00.05 PM.png" width="420" height="155" data-api-endpoint="https://q.utoronto.ca/api/v1/courses/291539/files/24057835" data-api-returntype="File" /></li>
+                <li>Re-arrange the form fields (except for the checkbox) into two columns of the same width. They horizontal order should be feedback, email, country, and attachment. The labels should be left-aligned and take at most 30% of each column. Make sure to put some appropriate space between columns, labels, and inputs.</li>
+                <li>Re-arrange your page into a two-columned layout. The left column contains everything except the <code>Hello Visitors</code> &lt;div&gt;, the footer, and the embedded video. The right column is dedicated to the video. Set its background color to <em>plum</em>. The video column should take at least 50% of the whole window's width, and never shrink below 560 pixels (the original video's width). In other words, if there is not enough space, the other column should be squeezed so the video's frame is not compromised. Obviously, if the width becomes too small, the browser will add a horizontal scrollbar. Even it that case, the video frame must be full-sized after scrolling.</li>
+                <li>Make everything inside the HTML file center-aligned (except for the 2-column part of the form). That includes all grid content, the header, and the footer. The video must be both horizontally and vertically centered in the right column.&nbsp;</li>
+                <li>Put a reasonable margin between elements so that they will not overlap or fall too close to each other. Also, make sure that the labels are vertically aligned with their corresponding inputs.&nbsp;</li>
+              </ul>
+              <p>For your help, you can refer to the below screenshot as what your final submission should look like to receive the full marks. Note that the inputs fields, buttons, and progress bar may look different from the example, depending on your browser.</p>
+              <p><strong>Important: </strong>The below picture describes <strong>necessity</strong>, not sufficiency. In other words, a working solution looks similar to the picture, but it does not mean that you will necessarily get full marks if your solution looks like it. To obtain full marks, your code must adhere to <strong>all</strong> rules listed in the handout .</p>
+            </div>
+            <p>&nbsp;</p>
+            <p><img src="https://q.utoronto.ca/courses/291539/files/24058175/preview" alt="Screenshot 2022-12-28 at 4.28.36 PM.png" width="930" height="452" data-api-endpoint="https://q.utoronto.ca/api/v1/courses/291539/files/24058175" data-api-returntype="File" /></p>
           </div>
 
           <hr>
