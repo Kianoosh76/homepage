@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/html">
+
 <head>
     <title>Restify: phase 3</title>
     <meta charset="utf-8">
@@ -14,275 +15,343 @@
     <meta property="og:description" content="CSC309: Programming on the Web - Winter 2022">
     <meta property="og:image" content="https://www.cs.toronto.edu/~kianoosh/courses/csc309/images/card.png">
 
-    <link rel="shortcut icon" type="image/jpg" href="../../images/favicon.png"/>
+    <link rel="shortcut icon" type="image/jpg" href="../../images/favicon.png" />
     <link rel="stylesheet" type="text/css" href="../../styles/bootstrap4/bootstrap.min.css">
     <link href="../../plugins/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href="../../plugins/colorbox/colorbox.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" type="text/css" href="../../styles/handout.css?v=1.4">
     <link rel="stylesheet" type="text/css" href="../../styles/course.css?v=1.3">
     <link rel="stylesheet" type="text/css" href="../../styles/handout_responsive.css">
 </head>
+
 <body>
 
-<div class="super_container">
+    <div class="super_container">
 
-    <!-- Header -->
+        <!-- Header -->
 
-    <header class="header">
+        <header class="header">
 
-        <!-- Header Content -->
-        <div class="header_container">
-            <div class="container">
-                <div class="row">
-                    <div class="col">
-                        <div class="header_content d-flex flex-row align-items-center justify-content-start">
-                            <div class="logo_container">
-                                <a href="../../">
-                                    <div class="logo_text">CSC309: Programming on the Web</div>
-                                </a>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Header Search Panel -->
-        <div class="header_search_container">
-            <div class="container">
-                <div class="row">
-                    <div class="col">
-                        <div class="header_search_content d-flex flex-row align-items-center justify-content-end">
-                            <form action="#" class="header_search_form">
-                                <input type="search" class="search_input" placeholder="Search" required="required">
-                                <button class="header_search_button d-flex flex-column align-items-center justify-content-center">
-                                    <i class="fa fa-search" aria-hidden="true"></i>
-                                </button>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </header>
-
-    <!-- Home -->
-
-    <div class="home">
-        <div class="breadcrumbs_container">
-            <div class="container">
-                <div class="row">
-                    <div class="col">
-                        <div class="breadcrumbs">
-                            <ul>
-                                <li><a href="../../">Home</a></li>
-                                <li><a href="#">handouts</a></li>
-                                <li>Assignment 3</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Blog -->
-
-    <div class="blog">
-        <div class="container">
-            <div class="row">
-
-                <!-- Blog Content -->
-                <div class="col-lg-8">
-                    <div class="blog_content">
-                        <div class="blog_title">Restify: phase 3</div>
-                        <div class="blog_meta">
-                            <ul>
-                                <li>Due date: <span id="due-date">Fri April 8, 2022 23:59:00</span></li>
-                                <li><span id="remaining-time"></span> remaining</li>
-                            </ul>
-                        </div>
-                        <div class="blog_subtitle"><b>Overview</b></div>
-                        <p>Please find the general information about the project and its features on the <a href="p1.html">phase 1 handout</a>.</p>
-                        NOTE NOTE: talk about handling tokens + paginations (notif ...)
-                        NOTE NOTE: talk about UX perfections: error validation in place in forms, paginations, pages, loading buttons, paginations, URLs
-                        <div class="blog_subtitle"><b>Submission</b></div>
-                        <p>TAs will clone and run your codes on their own machines. Therefore, you must make sure that your code can run well on other computers. A <a>virtual machine</a> has already been offered to you. It is the environment in which your code will be run in phases 2 and 3. So, to avoid unexpected issues, you are advised to use that environment to run your code. However, you are allowed to work on other operating systems and environments as well, but <b>at your own risk</b>. It is crucially important for you to at least double-check your whole project in that virtual machine before submitting it. You will not be allowed to modify your code at the interview sessions. Therefore, if, for any reason, your code does not run, you will not get any marks. </p>
-
-                        <p>It is recommended that you test your code on Firefox (95 or above) or Google Chrome (96 or above). You might probably not want to risk it by using Internet Explorer, Opera, or other things.</p>
-
-                        <div class="blog_subtitle"><b>Phase 3 deliverables</b></div>
-
-                        <p>In this phase, you should use React to implement the frontend of your web application. Your frontend is based on your static demo from phase 1 and communicates to the Django backend of phase 2. Therefore, the deliverable for this phase is a <b>full website</b>. You must push both your frontend and backend servers to your repository. Push two scripts as well: <span class="quote">startup.sh</span> and <span class="quote">run.sh</span>. The <b>startup</b> script should run all preparations such as creating the virtual env, pip installing all packages, migrations, npm install, etc. The <b>run</b> script  should run both backend and frontend servers. The TA will work with your frontend interface like an ordinary user and will check all the required features. It should be a fully-functional website where users interact without any help from other people. </p>
-
-                        <p><b>Note 1:</b> Since it is the final phase, you can adjust your backend server, as well as your HTML/CSS files of phase 1. You will not lose any marks for that.</p>
-
-                        <p><b>Note 2: </b> Before submitting, make sure that your startup and run scripts work well on the virtual machines given to you. The TAs will run your application on clean instances of that virtual machine. If you have worked with another operating system, it is your absolute <b>responsibility</b> to double-check that your project works fine within the virtual machine as well. </p>
-                        <hr>
-
-                    </div>
-
-                    <!-- Comments -->
-                    <div class="comments_container">
-                        <h3>Comments</h3>
-                        <ul class="comments_list">
-                            <li>
-                                <div class="comment_item d-flex flex-row align-items-start jutify-content-start">
-                                    <div class="comment_content">
-                                        <div class="comment_title_container d-flex flex-row align-items-center justify-content-start">
-                                            <div class="comment_author"><a href="#" onclick="return false">Justin</a></div>
-                                            <div class="comment_rating"><div class="rating_r rating_r_5"><i></i><i></i><i></i><i></i><i></i></div></div>
-                                            <div class="comment_time ml-auto" id="date1"></div>
-                                        </div>
-                                        <div class="comment_text">
-                                            <p>This is my fourth time taking CSC309, and inarguably, this is the best assignment I've ever seen.<br>
-                                                Problems are so accurately designed that anyone with their own knowledge and experience have their own takeaways.<br>
-                                                I hope next assignments will be this good, too!
-                                            </p>
-                                        </div>
-                                        <div class="comment_extras d-flex flex-row align-items-center justify-content-start">
-                                            <div class="comment_extra comment_likes"><a href="#" onclick="return false"><i class="fa fa-thumbs-up" aria-hidden="true"></i><span>108</span></a></div>
-                                            <div class="comment_extra comment_reply"><a href="#" onclick="return false"><i class="fa fa-pencil-square" aria-hidden="true"></i><span>Reply</span></a></div>
-                                        </div>
-                                    </div>
+            <!-- Header Content -->
+            <div class="header_container">
+                <div class="container">
+                    <div class="row">
+                        <div class="col">
+                            <div class="header_content d-flex flex-row align-items-center justify-content-start">
+                                <div class="logo_container">
+                                    <a href="../../">
+                                        <div class="logo_text">CSC309: Programming on the Web</div>
+                                    </a>
                                 </div>
-                                <ul>
-                                    <li>
-                                        <div class="comment_item d-flex flex-row align-items-start jutify-content-start">
-                                            <div class="comment_content">
-                                                <div class="comment_title_container d-flex flex-row align-items-center justify-content-start">
-                                                    <div class="comment_author"><a href="#" onclick="return false">Kianoosh</a></div>
-                                                    <div class="comment_time ml-auto" id="date2"></div>
-                                                    <script>document.getElementById("date1").innerHTML = new Date().toDateString();
-                                                    document.getElementById("date2").innerHTML = new Date().toDateString();
-                                                    </script>
 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Header Search Panel -->
+            <div class="header_search_container">
+                <div class="container">
+                    <div class="row">
+                        <div class="col">
+                            <div class="header_search_content d-flex flex-row align-items-center justify-content-end">
+                                <form action="#" class="header_search_form">
+                                    <input type="search" class="search_input" placeholder="Search" required="required">
+                                    <button
+                                        class="header_search_button d-flex flex-column align-items-center justify-content-center">
+                                        <i class="fa fa-search" aria-hidden="true"></i>
+                                    </button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Home -->
+
+        <div class="home">
+            <div class="breadcrumbs_container">
+                <div class="container">
+                    <div class="row">
+                        <div class="col">
+                            <div class="breadcrumbs">
+                                <ul>
+                                    <li><a href="../../">Home</a></li>
+                                    <li><a href="#">handouts</a></li>
+                                    <li>Assignment 3</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Blog -->
+
+        <div class="blog">
+            <div class="container">
+                <div class="row">
+
+                    <!-- Blog Content -->
+                    <div class="col-lg-8">
+                        <div class="blog_content">
+                            <div class="blog_title">Restify: phase 3</div>
+                            <div class="blog_meta">
+                                <ul>
+                                    <li>Due date: <span id="due-date">Fri April 8, 2022 23:59:00</span></li>
+                                    <li><span id="remaining-time"></span> remaining</li>
+                                </ul>
+                            </div>
+                            <div class="blog_subtitle"><b>Overview</b></div>
+                            <p>Please find the general information about the project and its features on the <a
+                                    href="p1.html">phase 1 handout</a>.</p>
+                            NOTE NOTE: talk about handling tokens + paginations (notif ...)
+                            NOTE NOTE: talk about UX perfections: error validation in place in forms, paginations,
+                            pages, loading buttons, paginations, URLs
+                            <div class="blog_subtitle"><b>Submission</b></div>
+                            <p>TAs will clone and run your codes on their own machines. Therefore, you must make sure
+                                that your code can run well on other computers. A <a>virtual machine</a> has already
+                                been offered to you. It is the environment in which your code will be run in phases 2
+                                and 3. So, to avoid unexpected issues, you are advised to use that environment to run
+                                your code. However, you are allowed to work on other operating systems and environments
+                                as well, but <b>at your own risk</b>. It is crucially important for you to at least
+                                double-check your whole project in that virtual machine before submitting it. You will
+                                not be allowed to modify your code at the interview sessions. Therefore, if, for any
+                                reason, your code does not run, you will not get any marks. </p>
+
+                            <p>It is recommended that you test your code on Firefox (95 or above) or Google Chrome (96
+                                or above). You might probably not want to risk it by using Internet Explorer, Opera, or
+                                other things.</p>
+
+                            <div class="blog_subtitle"><b>Phase 3 deliverables</b></div>
+
+                            <p>In this phase, you should use React to implement the frontend of your web application.
+                                Your frontend is based on your static demo from phase 1 and communicates to the Django
+                                backend of phase 2. Therefore, the deliverable for this phase is a <b>full website</b>.
+                                You must push both your frontend and backend servers to your repository. Push two
+                                scripts as well: <span class="quote">startup.sh</span> and <span
+                                    class="quote">run.sh</span>. The <b>startup</b> script should run all preparations
+                                such as creating the virtual env, pip installing all packages, migrations, npm install,
+                                etc. The <b>run</b> script should run both backend and frontend servers. The TA will
+                                work with your frontend interface like an ordinary user and will check all the required
+                                features. It should be a fully-functional website where users interact without any help
+                                from other people. </p>
+
+                            <p><b>Note 1:</b> Since it is the final phase, you can adjust your backend server, as well
+                                as your HTML/CSS files of phase 1. You will not lose any marks for that.</p>
+
+                            <p><b>Note 2: </b> Before submitting, make sure that your startup and run scripts work well
+                                on the virtual machines given to you. The TAs will run your application on clean
+                                instances of that virtual machine. If you have worked with another operating system, it
+                                is your absolute <b>responsibility</b> to double-check that your project works fine
+                                within the virtual machine as well. </p>
+                            <hr>
+
+                        </div>
+
+                        <!-- Comments -->
+                        <div class="comments_container">
+                            <h3>Comments</h3>
+                            <ul class="comments_list">
+                                <li>
+                                    <div class="comment_item d-flex flex-row align-items-start jutify-content-start">
+                                        <div class="comment_content">
+                                            <div
+                                                class="comment_title_container d-flex flex-row align-items-center justify-content-start">
+                                                <div class="comment_author"><a href="#"
+                                                        onclick="return false">Justin</a></div>
+                                                <div class="comment_rating">
+                                                    <div class="rating_r rating_r_5"><i></i><i></i><i></i><i></i><i></i>
+                                                    </div>
                                                 </div>
-                                                <div class="comment_text">
-                                                    <p>Thanks bro!</p>
-                                                </div>
-                                                <div class="comment_extras d-flex flex-row align-items-center justify-content-start">
-                                                    <div class="comment_extra comment_likes"><a href="#" onclick="return false"><i class="fa fa-thumbs-up" aria-hidden="true"></i><span>36</span></a></div>
-                                                    <div class="comment_extra comment_reply"><a href="#" onclick="return false"><i class="fa fa-pencil-square" aria-hidden="true"></i><span>Reply</span></a></div>
-                                                </div>
+                                                <div class="comment_time ml-auto" id="date1"></div>
+                                            </div>
+                                            <div class="comment_text">
+                                                <p>This is my fourth time taking CSC309, and inarguably, this is the
+                                                    best assignment I've ever seen.<br>
+                                                    Problems are so accurately designed that anyone with their own
+                                                    knowledge and experience have their own takeaways.<br>
+                                                    I hope next assignments will be this good, too!
+                                                </p>
+                                            </div>
+                                            <div
+                                                class="comment_extras d-flex flex-row align-items-center justify-content-start">
+                                                <div class="comment_extra comment_likes"><a href="#"
+                                                        onclick="return false"><i class="fa fa-thumbs-up"
+                                                            aria-hidden="true"></i><span>108</span></a></div>
+                                                <div class="comment_extra comment_reply"><a href="#"
+                                                        onclick="return false"><i class="fa fa-pencil-square"
+                                                            aria-hidden="true"></i><span>Reply</span></a></div>
                                             </div>
                                         </div>
-                                    </li>
-                                </ul>
-                            </li>
-                        </ul>
-                        <div class="add_comment_container">
-                            <div class="add_comment_title">Write a comment</div>
-                            <div class="add_comment_text">Your email address will not be published. Required fields are marked *</div>
-                            <form action="#" class="comment_form">
-                                <div>
-                                    <div class="form_title">Review*</div>
-                                    <textarea class="comment_input comment_textarea" required="required"></textarea>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-6 input_col">
-                                        <div class="form_title">Name*</div>
-                                        <input type="text" class="comment_input" required="required">
                                     </div>
-                                    <div class="col-md-6 input_col">
-                                        <div class="form_title">Email*</div>
-                                        <input type="text" class="comment_input" required="required">
+                                    <ul>
+                                        <li>
+                                            <div
+                                                class="comment_item d-flex flex-row align-items-start jutify-content-start">
+                                                <div class="comment_content">
+                                                    <div
+                                                        class="comment_title_container d-flex flex-row align-items-center justify-content-start">
+                                                        <div class="comment_author"><a href="#"
+                                                                onclick="return false">Kianoosh</a></div>
+                                                        <div class="comment_time ml-auto" id="date2"></div>
+                                                        <script>document.getElementById("date1").innerHTML = new Date().toDateString();
+                                                            document.getElementById("date2").innerHTML = new Date().toDateString();
+                                                        </script>
+
+                                                    </div>
+                                                    <div class="comment_text">
+                                                        <p>Thanks bro!</p>
+                                                    </div>
+                                                    <div
+                                                        class="comment_extras d-flex flex-row align-items-center justify-content-start">
+                                                        <div class="comment_extra comment_likes"><a href="#"
+                                                                onclick="return false"><i class="fa fa-thumbs-up"
+                                                                    aria-hidden="true"></i><span>36</span></a></div>
+                                                        <div class="comment_extra comment_reply"><a href="#"
+                                                                onclick="return false"><i class="fa fa-pencil-square"
+                                                                    aria-hidden="true"></i><span>Reply</span></a></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <div class="add_comment_container">
+                                <div class="add_comment_title">Write a comment</div>
+                                <div class="add_comment_text">Your email address will not be published. Required fields
+                                    are marked *</div>
+                                <form action="#" class="comment_form">
+                                    <div>
+                                        <div class="form_title">Review*</div>
+                                        <textarea class="comment_input comment_textarea" required="required"></textarea>
                                     </div>
-                                </div>
-                                <div class="comment_notify">
-                                    <input type="checkbox" id="checkbox_notify" name="regular_checkbox" class="regular_checkbox checkbox_account" checked>
-                                    <label for="checkbox_notify"><i class="fa fa-check" aria-hidden="true"></i></label>
-                                    <span>Notify me of new posts by email</span>
-                                </div>
-                                <div>
-                                    <script>
-                                        function fakesubmit() {
-                                            alert("Thank you so much for writing your feedback.\n\nAs you may already have guessed, your feedback is neither saved nor sent anywhere. In fact, no one will ever even know that you wrote such feedback. " +
-                                                "The reason is that it is not possible for this website to store and present such stuff. Throughout this course, you will learn why.\n\n" +
-                                                "Now, please copy your feedback to piazza or email it to me or a TA :)")
-                                        }
-                                    </script>
-                                    <button type="submit" onclick="fakesubmit()" class="comment_button trans_200">submit</button>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Blog Sidebar -->
-                <div class="col-lg-4">
-                    <div class="sidebar">
-
-                        <!-- Feature -->
-                        <div class="sidebar_section">
-                            <div class="sidebar_section_title">Course Links</div>
-                            <div class="sidebar_feature">
-
-                                <!-- Features -->
-                                <div class="feature_list">
-
-                                    <!-- Feature -->
-                                    <div class="feature d-flex flex-row align-items-center justify-content-start">
-                                        <div class="feature_title"><i class="fa fa-calendar" aria-hidden="true"></i><span>Schedule</span></div>
-                                        <div class="feature_text ml-auto"><a href="https://calendar.google.com/calendar/u/0?cid=NWY2Zm5ia2NhZHQ0bTQyajdjamlkMnJkMzhAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ">Google Calendar</a></div>
+                                    <div class="row">
+                                        <div class="col-md-6 input_col">
+                                            <div class="form_title">Name*</div>
+                                            <input type="text" class="comment_input" required="required">
+                                        </div>
+                                        <div class="col-md-6 input_col">
+                                            <div class="form_title">Email*</div>
+                                            <input type="text" class="comment_input" required="required">
+                                        </div>
                                     </div>
-
-                                    <!-- Feature -->
-                                    <div class="feature d-flex flex-row align-items-center justify-content-start">
-                                        <div class="feature_title"><i class="fa fa-question-circle-o" aria-hidden="true"></i><span>Announcement - Q&A</span></div>
-                                        <div class="feature_text ml-auto"><a href="https://piazza.com/utoronto.ca/winter2022/csc309">Piazza</a></div>
+                                    <div class="comment_notify">
+                                        <input type="checkbox" id="checkbox_notify" name="regular_checkbox"
+                                            class="regular_checkbox checkbox_account" checked>
+                                        <label for="checkbox_notify"><i class="fa fa-check"
+                                                aria-hidden="true"></i></label>
+                                        <span>Notify me of new posts by email</span>
                                     </div>
-
-                                    <!-- Feature -->
-                                    <div class="feature d-flex flex-row align-items-center justify-content-start">
-                                        <div class="feature_title"><i class="fa fa-address-book" aria-hidden="true"></i><span>Submissions</span></div>
-                                        <div class="feature_text ml-auto"><a href="http://mcsmark.utm.utoronto.ca/csc309s22">Markus</a></div>
+                                    <div>
+                                        <script>
+                                            function fakesubmit() {
+                                                alert("Thank you so much for writing your feedback.\n\nAs you may already have guessed, your feedback is neither saved nor sent anywhere. In fact, no one will ever even know that you wrote such feedback. " +
+                                                    "The reason is that it is not possible for this website to store and present such stuff. Throughout this course, you will learn why.\n\n" +
+                                                    "Now, please copy your feedback to piazza or email it to me or a TA :)")
+                                            }
+                                        </script>
+                                        <button type="submit" onclick="fakesubmit()"
+                                            class="comment_button trans_200">submit</button>
                                     </div>
-
-                                    <!-- Feature -->
-                                    <div class="feature d-flex flex-row align-items-center justify-content-start">
-                                        <div class="feature_title"><i class="fa fa-table" aria-hidden="true"></i><span>Informal chat</span></div>
-                                        <div class="feature_text ml-auto"><a href="https://discord.gg/VGFQN62EeY">Discord</a></div>
-                                    </div>
-
-                                    <!-- Feature -->
-                                    <div class="feature d-flex flex-row align-items-center justify-content-start">
-                                        <div class="feature_title"><i class="fa fa-flask" aria-hidden="true"></i><span>Lab sessions</span></div>
-                                        <div class="feature_text ml-auto"><a href="https://utoronto.zoom.us/s/84959059534">Zoom</a></div>
-                                    </div>
-
-                                </div>
+                                </form>
                             </div>
                         </div>
+                    </div>
 
+                    <!-- Blog Sidebar -->
+                    <div class="col-lg-4">
+                        <div class="sidebar">
+
+                            <!-- Feature -->
+                            <div class="sidebar_section">
+                                <div class="sidebar_section_title">Course Links</div>
+                                <div class="sidebar_feature">
+
+                                    <!-- Features -->
+                                    <div class="feature_list">
+
+                                        <!-- Feature -->
+                                        <div class="feature d-flex flex-row align-items-center justify-content-start">
+                                            <div class="feature_title"><i class="fa fa-calendar"
+                                                    aria-hidden="true"></i><span>Schedule</span></div>
+                                            <div class="feature_text ml-auto"><a
+                                                    href="https://calendar.google.com/calendar/u/0?cid=NWY2Zm5ia2NhZHQ0bTQyajdjamlkMnJkMzhAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ">Google
+                                                    Calendar</a></div>
+                                        </div>
+
+                                        <!-- Feature -->
+                                        <div class="feature d-flex flex-row align-items-center justify-content-start">
+                                            <div class="feature_title"><i class="fa fa-question-circle-o"
+                                                    aria-hidden="true"></i><span>Announcement - Q&A</span></div>
+                                            <div class="feature_text ml-auto"><a
+                                                    href="https://piazza.com/utoronto.ca/winter2022/csc309">Piazza</a>
+                                            </div>
+                                        </div>
+
+                                        <!-- Feature -->
+                                        <div class="feature d-flex flex-row align-items-center justify-content-start">
+                                            <div class="feature_title"><i class="fa fa-address-book"
+                                                    aria-hidden="true"></i><span>Submissions</span></div>
+                                            <div class="feature_text ml-auto"><a
+                                                    href="http://mcsmark.utm.utoronto.ca/csc309s22">Markus</a></div>
+                                        </div>
+
+                                        <!-- Feature -->
+                                        <div class="feature d-flex flex-row align-items-center justify-content-start">
+                                            <div class="feature_title"><i class="fa fa-table"
+                                                    aria-hidden="true"></i><span>Informal chat</span></div>
+                                            <div class="feature_text ml-auto"><a
+                                                    href="https://discord.gg/VGFQN62EeY">Discord</a></div>
+                                        </div>
+
+                                        <!-- Feature -->
+                                        <div class="feature d-flex flex-row align-items-center justify-content-start">
+                                            <div class="feature_title"><i class="fa fa-flask"
+                                                    aria-hidden="true"></i><span>Lab sessions</span></div>
+                                            <div class="feature_text ml-auto"><a
+                                                    href="https://utoronto.zoom.us/s/84959059534">Zoom</a></div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
+
+        <!-- Footer -->
+
+        <footer class="footer">
+            <div class="container">
+                <div class="row copyright_row">
+                    <div class="col">
+                        <div class="copyright d-flex flex-lg-row flex-column align-items-center justify-content-start">
+                            <div class="cr_text">
+                                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                                Copyright &copy;
+                                <script>document.write(new Date().getFullYear());</script> All rights reserved | This
+                                template is made by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+                                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
     </div>
 
-    <!-- Footer -->
-
-    <footer class="footer">
-        <div class="container">
-            <div class="row copyright_row">
-                <div class="col">
-                    <div class="copyright d-flex flex-lg-row flex-column align-items-center justify-content-start">
-                        <div class="cr_text"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                            Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-                            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
-</div>
-
-<script src="../../js/jquery-3.2.1.min.js"></script>
-<script src="../../styles/bootstrap4/popper.js"></script>
-<script src="../../styles/bootstrap4/bootstrap.min.js"></script>
-<script src="../../plugins/colorbox/jquery.colorbox-min.js"></script>
-<script src="../../js/handout.js?v=1"></script>
+    <script src="../../js/jquery-3.2.1.min.js"></script>
+    <script src="../../styles/bootstrap4/popper.js"></script>
+    <script src="../../styles/bootstrap4/bootstrap.min.js"></script>
+    <script src="../../js/handout.js?v=1"></script>
 </body>
+
 </html>

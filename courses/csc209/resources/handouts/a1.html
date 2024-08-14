@@ -1,28 +1,29 @@
-    <!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <title>Assignment 1: C and File Systems</title>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="description" content="CSC209: Software Tools and System Programming - Summer 2022">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+<!DOCTYPE html>
+<html lang="en">
 
-        <!-- Open Graph / Facebook -->
-        <meta property="og:type" content="website">
-        <meta property="og:url" content="https://www.cs.toronto.edu/~kianoosh/courses/csc209/handouts/a1.html">
-        <meta property="og:title" content="Assignment 1: C and File Systems">
-        <meta property="og:description" content="CSC209: Software Tools and System Programming - Summer 2022">
-        <meta property="og:image" content="https://www.cs.toronto.edu/~kianoosh/courses/csc209/images/card.png">
+<head>
+    <title>Assignment 1: C and File Systems</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="CSC209: Software Tools and System Programming - Summer 2022">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <link rel="shortcut icon" type="image/jpg" href="../../images/favicon.png"/>
-        <link rel="stylesheet" type="text/css" href="../../styles/bootstrap4/bootstrap.min.css">
-        <link href="../../plugins/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-        <link href="../../plugins/colorbox/colorbox.css" rel="stylesheet" type="text/css">
-        <link rel="stylesheet" type="text/css" href="../../styles/handout.css?v=1.4">
-        <link rel="stylesheet" type="text/css" href="../../styles/course.css?v=1.3">
-        <link rel="stylesheet" type="text/css" href="../../styles/handout_responsive.css">
-    </head>
-    <body>
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.cs.toronto.edu/~kianoosh/courses/csc209/handouts/a1.html">
+    <meta property="og:title" content="Assignment 1: C and File Systems">
+    <meta property="og:description" content="CSC209: Software Tools and System Programming - Summer 2022">
+    <meta property="og:image" content="https://www.cs.toronto.edu/~kianoosh/courses/csc209/images/card.png">
+
+    <link rel="shortcut icon" type="image/jpg" href="../../images/favicon.png" />
+    <link rel="stylesheet" type="text/css" href="../../styles/bootstrap4/bootstrap.min.css">
+    <link href="../../plugins/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="../../styles/handout.css?v=1.4">
+    <link rel="stylesheet" type="text/css" href="../../styles/course.css?v=1.3">
+    <link rel="stylesheet" type="text/css" href="../../styles/handout_responsive.css">
+</head>
+
+<body>
 
     <div class="super_container">
 
@@ -56,7 +57,8 @@
                             <div class="header_search_content d-flex flex-row align-items-center justify-content-end">
                                 <form action="#" class="header_search_form">
                                     <input type="search" class="search_input" placeholder="Search" required="required">
-                                    <button class="header_search_button d-flex flex-column align-items-center justify-content-center">
+                                    <button
+                                        class="header_search_button d-flex flex-column align-items-center justify-content-center">
                                         <i class="fa fa-search" aria-hidden="true"></i>
                                     </button>
                                 </form>
@@ -108,7 +110,7 @@
 
                             <p>
                                 Your task in this assignment is to implement a simulated file
-                                system.  The simulated file system (simfs) is stored in a single Unix file.
+                                system. The simulated file system (simfs) is stored in a single Unix file.
                                 There is only one directory in this file system, and there are limits on the
                                 number of files (<code>MAXFILES</code>) it can store and the amount of space
                                 (<code>MAXBLOCKS</code>) it can occupy. The key file system structures are already
@@ -127,13 +129,24 @@
 
                             <ul class="tab_panel_bullets">
                                 <li>This assignment will make up 10% of your final grade.</li>
-                                <li>No late submissions will be accepted after the due date. However, you are given a certain amount of <b>tokens</b> by which you can slightly extend the deadline of the assignment. Details about tokens can be found on the <a href="../../">course website</a> </li>
-                                <li>If you have any questions or problems with the assignment, please post them on Piazza.</li>
-                                <li>Your submissions will be auto-graded. Therefore, your code must adhere to all details provided in the handout; otherwise, you might lose marks.</li>
-                                <li>You will not receive any feedback from the auto grader before the deadline has passed. So it is your responsibility to double-check your code with the handout before submission. Even minor spelling mistakes can lead to loss of marks. No remark requests will be accepted on these matters.</li>
-                                <li>You must verify that your submission compiles <b> without any warnings </b> and runs on a UTM MCS lab machine, as that is
+                                <li>No late submissions will be accepted after the due date. However, you are given a
+                                    certain amount of <b>tokens</b> by which you can slightly extend the deadline of the
+                                    assignment. Details about tokens can be found on the <a href="../../">course
+                                        website</a> </li>
+                                <li>If you have any questions or problems with the assignment, please post them on
+                                    Piazza.</li>
+                                <li>Your submissions will be auto-graded. Therefore, your code must adhere to all
+                                    details provided in the handout; otherwise, you might lose marks.</li>
+                                <li>You will not receive any feedback from the auto grader before the deadline has
+                                    passed. So it is your responsibility to double-check your code with the handout
+                                    before submission. Even minor spelling mistakes can lead to loss of marks. No remark
+                                    requests will be accepted on these matters.</li>
+                                <li>You must verify that your submission compiles <b> without any warnings </b> and runs
+                                    on a UTM MCS lab machine, as that is
                                     where we will be testing. </li>
-                                <li>Only the last version of your repository will be graded. Make sure that your last commit is the one you would like to be graded. It will not be possible to ask for a checkout to a different commit. </li>
+                                <li>Only the last version of your repository will be graded. Make sure that your last
+                                    commit is the one you would like to be graded. It will not be possible to ask for a
+                                    checkout to a different commit. </li>
                                 <li> Please read the next section, about the simfs structure, very carefully. The
                                     specification for the file system is necessarily detailed, and for your program
                                     to work with simfs-formatted files, it will need to conform precisely to the spec.
@@ -142,25 +155,34 @@
 
                             <div class="blog_subtitle">What to submit</div>
 
-                            <p>Submit your assignment by committing <b>all</b> your source code, header files, and Makefile to your
-                                repository under the <code>a1</code> directory.  Please do not commit .o files or
+                            <p>Submit your assignment by committing <b>all</b> your source code, header files, and
+                                Makefile to your
+                                repository under the <code>a1</code> directory. Please do not commit .o files or
                                 executable files. Do not modify the <code>Makefile</code> or <code>simfstypes.h</code>.
-                            <br>
-                                Note that you must submit your work to your git repository on Markus. That is, you cannot submit through its normal web interface.
+                                <br>
+                                Note that you must submit your work to your git repository on Markus. That is, you
+                                cannot submit through its normal web interface.
                             </p>
 
                             <div class="blog_subtitle">Academic Integrity</div>
 
-                            <p>Assignments are <strong>individual work</strong> which means that you will not be allowed to seek advice from other students or copy/paste someone else's code, even open-source codes from the internet. However, you are allowed to look at online resources, tutorials, and Q&A websites to solve the problems. The entire code must be written by yourself.</p>
+                            <p>Assignments are <strong>individual work</strong> which means that you will not be allowed
+                                to seek advice from other students or copy/paste someone else's code, even open-source
+                                codes from the internet. However, you are allowed to look at online resources,
+                                tutorials, and Q&A websites to solve the problems. The entire code must be written by
+                                yourself.</p>
 
                             <hr>
 
                             <div class="blog_subtitle"><b>simfs structure</b></div>
 
                             <p>
-                                simfs should be thought of as an array of <i>blocks</i>. Each block is a contiguous chunk
-                                of <code>BLOCKSIZE</code> bytes. Metadata (described below) is stored at the beginning of the file in
-                                the first (or first few) blocks. The simulated file system, simfs, contains two types of metadata: file
+                                simfs should be thought of as an array of <i>blocks</i>. Each block is a contiguous
+                                chunk
+                                of <code>BLOCKSIZE</code> bytes. Metadata (described below) is stored at the beginning
+                                of the file in
+                                the first (or first few) blocks. The simulated file system, simfs, contains two types of
+                                metadata: file
                                 entries (<code>fentries</code>) and file nodes (<code>fnodes</code>).
                             </p>
 
@@ -177,17 +199,24 @@
 
                             <p> An <code>fnode</code> contains:</p>
                             <ul class="tab_panel_bullets">
-                                <li><b>blockindex:</b> The index of the data block storing the file data associated with this fnode. The
-                                    magnitude of the index is always the index of the fnode in its array; it is negative if the data block is not in use. </li>
-                                <li><b>nextblock:</b> An index into the array of fnodes. The specified fnode contains info about the next block
+                                <li><b>blockindex:</b> The index of the data block storing the file data associated with
+                                    this fnode. The
+                                    magnitude of the index is always the index of the fnode in its array; it is negative
+                                    if the data block is not in use. </li>
+                                <li><b>nextblock:</b> An index into the array of fnodes. The specified fnode contains
+                                    info about the next block
                                     of data in the file. This value is -1 if there is no next block in the file.
                                 </li>
                             </ul>
 
                             <p>
-                                There are a fixed number of fentries and a fixed number of fnodes, so it is possible to calculate how much space they
-                                will take. The array of fentries is stored at the very beginning of the file, followed immediately after by the array of fnodes. The number of blocks required to store the fentries and fnodes depends on how many of them
-                                there are (<code>MAXFILES</code> and <code>MAXBLOCKS</code>). See <code>simfstypes.h</code> for the definitions
+                                There are a fixed number of fentries and a fixed number of fnodes, so it is possible to
+                                calculate how much space they
+                                will take. The array of fentries is stored at the very beginning of the file, followed
+                                immediately after by the array of fnodes. The number of blocks required to store the
+                                fentries and fnodes depends on how many of them
+                                there are (<code>MAXFILES</code> and <code>MAXBLOCKS</code>). See
+                                <code>simfstypes.h</code> for the definitions
                                 of these constants as well as for the structs defined in the previous bullets.
                             </p>
 
@@ -197,19 +226,24 @@
                                 As a result, the first fnode is in use (block 0 contains metadata), and file data
                                 begins in the second block (index 1). The real file containing
                                 the simulated file system would be arranged as shown in the following
-                                diagram.  Please note that the boxes are not scaled according to the number
+                                diagram. Please note that the boxes are not scaled according to the number
                                 of bytes they occupy.</p>
 
                             <img src="../images/simfile.png" width=300>
 
-                            <p>Note that it is a good idea to set the maximum number of files and blocks so that they fit in
-                                exactly N blocks (where N is an integer), to avoid wasting space. However, like the example above,
-                                you may not assume this is the case; there may be wasted bytes between them and the start of the
+                            <p>Note that it is a good idea to set the maximum number of files and blocks so that they
+                                fit in
+                                exactly N blocks (where N is an integer), to avoid wasting space. However, like the
+                                example above,
+                                you may not assume this is the case; there may be wasted bytes between them and the
+                                start of the
                                 file data.
                             </p>
 
-                            <p>Also note that file data blocks for a particular file will not necessarily be next to each other,
-                                though the example above does have them together. It is possible for a file to be in blocks 1 and 3, for
+                            <p>Also note that file data blocks for a particular file will not necessarily be next to
+                                each other,
+                                though the example above does have them together. It is possible for a file to be in
+                                blocks 1 and 3, for
                                 example, with another file at block 2.
                             </p>
                             <hr>
@@ -226,7 +260,7 @@
 
                             <div class="blog_subtitle">Makefile</div>
 
-                            <p>The file for building the program.  The makefile is structured so that
+                            <p>The file for building the program. The makefile is structured so that
                                 only the files that are changed need to be recompiled. Please do not
                                 modify this file; your code should compile with the flags specified.</p>
 
@@ -251,8 +285,8 @@
 
                             <div class="blog_subtitle">simfs.c</div>
 
-                            <p>The main program.  The main function parses the arguments, and calls the
-                                functions for the appropriate commands.  You will need to modify the switch
+                            <p>The main program. The main function parses the arguments, and calls the
+                                functions for the appropriate commands. You will need to modify the switch
                                 statement as you add new commands.
                             </p>
 
@@ -260,49 +294,61 @@
 
                             <p>Contains the <code>initfs</code> function that initializes the file
                                 system structure in the file specified by the filename argument to
-                                <code>initfs</code>.  <br>
+                                <code>initfs</code>. <br>
                                 <b>Warning</b>: If the file already exists, then <code>initfs</code>
-                                will overwrite it.</p>
+                                will overwrite it.
+                            </p>
 
                             <p>Start by creating a filesystem using <code>initfs</code>. Then, examine that file
-                                system file with both the Unix <code>xxd</code> utility and the provided <code>printfs</code> function. Try varying the <code>MAXFILE</code>
-                                and <code>MAXBLOCK</code> values to see how that affects what is written.</p>
+                                system file with both the Unix <code>xxd</code> utility and the provided
+                                <code>printfs</code> function. Try varying the <code>MAXFILE</code>
+                                and <code>MAXBLOCK</code> values to see how that affects what is written.
+                            </p>
 
                             <div class="blog_subtitle">printfs.c</div>
 
                             <p>The <code>printfs</code> function prints the contents of the file that
                                 stores the simulated filesystem in a readable form. This is a convenience function.
-                                You could use <code>xxd</code> to read the binary data, but it is more convenient to have a
+                                You could use <code>xxd</code> to read the binary data, but it is more convenient to
+                                have a
                                 command to print the metadata in a human readable format.</p>
 
                             <div class="blog_subtitle">simfs_ops.c</div>
 
                             <p>You'll do the majority of your work here. The file already contains two helper functions
-                                that open a file system. You should add other helper functions and functions for the four
+                                that open a file system. You should add other helper functions and functions for the
+                                four
                                 required file system operations here.</p>
 
                             <hr>
                             <div class="blog_subtitle"><b>Your Task</b></div>
 
                             <p>You will write functions to implement the operations below. These operations should
-                                work for any positive, valid values of <code>BLOCKSIZE</code>, <code>MAXFILES</code>, or <code>MAXBLOCKS</code>. (Valid values will not cause the <code>short</code> values in the structs to overflow.)</p>
+                                work for any positive, valid values of <code>BLOCKSIZE</code>, <code>MAXFILES</code>, or
+                                <code>MAXBLOCKS</code>. (Valid values will not cause the <code>short</code> values in
+                                the structs to overflow.)
+                            </p>
 
                             <div class="blog_subtitle">Creating a file (<code>createfile</code>)</div>
 
                             <p>The <code>createfile</code> command takes a single argument: a simulated file name.
-                                It will create an empty file of that name on the file system if it is possible to do so, using
-                                the first available fentry. If there are not enough resources on the file system, an error should be emitted.</p>
+                                It will create an empty file of that name on the file system if it is possible to do so,
+                                using
+                                the first available fentry. If there are not enough resources on the file system, an
+                                error should be emitted.</p>
 
                             <div class="blog_subtitle">Deleting a file (<code>deletefile</code>)</div>
 
                             <p>The <code>deletefile</code> command also takes a single argument: a simulated file name.
-                                It should remove the file from the file system, including freeing any blocks used to store
-                                the file. To avoid malicious use of old data, your operation should overwrite the file data
+                                It should remove the file from the file system, including freeing any blocks used to
+                                store
+                                the file. To avoid malicious use of old data, your operation should overwrite the file
+                                data
                                 with zeroes.</p>
 
                             <div class="blog_subtitle">Reading a file (<code>readfile</code>)</div>
                             <p>
-                            The <code>readfile</code> command takes 3 arguments:
+                                The <code>readfile</code> command takes 3 arguments:
                             <ul class="tab_panel_bullets">
                                 <li><b>file name:</b> The name of the simulated file to read from. </li>
                                 <li><b>start:</b> The offset into the file to start reading.</li>
@@ -310,9 +356,11 @@
                             </ul>
                             </p>
                             <p>When this command is received, the file system will print the requested data to
-                                <code>stdout</code>. If any part of the request cannot be completed, an error should be emitted to
+                                <code>stdout</code>. If any part of the request cannot be completed, an error should be
+                                emitted to
                                 <code>stderr</code>; for example, if the start position is larger than size of the file.
-                                (In the case of an error, we don't care what, if anything, is emitted to <code>stdout</code>.)
+                                (In the case of an error, we don't care what, if anything, is emitted to
+                                <code>stdout</code>.)
                             </p>
 
                             <div class="blog_subtitle">Writing a file (<code>writefile</code>)</div>
@@ -325,14 +373,20 @@
                             </ul>
 
                             <p>When this command is received, the file system will write the requested data from
-                                <code>stdin</code>. Like the read operation, if any part of this request cannot be completed,
+                                <code>stdin</code>. Like the read operation, if any part of this request cannot be
+                                completed,
                                 an error should be emitted. For example, if the start position is larger than
-                                the current size of the file, an error should be emitted, since we don't know what to write in
-                                the intervening bytes. Also, if the file system doesn't have enough free blocks available for the
-                                write, then an error should be emitted.</p>
+                                the current size of the file, an error should be emitted, since we don't know what to
+                                write in
+                                the intervening bytes. Also, if the file system doesn't have enough free blocks
+                                available for the
+                                write, then an error should be emitted.
+                            </p>
 
-                            <p> In any error case, it is imperative that <b>no changes be made to the filesystem</b>. The file system
-                                cannot be left in an inconsistent state; the whole operation must be completed, or none of it.
+                            <p> In any error case, it is imperative that <b>no changes be made to the filesystem</b>.
+                                The file system
+                                cannot be left in an inconsistent state; the whole operation must be completed, or none
+                                of it.
                             </p>
 
                             <p>Whenever a new data block is allocated, initialize it to zeros (the binary value, not
@@ -341,103 +395,136 @@
                             <div class="blog_subtitle"><b>Error Handling</b></div>
 
                             <p>Thorough error checking is required for this assignment. Your program should never
-                                crash (segmentation fault or bus error), and it should endeavour to never leave the file system
+                                crash (segmentation fault or bus error), and it should endeavour to never leave the file
+                                system
                                 in an inconsistent state. To do this, you should check the return values of all
-                                library calls and verify that all resources (file slots, block slots) are available before
+                                library calls and verify that all resources (file slots, block slots) are available
+                                before
                                 beginning to modify the file system. it is also highly recommended that you use valgrind
                                 to check your use of memory.</p>
 
-                            <p>If an error is detected, print an appropriate error message to <code>stderr</code> and exit with a nonzero exit value. The
+                            <p>If an error is detected, print an appropriate error message to <code>stderr</code> and
+                                exit with a nonzero exit value. The
                                 error message should name the operation being attempted and should describe the issue
-                                encountered. No messages should be printed to <code>stderr</code>  that are not errors.</p>
+                                encountered. No messages should be printed to <code>stderr</code> that are not errors.
+                            </p>
 
 
 
-                        <div class="comments_container">
-                            <div class="blog_subtitle">Comments</div>
-                            <ul class="comments_list">
-                                <li>
-                                    <div class="comment_item d-flex flex-row align-items-start jutify-content-start">
-                                        <div class="comment_content">
-                                            <div class="comment_title_container d-flex flex-row align-items-center justify-content-start">
-                                                <div class="comment_author"><a href="#" onclick="return false">Justin</a></div>
-                                                <div class="comment_rating"><div class="rating_r rating_r_5"><i></i><i></i><i></i><i></i><i></i></div></div>
-                                                <div class="comment_time ml-auto" id="date1"></div>
-                                            </div>
-                                            <div class="comment_text">
-                                                <p>This is my fourth time taking CSC209, and inarguably, this is the best assignment I've ever seen.<br>
-                                                    Problems are so accurately designed that anyone with their own knowledge and experience have their own takeaways.<br>
-                                                    I hope next assignments will be this good, too!
-                                                </p>
-                                            </div>
-                                            <div class="comment_extras d-flex flex-row align-items-center justify-content-start">
-                                                <div class="comment_extra comment_likes"><a href="#" onclick="return false"><i class="fa fa-thumbs-up" aria-hidden="true"></i><span>108</span></a></div>
-                                                <div class="comment_extra comment_reply"><a href="#" onclick="return false"><i class="fa fa-pencil-square" aria-hidden="true"></i><span>Reply</span></a></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <ul>
-                                        <li>
-                                            <div class="comment_item d-flex flex-row align-items-start jutify-content-start">
-                                                <div class="comment_content">
-                                                    <div class="comment_title_container d-flex flex-row align-items-center justify-content-start">
-                                                        <div class="comment_author"><a href="#" onclick="return false">Kianoosh</a></div>
-                                                        <div class="comment_time ml-auto" id="date2"></div>
-                                                        <script>document.getElementById("date1").innerHTML = new Date().toDateString();
-                                                        document.getElementById("date2").innerHTML = new Date().toDateString();
-                                                        </script>
-
+                            <div class="comments_container">
+                                <div class="blog_subtitle">Comments</div>
+                                <ul class="comments_list">
+                                    <li>
+                                        <div
+                                            class="comment_item d-flex flex-row align-items-start jutify-content-start">
+                                            <div class="comment_content">
+                                                <div
+                                                    class="comment_title_container d-flex flex-row align-items-center justify-content-start">
+                                                    <div class="comment_author"><a href="#"
+                                                            onclick="return false">Justin</a></div>
+                                                    <div class="comment_rating">
+                                                        <div class="rating_r rating_r_5">
+                                                            <i></i><i></i><i></i><i></i><i></i>
+                                                        </div>
                                                     </div>
-                                                    <div class="comment_text">
-                                                        <p>Thanks bro!</p>
-                                                    </div>
-                                                    <div class="comment_extras d-flex flex-row align-items-center justify-content-start">
-                                                        <div class="comment_extra comment_likes"><a href="#" onclick="return false"><i class="fa fa-thumbs-up" aria-hidden="true"></i><span>36</span></a></div>
-                                                        <div class="comment_extra comment_reply"><a href="#" onclick="return false"><i class="fa fa-pencil-square" aria-hidden="true"></i><span>Reply</span></a></div>
-                                                    </div>
+                                                    <div class="comment_time ml-auto" id="date1"></div>
+                                                </div>
+                                                <div class="comment_text">
+                                                    <p>This is my fourth time taking CSC209, and inarguably, this is the
+                                                        best assignment I've ever seen.<br>
+                                                        Problems are so accurately designed that anyone with their own
+                                                        knowledge and experience have their own takeaways.<br>
+                                                        I hope next assignments will be this good, too!
+                                                    </p>
+                                                </div>
+                                                <div
+                                                    class="comment_extras d-flex flex-row align-items-center justify-content-start">
+                                                    <div class="comment_extra comment_likes"><a href="#"
+                                                            onclick="return false"><i class="fa fa-thumbs-up"
+                                                                aria-hidden="true"></i><span>108</span></a></div>
+                                                    <div class="comment_extra comment_reply"><a href="#"
+                                                            onclick="return false"><i class="fa fa-pencil-square"
+                                                                aria-hidden="true"></i><span>Reply</span></a></div>
                                                 </div>
                                             </div>
-                                        </li>
-                                    </ul>
-                                </li>
-                            </ul>
-                            <div class="add_comment_container">
-                                <div class="add_comment_title">Write a comment</div>
-                                <div class="add_comment_text">Your email address will not be published. Required fields are marked *</div>
-                                <form action="#" class="comment_form">
-                                    <div>
-                                        <div class="form_title">Review*</div>
-                                        <textarea class="comment_input comment_textarea" required="required"></textarea>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-md-6 input_col">
-                                            <div class="form_title">Name*</div>
-                                            <input type="text" class="comment_input" required="required">
                                         </div>
-                                        <div class="col-md-6 input_col">
-                                            <div class="form_title">Email*</div>
-                                            <input type="text" class="comment_input" required="required">
+                                        <ul>
+                                            <li>
+                                                <div
+                                                    class="comment_item d-flex flex-row align-items-start jutify-content-start">
+                                                    <div class="comment_content">
+                                                        <div
+                                                            class="comment_title_container d-flex flex-row align-items-center justify-content-start">
+                                                            <div class="comment_author"><a href="#"
+                                                                    onclick="return false">Kianoosh</a></div>
+                                                            <div class="comment_time ml-auto" id="date2"></div>
+                                                            <script>document.getElementById("date1").innerHTML = new Date().toDateString();
+                                                                document.getElementById("date2").innerHTML = new Date().toDateString();
+                                                            </script>
+
+                                                        </div>
+                                                        <div class="comment_text">
+                                                            <p>Thanks bro!</p>
+                                                        </div>
+                                                        <div
+                                                            class="comment_extras d-flex flex-row align-items-center justify-content-start">
+                                                            <div class="comment_extra comment_likes"><a href="#"
+                                                                    onclick="return false"><i class="fa fa-thumbs-up"
+                                                                        aria-hidden="true"></i><span>36</span></a></div>
+                                                            <div class="comment_extra comment_reply"><a href="#"
+                                                                    onclick="return false"><i
+                                                                        class="fa fa-pencil-square"
+                                                                        aria-hidden="true"></i><span>Reply</span></a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                                <div class="add_comment_container">
+                                    <div class="add_comment_title">Write a comment</div>
+                                    <div class="add_comment_text">Your email address will not be published. Required
+                                        fields are marked *</div>
+                                    <form action="#" class="comment_form">
+                                        <div>
+                                            <div class="form_title">Review*</div>
+                                            <textarea class="comment_input comment_textarea"
+                                                required="required"></textarea>
                                         </div>
-                                    </div>
-                                    <div class="comment_notify">
-                                        <input type="checkbox" id="checkbox_notify" name="regular_checkbox" class="regular_checkbox checkbox_account" checked>
-                                        <label for="checkbox_notify"><i class="fa fa-check" aria-hidden="true"></i></label>
-                                        <span>Notify me of new posts by email</span>
-                                    </div>
-                                    <div>
-                                        <script>
-                                            function fakesubmit() {
-                                                alert("Thank you so much for writing your feedback.\n\nAs you may already have guessed, your feedback is neither saved nor sent anywhere. In fact, no one will ever even know that you wrote such feedback. " +
-                                                    "The reason is that it is not possible for this website to store and present such stuff. \n\n" +
-                                                    "Now, please copy your feedback to piazza or email it to me or a TA :)")
-                                            }
-                                        </script>
-                                        <button type="submit" onclick="fakesubmit()" class="comment_button trans_200">submit</button>
-                                    </div>
-                                </form>
+                                        <div class="row">
+                                            <div class="col-md-6 input_col">
+                                                <div class="form_title">Name*</div>
+                                                <input type="text" class="comment_input" required="required">
+                                            </div>
+                                            <div class="col-md-6 input_col">
+                                                <div class="form_title">Email*</div>
+                                                <input type="text" class="comment_input" required="required">
+                                            </div>
+                                        </div>
+                                        <div class="comment_notify">
+                                            <input type="checkbox" id="checkbox_notify" name="regular_checkbox"
+                                                class="regular_checkbox checkbox_account" checked>
+                                            <label for="checkbox_notify"><i class="fa fa-check"
+                                                    aria-hidden="true"></i></label>
+                                            <span>Notify me of new posts by email</span>
+                                        </div>
+                                        <div>
+                                            <script>
+                                                function fakesubmit() {
+                                                    alert("Thank you so much for writing your feedback.\n\nAs you may already have guessed, your feedback is neither saved nor sent anywhere. In fact, no one will ever even know that you wrote such feedback. " +
+                                                        "The reason is that it is not possible for this website to store and present such stuff. \n\n" +
+                                                        "Now, please copy your feedback to piazza or email it to me or a TA :)")
+                                                }
+                                            </script>
+                                            <button type="submit" onclick="fakesubmit()"
+                                                class="comment_button trans_200">submit</button>
+                                        </div>
+                                    </form>
+                                </div>
                             </div>
                         </div>
-                    </div>
                     </div>
                     <!-- Blog Sidebar -->
                     <div class="col-lg-4">
@@ -453,29 +540,39 @@
 
                                         <!-- Feature -->
                                         <div class="feature d-flex flex-row align-items-center justify-content-start">
-                                            <div class="feature_title"><i class="fa fa-question-circle-o" aria-hidden="true"></i><span>Announcement - Q&A</span></div>
-                                            <div class="feature_text ml-auto"><a href="https://piazza.com/utoronto.ca/summer2022/csc209/home">Piazza</a></div>
+                                            <div class="feature_title"><i class="fa fa-question-circle-o"
+                                                    aria-hidden="true"></i><span>Announcement - Q&A</span></div>
+                                            <div class="feature_text ml-auto"><a
+                                                    href="https://piazza.com/utoronto.ca/summer2022/csc209/home">Piazza</a>
+                                            </div>
                                         </div>
 
                                         <!-- Feature -->
                                         <div class="feature d-flex flex-row align-items-center justify-content-start">
-                                            <div class="feature_title"><i class="fa fa-pencil" aria-hidden="true"></i><span>Weekly prep</span></div>
-                                            <div class="feature_text ml-auto"><a href="https://pcrs.utm.utoronto.ca/209/">PCRS</a></div>
+                                            <div class="feature_title"><i class="fa fa-pencil"
+                                                    aria-hidden="true"></i><span>Weekly prep</span></div>
+                                            <div class="feature_text ml-auto"><a
+                                                    href="https://pcrs.utm.utoronto.ca/209/">PCRS</a></div>
                                         </div>
 
                                         <!-- Feature -->
                                         <div class="feature d-flex flex-row align-items-center justify-content-start">
-                                            <div class="feature_title"><i class="fa fa-address-book" aria-hidden="true"></i><span>Assignments</span></div>
-                                            <div class="feature_text ml-auto"><a href="https://mcsmark.utm.utoronto.ca/csc209hsummer22">Markus</a></div>
+                                            <div class="feature_title"><i class="fa fa-address-book"
+                                                    aria-hidden="true"></i><span>Assignments</span></div>
+                                            <div class="feature_text ml-auto"><a
+                                                    href="https://mcsmark.utm.utoronto.ca/csc209hsummer22">Markus</a>
+                                            </div>
                                         </div>
 
                                         <!-- Feature -->
                                         <div class="feature d-flex flex-row align-items-center justify-content-start">
-                                            <div class="feature_title"><i class="fa fa-table" aria-hidden="true"></i><span>Informal chat</span></div>
-                                            <div class="feature_text ml-auto"><a href="https://discord.gg/nZgaqcmMN6">Discord</a></div>
+                                            <div class="feature_title"><i class="fa fa-table"
+                                                    aria-hidden="true"></i><span>Informal chat</span></div>
+                                            <div class="feature_text ml-auto"><a
+                                                    href="https://discord.gg/nZgaqcmMN6">Discord</a></div>
                                         </div>
 
-                                    </div>                         
+                                    </div>
                                 </div>
                             </div>
 
@@ -492,19 +589,24 @@
                 <div class="row copyright_row">
                     <div class="col">
                         <div class="copyright d-flex flex-lg-row flex-column align-items-center justify-content-start">
-                            <div class="cr_text"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                                Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-                                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></div>
+                            <div class="cr_text">
+                                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                                Copyright &copy;
+                                <script>document.write(new Date().getFullYear());</script> All rights reserved | This
+                                template is made by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+                                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </footer></div>
+        </footer>
+    </div>
 
     <script src="../../js/jquery-3.2.1.min.js"></script>
     <script src="../../styles/bootstrap4/popper.js"></script>
     <script src="../../styles/bootstrap4/bootstrap.min.js"></script>
-    <script src="../../plugins/colorbox/jquery.colorbox-min.js"></script>
     <script src="../../js/handout.js?v=1"></script>
-    </body>
+</body>
+
 </html>

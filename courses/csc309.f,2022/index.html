@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<title>CSC309</title>
 	<meta charset="utf-8">
@@ -21,926 +22,978 @@
 	<meta property="twitter:description" content="Programming on the Web - Fall 2022">
 	<meta property="twitter:image" content="https://www.cs.toronto.edu/~kianoosh/courses/csc309/images/card.png">
 
-	<link rel="shortcut icon" type="image/png" href="images/favicon.png"/>
+	<link rel="shortcut icon" type="image/png" href="images/favicon.png" />
 	<link rel="stylesheet" type="text/css" href="styles/bootstrap4/bootstrap.min.css">
 	<link href="plugins/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-	<link href="plugins/colorbox/colorbox.css" rel="stylesheet" type="text/css">
 
 	<link rel="stylesheet" type="text/css" href="styles/course.css">
 	<link rel="stylesheet" type="text/css" href="styles/course_responsive.css">
 </head>
+
 <body>
 
-<div class="super_container">
+	<div class="super_container">
 
-	<!-- Header -->
+		<!-- Header -->
 
-	<!--	<header class="header">-->
-	<!--			-->
-	<!--		&lt;!&ndash; Top Bar &ndash;&gt;-->
-	<!--		<div class="top_bar">-->
-	<!--			<div class="top_bar_container">-->
-	<!--				<div class="container">-->
-	<!--					<div class="row">-->
-	<!--						<div class="col">-->
-	<!--							<div class="top_bar_content d-flex flex-row align-items-center justify-content-start">-->
-	<!--								<ul class="top_bar_contact_list">-->
-	<!--									<li><div class="question">Have any questions?</div></li>-->
-	<!--									<li>-->
-	<!--										<i class="fa fa-phone" aria-hidden="true"></i>-->
-	<!--										<div>001-1234-88888</div>-->
-	<!--									</li>-->
-	<!--									<li>-->
-	<!--										<i class="fa fa-envelope-o" aria-hidden="true"></i>-->
-	<!--										<div>info.deercreative@gmail.com</div>-->
-	<!--									</li>-->
-	<!--								</ul>-->
-	<!--								<div class="top_bar_login ml-auto">-->
-	<!--									<div class="login_button"><a href="#">Register or Login</a></div>-->
-	<!--								</div>-->
-	<!--							</div>-->
-	<!--						</div>-->
-	<!--					</div>-->
-	<!--				</div>-->
-	<!--			</div>				-->
-	<!--		</div>-->
+		<!--	<header class="header">-->
+		<!--			-->
+		<!--		&lt;!&ndash; Top Bar &ndash;&gt;-->
+		<!--		<div class="top_bar">-->
+		<!--			<div class="top_bar_container">-->
+		<!--				<div class="container">-->
+		<!--					<div class="row">-->
+		<!--						<div class="col">-->
+		<!--							<div class="top_bar_content d-flex flex-row align-items-center justify-content-start">-->
+		<!--								<ul class="top_bar_contact_list">-->
+		<!--									<li><div class="question">Have any questions?</div></li>-->
+		<!--									<li>-->
+		<!--										<i class="fa fa-phone" aria-hidden="true"></i>-->
+		<!--										<div>001-1234-88888</div>-->
+		<!--									</li>-->
+		<!--									<li>-->
+		<!--										<i class="fa fa-envelope-o" aria-hidden="true"></i>-->
+		<!--										<div>info.deercreative@gmail.com</div>-->
+		<!--									</li>-->
+		<!--								</ul>-->
+		<!--								<div class="top_bar_login ml-auto">-->
+		<!--									<div class="login_button"><a href="#">Register or Login</a></div>-->
+		<!--								</div>-->
+		<!--							</div>-->
+		<!--						</div>-->
+		<!--					</div>-->
+		<!--				</div>-->
+		<!--			</div>				-->
+		<!--		</div>-->
 
-	<!--		&lt;!&ndash; Header Content &ndash;&gt;-->
-	<!--		<div class="header_container">-->
-	<!--			<div class="container">-->
-	<!--				<div class="row">-->
-	<!--					<div class="col">-->
-	<!--						<div class="header_content d-flex flex-row align-items-center justify-content-start">-->
-	<!--							<div class="logo_container">-->
-	<!--								<a href="#">-->
-	<!--									<div class="logo_text">Unic<span>at</span></div>-->
-	<!--								</a>-->
-	<!--							</div>-->
-	<!--							<nav class="main_nav_contaner ml-auto">-->
-	<!--								<ul class="main_nav">-->
-	<!--									<li><a href="index.html">Home</a></li>-->
-	<!--									<li><a href="about.html">About</a></li>-->
-	<!--									<li><a href="courses.html">Courses</a></li>-->
-	<!--									<li><a href="blog.html">Blog</a></li>-->
-	<!--									<li><a href="#">Page</a></li>-->
-	<!--									<li><a href="contact.html">Contact</a></li>-->
-	<!--								</ul>-->
-	<!--								<div class="search_button"><i class="fa fa-search" aria-hidden="true"></i></div>-->
+		<!--		&lt;!&ndash; Header Content &ndash;&gt;-->
+		<!--		<div class="header_container">-->
+		<!--			<div class="container">-->
+		<!--				<div class="row">-->
+		<!--					<div class="col">-->
+		<!--						<div class="header_content d-flex flex-row align-items-center justify-content-start">-->
+		<!--							<div class="logo_container">-->
+		<!--								<a href="#">-->
+		<!--									<div class="logo_text">Unic<span>at</span></div>-->
+		<!--								</a>-->
+		<!--							</div>-->
+		<!--							<nav class="main_nav_contaner ml-auto">-->
+		<!--								<ul class="main_nav">-->
+		<!--									<li><a href="index.html">Home</a></li>-->
+		<!--									<li><a href="about.html">About</a></li>-->
+		<!--									<li><a href="courses.html">Courses</a></li>-->
+		<!--									<li><a href="blog.html">Blog</a></li>-->
+		<!--									<li><a href="#">Page</a></li>-->
+		<!--									<li><a href="contact.html">Contact</a></li>-->
+		<!--								</ul>-->
+		<!--								<div class="search_button"><i class="fa fa-search" aria-hidden="true"></i></div>-->
 
-	<!--								&lt;!&ndash; Hamburger &ndash;&gt;-->
+		<!--								&lt;!&ndash; Hamburger &ndash;&gt;-->
 
-	<!--								<div class="shopping_cart"><i class="fa fa-shopping-cart" aria-hidden="true"></i></div>-->
-	<!--								<div class="hamburger menu_mm">-->
-	<!--									<i class="fa fa-bars menu_mm" aria-hidden="true"></i>-->
-	<!--								</div>-->
-	<!--							</nav>-->
+		<!--								<div class="shopping_cart"><i class="fa fa-shopping-cart" aria-hidden="true"></i></div>-->
+		<!--								<div class="hamburger menu_mm">-->
+		<!--									<i class="fa fa-bars menu_mm" aria-hidden="true"></i>-->
+		<!--								</div>-->
+		<!--							</nav>-->
 
-	<!--						</div>-->
-	<!--					</div>-->
-	<!--				</div>-->
-	<!--			</div>-->
-	<!--		</div>-->
+		<!--						</div>-->
+		<!--					</div>-->
+		<!--				</div>-->
+		<!--			</div>-->
+		<!--		</div>-->
 
-	<!--		&lt;!&ndash; Header Search Panel &ndash;&gt;-->
-	<!--		<div class="header_search_container">-->
-	<!--			<div class="container">-->
-	<!--				<div class="row">-->
-	<!--					<div class="col">-->
-	<!--						<div class="header_search_content d-flex flex-row align-items-center justify-content-end">-->
-	<!--							<form action="#" class="header_search_form">-->
-	<!--								<input type="search" class="search_input" placeholder="Search" required="required">-->
-	<!--								<button class="header_search_button d-flex flex-column align-items-center justify-content-center">-->
-	<!--									<i class="fa fa-search" aria-hidden="true"></i>-->
-	<!--								</button>-->
-	<!--							</form>-->
-	<!--						</div>-->
-	<!--					</div>-->
-	<!--				</div>-->
-	<!--			</div>			-->
-	<!--		</div>			-->
-	<!--	</header>-->
+		<!--		&lt;!&ndash; Header Search Panel &ndash;&gt;-->
+		<!--		<div class="header_search_container">-->
+		<!--			<div class="container">-->
+		<!--				<div class="row">-->
+		<!--					<div class="col">-->
+		<!--						<div class="header_search_content d-flex flex-row align-items-center justify-content-end">-->
+		<!--							<form action="#" class="header_search_form">-->
+		<!--								<input type="search" class="search_input" placeholder="Search" required="required">-->
+		<!--								<button class="header_search_button d-flex flex-column align-items-center justify-content-center">-->
+		<!--									<i class="fa fa-search" aria-hidden="true"></i>-->
+		<!--								</button>-->
+		<!--							</form>-->
+		<!--						</div>-->
+		<!--					</div>-->
+		<!--				</div>-->
+		<!--			</div>			-->
+		<!--		</div>			-->
+		<!--	</header>-->
 
-	<!--	&lt;!&ndash; Menu &ndash;&gt;-->
+		<!--	&lt;!&ndash; Menu &ndash;&gt;-->
 
-	<!--	<div class="menu d-flex flex-column align-items-end justify-content-start text-right menu_mm trans_400">-->
-	<!--		<div class="menu_close_container"><div class="menu_close"><div></div><div></div></div></div>-->
-	<!--		<div class="search">-->
-	<!--			<form action="#" class="header_search_form menu_mm">-->
-	<!--				<input type="search" class="search_input menu_mm" placeholder="Search" required="required">-->
-	<!--				<button class="header_search_button d-flex flex-column align-items-center justify-content-center menu_mm">-->
-	<!--					<i class="fa fa-search menu_mm" aria-hidden="true"></i>-->
-	<!--				</button>-->
-	<!--			</form>-->
-	<!--		</div>-->
-	<!--		<nav class="menu_nav">-->
-	<!--			<ul class="menu_mm">-->
-	<!--				<li class="menu_mm"><a href="index.html">Home</a></li>-->
-	<!--				<li class="menu_mm"><a href="#">About</a></li>-->
-	<!--				<li class="menu_mm"><a href="#">Courses</a></li>-->
-	<!--				<li class="menu_mm"><a href="#">Blog</a></li>-->
-	<!--				<li class="menu_mm"><a href="#">Page</a></li>-->
-	<!--				<li class="menu_mm"><a href="contact.html">Contact</a></li>-->
-	<!--			</ul>-->
-	<!--		</nav>-->
-	<!--	</div>-->
-	<!--	-->
-	<!--	&lt;!&ndash; Home &ndash;&gt;-->
+		<!--	<div class="menu d-flex flex-column align-items-end justify-content-start text-right menu_mm trans_400">-->
+		<!--		<div class="menu_close_container"><div class="menu_close"><div></div><div></div></div></div>-->
+		<!--		<div class="search">-->
+		<!--			<form action="#" class="header_search_form menu_mm">-->
+		<!--				<input type="search" class="search_input menu_mm" placeholder="Search" required="required">-->
+		<!--				<button class="header_search_button d-flex flex-column align-items-center justify-content-center menu_mm">-->
+		<!--					<i class="fa fa-search menu_mm" aria-hidden="true"></i>-->
+		<!--				</button>-->
+		<!--			</form>-->
+		<!--		</div>-->
+		<!--		<nav class="menu_nav">-->
+		<!--			<ul class="menu_mm">-->
+		<!--				<li class="menu_mm"><a href="index.html">Home</a></li>-->
+		<!--				<li class="menu_mm"><a href="#">About</a></li>-->
+		<!--				<li class="menu_mm"><a href="#">Courses</a></li>-->
+		<!--				<li class="menu_mm"><a href="#">Blog</a></li>-->
+		<!--				<li class="menu_mm"><a href="#">Page</a></li>-->
+		<!--				<li class="menu_mm"><a href="contact.html">Contact</a></li>-->
+		<!--			</ul>-->
+		<!--		</nav>-->
+		<!--	</div>-->
+		<!--	-->
+		<!--	&lt;!&ndash; Home &ndash;&gt;-->
 
-	<!--	<div class="home">-->
-	<!--		<div class="breadcrumbs_container">-->
-	<!--			<div class="container">-->
-	<!--				<div class="row">-->
-	<!--					<div class="col">-->
-	<!--						<div class="breadcrumbs">-->
-	<!--							<ul>-->
-	<!--								<li><a href="index.html">Home</a></li>-->
-	<!--								<li><a href="courses.html">Courses</a></li>-->
-	<!--								<li>Course Details</li>-->
-	<!--							</ul>-->
-	<!--						</div>-->
-	<!--					</div>-->
-	<!--				</div>-->
-	<!--			</div>-->
-	<!--		</div>			-->
-	<!--	</div>-->
+		<!--	<div class="home">-->
+		<!--		<div class="breadcrumbs_container">-->
+		<!--			<div class="container">-->
+		<!--				<div class="row">-->
+		<!--					<div class="col">-->
+		<!--						<div class="breadcrumbs">-->
+		<!--							<ul>-->
+		<!--								<li><a href="index.html">Home</a></li>-->
+		<!--								<li><a href="courses.html">Courses</a></li>-->
+		<!--								<li>Course Details</li>-->
+		<!--							</ul>-->
+		<!--						</div>-->
+		<!--					</div>-->
+		<!--				</div>-->
+		<!--			</div>-->
+		<!--		</div>			-->
+		<!--	</div>-->
 
-	<!-- Course -->
+		<!-- Course -->
 
-	<div class="course">
-		<div class="container">
-			<div class="row">
+		<div class="course">
+			<div class="container">
+				<div class="row">
 
-				<!-- Course -->
-				<div class="col-lg-8">
+					<!-- Course -->
+					<div class="col-lg-8">
 
-					<div class="course_container">
-						<div class="course_title">CSC309: Programming on the Web</div>
-						<div class="course_info_title">University of Toronto - Fall 2022</div>
-						<div class="course_info d-flex flex-lg-row flex-column align-items-lg-center align-items-start justify-content-start" style="margin-top: 36px">
+						<div class="course_container">
+							<div class="course_title">CSC309: Programming on the Web</div>
+							<div class="course_info_title">University of Toronto - Fall 2022</div>
+							<div
+								class="course_info d-flex flex-lg-row flex-column align-items-lg-center align-items-start justify-content-start"
+								style="margin-top: 36px">
 
-							<!-- Course Info Item -->
-							<div class="course_info_item">
-								<div class="course_info_title">Lectures </div>
-								<div class="course_info_text" style="color: black">
-									Mon - Wed 3-4
-									(<a href="https://map.utoronto.ca/?id=1809#!m/494470">BA 1190</a>)
-									<br>
-
-									Mon - Wed 4-5
-									(<a href="https://map.utoronto.ca/?id=1809#!m/494474">MC 102</a>)
-								</div>
-							</div>
-
-							<!-- Course Info Item -->
-							<div class="course_info_item">
-								<div class="course_info_title">Tutorials</div>
-								<div class="course_info_text">
+								<!-- Course Info Item -->
+								<div class="course_info_item">
+									<div class="course_info_title">Lectures </div>
 									<div class="course_info_text" style="color: black">
-										Fri 3-4
-										(<a href="https://map.utoronto.ca/?id=1809#!m/494470">BA 3185</a>, <a href="https://map.utoronto.ca/?id=1809#!m/494470">BA 3195</a>)
+										Mon - Wed 3-4
+										(<a href="https://map.utoronto.ca/?id=1809#!m/494470">BA 1190</a>)
 										<br>
 
-										Fri 4-5
-										(<a href="https://map.utoronto.ca/?id=1809#!m/494470">BA 3185</a>, <a href="https://map.utoronto.ca/?id=1809#!m/494470">BA 3195</a>)
+										Mon - Wed 4-5
+										(<a href="https://map.utoronto.ca/?id=1809#!m/494474">MC 102</a>)
 									</div>
 								</div>
-							</div>
 
+								<!-- Course Info Item -->
+								<div class="course_info_item">
+									<div class="course_info_title">Tutorials</div>
+									<div class="course_info_text">
+										<div class="course_info_text" style="color: black">
+											Fri 3-4
+											(<a href="https://map.utoronto.ca/?id=1809#!m/494470">BA 3185</a>, <a
+												href="https://map.utoronto.ca/?id=1809#!m/494470">BA 3195</a>)
+											<br>
 
-							<!-- Course Info Item -->
-							<div class="course_info_item">
-								<div class="course_info_title">Office hours</div>
-								<div class="course_info_text" style="color: black">
-									Wed 5-6
-									(<a href="https://map.utoronto.ca/?id=1809#!m/494470">BA 2283</a>)
-									<br>
-
-									Fri 9-10 (<a href="https://utoronto.zoom.us/j/87597745392">Zoom</a>)
+											Fri 4-5
+											(<a href="https://map.utoronto.ca/?id=1809#!m/494470">BA 3185</a>, <a
+												href="https://map.utoronto.ca/?id=1809#!m/494470">BA 3195</a>)
+										</div>
+									</div>
 								</div>
+
+
+								<!-- Course Info Item -->
+								<div class="course_info_item">
+									<div class="course_info_title">Office hours</div>
+									<div class="course_info_text" style="color: black">
+										Wed 5-6
+										(<a href="https://map.utoronto.ca/?id=1809#!m/494470">BA 2283</a>)
+										<br>
+
+										Fri 9-10 (<a href="https://utoronto.zoom.us/j/87597745392">Zoom</a>)
+									</div>
+								</div>
+
 							</div>
 
-						</div>
+							<!-- Course Tabs -->
+							<div class="course_tabs_container">
+								<div class="tabs d-flex flex-row align-items-center justify-content-start">
+									<div class="tab active">description</div>
+									<div class="tab">curriculum</div>
+									<div class="tab">team</div>
+								</div>
+								<div class="tab_panels">
 
-						<!-- Course Tabs -->
-						<div class="course_tabs_container">
-							<div class="tabs d-flex flex-row align-items-center justify-content-start">
-								<div class="tab active">description</div>
-								<div class="tab">curriculum</div>
-								<div class="tab">team</div>
-							</div>
-							<div class="tab_panels">
+									<!-- Description -->
+									<div class="tab_panel active">
+										<div class="tab_panel_content">
+											<div class="tab_panel_section">
+												<div class="tab_panel_title">About the course</div>
+												<div class="tab_panel_text">
+													<p>An introduction to software development on the web. Concepts underlying the development of
+														programs that operate on the web; survey of technological alternatives; greater depth on
+														some technologies. Operational concepts of the internet and the web, static client content,
+														dynamic client content, dynamically served content, n-tiered architectures, web development
+														processes, and security on the web. Assignments involve increasingly more complex web-based
+														programs.
+													</p>
+												</div>
+											</div>
+											<div class="tab_panel_section">
+												<div class="tab_panel_title">Learning outcomes</div>
+												<div class="tab_panel_text">
+													<p>At the end of the course, you will:</p>
+												</div>
+												<ul class="tab_panel_bullets">
+													<li>Understand the concept of web, servers, and clients</li>
+													<li>Gain solid knowledge about various components of a website (back-end and front-end)</li>
+													<li>Learn how to create a static website with HTML and CSS</li>
+													<li>Learn how develop the back-end of a website with Django</li>
+													<li>Learn how to develop the front-end of a website with React</li>
+												</ul>
+											</div>
 
-								<!-- Description -->
-								<div class="tab_panel active">
-									<div class="tab_panel_content">
-										<div class="tab_panel_section">
-											<div class="tab_panel_title">About the course</div>
-											<div class="tab_panel_text">
-												<p>An introduction to software development on the web. Concepts underlying the development of programs that operate on the web; survey of technological alternatives; greater depth on some technologies. Operational concepts of the internet and the web, static client content, dynamic client content, dynamically served content, n-tiered architectures, web development processes, and security on the web. Assignments involve increasingly more complex web-based programs.
-												</p>
+											<div class="tab_panel_section">
+												<div class="tab_panel_title">Pre-requisites</div>
+												<ul class="tab_panel_bullets">
+													<li>Programming experience &amp; Python (CSC108)</li>
+													<li>Advanced programming &amp; OOP (CSC207 &amp; CSC148)</li>
+													<li>Basic shell &amp; system programming (CSC209)</li>
+													<li>
+														<strong>Recommended Co-requisite:</strong>
+														Database design (CSC343)
+													</li>
+												</ul>
+											</div>
+											<div class="tab_panel_section">
+												<div class="tab_panel_subtitle">What is the target audience?</div>
+												<div class="tab_panel_text">
+													<p>This course is suitable for anyone interested in learning web programming and may be
+														seeking a relevant job in the future. It assumes no prior knowledge or experience in web
+														development. So everything will be discussed from the very basics.
+													</p>
+												</div>
+											</div>
+											<div class="tab_panel_section">
+												<div class="tab_panel_title">Assessment</div>
+												<div class="tab_panel_text">
+													<p>Assessment will be done through 3 assignments and one project (broken down into two parts).
+														This course does not have any final or midterm exams.
+													</p>
+												</div>
+												<br>
+												<div class="tab_panel_subtitle">Assignments</div>
+												<div class="tab_panel_text">
+													<p>
+														Assignments consist of small problems that challenge your understanding of the concepts and
+														will be mostly auto-graded.
+													</p>
+												</div>
+												<br>
+												<div class="tab_panel_subtitle">Project</div>
+												<div class="tab_panel_text">
+													<p>
+
+														The project simulates a real-world gym website that you could be very well asked to develop
+														as a freelance web developer. Even though the scope is considerably small, it is designed to
+														give a sense about how creating a real website and being a full-stack developer would look
+														like. For the project, you can make groups of 2 or 3 members. You could also do it alone,
+														but it is not recommended as the workload might be excessive for one person.
+													</p>
+													<p>
+														You will deliver the <b>backend</b> and <b>frontend</b> of the project separately. Grading
+														will take place through interview sessions with TAs. They will work with your website to
+														check if the requirements are implemented correctly, and also ask each member questions
+														about their role and the code they have implemented.
+														The grade for the former one will be shared between all members, while the latter one yield
+														to individual grades, based on each member's participation and understanding of the entire
+														submission.
+
+													</p>
+												</div>
+												<br>
+												<div class="tab_panel_subtitle">Grading breakdown</div>
+												<div class="container">
+													<div class="row">
+														<div class="col-sm">
+															<ul class="tab_panel_bullets">
+																<li>Assignment 1: 10%</li>
+																<li>Assignment 2: 15%</li>
+																<li>Assignment 3: 20%</li>
+															</ul>
+														</div>
+														<div class="col-sm">
+															<ul class="tab_panel_bullets">
+																<li>Project backend: 25%</li>
+																<li>Project frontend: 30%</li>
+															</ul>
+														</div>
+													</div>
+												</div>
+
+											</div>
+
+											<div class="tab_panel_section">
+												<div class="tab_panel_title">Late submissions</div>
+												<div class="tab_panel_text">
+													<p>In assignments or projects, late submissions of <code>x</code> hours (starting from 1) will
+														deduct following percentage from your grades.<br>
+														<img width="250" style="margin-left: 10em" src="images/penalty-decay.png"
+															alt="0.0002 * x ^ 3.06"><br><br>
+														The above formula is designed so very little penalty is incurred in the first few hours
+														after the deadline, and it significantly increases over time. Some example penalties are
+														listed below. (Note that they indicate the <b>deducted percentage</b> of your assessment
+														mark)<br><br>
+														<img width="100" style="margin-left: 3em" src="images/penalty-examples.png"
+															alt="0.0002 * x ^ 3.06"><br><br>
+													</p>
+												</div>
+											</div>
+
+											<div class="tab_panel_section">
+												<div class="tab_panel_title">Remark Policy</div>
+												<div class="tab_panel_text">
+													<p>
+														If you feel there was an error in the marking of an assignment, you may request a remark
+														directly on Markus, through email to the course instructor, or the lead TA. You must give a
+														specific reason for the request, referring to a possible error or omission by the marker.
+														Stating specific potential grading errors for your remark request is mandatory for us to
+														even consider your request. However, we will review your entire work, not just the items you
+														pointed out. Please keep in mind that your grade may stay the same, may increase, or may
+														even decrease, after your remark request is assessed. Remark requests must be received
+														<strong>within four days</strong>
+														of when you received the grade for that item.
+
+													</p>
+												</div>
+											</div>
+
+											<div class="tab_panel_section">
+												<div class="tab_panel_title">Missed Term Work</div>
+												<div class="tab_panel_text">
+													<p>
+														To request special consideration, bring supporting documentation to the instructor in person
+														during office hours at least one week in advance.
+													</p>
+													<p>
+														In the event of an illness or other catastrophe, please contact the instructor and provide
+														supporting documentation within one week of the missed work. You must also declare your
+														absence on Acorn. Do not wait until the due date has passed. It is always easier to make
+														alternate arrangements before the due date.
+													</p>
+												</div>
+											</div>
+
+											<div class="tab_panel_section">
+												<div class="tab_panel_title">Academic Integrity</div>
+												<div class="tab_panel_text">
+													<p>
+
+														Honesty and fairness are fundamental to the University of Toronto’s mission. Plagiarism is a
+														form of academic fraud and is treated very seriously.
+
+														You are also expected to read the handout
+														<a href="http://www.writing.utoronto.ca/advice/using-sources/how-not-to-plagiarize">How not
+															to plagiarize</a>
+														and to be familiar with the Code of behaviour on academic matters, which is linked from the
+														UTM calendar under the link Codes and policies.
+
+
+													</p>
+												</div>
+												<br>
+												<div class="tab_panel_subtitle">Assignments</div>
+												<div class="tab_panel_text">
+													<p>
+
+														Assignments are
+														<strong>individual works</strong>
+														which means that you will not be allowed to seek advice from other students or copy/paste
+														someone else's code, even open source codes from the internet. However, you are allowed to
+														look at online resources, tutorials, and Q&amp;A websites over the course of solving the
+														problems. The entire code must be written by yourself.
+
+													</p>
+												</div>
+												<br>
+												<div class="tab_panel_subtitle">Project</div>
+												<div class="tab_panel_text">
+													<p>
+														Unlike the assignments, you are allowed to download packages or use open source codes from
+														the internet for the project. However, sharing even a small piece of code to other teams is
+														strictly prohibited (either giving to or taking from them). Online codes must include a
+														reference to the webpage they are taken from.
+													</p>
+												</div>
+											</div>
+
+										</div>
+									</div>
+
+									<!-- Curriculum -->
+									<div class="tab_panel tab_panel_2">
+										<div class="tab_panel_content">
+											<div class="tab_panel_content">
+
+												<!-- Dropdowns -->
+												<ul class="dropdowns">
+													<div class="dropdown_item">
+														<div class="dropdown_title_container">
+															<div class="dropdown_item_title">
+																Week 1:
+																<span> Intro + HTML</span>
+															</div>
+															<div class="dropdown_title_date">
+																Sep 12th & 14th
+																| <a href="resources/slides/W01-Intro+HTML.pdf">slides</a>
+															</div>
+
+														</div>
+														<div class="dropdown_item_text">
+															<p>Course intro, web architecture, server/client model, request/response, HTTP, HTML</p>
+														</div>
+													</div>
+													<hr>
+													<div class="dropdown_item">
+														<div class="dropdown_title_container">
+															<div class="dropdown_item_title">
+																Week 2:
+																<span> Cascading Style Sheets</span>
+															</div>
+															<div class="dropdown_title_date">
+																Sep 19th & 21st
+																| <a href="resources/slides/W02-CSS.pdf">slides</a>
+															</div>
+														</div>
+														<div class="dropdown_item_text">
+															<p>Styles, selectors, spacing, flex box, grids, frameworks</p>
+														</div>
+													</div>
+													<hr>
+													<div class="dropdown_item">
+														<div class="dropdown_title_container">
+															<div class="dropdown_item_title">
+																Week 3:
+																<span> JavaScript part 1</span>
+															</div>
+															<div class="dropdown_title_date">
+																Sep 26th & 28th
+																| <a href="resources/slides/W03-JavaScript-1.pdf">slides</a>
+															</div>
+														</div>
+														<div class="dropdown_item_text">
+															<p>JS syntax, objects, functions, scope, closures, arrow functions</p>
+														</div>
+													</div>
+													<hr>
+													<div class="dropdown_item">
+														<div class="dropdown_title_container">
+															<div class="dropdown_item_title">
+																Week 4:
+																<span> JavaScript part 2</span>
+															</div>
+															<div class="dropdown_title_date">
+																Oct 3rd & 5th
+																| <a href="resources/slides/W04-JavaScript-2.pdf">slides</a>
+															</div>
+														</div>
+														<div class="dropdown_item_text">
+															<p>
+																DOM, elements, jQuery, Ajax, event loop, fetch API, promises</p>
+														</div>
+													</div>
+													<hr>
+													<div class="dropdown_item">
+														<div class="dropdown_title_container">
+															<div class="dropdown_item_title">
+																Week 5:
+																<span> Django part 1</span>
+															</div>
+															<div class="dropdown_title_date">
+																<b>Oct 12th & 14th (unusual dates)</b>
+																| <a href="resources/slides/W05-Django-1.pdf?v=1.2">slides</a>
+															</div>
+														</div>
+														<div class="dropdown_item_text">
+															<p>
+																Backend development, frameworks, pip, Django setup,
+																simple views, html responses, forms, MVC</p>
+														</div>
+													</div>
+													<hr>
+													<div class="dropdown_item">
+														<div class="dropdown_title_container">
+															<div class="dropdown_item_title">
+																Week 6:
+																<span> Django part 2</span>
+															</div>
+															<div class="dropdown_title_date">
+																Oct 17th & 19th
+																| <a href="resources/slides/W06-Django-2.pdf?v=1.1">slides</a>
+															</div>
+														</div>
+														<div class="dropdown_item_text">
+															<p>Models, ORM, advanced views, authentication,
+																admin panel</p>
+														</div>
+													</div>
+													<hr>
+													<div class="dropdown_item">
+														<div class="dropdown_title_container">
+															<div class="dropdown_item_title">
+																Week 7:
+																<span> Django part 3</span>
+															</div>
+															<div class="dropdown_title_date">
+																Oct 24th & 26th
+																| <a href="resources/slides/W07-Django-3.pdf">slides</a>
+															</div>
+														</div>
+														<div class="dropdown_item_text">
+															<p>
+																Custom Models, migrations, CRUD</p>
+														</div>
+													</div>
+													<hr>
+													<div class="dropdown_item">
+														<div class="dropdown_title_container">
+															<div class="dropdown_item_title">
+																Week 8:
+																<span> Django part 4</span>
+															</div>
+															<div class="dropdown_title_date">
+																Oct 31st, Nov 2nd
+																| <a href="resources/slides/W08-Django-4.pdf">slides</a>
+															</div>
+														</div>
+														<div class="dropdown_item_text">
+															<p>
+																Python projects, virtual env, Restful APIs, APIView,
+																serializers, permissions</p>
+														</div>
+													</div>
+													<hr>
+													<div class="dropdown_item">
+														<div class="dropdown_title_container">
+															<div class="dropdown_item_title">
+																Week 9:
+																<span> React part 1</span>
+															</div>
+															<div class="dropdown_title_date">
+																Nov 14th & 16th
+																| <a href="resources/slides/W09-React-1.pdf">slides</a>
+															</div>
+														</div>
+														<div class="dropdown_item_text">
+															<p>
+																Single-page applications, React intro, JSX, props, state, events</p>
+														</div>
+													</div>
+													<hr>
+													<div class="dropdown_item">
+														<div class="dropdown_title_container">
+															<div class="dropdown_item_title">
+																Week 10:
+																<span> React part 2</span>
+															</div>
+															<div class="dropdown_title_date">
+																Nov 21st & 23rd
+																| <a href="resources/slides/W10-React-2.pdf?v=1">slides</a>
+															</div>
+														</div>
+														<div class="dropdown_item_text">
+															<p>React projects, NodeJS, npm, hooks, API calls</p>
+														</div>
+													</div>
+													<hr>
+													<div class="dropdown_item">
+														<div class="dropdown_title_container">
+															<div class="dropdown_item_title">
+																Week 11:
+																<span> React part 3</span>
+															</div>
+															<div class="dropdown_title_date">
+																<b>Nov 28th (Monday only)</b>
+																| <a href="resources/slides/W11-React-3.pdf">slides</a>
+															</div>
+														</div>
+														<div class="dropdown_item_text">
+															<p>
+																Context, routers, review of concepts</p>
+														</div>
+													</div>
+													<hr>
+													<div class="dropdown_item">
+														<div class="dropdown_title_container">
+															<div class="dropdown_item_title">
+																Week 12:
+																<span> Deployment (optional)</span>
+															</div>
+															<div class="dropdown_title_date">
+																Dec 5th & 7th
+																| <a href="resources/slides/W12-Deployment.pdf?v=1.2">slides</a>
+															</div>
+														</div>
+														<div class="dropdown_item_text">
+															<p>Django deployment, React deployment, DevOps, Docker</p>
+														</div>
+													</div>
+
+												</ul>
 											</div>
 										</div>
-										<div class="tab_panel_section">
-											<div class="tab_panel_title">Learning outcomes</div>
-											<div class="tab_panel_text">
-												<p>At the end of the course, you will:</p>
-											</div>
-											<ul class="tab_panel_bullets">
-												<li>Understand the concept of web, servers, and clients</li>
-												<li>Gain solid knowledge about various components of a website (back-end and front-end)</li>
-												<li>Learn how to create a static website with HTML and CSS</li>
-												<li>Learn how develop the back-end of a website with Django</li>
-												<li>Learn how to develop the front-end of a website with React</li>
-											</ul>
-										</div>
+									</div>
 
-										<div class="tab_panel_section">
-											<div class="tab_panel_title">Pre-requisites</div>
-											<ul class="tab_panel_bullets">
-												<li>Programming experience &amp; Python (CSC108)</li>
-												<li>Advanced programming &amp; OOP (CSC207 &amp; CSC148)</li>
-												<li>Basic shell &amp; system programming (CSC209)</li>
+									<!-- Reviews -->
+									<div class="tab_panel tab_panel_3">
+										<!-- Comments -->
+										<div class="comments_container">
+											<ul class="comments_list">
 												<li>
-													<strong>Recommended Co-requisite:</strong>
-													Database design (CSC343)
+													<div class="comment_item row align-items-start jutify-content-start">
+														<div class="comment_image col-lg-3">
+															<div>
+																<img src="images/kianoosh.jpg" alt="">
+															</div>
+														</div>
+														<div class="col-lg">
+															<div class="comment_author">
+																<a href="https://www.cs.toronto.edu/~kianoosh">Kianoosh Abbasi (Instructor)</a>
+															</div>
+															<div class="comment_time">
+																<a href="mailto:csc309-2022-09@cs.toronto.edu">csc309-2022-09@cs.toronto.edu</a>
+															</div>
+															<div class="comment_text">
+																<p>One day, becoming a teacher was my biggest dream. It feels good when dreams come
+																	true. </p>
+															</div>
+														</div>
+													</div>
+												</li>
+												<li>
+													<div class="comment_item row align-items-start jutify-content-start">
+														<div class="comment_image col-lg-3">
+															<div>
+																<img src="images/howie.jpg" alt="">
+															</div>
+														</div>
+														<div class="col-lg">
+															<div class="comment_author">
+																<a href="#">Han Xian Xu Huang (head TA)</a>
+															</div>
+															<div class="comment_time">
+																<a href="mailto:hanxianxu.huang@utoronto.ca">hanxianxu.huang@utoronto.ca</a>
+															</div>
+															<div class="comment_text">
+																<p>Finally, I realize winter break and summer break mean so much to me. Unfortunately,
+																	it's probably too late.</p>
+															</div>
+														</div>
+													</div>
+												</li>
+												<li>
+													<div class="comment_item row align-items-start jutify-content-start">
+														<div class="comment_image col-lg-3">
+															<div>
+																<img src="images/kevin.png" alt="">
+															</div>
+														</div>
+														<div class="col-lg">
+															<div class="comment_author">
+																<a href="https://www.linkedin.com/in/ge-kevin/">Kevin Ge</a>
+															</div>
+															<div class="comment_text">
+																<p>Final year CS undergrad. If you're tired of asking me course-related questions, you
+																	ask me what I'm listening to or what I'm currently reading 🙂.
+																</p>
+															</div>
+														</div>
+													</div>
+												</li>
+												<li>
+													<div class="comment_item row align-items-start jutify-content-start">
+														<div class="comment_image col-lg-3">
+															<div>
+																<img src="images/ehsan.png" alt="">
+															</div>
+														</div>
+														<div class="col-lg">
+															<div class="comment_author">
+																<a href="https://etesami.github.io/">Ehsan Etesami</a>
+															</div>
+															<div class="comment_text">
+																<p>I am a PhD student at UofT and received the worldwide #1 ranking in search for my own
+																	name.</p>
+															</div>
+														</div>
+													</div>
+												</li>
+												<li>
+													<div class="comment_item row align-items-start jutify-content-start">
+														<div class="comment_image col-lg-3">
+															<div>
+																<img src="images/matt.jpg" alt="">
+															</div>
+														</div>
+														<div class="col-lg">
+															<div class="comment_author">
+																<a href="#">Matthew Choi</a>
+															</div>
+															<div class="comment_time">
+																<a href=""></a>
+															</div>
+															<div class="comment_text">
+																<p>You might catch me trying to tan my hands in Bahen.</p>
+															</div>
+														</div>
+													</div>
+												</li>
+												<li>
+													<div class="comment_item row align-items-start jutify-content-start">
+														<div class="comment_image col-lg-3">
+															<div>
+																<img src="images/vahid.jpg" alt="">
+															</div>
+														</div>
+														<div class="col-lg">
+															<div class="comment_author">
+																<a href="#">Vahid Zehtab</a>
+															</div>
+															<div class="comment_time">
+																<a href=""></a>
+															</div>
+															<div class="comment_text">
+																<p>I don't believe in bios. Interestingly enough, I don't believe in BIOS either.</p>
+															</div>
+														</div>
+													</div>
+												</li>
+												<li>
+													<div class="comment_item row align-items-start jutify-content-start">
+														<div class="comment_image col-lg-3">
+															<div>
+																<img src="images/jojo.PNG" alt="">
+															</div>
+														</div>
+														<div class="col-lg">
+															<div class="comment_author">
+																<a href="https://www.linkedin.com/in/jiujiu-duan-aa1441179/?originalSubdomain=ca">Jiujiu
+																	Duan</a>
+															</div>
+															<div class="comment_text">
+																<p>If you don't know how to pronounce my name Jiujiu, just call me Jojo 🙂</p>
+															</div>
+														</div>
+													</div>
+												</li>
+												<li>
+													<div class="comment_item row align-items-start jutify-content-start">
+														<div class="comment_image col-lg-3">
+															<div>
+																<img src="images/naruki.png" alt="">
+															</div>
+														</div>
+														<div class="col-lg">
+															<div class="comment_author">
+																<a href="https://www.cs.toronto.edu/~naruki/">Naruki Yoshikawa</a>
+															</div>
+															<div class="comment_text">
+																<p>A Ph.D. student working in cheminformatics and robotics</p>
+															</div>
+														</div>
+													</div>
 												</li>
 											</ul>
 										</div>
-										<div class="tab_panel_section">
-											<div class="tab_panel_subtitle">What is the target audience?</div>
-											<div class="tab_panel_text">
-												<p>This course is suitable for anyone interested in learning web programming and may be seeking a relevant job in the future. It assumes no prior knowledge or experience in web development. So everything will be discussed from the very basics.
-												</p>
-											</div>
-										</div>
-										<div class="tab_panel_section">
-											<div class="tab_panel_title">Assessment</div>
-											<div class="tab_panel_text">
-												<p>Assessment will be done through 3 assignments and one project (broken down into two parts). This course does not have any final or midterm exams.
-												</p>
-											</div>
-											<br>
-											<div class="tab_panel_subtitle">Assignments</div>
-											<div class="tab_panel_text">
-												<p>
-													Assignments consist of small problems that challenge your understanding of the concepts and will be mostly auto-graded.
-												</p>
-											</div>
-											<br>
-											<div class="tab_panel_subtitle">Project</div>
-											<div class="tab_panel_text">
-												<p>
-
-													The project simulates a real-world gym website that you could be very well asked to develop as a freelance web developer. Even though the scope is considerably small, it is designed to give a sense about how creating a real website and being a full-stack developer would look like. For the project, you can make groups of 2 or 3 members. You could also do it alone, but it is not recommended as the workload might be excessive for one person.
-												</p>
-												<p>
-													You will deliver the <b>backend</b> and <b>frontend</b> of the project separately. Grading will take place through interview sessions with TAs. They will work with your website to check if the requirements are implemented correctly, and also ask each member questions about their role and the code they have implemented.
-													The grade for the former one will be shared between all members, while the latter one yield to individual grades, based on each member's participation and understanding of the entire submission.
-
-												</p>
-											</div>
-											<br>
-											<div class="tab_panel_subtitle">Grading breakdown</div>
-											<div class="container">
-												<div class="row">
-													<div class="col-sm">
-														<ul class="tab_panel_bullets">
-															<li>Assignment 1: 10%</li>
-															<li>Assignment 2: 15%</li>
-															<li>Assignment 3: 20%</li>
-														</ul>
-													</div>
-													<div class="col-sm">
-														<ul class="tab_panel_bullets">
-															<li>Project backend: 25%</li>
-															<li>Project frontend: 30%</li>
-														</ul>
-													</div>
-												</div>
-											</div>
-
-										</div>
-
-										<div class="tab_panel_section">
-											<div class="tab_panel_title">Late submissions</div>
-											<div class="tab_panel_text">
-												<p>In assignments or projects, late submissions of <code>x</code> hours (starting from 1) will deduct following percentage from your grades.<br>
-												<img width="250" style="margin-left: 10em" src="images/penalty-decay.png" alt="0.0002 * x ^ 3.06"><br><br>
-												The above formula is designed so very little penalty is incurred in the first few hours after the deadline, and it significantly increases over time. Some example penalties are listed below. (Note that they indicate the <b>deducted percentage</b> of your assessment mark)<br><br>
-												<img width="100" style="margin-left: 3em" src="images/penalty-examples.png" alt="0.0002 * x ^ 3.06"><br><br>
-												</p>
-											</div>
-										</div>
-
-										<div class="tab_panel_section">
-											<div class="tab_panel_title">Remark Policy</div>
-											<div class="tab_panel_text">
-												<p>
-													If you feel there was an error in the marking of an assignment, you may request a remark directly on Markus, through email to the course instructor, or the lead TA. You must give a specific reason for the request, referring to a possible error or omission by the marker. Stating specific potential grading errors for your remark request is mandatory for us to even consider your request. However, we will review your entire work, not just the items you pointed out. Please keep in mind that your grade may stay the same, may increase, or may even decrease, after your remark request is assessed. Remark requests must be received
-													<strong>within four days</strong>
-													of when you received the grade for that item.
-
-												</p>
-											</div>
-										</div>
-
-										<div class="tab_panel_section">
-											<div class="tab_panel_title">Missed Term Work</div>
-											<div class="tab_panel_text">
-												<p>
-													To request special consideration, bring supporting documentation to the instructor in person during office hours at least one week in advance.
-												</p>
-												<p>
-													In the event of an illness or other catastrophe, please contact the instructor and provide supporting documentation within one week of the missed work. You must also declare your absence on Acorn. Do not wait until the due date has passed. It is always easier to make alternate arrangements before the due date.
-												</p>
-											</div>
-										</div>
-
-										<div class="tab_panel_section">
-											<div class="tab_panel_title">Academic Integrity</div>
-											<div class="tab_panel_text">
-												<p>
-
-													Honesty and fairness are fundamental to the University of Toronto’s mission. Plagiarism is a form of academic fraud and is treated very seriously.
-
-													You are also expected to read the handout
-													<a href="http://www.writing.utoronto.ca/advice/using-sources/how-not-to-plagiarize">How not to plagiarize</a>
-													and to be familiar with the Code of behaviour on academic matters, which is linked from the UTM calendar under the link Codes and policies.
-
-
-												</p>
-											</div>
-											<br>
-											<div class="tab_panel_subtitle">Assignments</div>
-											<div class="tab_panel_text">
-												<p>
-
-													Assignments are
-													<strong>individual works</strong>
-													which means that you will not be allowed to seek advice from other students or copy/paste someone else's code, even open source codes from the internet. However, you are allowed to look at online resources, tutorials, and Q&amp;A websites over the course of solving the problems. The entire code must be written by yourself.
-
-												</p>
-											</div>
-											<br>
-											<div class="tab_panel_subtitle">Project</div>
-											<div class="tab_panel_text">
-												<p>
-													Unlike the assignments, you are allowed to download packages or use open source codes from the internet for the project. However, sharing even a small piece of code to other teams is strictly prohibited (either giving to or taking from them). Online codes must include a reference to the webpage they are taken from.
-												</p>
-											</div>
-										</div>
-
 									</div>
+
 								</div>
-
-								<!-- Curriculum -->
-								<div class="tab_panel tab_panel_2">
-									<div class="tab_panel_content">
-										<div class="tab_panel_content">
-
-											<!-- Dropdowns -->
-											<ul class="dropdowns">
-												<div class="dropdown_item">
-													<div class="dropdown_title_container">
-														<div class="dropdown_item_title">
-															Week 1:
-															<span> Intro + HTML</span>
-														</div>
-														<div class="dropdown_title_date">
-															Sep 12th & 14th
-															| <a href="resources/slides/W01-Intro+HTML.pdf">slides</a>
-														</div>
-
-													</div>
-													<div class="dropdown_item_text">
-														<p>Course intro, web architecture, server/client model, request/response, HTTP, HTML</p>
-													</div>
-												</div>
-												<hr>
-												<div class="dropdown_item">
-													<div class="dropdown_title_container">
-														<div class="dropdown_item_title">
-															Week 2:
-															<span> Cascading Style Sheets</span>
-														</div>
-														<div class="dropdown_title_date">
-															Sep 19th & 21st
-															| <a href="resources/slides/W02-CSS.pdf">slides</a>
-														</div>
-													</div>
-													<div class="dropdown_item_text">
-														<p>Styles, selectors, spacing, flex box, grids, frameworks</p>
-													</div>
-												</div>
-												<hr>
-												<div class="dropdown_item">
-													<div class="dropdown_title_container">
-														<div class="dropdown_item_title">
-															Week 3:
-															<span> JavaScript part 1</span>
-														</div>
-														<div class="dropdown_title_date">
-															Sep 26th & 28th
-															| <a href="resources/slides/W03-JavaScript-1.pdf">slides</a>
-														</div>
-													</div>
-													<div class="dropdown_item_text">
-														<p>JS syntax, objects, functions, scope, closures, arrow functions</p>
-													</div>
-												</div>
-												<hr>
-												<div class="dropdown_item">
-													<div class="dropdown_title_container">
-														<div class="dropdown_item_title">
-															Week 4:
-															<span> JavaScript part 2</span>
-														</div>
-														<div class="dropdown_title_date">
-															Oct 3rd & 5th
-															| <a href="resources/slides/W04-JavaScript-2.pdf">slides</a>
-														</div>
-													</div>
-													<div class="dropdown_item_text">
-														<p>
-															DOM, elements, jQuery, Ajax, event loop, fetch API, promises</p>
-													</div>
-												</div>
-												<hr>
-												<div class="dropdown_item">
-													<div class="dropdown_title_container">
-														<div class="dropdown_item_title">
-															Week 5:
-															<span> Django part 1</span>
-														</div>
-														<div class="dropdown_title_date">
-															<b>Oct 12th & 14th (unusual dates)</b>
-															| <a href="resources/slides/W05-Django-1.pdf?v=1.2">slides</a>
-														</div>
-													</div>
-													<div class="dropdown_item_text">
-														<p>
-															Backend development, frameworks, pip, Django setup,
-															simple views, html responses, forms, MVC</p>
-													</div>
-												</div>
-												<hr>
-												<div class="dropdown_item">
-													<div class="dropdown_title_container">
-														<div class="dropdown_item_title">
-															Week 6:
-															<span> Django part 2</span>
-														</div>
-														<div class="dropdown_title_date">
-															Oct 17th & 19th
-															| <a href="resources/slides/W06-Django-2.pdf?v=1.1">slides</a>
-														</div>
-													</div>
-													<div class="dropdown_item_text">
-														<p>Models, ORM, advanced views, authentication,
-															admin panel</p>
-													</div>
-												</div>
-												<hr>
-												<div class="dropdown_item">
-													<div class="dropdown_title_container">
-														<div class="dropdown_item_title">
-															Week 7:
-															<span> Django part 3</span>
-														</div>
-														<div class="dropdown_title_date">
-															Oct 24th & 26th
-															| <a href="resources/slides/W07-Django-3.pdf">slides</a>
-														</div>
-													</div>
-													<div class="dropdown_item_text">
-														<p>
-															Custom Models, migrations, CRUD</p>
-													</div>
-												</div>
-												<hr>
-												<div class="dropdown_item">
-													<div class="dropdown_title_container">
-														<div class="dropdown_item_title">
-															Week 8:
-															<span> Django part 4</span>
-														</div>
-														<div class="dropdown_title_date">
-															Oct 31st, Nov 2nd
-															| <a href="resources/slides/W08-Django-4.pdf">slides</a>
-														</div>
-													</div>
-													<div class="dropdown_item_text">
-														<p>
-															Python projects, virtual env, Restful APIs, APIView,
-															serializers, permissions</p>
-													</div>
-												</div>
-												<hr>
-												<div class="dropdown_item">
-													<div class="dropdown_title_container">
-														<div class="dropdown_item_title">
-															Week 9:
-															<span> React part 1</span>
-														</div>
-														<div class="dropdown_title_date">
-															Nov 14th & 16th
-															| <a href="resources/slides/W09-React-1.pdf">slides</a>
-														</div>
-													</div>
-													<div class="dropdown_item_text">
-														<p>
-															Single-page applications, React intro, JSX, props, state, events</p>
-													</div>
-												</div>
-												<hr>
-												<div class="dropdown_item">
-													<div class="dropdown_title_container">
-														<div class="dropdown_item_title">
-															Week 10:
-															<span> React part 2</span>
-														</div>
-														<div class="dropdown_title_date">
-															Nov 21st & 23rd
-															| <a href="resources/slides/W10-React-2.pdf?v=1">slides</a>
-														</div>
-													</div>
-													<div class="dropdown_item_text">
-														<p>React projects, NodeJS, npm, hooks, API calls</p>
-													</div>
-												</div>
-												<hr>
-												<div class="dropdown_item">
-													<div class="dropdown_title_container">
-														<div class="dropdown_item_title">
-															Week 11:
-															<span> React part 3</span>
-														</div>
-														<div class="dropdown_title_date">
-															<b>Nov 28th (Monday only)</b>
-															| <a href="resources/slides/W11-React-3.pdf">slides</a>
-														</div>
-													</div>
-													<div class="dropdown_item_text">
-														<p>
-															Context, routers, review of concepts</p>
-													</div>
-												</div>
-												<hr>
-												<div class="dropdown_item">
-													<div class="dropdown_title_container">
-														<div class="dropdown_item_title">
-															Week 12:
-															<span> Deployment (optional)</span>
-														</div>
-														<div class="dropdown_title_date">
-															Dec 5th & 7th
-															| <a href="resources/slides/W12-Deployment.pdf?v=1.2">slides</a>
-														</div>
-													</div>
-													<div class="dropdown_item_text">
-														<p>Django deployment, React deployment, DevOps, Docker</p>
-													</div>
-												</div>
-
-											</ul>
-										</div>
-									</div>
-								</div>
-
-								<!-- Reviews -->
-								<div class="tab_panel tab_panel_3">
-									<!-- Comments -->
-									<div class="comments_container">
-										<ul class="comments_list">
-											<li>
-												<div class="comment_item row align-items-start jutify-content-start">
-													<div class="comment_image col-lg-3">
-														<div>
-															<img src="images/kianoosh.jpg" alt="">
-														</div>
-													</div>
-													<div class="col-lg">
-														<div class="comment_author">
-															<a href="https://www.cs.toronto.edu/~kianoosh">Kianoosh Abbasi (Instructor)</a>
-														</div>
-														<div class="comment_time">
-															<a href="mailto:csc309-2022-09@cs.toronto.edu">csc309-2022-09@cs.toronto.edu</a>
-														</div>
-														<div class="comment_text">
-															<p>One day, becoming a teacher was my biggest dream. It feels good when dreams come true. </p>
-														</div>
-													</div>
-												</div>
-											</li>
-											<li>
-												<div class="comment_item row align-items-start jutify-content-start">
-													<div class="comment_image col-lg-3">
-														<div>
-															<img src="images/howie.jpg" alt="">
-														</div>
-													</div>
-													<div class="col-lg">
-														<div class="comment_author">
-															<a href="#">Han Xian Xu Huang (head TA)</a>
-														</div>
-														<div class="comment_time">
-															<a href="mailto:hanxianxu.huang@utoronto.ca">hanxianxu.huang@utoronto.ca</a>
-														</div>
-														<div class="comment_text">
-															<p>Finally, I realize winter break and summer break mean so much to me. Unfortunately, it's probably too late.</p>
-														</div>
-													</div>
-												</div>
-											</li>
-											<li>
-												<div class="comment_item row align-items-start jutify-content-start">
-													<div class="comment_image col-lg-3">
-														<div>
-															<img src="images/kevin.png" alt="">
-														</div>
-													</div>
-													<div class="col-lg">
-														<div class="comment_author">
-															<a href="https://www.linkedin.com/in/ge-kevin/">Kevin Ge</a>
-														</div>
-														<div class="comment_text">
-															<p>Final year CS undergrad. If you're tired of asking me course-related questions, you ask me what I'm listening to or what I'm currently reading 🙂.
-															</p>
-														</div>
-													</div>
-												</div>
-											</li>
-											<li>
-												<div class="comment_item row align-items-start jutify-content-start">
-													<div class="comment_image col-lg-3">
-														<div>
-															<img src="images/ehsan.png" alt="">
-														</div>
-													</div>
-													<div class="col-lg">
-														<div class="comment_author">
-															<a href="https://etesami.github.io/">Ehsan Etesami</a>
-														</div>
-														<div class="comment_text">
-															<p>I am a PhD student at UofT and received the worldwide #1 ranking in search for my own name.</p>
-														</div>
-													</div>
-												</div>
-											</li>
-											<li>
-												<div class="comment_item row align-items-start jutify-content-start">
-													<div class="comment_image col-lg-3">
-														<div>
-															<img src="images/matt.jpg" alt="">
-														</div>
-													</div>
-													<div class="col-lg">
-														<div class="comment_author">
-															<a href="#">Matthew Choi</a>
-														</div>
-														<div class="comment_time">
-															<a href=""></a>
-														</div>
-														<div class="comment_text">
-															<p>You might catch me trying to tan my hands in Bahen.</p>
-														</div>
-													</div>
-												</div>
-											</li>
-											<li>
-												<div class="comment_item row align-items-start jutify-content-start">
-													<div class="comment_image col-lg-3">
-														<div>
-															<img src="images/vahid.jpg" alt="">
-														</div>
-													</div>
-													<div class="col-lg">
-														<div class="comment_author">
-															<a href="#">Vahid Zehtab</a>
-														</div>
-														<div class="comment_time">
-															<a href=""></a>
-														</div>
-														<div class="comment_text">
-															<p>I don't believe in bios. Interestingly enough, I don't believe in BIOS either.</p>
-														</div>
-													</div>
-												</div>
-											</li>
-											<li>
-												<div class="comment_item row align-items-start jutify-content-start">
-													<div class="comment_image col-lg-3">
-														<div>
-															<img src="images/jojo.PNG" alt="">
-														</div>
-													</div>
-													<div class="col-lg">
-														<div class="comment_author">
-															<a href="https://www.linkedin.com/in/jiujiu-duan-aa1441179/?originalSubdomain=ca">Jiujiu Duan</a>
-														</div>
-														<div class="comment_text">
-															<p>If you don't know how to pronounce my name Jiujiu, just call me Jojo 🙂</p>
-														</div>
-													</div>
-												</div>
-											</li>
-											<li>
-												<div class="comment_item row align-items-start jutify-content-start">
-													<div class="comment_image col-lg-3">
-														<div>
-															<img src="images/naruki.png" alt="">
-														</div>
-													</div>
-													<div class="col-lg">
-														<div class="comment_author">
-															<a href="https://www.cs.toronto.edu/~naruki/">Naruki Yoshikawa</a>
-														</div>
-														<div class="comment_text">
-															<p>A Ph.D. student working in cheminformatics and robotics</p>
-														</div>
-													</div>
-												</div>
-											</li>
-										</ul>
-									</div>
-								</div>
-
 							</div>
 						</div>
 					</div>
-				</div>
 
-				<!-- Course Sidebar -->
-				<div class="col-lg-4">
-					<div class="sidebar">
+					<!-- Course Sidebar -->
+					<div class="col-lg-4">
+						<div class="sidebar">
 
-						<!-- Feature -->
-						<div class="sidebar_section">
-							<div class="sidebar_section_title">Course Links</div>
-							<div class="sidebar_feature">
+							<!-- Feature -->
+							<div class="sidebar_section">
+								<div class="sidebar_section_title">Course Links</div>
+								<div class="sidebar_feature">
 
-								<!-- Features -->
-								<div class="feature_list">
+									<!-- Features -->
+									<div class="feature_list">
 
-									<!-- Feature -->
-									<div class="feature d-flex flex-row align-items-center justify-content-start">
-										<div class="feature_title">
-											<i class="fa fa-question-circle-o" aria-hidden="true"></i>
-											<span>Announcement - Q&amp;A</span>
+										<!-- Feature -->
+										<div class="feature d-flex flex-row align-items-center justify-content-start">
+											<div class="feature_title">
+												<i class="fa fa-question-circle-o" aria-hidden="true"></i>
+												<span>Announcement - Q&amp;A</span>
+											</div>
+											<div class="feature_text ml-auto">
+												<a href="https://piazza.com/utoronto.ca/fall2022/csc309">Piazza</a>
+											</div>
 										</div>
-										<div class="feature_text ml-auto">
-											<a href="https://piazza.com/utoronto.ca/fall2022/csc309">Piazza</a>
+
+										<!-- Feature -->
+										<div class="feature d-flex flex-row align-items-center justify-content-start">
+											<div class="feature_title">
+												<i class="fa fa-address-book" aria-hidden="true"></i>
+												<span>Submissions</span>
+											</div>
+											<div class="feature_text ml-auto">
+												<a href="https://markus.teach.cs.toronto.edu/2022-09">Markus</a>
+											</div>
 										</div>
+
+										<!-- Feature -->
+										<div class="feature d-flex flex-row align-items-center justify-content-start">
+											<div class="feature_title">
+												<i class="fa fa-slideshare" aria-hidden="true"></i>
+												<span>Informal chat</span>
+											</div>
+											<div class="feature_text ml-auto">
+												<a href="https://discord.gg/6RgTVxYzyA">Discord</a>
+											</div>
+										</div>
+
+										<!-- Feature -->
+										<div class="feature d-flex flex-row align-items-center justify-content-start">
+											<div class="feature_title">
+												<i class="fa fa-microphone" aria-hidden="true"></i>
+												<span>Interviews and grades</span>
+											</div>
+											<div class="feature_text ml-auto">
+												<a href="https://csc309.teach.cs.toronto.edu/">IBS</a>
+											</div>
+										</div>
+
+										<div class="feature d-flex flex-row align-items-center justify-content-start">
+											<div class="feature_title">
+												<i class="fa fa-code" aria-hidden="true"></i>
+												<span>Lecture codes</span>
+											</div>
+											<div class="feature_text ml-auto">
+												<a href="https://github.com/Kianoosh76/csc309-fall2022-codes">Github</a>
+											</div>
+										</div>
+
+
 									</div>
-
-									<!-- Feature -->
-									<div class="feature d-flex flex-row align-items-center justify-content-start">
-										<div class="feature_title">
-											<i class="fa fa-address-book" aria-hidden="true"></i>
-											<span>Submissions</span>
-										</div>
-										<div class="feature_text ml-auto">
-											<a href="https://markus.teach.cs.toronto.edu/2022-09">Markus</a>
-										</div>
-									</div>
-
-									<!-- Feature -->
-									<div class="feature d-flex flex-row align-items-center justify-content-start">
-										<div class="feature_title">
-											<i class="fa fa-slideshare" aria-hidden="true"></i>
-											<span>Informal chat</span>
-										</div>
-										<div class="feature_text ml-auto">
-											<a href="https://discord.gg/6RgTVxYzyA">Discord</a>
-										</div>
-									</div>
-
-									<!-- Feature -->
-									<div class="feature d-flex flex-row align-items-center justify-content-start">
-										<div class="feature_title">
-											<i class="fa fa-microphone" aria-hidden="true"></i>
-											<span>Interviews and grades</span>
-										</div>
-										<div class="feature_text ml-auto">
-											<a href="https://csc309.teach.cs.toronto.edu/">IBS</a>
-										</div>
-									</div>
-
-									<div class="feature d-flex flex-row align-items-center justify-content-start">
-										<div class="feature_title">
-											<i class="fa fa-code" aria-hidden="true"></i>
-											<span>Lecture codes</span>
-										</div>
-										<div class="feature_text ml-auto">
-											<a href="https://github.com/Kianoosh76/csc309-fall2022-codes">Github</a>
-										</div>
-									</div>
-
-
 								</div>
 							</div>
-						</div>
 
-						<!-- Feature -->
-						<div class="sidebar_section">
-							<div class="sidebar_section_title">Handouts and deadlines</div>
-							<div class="sidebar_feature">
+							<!-- Feature -->
+							<div class="sidebar_section">
+								<div class="sidebar_section_title">Handouts and deadlines</div>
+								<div class="sidebar_feature">
 
-								<!-- Features -->
-								<div class="feature_list">
+									<!-- Features -->
+									<div class="feature_list">
 
-									<!-- Feature -->
-									<div class="feature d-flex flex-row align-items-center justify-content-start">
-										<div class="feature_title">
-											<i class="fa fa-keyboard-o" aria-hidden="true"></i>
-											<span>
-                                                    <a href="resources/handouts/a1.html">Assignment 1</a>
-                                                </span>
+										<!-- Feature -->
+										<div class="feature d-flex flex-row align-items-center justify-content-start">
+											<div class="feature_title">
+												<i class="fa fa-keyboard-o" aria-hidden="true"></i>
+												<span>
+													<a href="resources/handouts/a1.html">Assignment 1</a>
+												</span>
+											</div>
+											<div class="feature_text ml-auto">Oct 2nd, 22:00</div>
 										</div>
-										<div class="feature_text ml-auto">Oct 2nd, 22:00</div>
-									</div>
 
-									<div class="feature d-flex flex-row align-items-center justify-content-start">
-										<div class="feature_title">
-											<i class="fa fa-keyboard-o" aria-hidden="true"></i>
-											<span>
-                                                    <a href="resources/handouts/a2.html">Assignment 2</a>
-                                                </span>
+										<div class="feature d-flex flex-row align-items-center justify-content-start">
+											<div class="feature_title">
+												<i class="fa fa-keyboard-o" aria-hidden="true"></i>
+												<span>
+													<a href="resources/handouts/a2.html">Assignment 2</a>
+												</span>
+											</div>
+											<div class="feature_text ml-auto">Oct 16th, 22:00</div>
 										</div>
-										<div class="feature_text ml-auto">Oct 16th, 22:00</div>
-									</div>
 
-									<div class="feature d-flex flex-row align-items-center justify-content-start">
-										<div class="feature_title">
-											<i class="fa fa-keyboard-o" aria-hidden="true"></i>
-											<span>
-                                                    <a href="resources/handouts/a3.html">Assignment 3</a>
-                                                </span>
+										<div class="feature d-flex flex-row align-items-center justify-content-start">
+											<div class="feature_title">
+												<i class="fa fa-keyboard-o" aria-hidden="true"></i>
+												<span>
+													<a href="resources/handouts/a3.html">Assignment 3</a>
+												</span>
+											</div>
+											<div class="feature_text ml-auto">Nov 1st, 22:00</div>
 										</div>
-										<div class="feature_text ml-auto">Nov 1st, 22:00</div>
-									</div>
 
-									<div class="feature d-flex flex-row align-items-center justify-content-start">
-										<div class="feature_title">
-											<i class="fa fa-desktop" aria-hidden="true"></i>
-											<span>
-												<a href="resources/handouts/pb.html">Project backend</a>
-                                                </span>
+										<div class="feature d-flex flex-row align-items-center justify-content-start">
+											<div class="feature_title">
+												<i class="fa fa-desktop" aria-hidden="true"></i>
+												<span>
+													<a href="resources/handouts/pb.html">Project backend</a>
+												</span>
+											</div>
+											<div class="feature_text ml-auto">Nov 18th, 22:00</div>
 										</div>
-										<div class="feature_text ml-auto">Nov 18th, 22:00</div>
-									</div>
 
-									<div class="feature d-flex flex-row align-items-center justify-content-start">
-										<div class="feature_title">
-											<i class="fa fa-desktop" aria-hidden="true"></i>
-											<span>
-												<a href="resources/handouts/pf.html">
-                                                    Project frontend
-												</a>
-                                                </span>
+										<div class="feature d-flex flex-row align-items-center justify-content-start">
+											<div class="feature_title">
+												<i class="fa fa-desktop" aria-hidden="true"></i>
+												<span>
+													<a href="resources/handouts/pf.html">
+														Project frontend
+													</a>
+												</span>
+											</div>
+											<div class="feature_text ml-auto">Dec 8th, 22:00</div>
 										</div>
-										<div class="feature_text ml-auto">Dec 8th, 22:00</div>
-									</div>
 
+									</div>
 								</div>
 							</div>
-						</div>
 
+						</div>
 					</div>
 				</div>
 			</div>
 		</div>
+
+		<!-- Footer -->
+
+		<footer class="footer">
+			<div class="container">
+				<div class="row copyright_row">
+					<div class="col">
+						<div class="copyright d-flex flex-lg-row flex-column align-items-center justify-content-start">
+							<div class="cr_text">
+								<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+
+								Copyright &copy;
+								<script>
+									document.write(new Date().getFullYear());
+								</script>
+								All rights reserved | This template is made by
+								<a href="https://colorlib.com/" target="_blank">Colorlib</a>
+								<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
 	</div>
 
-	<!-- Footer -->
-
-	<footer class="footer">
-		<div class="container">
-			<div class="row copyright_row">
-				<div class="col">
-					<div class="copyright d-flex flex-lg-row flex-column align-items-center justify-content-start">
-						<div class="cr_text">
-							<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-
-							Copyright &copy;
-							<script>
-								document.write(new Date().getFullYear());
-							</script>
-							All rights reserved | This template is made by
-							<a href="https://colorlib.com/" target="_blank">Colorlib</a>
-							<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</footer>
-</div>
-
-<script src="js/jquery-3.2.1.min.js"></script>
-<script src="styles/bootstrap4/popper.js"></script>
-<script src="styles/bootstrap4/bootstrap.min.js"></script>
-<script src="plugins/colorbox/jquery.colorbox-min.js"></script>
-<script src="js/course.js"></script>
+	<script src="js/jquery-3.2.1.min.js"></script>
+	<script src="styles/bootstrap4/popper.js"></script>
+	<script src="styles/bootstrap4/bootstrap.min.js"></script>
+	<script src="js/course.js"></script>
 </body>
+
 </html>

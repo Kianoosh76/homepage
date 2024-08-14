@@ -1,28 +1,29 @@
-    <!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <title>Assignment 2: Processes</title>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="description" content="CSC209: Software Tools and System Programming - Summer 2022">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+<!DOCTYPE html>
+<html lang="en">
 
-        <!-- Open Graph / Facebook -->
-        <meta property="og:type" content="website">
-        <meta property="og:url" content="https://www.cs.toronto.edu/~kianoosh/courses/csc209/handouts/a2.html">
-        <meta property="og:title" content="Assignment 2: Processes">
-        <meta property="og:description" content="CSC209: Software Tools and System Programming - Summer 2022">
-        <meta property="og:image" content="https://www.cs.toronto.edu/~kianoosh/courses/csc209/images/card.png">
+<head>
+    <title>Assignment 2: Processes</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="CSC209: Software Tools and System Programming - Summer 2022">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <link rel="shortcut icon" type="image/jpg" href="../../images/favicon.png"/>
-        <link rel="stylesheet" type="text/css" href="../../styles/bootstrap4/bootstrap.min.css">
-        <link href="../../plugins/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-        <link href="../../plugins/colorbox/colorbox.css" rel="stylesheet" type="text/css">
-        <link rel="stylesheet" type="text/css" href="../../styles/handout.css?v=1.4">
-        <link rel="stylesheet" type="text/css" href="../../styles/course.css?v=1.3">
-        <link rel="stylesheet" type="text/css" href="../../styles/handout_responsive.css">
-    </head>
-    <body>
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.cs.toronto.edu/~kianoosh/courses/csc209/handouts/a2.html">
+    <meta property="og:title" content="Assignment 2: Processes">
+    <meta property="og:description" content="CSC209: Software Tools and System Programming - Summer 2022">
+    <meta property="og:image" content="https://www.cs.toronto.edu/~kianoosh/courses/csc209/images/card.png">
+
+    <link rel="shortcut icon" type="image/jpg" href="../../images/favicon.png" />
+    <link rel="stylesheet" type="text/css" href="../../styles/bootstrap4/bootstrap.min.css">
+    <link href="../../plugins/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="../../styles/handout.css?v=1.4">
+    <link rel="stylesheet" type="text/css" href="../../styles/course.css?v=1.3">
+    <link rel="stylesheet" type="text/css" href="../../styles/handout_responsive.css">
+</head>
+
+<body>
 
     <div class="super_container">
 
@@ -56,7 +57,8 @@
                             <div class="header_search_content d-flex flex-row align-items-center justify-content-end">
                                 <form action="#" class="header_search_form">
                                     <input type="search" class="search_input" placeholder="Search" required="required">
-                                    <button class="header_search_button d-flex flex-column align-items-center justify-content-center">
+                                    <button
+                                        class="header_search_button d-flex flex-column align-items-center justify-content-center">
                                         <i class="fa fa-search" aria-hidden="true"></i>
                                     </button>
                                 </form>
@@ -107,128 +109,207 @@
                             <div class="blog_subtitle"><b>Objective</b></div>
 
                             <p>
-                            For this assignment, you will write a multi-process program that takes advantage of multiple CPU cores in parallel
-                            to solve the <a href="https://en.wikipedia.org/wiki/Closest_pair_of_points_problem">Closest Pair of Points Problem</a>. You will use divide and conquer technics and combine it with multi-process programming to solve this assignment.</p>
+                                For this assignment, you will write a multi-process program that takes advantage of
+                                multiple CPU cores in parallel
+                                to solve the <a
+                                    href="https://en.wikipedia.org/wiki/Closest_pair_of_points_problem">Closest Pair of
+                                    Points Problem</a>. You will use divide and conquer technics and combine it with
+                                multi-process programming to solve this assignment.</p>
 
                             <div class="blog_subtitle">Notes</div>
 
                             <ul class="tab_panel_bullets">
                                 <li>This assignment will make up 10% of your final grade.</li>
-                                <li>No late submissions will be accepted after the due date. However, you are given a certain amount of <b>tokens</b> by which you can slightly extend the deadline of the assignment. Details about tokens can be found on the <a href="../../">course website</a>.</li>
-                                <li>If you have any questions or problems with the assignment, please post them on Piazza.</li>
-                                <li>Your submissions will be auto-graded. Therefore, your code must adhere to all details provided in the handout; otherwise, you might lose marks.</li>
-                                <li>You will not receive any feedback from the auto grader before the deadline has passed. So it is your responsibility to double-check your code with the handout before submission. Even minor spelling mistakes can lead to loss of marks. No remark requests will be accepted on these matters.</li>
-                                <li>You must verify that your submission compiles <b> without any warnings </b> and runs on a UTM MCS lab machine, as that is
+                                <li>No late submissions will be accepted after the due date. However, you are given a
+                                    certain amount of <b>tokens</b> by which you can slightly extend the deadline of the
+                                    assignment. Details about tokens can be found on the <a href="../../">course
+                                        website</a>.</li>
+                                <li>If you have any questions or problems with the assignment, please post them on
+                                    Piazza.</li>
+                                <li>Your submissions will be auto-graded. Therefore, your code must adhere to all
+                                    details provided in the handout; otherwise, you might lose marks.</li>
+                                <li>You will not receive any feedback from the auto grader before the deadline has
+                                    passed. So it is your responsibility to double-check your code with the handout
+                                    before submission. Even minor spelling mistakes can lead to loss of marks. No remark
+                                    requests will be accepted on these matters.</li>
+                                <li>You must verify that your submission compiles <b> without any warnings </b> and runs
+                                    on a UTM MCS lab machine, as that is
                                     where we will be testing. </li>
-                                <li>Only the last version of your repository will be graded. Make sure that your last commit is the one you would like to be graded. It will not be possible to ask for a checkout to a different commit. </li>
+                                <li>Only the last version of your repository will be graded. Make sure that your last
+                                    commit is the one you would like to be graded. It will not be possible to ask for a
+                                    checkout to a different commit. </li>
                             </ul>
 
                             <div class="blog_subtitle">Academic Integrity</div>
 
-                            <p>Assignments are <strong>individual work</strong> which means that you will not be allowed to seek advice from other students or copy/paste someone else's code, even open-source codes from the internet. However, you are allowed to look at online resources, tutorials, and Q&A websites to solve the problems. The entire code must be written by yourself.</p>
+                            <p>Assignments are <strong>individual work</strong> which means that you will not be allowed
+                                to seek advice from other students or copy/paste someone else's code, even open-source
+                                codes from the internet. However, you are allowed to look at online resources,
+                                tutorials, and Q&A websites to solve the problems. The entire code must be written by
+                                yourself.</p>
 
                             <hr>
 
                             <div class="blog_subtitle"><b>Background</b></div>
 
                             <p>
-                                The closest pair of points problem is a computational geometry problem that can be solved using a <b>divide and conquer</b> algorithm.
+                                The closest pair of points problem is a computational geometry problem that can be
+                                solved using a <b>divide and conquer</b> algorithm.
 
-                                As a reminder of what a divide-and-conquer algorithm is (from <a href="https://en.wikipedia.org/wiki/Divide-and-conquer_algorithm">Wikipedia</a>):</p>
+                                As a reminder of what a divide-and-conquer algorithm is (from <a
+                                    href="https://en.wikipedia.org/wiki/Divide-and-conquer_algorithm">Wikipedia</a>):
+                            </p>
 
-                                <p>
+                            <p>
                                 <span class="quote">
-                                A divide-and-conquer algorithm works by recursively breaking down a problem into two or more sub-problems of the same or related type, until these become simple enough to be solved directly. The solutions to the sub-problems are then combined to give a solution to the original problem.
+                                    A divide-and-conquer algorithm works by recursively breaking down a problem into two
+                                    or more sub-problems of the same or related type, until these become simple enough
+                                    to be solved directly. The solutions to the sub-problems are then combined to give a
+                                    solution to the original problem.
                                 </span>
                             </p>
 
 
-                                <p>
-                                A high-level explanation of the problem is explained in this handout. A more detailed explanation is available in this PDF printout of Section 33.4 from <a href="../files/clrs_closest_points.pdf">Introduction to Algorithms</a> by Cormen, Leiserson, Rivest, and Stein (CLRS).
+                            <p>
+                                A high-level explanation of the problem is explained in this handout. A more detailed
+                                explanation is available in this PDF printout of Section 33.4 from <a
+                                    href="../files/clrs_closest_points.pdf">Introduction to Algorithms</a> by Cormen,
+                                Leiserson, Rivest, and Stein (CLRS).
 
-                                If you have any questions about the algorithm, to avoid clutter and to make the Piazza threads more useful for everyone, please avoid vague questions such as, "I don't understand Step X". Instead, please reference specific elements from the text in the handout or provided PDF file and ask a specific question about that text.
+                                If you have any questions about the algorithm, to avoid clutter and to make the Piazza
+                                threads more useful for everyone, please avoid vague questions such as, "I don't
+                                understand Step X". Instead, please reference specific elements from the text in the
+                                handout or provided PDF file and ask a specific question about that text.
 
                             </p>
 
                             <hr>
                             <div class="blog_subtitle"><b>Closest pair of points</b></div>
 
-                            <p>Given <code>n</code> points on a 2D plane, find the distance between the closest pair of points.</p>
+                            <p>Given <code>n</code> points on a 2D plane, find the distance between the closest pair of
+                                points.</p>
 
                             <div class="blog_subtitle">Naive (brute-force) approach</div>
 
-                            <p>The naive solution can be implemented in just a few lines, by finding the distance between all pairs of points and returning the distance between the closest pair. This approach requires <code>O(n^2)</code> time.</p>
+                            <p>The naive solution can be implemented in just a few lines, by finding the distance
+                                between all pairs of points and returning the distance between the closest pair. This
+                                approach requires <code>O(n^2)</code> time.</p>
 
                             <div class="blog_subtitle">Recursive divide-and-conquer approach</div>
 
-                            <p>The problem can be solved in <code>O(nlogn)</code> time using the following recursive divide and conquer approach:</p>
+                            <p>The problem can be solved in <code>O(nlogn)</code> time using the following recursive
+                                divide and conquer approach:</p>
                             <ul class="tab_panel_bullets">
                                 <li>Sort the points in ascending order by their x-coordinates.</li>
-                                <li>Split the list of points into two equal-sized halves. This is like drawing a vertical line through the plane to divide the points into a left-hand-side and right-hand-side, each containing an equal number of points.</li>
+                                <li>Split the list of points into two equal-sized halves. This is like drawing a
+                                    vertical line through the plane to divide the points into a left-hand-side and
+                                    right-hand-side, each containing an equal number of points.</li>
                                 <li>Solve the problem recursively on the left and right halves.</li>
-                                <li>Find the distance between the closest pair of points where one point lies on the left-hand-side, and the other point lies on the right-hand-side. This can be done in linear time.</li>
+                                <li>Find the distance between the closest pair of points where one point lies on the
+                                    left-hand-side, and the other point lies on the right-hand-side. This can be done in
+                                    linear time.</li>
                                 <li>The final answer is the minimum among the:
                                     <ul>
                                         <li>Distance between the closest pair of points on the left-hand side.</li>
                                         <li>Distance between the closest pair of points on the right-hand side.</li>
-                                        <li>Distance between the closest pair of points where one point is on the left-hand-side and the other point is on the right-hand side.</li>
-                                    </ul></li>
+                                        <li>Distance between the closest pair of points where one point is on the
+                                            left-hand-side and the other point is on the right-hand side.</li>
+                                    </ul>
+                                </li>
                             </ul>
 
                             <p>An illustration of the above steps is depicted below.</p>
                             <img src="../images/closest_points.png" style="width:100.0%" alt="" />
 
-                            <p><b>Note</b>: Our implementation in this assignment is not exactly <code>O(nlogn)</code>, as we do not adhere strictly to all the guidelines outlined in the CLRS text.</p>
+                            <p><b>Note</b>: Our implementation in this assignment is not exactly <code>O(nlogn)</code>,
+                                as we do not adhere strictly to all the guidelines outlined in the CLRS text.</p>
 
                             <hr>
                             <div class="blog_subtitle"><b>Assignment Structure</b></div>
 
-                            <p>The <a href="../files/a2-starter-code.zip">starter code</a> has the following structure:</p>
+                            <p>The <a href="../files/a2-starter-code.zip">starter code</a> has the following structure:
+                            </p>
 
                             <ul class="tab_panel_bullets">
-                                <li><code>Makefile</code>, which you will notice contains a new flag, <code>-fsanitize=signed-integer-overflow</code>, as well as the <code>-lm</code> flag required for the <code>math</code> library.</li>
+                                <li><code>Makefile</code>, which you will notice contains a new flag,
+                                    <code>-fsanitize=signed-integer-overflow</code>, as well as the <code>-lm</code>
+                                    flag required for the <code>math</code> library.
+                                </li>
                                 <li><code>main.c</code> contains the logic to:
                                     <ul class="tab_panel_bullets">
                                         <li>Parse command-line arguments</li>
                                         <li>Either generate points or read them from a file</li>
                                         <li>Optionally save generated points to a file</li>
                                         <li>Sort the points with <code>qsort()</code></li>
-                                        <li>Call both the single-process and multi-process implementations to find the distance between the closest pair of points</li>
-                                        <li>Measure the time taken by both the single-process and multi-process implementations</li>
-                                    </ul></li>
-                                <li><code>closest_tests.c</code> contains a test case to test the correctness of your implementation. You may use this as a skeleton to add additional test cases.</li>
-                                <li><code>closest_helpers.h</code>, <code>closest_brute.h</code>, <code>closest_serial.h</code>, and <code>closest_parallel.h</code> declare all the functions that you will implement.</li>
-                                <li><code>closest_helpers.c</code>, <code>closest_brute.c</code>, <code>closest_serial.c</code>, and <code>closest_parallel.c</code> are where your implementations will go.</li>
+                                        <li>Call both the single-process and multi-process implementations to find the
+                                            distance between the closest pair of points</li>
+                                        <li>Measure the time taken by both the single-process and multi-process
+                                            implementations</li>
+                                    </ul>
+                                </li>
+                                <li><code>closest_tests.c</code> contains a test case to test the correctness of your
+                                    implementation. You may use this as a skeleton to add additional test cases.</li>
+                                <li><code>closest_helpers.h</code>, <code>closest_brute.h</code>,
+                                    <code>closest_serial.h</code>, and <code>closest_parallel.h</code> declare all the
+                                    functions that you will implement.
+                                </li>
+                                <li><code>closest_helpers.c</code>, <code>closest_brute.c</code>,
+                                    <code>closest_serial.c</code>, and <code>closest_parallel.c</code> are where your
+                                    implementations will go.
+                                </li>
                             </ul>
 
-                            <p>Your implementation (i.e., <code>closest*.c</code>) MUST work with the original <code>Makefile</code>, <code>main.c</code>, and <code>closest*.h</code> files supplied in your starter code. If you do modify them for testing purposes, be sure to reverse back to the original versions using <code>git checkout COMMIT_ID FILENAME</code> when running your final set of tests (check <code>git log</code> to find the commit ID of the starter code).</p>
+                            <p>Your implementation (i.e., <code>closest*.c</code>) MUST work with the original
+                                <code>Makefile</code>, <code>main.c</code>, and <code>closest*.h</code> files supplied
+                                in your starter code. If you do modify them for testing purposes, be sure to reverse
+                                back to the original versions using <code>git checkout COMMIT_ID FILENAME</code> when
+                                running your final set of tests (check <code>git log</code> to find the commit ID of the
+                                starter code).
+                            </p>
 
-                            <p>The <code>closest_tests.c</code> file is supplied only for your convenience, so you may modify it as you see fit. It will not be marked.</p>
+                            <p>The <code>closest_tests.c</code> file is supplied only for your convenience, so you may
+                                modify it as you see fit. It will not be marked.</p>
 
                             <div class="blog_subtitle">Program output</div>
 
-                            <p>Your implementation should not print <b>anything</b> to <code>stdout</code>. The only data printed to <code>stdout</code> should be from the <code>printf()</code> calls supplied in <code>main.c</code>.</p>
+                            <p>Your implementation should not print <b>anything</b> to <code>stdout</code>. The only
+                                data printed to <code>stdout</code> should be from the <code>printf()</code> calls
+                                supplied in <code>main.c</code>.</p>
 
-                            <p>Any other information that you print for debugging purposes should be printed to <code>stderr</code> if your program is run in <em>verbose</em> mode (explained below). If the program is not in verbose mode, no output should be printed except for error messages before the program exits.</p>
+                            <p>Any other information that you print for debugging purposes should be printed to
+                                <code>stderr</code> if your program is run in <em>verbose</em> mode (explained below).
+                                If the program is not in verbose mode, no output should be printed except for error
+                                messages before the program exits.
+                            </p>
 
                             <div class="blog_subtitle">Global Variables</div>
                             <p>Notice that the header files declare two global variables:</p>
                             <ul class="tab_panel_bullets">
                                 <li><code>curr_depth</code> will help you keep track of your number of processes.</li>
-                                <li><code>verbose</code> is a boolean value, toggled using the <code>-v</code> command-line argument.</li>
+                                <li><code>verbose</code> is a boolean value, toggled using the <code>-v</code>
+                                    command-line argument.</li>
                             </ul>
 
-                            <p>In verbose mode, any of your functions may print any additional debugging information of your choosing to <code>stderr</code>. We will not be testing your program in verbose mode.</p>
+                            <p>In verbose mode, any of your functions may print any additional debugging information of
+                                your choosing to <code>stderr</code>. We will not be testing your program in verbose
+                                mode.</p>
                             <hr>
                             <div class="blog_subtitle"><b>Your tasks</b></div>
-                            <p>You are to implement the algorithm in three different ways: the naive, single-process, and multi-process approaches. Further explanation on each part follows.</p>
+                            <p>You are to implement the algorithm in three different ways: the naive, single-process,
+                                and multi-process approaches. Further explanation on each part follows.</p>
                             <div class="blog_subtitle">Naive (Brute-Force) Implementation</div>
                             <p>First, you must implement the naive algorithm, which requires that you implement:</p>
                             <ul class="tab_panel_bullets">
-                                <li><code>double dist(struct Point, struct Point);</code> (in <code>closest_helpers.c</code>)</li>
-                                <li><code>double brute_force(struct Point P[], size_t n);</code> (in <code>closest_brute.c</code>)</li>
+                                <li><code>double dist(struct Point, struct Point);</code> (in
+                                    <code>closest_helpers.c</code>)
+                                </li>
+                                <li><code>double brute_force(struct Point P[], size_t n);</code> (in
+                                    <code>closest_brute.c</code>)
+                                </li>
                             </ul>
-                            <p>Implementing the naive approach is a requirement for implementing the recursive approach described below. Specifically, the naive approach is used for solving the simplest instance (base case) of the problem, where only 2 or 3 points are given as input.</p>
+                            <p>Implementing the naive approach is a requirement for implementing the recursive approach
+                                described below. Specifically, the naive approach is used for solving the simplest
+                                instance (base case) of the problem, where only 2 or 3 points are given as input.</p>
                             <p>You may test your naive implementation using <code>closest_tests.c</code>.</p>
                             <div class="blog_subtitle">Single-Process Implementation</div>
                             <p>Next, you must implement the single-process divide-and-conquer solution.</p>
@@ -236,224 +317,406 @@
 
                             <ul class="tab_panel_bullets">
                                 <li>The naive solution, as described above.</li>
-                                <li><code>int compare_x(const void*, const void*);</code> (in <code>closest_helpers.c</code>)</li>
-                                <li><code>int compare_y(const void*, const void*);</code> (in <code>closest_helpers.c</code>)</li>
-                                <li><code>double combine_lr(struct Point P[], size_t n, struct Point mid_point, double d);</code> (in <code>closest_serial.c</code>)</li>
-                                <li><code>double _closest_serial(struct Point P[], size_t n);</code> (in <code>closest_serial.c</code>)</li>
-                                <li><code>double closest_serial(struct Point P[], size_t n);</code> (in <code>closest_serial.c</code>)</li>
+                                <li><code>int compare_x(const void*, const void*);</code> (in
+                                    <code>closest_helpers.c</code>)
+                                </li>
+                                <li><code>int compare_y(const void*, const void*);</code> (in
+                                    <code>closest_helpers.c</code>)
+                                </li>
+                                <li><code>double combine_lr(struct Point P[], size_t n, struct Point mid_point, double d);</code>
+                                    (in <code>closest_serial.c</code>)</li>
+                                <li><code>double _closest_serial(struct Point P[], size_t n);</code> (in
+                                    <code>closest_serial.c</code>)
+                                </li>
+                                <li><code>double closest_serial(struct Point P[], size_t n);</code> (in
+                                    <code>closest_serial.c</code>)
+                                </li>
                             </ul>
-                            <p>All functions above will be re-used when completing the next part of your assignment, which is to write your multi-process solution.</p>
+                            <p>All functions above will be re-used when completing the next part of your assignment,
+                                which is to write your multi-process solution.</p>
 
                             <div class="blog_subtitle">Multi-Process Implementation</div>
                             <p>Your multi-process implementation requires that you implement:</p>
                             <ul class="tab_panel_bullets">
                                 <li>The naive solution and single-process recursive solution, as described above.</li>
-                                <li><code>double _closest_parallel(struct Point P[], size_t n, int pdmax, int *pcount);</code> (in <code>closest_parallel.c</code>)</li>
-                                <li><code>double closest_parallel(struct Point P[], size_t n, int pdmax, int *pcount);</code> (in <code>closest_parallel.c</code>)</li>
+                                <li><code>double _closest_parallel(struct Point P[], size_t n, int pdmax, int *pcount);</code>
+                                    (in <code>closest_parallel.c</code>)</li>
+                                <li><code>double closest_parallel(struct Point P[], size_t n, int pdmax, int *pcount);</code>
+                                    (in <code>closest_parallel.c</code>)</li>
                             </ul>
                             <hr>
                             <div class="blog_subtitle"><b>Implementation requirements</b></div>
                             <div class="blog_subtitle">Naive solution</div>
-                            <p>There are no special requirements for the naive solution, aside from the correct implementation of the algorithm.</p>
+                            <p>There are no special requirements for the naive solution, aside from the correct
+                                implementation of the algorithm.</p>
                             <div class="blog_subtitle">Single-process recursive solution</div>
-                            <p>Implement the algorithm as described earlier in this handout, under the "<span class="quote">Recursive divide-and-conquer</span> approach" section.</p>
-                            <p>We will check for compliance with <b>all</b> the following requirements. No credit will be given to submissions that violate these requirements (e.g., not using <code>qsort()</code>, or implementing the naive solution instead of the divide-and-conquer solution).</p>
-                            <p>The <code>closest_serial()</code> function should first sort the points, using <code>qsort()</code>, in ascending order by their x-coordinates. It should then call <code>_closest_serial()</code>.</p>
+                            <p>Implement the algorithm as described earlier in this handout, under the "<span
+                                    class="quote">Recursive divide-and-conquer</span> approach" section.</p>
+                            <p>We will check for compliance with <b>all</b> the following requirements. No credit will
+                                be given to submissions that violate these requirements (e.g., not using
+                                <code>qsort()</code>, or implementing the naive solution instead of the
+                                divide-and-conquer solution).
+                            </p>
+                            <p>The <code>closest_serial()</code> function should first sort the points, using
+                                <code>qsort()</code>, in ascending order by their x-coordinates. It should then call
+                                <code>_closest_serial()</code>.
+                            </p>
                             <p>The <code>_closest_serial()</code> function should:</p>
 
                             <ul class="tab_panel_bullets">
-                                <li>Find the middle point, <code>p_mid</code>, by x-coordinate. This is easy since the points should already be sorted by x-coordinate.</li>
-                                <li>Split the array of points into two equal-sized halves. The left half should consist of elements <code>0</code> to the floor of <code>n/2</code> (i.e., if <code>n</code> is odd, the right half will consist of one more point).</li>
+                                <li>Find the middle point, <code>p_mid</code>, by x-coordinate. This is easy since the
+                                    points should already be sorted by x-coordinate.</li>
+                                <li>Split the array of points into two equal-sized halves. The left half should consist
+                                    of elements <code>0</code> to the floor of <code>n/2</code> (i.e., if <code>n</code>
+                                    is odd, the right half will consist of one more point).</li>
                                 <li>Solve the problem on the left and right halves:
                                     <ul>
-                                        <li>If one or both of the halves consist of 3 points or fewer, call <code>brute_force()</code> to find the solution. This is the "stop condition" of your recursive function.</li>
-                                        <li>Otherwise, make two recursive calls to <code>_closest_serial()</code> (for the left half and the right half).</li>
-                                    </ul></li>
-                                <li>Let <code>dl</code> be the distance between the closest pair of points on the left-hand side, and <code>dr</code> be the distance between the closest pair of points on the right-hand side. Let <code>d</code> be the minimum among <code>dl</code> and <code>dr</code>.</li>
-                                <li>Find the distance between the closest pair of points where one point lies on the left-hand-side and the other point lies on the right-hand-side. Do this by calling <code>combine_lr()</code>, passing in the array of <code>n</code> points, along with <code>d</code> and <code>p_mid</code>. This function implements the following linear-time solution:
+                                        <li>If one or both of the halves consist of 3 points or fewer, call
+                                            <code>brute_force()</code> to find the solution. This is the "stop
+                                            condition" of your recursive function.
+                                        </li>
+                                        <li>Otherwise, make two recursive calls to <code>_closest_serial()</code> (for
+                                            the left half and the right half).</li>
+                                    </ul>
+                                </li>
+                                <li>Let <code>dl</code> be the distance between the closest pair of points on the
+                                    left-hand side, and <code>dr</code> be the distance between the closest pair of
+                                    points on the right-hand side. Let <code>d</code> be the minimum among
+                                    <code>dl</code> and <code>dr</code>.
+                                </li>
+                                <li>Find the distance between the closest pair of points where one point lies on the
+                                    left-hand-side and the other point lies on the right-hand-side. Do this by calling
+                                    <code>combine_lr()</code>, passing in the array of <code>n</code> points, along with
+                                    <code>d</code> and <code>p_mid</code>. This function implements the following
+                                    linear-time solution:
                                     <ul class="tab_panel_bullets">
-                                        <li>Build an array consisting of points where for each point <code>p_i</code>, <code>abs(p_i.x - p_mid.x) &lt; d</code>.</li>
+                                        <li>Build an array consisting of points where for each point <code>p_i</code>,
+                                            <code>abs(p_i.x - p_mid.x) &lt; d</code>.
+                                        </li>
                                         <li>Sort the points with <code>qsort()</code> by their y-coordinate.
                                             <ul>
-                                                <li>There exists a more efficient solution where this step can be avoided. But we are skipping that optimization for simplicity.</li>
-                                            </ul></li>
-                                        <li>For each point in the array <code>p_i</code>, find the distance between it and each subsequent point <code>p_j</code> where <code>p_j.y - p_i.y &lt; d</code>.
+                                                <li>There exists a more efficient solution where this step can be
+                                                    avoided. But we are skipping that optimization for simplicity.</li>
+                                            </ul>
+                                        </li>
+                                        <li>For each point in the array <code>p_i</code>, find the distance between it
+                                            and each subsequent point <code>p_j</code> where
+                                            <code>p_j.y - p_i.y &lt; d</code>.
                                             <ul>
-                                                <li>Although this is implemented with a nested loop, and thus appears to be an O(n^2) solution at first glance, it is actually a linear-time solution, since it is proven that, for each point, the distance only needs to be computed for (at most) the next 7 points in the list that is sorted by y-coordinate. (See the CLRS pdf for details)</li>
-                                            </ul></li>
-                                        <li>Return the smaller of <code>d</code> or the smallest distance found in the previous step.</li>
-                                    </ul></li>
+                                                <li>Although this is implemented with a nested loop, and thus appears to
+                                                    be an O(n^2) solution at first glance, it is actually a linear-time
+                                                    solution, since it is proven that, for each point, the distance only
+                                                    needs to be computed for (at most) the next 7 points in the list
+                                                    that is sorted by y-coordinate. (See the CLRS pdf for details)</li>
+                                            </ul>
+                                        </li>
+                                        <li>Return the smaller of <code>d</code> or the smallest distance found in the
+                                            previous step.</li>
+                                    </ul>
+                                </li>
                                 <li>The final answer is the minimum among the:
                                     <ul>
-                                        <li>Distance between the closest pair of points on the left-hand side, <code>dl</code>.</li>
-                                        <li>Distance between the closest pair of points on the right-hand side, <code>dr</code>.</li>
-                                        <li>Distance between the closest pair of points where one point is on the left-hand-side and the other point is on the right-hand side.</li>
-                                    </ul></li>
-                                </ul>
+                                        <li>Distance between the closest pair of points on the left-hand side,
+                                            <code>dl</code>.
+                                        </li>
+                                        <li>Distance between the closest pair of points on the right-hand side,
+                                            <code>dr</code>.
+                                        </li>
+                                        <li>Distance between the closest pair of points where one point is on the
+                                            left-hand-side and the other point is on the right-hand side.</li>
+                                    </ul>
+                                </li>
+                            </ul>
 
                             <div class="blog_subtitle">Multi-process recursive solution</div>
-                            <p>We will check for compliance with <b>all</b> the following requirements. No credit will be given to submissions that violate these requirements (e.g., implementing a single-process solution, or not using pipes to communicate between processes).</p>
-                            <p>The <code>closest_parallel()</code> function should first sort the points, using <code>qsort()</code>, in ascending order by their x-coordinates. It should then call <code>_closest_parallel()</code>.</p>
-                            <p>The following logic specifies the requirements for the <strong>creation of</strong> and the <strong>co-ordination between</strong> the worker processes by <code>_closest_parallel()</code>:</p>
+                            <p>We will check for compliance with <b>all</b> the following requirements. No credit will
+                                be given to submissions that violate these requirements (e.g., implementing a
+                                single-process solution, or not using pipes to communicate between processes).</p>
+                            <p>The <code>closest_parallel()</code> function should first sort the points, using
+                                <code>qsort()</code>, in ascending order by their x-coordinates. It should then call
+                                <code>_closest_parallel()</code>.
+                            </p>
+                            <p>The following logic specifies the requirements for the <strong>creation of</strong> and
+                                the <strong>co-ordination between</strong> the worker processes by
+                                <code>_closest_parallel()</code>:
+                            </p>
                             <ul class="tab_panel_bullets">
-                                <li>Sort the array of <code>n</code> points, by their x-coordinates, in ascending order.</li>
-                                <li>Let <code>pdmax = pdepth</code>, where <code>pdepth</code> is the maximum depth of the process tree, specified by the argument of the command-line option <code>-d</code>.</li>
-                                <li>If <code>n &lt;= 3</code>, or <code>pdmax == 0</code>, invoke <code>_closest_serial()</code> to obtain the answer without creating any child processes. This is the stop condition for the recursive function <code>_closest_parallel()</code>.
+                                <li>Sort the array of <code>n</code> points, by their x-coordinates, in ascending order.
+                                </li>
+                                <li>Let <code>pdmax = pdepth</code>, where <code>pdepth</code> is the maximum depth of
+                                    the process tree, specified by the argument of the command-line option
+                                    <code>-d</code>.
+                                </li>
+                                <li>If <code>n &lt;= 3</code>, or <code>pdmax == 0</code>, invoke
+                                    <code>_closest_serial()</code> to obtain the answer without creating any child
+                                    processes. This is the stop condition for the recursive function
+                                    <code>_closest_parallel()</code>.
                                     <ul class="tab_panel_bullets">
-                                        <li>Note: When making the recursive call, you must set the appropriate value for <code>pdmax</code> to ensure that the stop condition is reached and that the correct number of processes is created.</li>
-                                    </ul></li>
-                                <li>Otherwise, split the array of points into two equal-sized halves. The left half should consist of elements <code>0</code> to the floor of <code>n/2</code> (i.e., if <code>n</code> is odd, the right half will consist of one more point).</li>
+                                        <li>Note: When making the recursive call, you must set the appropriate value for
+                                            <code>pdmax</code> to ensure that the stop condition is reached and that the
+                                            correct number of processes is created.
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>Otherwise, split the array of points into two equal-sized halves. The left half
+                                    should consist of elements <code>0</code> to the floor of <code>n/2</code> (i.e., if
+                                    <code>n</code> is odd, the right half will consist of one more point).
+                                </li>
                                 <li>Create two child processes to solve the left half and right half of the problem:
                                     <ul class="tab_panel_bullets">
-                                        <li>Create a pipe, which the first child process will use to communicate with its parent (i.e., the current process).</li>
+                                        <li>Create a pipe, which the first child process will use to communicate with
+                                            its parent (i.e., the current process).</li>
                                         <li>Fork a child, which will:
                                             <ul class="tab_panel_bullets">
-                                                <li>Invoke <code>_closest_parallel()</code> on the left half of the array (elements <code>0</code> to <code>floor(n/2)</code>), to obtain the distance between the closest pair of points on the left-hand side.</li>
-                                                <li>Send the return value (i.e., distance between the closest pair of points) back to the parent process by writing it to the pipe.</li>
-                                                <li>Exit with the appropriate status (consult text below the process tree diagram).</li>
-                                            </ul></li>
-                                        <li>Create a pipe, which the second child process will use to communicate with its parent (i.e., the current process).</li>
+                                                <li>Invoke <code>_closest_parallel()</code> on the left half of the
+                                                    array (elements <code>0</code> to <code>floor(n/2)</code>), to
+                                                    obtain the distance between the closest pair of points on the
+                                                    left-hand side.</li>
+                                                <li>Send the return value (i.e., distance between the closest pair of
+                                                    points) back to the parent process by writing it to the pipe.</li>
+                                                <li>Exit with the appropriate status (consult text below the process
+                                                    tree diagram).</li>
+                                            </ul>
+                                        </li>
+                                        <li>Create a pipe, which the second child process will use to communicate with
+                                            its parent (i.e., the current process).</li>
                                         <li>Fork a second child, which will:
                                             <ul class="tab_panel_bullets">
-                                                <li>Invoke <code>_closest_parallel()</code> on the right half of the array (elements <code>floor(n/2)+1</code> to <code>n-1</code>), to obtain the distance between the closest pair of points on the right-hand side.</li>
-                                                <li>Send the return value (i.e., distance between the closest pair of points) back to the parent process by writing it to the pipe.</li>
-                                                <li>Exit with the appropriate status (consult text below the process tree diagram).</li>
-                                            </ul></li>
-                                    </ul></li>
-                                <li>Wait for both child processes to complete (each process should have only two child processes).</li>
+                                                <li>Invoke <code>_closest_parallel()</code> on the right half of the
+                                                    array (elements <code>floor(n/2)+1</code> to <code>n-1</code>), to
+                                                    obtain the distance between the closest pair of points on the
+                                                    right-hand side.</li>
+                                                <li>Send the return value (i.e., distance between the closest pair of
+                                                    points) back to the parent process by writing it to the pipe.</li>
+                                                <li>Exit with the appropriate status (consult text below the process
+                                                    tree diagram).</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>Wait for both child processes to complete (each process should have only two child
+                                    processes).</li>
                                 <li>Read from the two pipes to retrieve the results from the two child processes.</li>
-                                <li>Follow step 5 from the single-process recursive solution to determine the distance between the closest pair of points with distance smaller than <code>d</code>, where one point is in the left half of the array and one point is in the right half of the array.</li>
+                                <li>Follow step 5 from the single-process recursive solution to determine the distance
+                                    between the closest pair of points with distance smaller than <code>d</code>, where
+                                    one point is in the left half of the array and one point is in the right half of the
+                                    array.</li>
                                 <li>The final answer is the minimum among the:
                                     <ul class="tab_panel_bullets">
-                                        <li>Distance between the closest pair of points on the left-hand side, found by the first child process.</li>
-                                        <li>Distance between the closest pair of points on the right-hand side, found by the second child process.</li>
-                                        <li>Distance between the closest pair of points where one point is on the left-hand-side and the other point is on the right-hand side.</li>
-                                    </ul></li>
+                                        <li>Distance between the closest pair of points on the left-hand side, found by
+                                            the first child process.</li>
+                                        <li>Distance between the closest pair of points on the right-hand side, found by
+                                            the second child process.</li>
+                                        <li>Distance between the closest pair of points where one point is on the
+                                            left-hand-side and the other point is on the right-hand side.</li>
+                                    </ul>
+                                </li>
                             </ul>
-                            <p>Let <code>current_depth</code> be the depth of the current process in the process tree. The parent process is at depth 0. The first two children have depth 1, and so on. An illustration is depicted below.</p>
+                            <p>Let <code>current_depth</code> be the depth of the current process in the process tree.
+                                The parent process is at depth 0. The first two children have depth 1, and so on. An
+                                illustration is depicted below.</p>
 
                             <img src="../images/process_tree.svg" alt="" />
 
                             <p>Each child process in your program should terminate with an exit status equal to:</p>
                             <ul class="tab_panel_bullets">
-                                <li>the number of descendent (i.e., child, grandchild...) processes that the terminating process forked; or</li>
-                                <li><code>1</code>, in case of an unrecoverable error (e.g., a failed system call, or if a child process terminated with exit status <code>1</code>).</li>
+                                <li>the number of descendent (i.e., child, grandchild...) processes that the terminating
+                                    process forked; or</li>
+                                <li><code>1</code>, in case of an unrecoverable error (e.g., a failed system call, or if
+                                    a child process terminated with exit status <code>1</code>).</li>
                             </ul>
 
-                            <p>A <code>static</code> variable is defined for you in <code>_closest_parallel()</code>: You will need it for keeping count of the number of descendent processes that were forked. See <a href="https://www.gnu.org/software/gnu-c-manual/gnu-c-manual.html#Storage-Class-Specifiers">Section 2.9 of the GNU C Reference Manual</a> for more on static variables.</p>
-                            <p>The parent process should <code>exit(0)</code> upon success, or <code>exit(1)</code> upon failure (but this is already done in <code>main.c</code>).</p>
+                            <p>A <code>static</code> variable is defined for you in <code>_closest_parallel()</code>:
+                                You will need it for keeping count of the number of descendent processes that were
+                                forked. See <a
+                                    href="https://www.gnu.org/software/gnu-c-manual/gnu-c-manual.html#Storage-Class-Specifiers">Section
+                                    2.9 of the GNU C Reference Manual</a> for more on static variables.</p>
+                            <p>The parent process should <code>exit(0)</code> upon success, or <code>exit(1)</code> upon
+                                failure (but this is already done in <code>main.c</code>).</p>
                             <hr>
                             <div class="blog_subtitle"><b>Benchmarking your implementation's performance</b></div>
 
-                            <p>Is there a point at which adding more processes starts to hurt performance? Why do you think that is the case? You do not have to submit your answer to these questions, but it is an educational experiment and useful thought exercise.</p>
+                            <p>Is there a point at which adding more processes starts to hurt performance? Why do you
+                                think that is the case? You do not have to submit your answer to these questions, but it
+                                is an educational experiment and useful thought exercise.</p>
                             <div class="blog_subtitle">Debugging Tips</div>
-                            <p>Debugging multi-process programs can be difficult. Here are some useful tips for how to do so:</p>
+                            <p>Debugging multi-process programs can be difficult. Here are some useful tips for how to
+                                do so:</p>
                             <ul class="tab_panel_bullets">
-                                <li>It is possible to debug a multi-process program with <code>gdb</code>, using either of <a href="http://sourceware.org/gdb/current/onlinedocs/gdb/Forks.html#Forks">two techniques described in the GDB manual</a>. If you use the <code>sleep()</code> technique, it may be more convenient to do it only with the <code>-v</code> flag enabled (so that you can still test your program normally when running without the <code>-v</code> flag).</li>
-                                <li>The <code>strace</code> and <code>ltrace</code> tools will prove invaluable. These tools trace your program's execution and print out every system call or library call (respectively) that your program makes. There are some common errors that are easily detectable using these tools. For example, your program may stall indefinitely due to a parent process invoking <code>read()</code> on an empty pipe that the child process has not closed.
-                                <li>You may find the <code>assert()</code> function helpful (see <code>man 3 assert</code> for details). You may invoke <code>assert()</code> throughout your code to identify cases where your variables hold unintended values. This is often a more convenient alternative to using <code>printf()</code> to print the contents of all your variables throughout your code.</li>
+                                <li>It is possible to debug a multi-process program with <code>gdb</code>, using either
+                                    of <a href="http://sourceware.org/gdb/current/onlinedocs/gdb/Forks.html#Forks">two
+                                        techniques described in the GDB manual</a>. If you use the <code>sleep()</code>
+                                    technique, it may be more convenient to do it only with the <code>-v</code> flag
+                                    enabled (so that you can still test your program normally when running without the
+                                    <code>-v</code> flag).
+                                </li>
+                                <li>The <code>strace</code> and <code>ltrace</code> tools will prove invaluable. These
+                                    tools trace your program's execution and print out every system call or library call
+                                    (respectively) that your program makes. There are some common errors that are easily
+                                    detectable using these tools. For example, your program may stall indefinitely due
+                                    to a parent process invoking <code>read()</code> on an empty pipe that the child
+                                    process has not closed.
+                                <li>You may find the <code>assert()</code> function helpful (see
+                                    <code>man 3 assert</code> for details). You may invoke <code>assert()</code>
+                                    throughout your code to identify cases where your variables hold unintended values.
+                                    This is often a more convenient alternative to using <code>printf()</code> to print
+                                    the contents of all your variables throughout your code.
+                                </li>
                             </ul>
                             <div class="blog_subtitle">Data Types</div>
-                            <p>Finally, remember that this is systems programming, which means you must properly handle many corner cases. Ensure that you deal correctly with all data types, e.g., by paying attention to the range of valid values that each type can hold.</p>
-                            <p>For example, see what the <a href="https://www.gnu.org/software/gnu-c-manual/gnu-c-manual.html#The-sizeof-Operator">GNU C Reference Manual says</a> about the <code>size_t</code> type:</p>
+                            <p>Finally, remember that this is systems programming, which means you must properly handle
+                                many corner cases. Ensure that you deal correctly with all data types, e.g., by paying
+                                attention to the range of valid values that each type can hold.</p>
+                            <p>For example, see what the <a
+                                    href="https://www.gnu.org/software/gnu-c-manual/gnu-c-manual.html#The-sizeof-Operator">GNU
+                                    C Reference Manual says</a> about the <code>size_t</code> type:</p>
                             <pre>
 
    The <code>size_t</code> type is often a convenient type for a loop index, since it is guaranteed to be able to hold the number of elements in any array; this is not the case with int, for example.
                             </pre>
-                            <p>You may also check the <a href="https://www.gnu.org/software/gnu-c-manual/gnu-c-manual.html#Primitive-Types">maximum and minimum values for various types</a> and return values through macros defined in different header files. For example, use macros defined in <code>limits.h</code> for finding <a href="https://www.gnu.org/software/libc/manual/html_node/Range-of-Type.html#Range-of-Type">minimum and maximum values of integer types</a>, macros defined in <code>float.h</code> for finding <a href="https://www.gnu.org/software/libc/manual/html_node/Floating-Point-Parameters.html">minimum and maximum values of floating-point types</a>, or macros defined in <code>stdlib.h</code> for finding <a href="https://www.gnu.org/software/libc/manual/html_node/ISO-Random.html#ISO-Random">the maximum value of randomly-generated integers</a>. You may observe that some of these macros are already used in the <code>main.c</code> starter code.</p>
-                            <p>Notice also that the program generates integer values for the x- and y-coordinates of the points, but calculates distance as floating-point values.</p>
+                            <p>You may also check the <a
+                                    href="https://www.gnu.org/software/gnu-c-manual/gnu-c-manual.html#Primitive-Types">maximum
+                                    and minimum values for various types</a> and return values through macros defined in
+                                different header files. For example, use macros defined in <code>limits.h</code> for
+                                finding <a
+                                    href="https://www.gnu.org/software/libc/manual/html_node/Range-of-Type.html#Range-of-Type">minimum
+                                    and maximum values of integer types</a>, macros defined in <code>float.h</code> for
+                                finding <a
+                                    href="https://www.gnu.org/software/libc/manual/html_node/Floating-Point-Parameters.html">minimum
+                                    and maximum values of floating-point types</a>, or macros defined in
+                                <code>stdlib.h</code> for finding <a
+                                    href="https://www.gnu.org/software/libc/manual/html_node/ISO-Random.html#ISO-Random">the
+                                    maximum value of randomly-generated integers</a>. You may observe that some of these
+                                macros are already used in the <code>main.c</code> starter code.
+                            </p>
+                            <p>Notice also that the program generates integer values for the x- and y-coordinates of the
+                                points, but calculates distance as floating-point values.</p>
                             <div class="blog_subtitle">What to Submit</div>
-                            <p>Submit <code>closest_helpers.c</code>, <code>closest_brute.c</code>, <code>closest_serial.c</code>,<code>closest_tests.c</code>, and <code>closest_parallel.c</code>. Verify that your submission compiles and runs on a UTM MCS lab machine, as that is where we will be testing.</p>
-                            <p>                                Note that you must submit your work to your git repository on Markus. That is, you cannot submit through its normal web interface.
+                            <p>Submit <code>closest_helpers.c</code>, <code>closest_brute.c</code>,
+                                <code>closest_serial.c</code>,<code>closest_tests.c</code>, and
+                                <code>closest_parallel.c</code>. Verify that your submission compiles and runs on a UTM
+                                MCS lab machine, as that is where we will be testing.
+                            </p>
+                            <p> Note that you must submit your work to your git repository on Markus. That is, you
+                                cannot submit through its normal web interface.
                             </p>
 
 
 
-                        <div class="comments_container">
-                            <div class="blog_subtitle">Comments</div>
-                            <ul class="comments_list">
-                                <li>
-                                    <div class="comment_item d-flex flex-row align-items-start jutify-content-start">
-                                        <div class="comment_content">
-                                            <div class="comment_title_container d-flex flex-row align-items-center justify-content-start">
-                                                <div class="comment_author"><a href="#" onclick="return false">Justin</a></div>
-                                                <div class="comment_rating"><div class="rating_r rating_r_5"><i></i><i></i><i></i><i></i><i></i></div></div>
-                                                <div class="comment_time ml-auto" id="date1"></div>
-                                            </div>
-                                            <div class="comment_text">
-                                                <p>This is my fourth time taking CSC209, and inarguably, this is the best assignment I've ever seen.<br>
-                                                    Problems are so accurately designed that anyone with their own knowledge and experience have their own takeaways.<br>
-                                                    I hope next assignments will be this good, too!
-                                                </p>
-                                            </div>
-                                            <div class="comment_extras d-flex flex-row align-items-center justify-content-start">
-                                                <div class="comment_extra comment_likes"><a href="#" onclick="return false"><i class="fa fa-thumbs-up" aria-hidden="true"></i><span>108</span></a></div>
-                                                <div class="comment_extra comment_reply"><a href="#" onclick="return false"><i class="fa fa-pencil-square" aria-hidden="true"></i><span>Reply</span></a></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <ul>
-                                        <li>
-                                            <div class="comment_item d-flex flex-row align-items-start jutify-content-start">
-                                                <div class="comment_content">
-                                                    <div class="comment_title_container d-flex flex-row align-items-center justify-content-start">
-                                                        <div class="comment_author"><a href="#" onclick="return false">Kianoosh</a></div>
-                                                        <div class="comment_time ml-auto" id="date2"></div>
-                                                        <script>document.getElementById("date1").innerHTML = new Date().toDateString();
-                                                        document.getElementById("date2").innerHTML = new Date().toDateString();
-                                                        </script>
-
+                            <div class="comments_container">
+                                <div class="blog_subtitle">Comments</div>
+                                <ul class="comments_list">
+                                    <li>
+                                        <div
+                                            class="comment_item d-flex flex-row align-items-start jutify-content-start">
+                                            <div class="comment_content">
+                                                <div
+                                                    class="comment_title_container d-flex flex-row align-items-center justify-content-start">
+                                                    <div class="comment_author"><a href="#"
+                                                            onclick="return false">Justin</a></div>
+                                                    <div class="comment_rating">
+                                                        <div class="rating_r rating_r_5">
+                                                            <i></i><i></i><i></i><i></i><i></i>
+                                                        </div>
                                                     </div>
-                                                    <div class="comment_text">
-                                                        <p>Thanks bro!</p>
-                                                    </div>
-                                                    <div class="comment_extras d-flex flex-row align-items-center justify-content-start">
-                                                        <div class="comment_extra comment_likes"><a href="#" onclick="return false"><i class="fa fa-thumbs-up" aria-hidden="true"></i><span>36</span></a></div>
-                                                        <div class="comment_extra comment_reply"><a href="#" onclick="return false"><i class="fa fa-pencil-square" aria-hidden="true"></i><span>Reply</span></a></div>
-                                                    </div>
+                                                    <div class="comment_time ml-auto" id="date1"></div>
+                                                </div>
+                                                <div class="comment_text">
+                                                    <p>This is my fourth time taking CSC209, and inarguably, this is the
+                                                        best assignment I've ever seen.<br>
+                                                        Problems are so accurately designed that anyone with their own
+                                                        knowledge and experience have their own takeaways.<br>
+                                                        I hope next assignments will be this good, too!
+                                                    </p>
+                                                </div>
+                                                <div
+                                                    class="comment_extras d-flex flex-row align-items-center justify-content-start">
+                                                    <div class="comment_extra comment_likes"><a href="#"
+                                                            onclick="return false"><i class="fa fa-thumbs-up"
+                                                                aria-hidden="true"></i><span>108</span></a></div>
+                                                    <div class="comment_extra comment_reply"><a href="#"
+                                                            onclick="return false"><i class="fa fa-pencil-square"
+                                                                aria-hidden="true"></i><span>Reply</span></a></div>
                                                 </div>
                                             </div>
-                                        </li>
-                                    </ul>
-                                </li>
-                            </ul>
-                            <div class="add_comment_container">
-                                <div class="add_comment_title">Write a comment</div>
-                                <div class="add_comment_text">Your email address will not be published. Required fields are marked *</div>
-                                <form action="#" class="comment_form">
-                                    <div>
-                                        <div class="form_title">Review*</div>
-                                        <textarea class="comment_input comment_textarea" required="required"></textarea>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-md-6 input_col">
-                                            <div class="form_title">Name*</div>
-                                            <input type="text" class="comment_input" required="required">
                                         </div>
-                                        <div class="col-md-6 input_col">
-                                            <div class="form_title">Email*</div>
-                                            <input type="text" class="comment_input" required="required">
+                                        <ul>
+                                            <li>
+                                                <div
+                                                    class="comment_item d-flex flex-row align-items-start jutify-content-start">
+                                                    <div class="comment_content">
+                                                        <div
+                                                            class="comment_title_container d-flex flex-row align-items-center justify-content-start">
+                                                            <div class="comment_author"><a href="#"
+                                                                    onclick="return false">Kianoosh</a></div>
+                                                            <div class="comment_time ml-auto" id="date2"></div>
+                                                            <script>document.getElementById("date1").innerHTML = new Date().toDateString();
+                                                                document.getElementById("date2").innerHTML = new Date().toDateString();
+                                                            </script>
+
+                                                        </div>
+                                                        <div class="comment_text">
+                                                            <p>Thanks bro!</p>
+                                                        </div>
+                                                        <div
+                                                            class="comment_extras d-flex flex-row align-items-center justify-content-start">
+                                                            <div class="comment_extra comment_likes"><a href="#"
+                                                                    onclick="return false"><i class="fa fa-thumbs-up"
+                                                                        aria-hidden="true"></i><span>36</span></a></div>
+                                                            <div class="comment_extra comment_reply"><a href="#"
+                                                                    onclick="return false"><i
+                                                                        class="fa fa-pencil-square"
+                                                                        aria-hidden="true"></i><span>Reply</span></a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                                <div class="add_comment_container">
+                                    <div class="add_comment_title">Write a comment</div>
+                                    <div class="add_comment_text">Your email address will not be published. Required
+                                        fields are marked *</div>
+                                    <form action="#" class="comment_form">
+                                        <div>
+                                            <div class="form_title">Review*</div>
+                                            <textarea class="comment_input comment_textarea"
+                                                required="required"></textarea>
                                         </div>
-                                    </div>
-                                    <div class="comment_notify">
-                                        <input type="checkbox" id="checkbox_notify" name="regular_checkbox" class="regular_checkbox checkbox_account" checked>
-                                        <label for="checkbox_notify"><i class="fa fa-check" aria-hidden="true"></i></label>
-                                        <span>Notify me of new posts by email</span>
-                                    </div>
-                                    <div>
-                                        <script>
-                                            function fakesubmit() {
-                                                alert("Thank you so much for writing your feedback.\n\nAs you may already have guessed, your feedback is neither saved nor sent anywhere. In fact, no one will ever even know that you wrote such feedback. " +
-                                                    "The reason is that it is not possible for this website to store and present such stuff. \n\n" +
-                                                    "Now, please copy your feedback to piazza or email it to me or a TA :)")
-                                            }
-                                        </script>
-                                        <button type="submit" onclick="fakesubmit()" class="comment_button trans_200">submit</button>
-                                    </div>
-                                </form>
+                                        <div class="row">
+                                            <div class="col-md-6 input_col">
+                                                <div class="form_title">Name*</div>
+                                                <input type="text" class="comment_input" required="required">
+                                            </div>
+                                            <div class="col-md-6 input_col">
+                                                <div class="form_title">Email*</div>
+                                                <input type="text" class="comment_input" required="required">
+                                            </div>
+                                        </div>
+                                        <div class="comment_notify">
+                                            <input type="checkbox" id="checkbox_notify" name="regular_checkbox"
+                                                class="regular_checkbox checkbox_account" checked>
+                                            <label for="checkbox_notify"><i class="fa fa-check"
+                                                    aria-hidden="true"></i></label>
+                                            <span>Notify me of new posts by email</span>
+                                        </div>
+                                        <div>
+                                            <script>
+                                                function fakesubmit() {
+                                                    alert("Thank you so much for writing your feedback.\n\nAs you may already have guessed, your feedback is neither saved nor sent anywhere. In fact, no one will ever even know that you wrote such feedback. " +
+                                                        "The reason is that it is not possible for this website to store and present such stuff. \n\n" +
+                                                        "Now, please copy your feedback to piazza or email it to me or a TA :)")
+                                                }
+                                            </script>
+                                            <button type="submit" onclick="fakesubmit()"
+                                                class="comment_button trans_200">submit</button>
+                                        </div>
+                                    </form>
+                                </div>
                             </div>
                         </div>
-                    </div>
                     </div>
                     <!-- Blog Sidebar -->
                     <div class="col-lg-4">
@@ -469,29 +732,39 @@
 
                                         <!-- Feature -->
                                         <div class="feature d-flex flex-row align-items-center justify-content-start">
-                                            <div class="feature_title"><i class="fa fa-question-circle-o" aria-hidden="true"></i><span>Announcement - Q&A</span></div>
-                                            <div class="feature_text ml-auto"><a href="https://piazza.com/utoronto.ca/summer2022/csc209/home">Piazza</a></div>
+                                            <div class="feature_title"><i class="fa fa-question-circle-o"
+                                                    aria-hidden="true"></i><span>Announcement - Q&A</span></div>
+                                            <div class="feature_text ml-auto"><a
+                                                    href="https://piazza.com/utoronto.ca/summer2022/csc209/home">Piazza</a>
+                                            </div>
                                         </div>
 
                                         <!-- Feature -->
                                         <div class="feature d-flex flex-row align-items-center justify-content-start">
-                                            <div class="feature_title"><i class="fa fa-pencil" aria-hidden="true"></i><span>Weekly prep</span></div>
-                                            <div class="feature_text ml-auto"><a href="https://pcrs.utm.utoronto.ca/209/">PCRS</a></div>
+                                            <div class="feature_title"><i class="fa fa-pencil"
+                                                    aria-hidden="true"></i><span>Weekly prep</span></div>
+                                            <div class="feature_text ml-auto"><a
+                                                    href="https://pcrs.utm.utoronto.ca/209/">PCRS</a></div>
                                         </div>
 
                                         <!-- Feature -->
                                         <div class="feature d-flex flex-row align-items-center justify-content-start">
-                                            <div class="feature_title"><i class="fa fa-address-book" aria-hidden="true"></i><span>Assignments</span></div>
-                                            <div class="feature_text ml-auto"><a href="https://mcsmark.utm.utoronto.ca/csc209hsummer22">Markus</a></div>
+                                            <div class="feature_title"><i class="fa fa-address-book"
+                                                    aria-hidden="true"></i><span>Assignments</span></div>
+                                            <div class="feature_text ml-auto"><a
+                                                    href="https://mcsmark.utm.utoronto.ca/csc209hsummer22">Markus</a>
+                                            </div>
                                         </div>
 
                                         <!-- Feature -->
                                         <div class="feature d-flex flex-row align-items-center justify-content-start">
-                                            <div class="feature_title"><i class="fa fa-table" aria-hidden="true"></i><span>Informal chat</span></div>
-                                            <div class="feature_text ml-auto"><a href="https://discord.gg/nZgaqcmMN6">Discord</a></div>
+                                            <div class="feature_title"><i class="fa fa-table"
+                                                    aria-hidden="true"></i><span>Informal chat</span></div>
+                                            <div class="feature_text ml-auto"><a
+                                                    href="https://discord.gg/nZgaqcmMN6">Discord</a></div>
                                         </div>
 
-                                    </div>                         
+                                    </div>
                                 </div>
                             </div>
 
@@ -508,19 +781,24 @@
                 <div class="row copyright_row">
                     <div class="col">
                         <div class="copyright d-flex flex-lg-row flex-column align-items-center justify-content-start">
-                            <div class="cr_text"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                                Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-                                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></div>
+                            <div class="cr_text">
+                                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                                Copyright &copy;
+                                <script>document.write(new Date().getFullYear());</script> All rights reserved | This
+                                template is made by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+                                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </footer></div>
+        </footer>
+    </div>
 
     <script src="../../js/jquery-3.2.1.min.js"></script>
     <script src="../../styles/bootstrap4/popper.js"></script>
     <script src="../../styles/bootstrap4/bootstrap.min.js"></script>
-    <script src="../../plugins/colorbox/jquery.colorbox-min.js"></script>
     <script src="../../js/handout.js?v=1"></script>
-    </body>
+</body>
+
 </html>

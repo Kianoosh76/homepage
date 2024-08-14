@@ -8,7 +8,6 @@
 2. Set Header
 3. Init Menu
 4. Init Header Search
-5. Init Colorbox
 
 
 ******************************/
@@ -42,7 +41,6 @@ $(document).ready(function()
 
 	initMenu();
 	initHeaderSearch();
-	initColorbox();
 
 	/* 
 
@@ -130,25 +128,6 @@ $(document).ready(function()
 				{
 					$('.header_search_container').toggleClass('active');
 				}
-			});
-		}
-	}
-
-	/*
-
-	5. Init Colorbox
-
-	*/
-
-	function initColorbox()
-	{
-		if($('.gallery_item').length)
-		{
-			$('.colorbox').colorbox(
-			{
-				rel:'colorbox',
-				photo: true,
-				maxWidth: '90%'
 			});
 		}
 	}
