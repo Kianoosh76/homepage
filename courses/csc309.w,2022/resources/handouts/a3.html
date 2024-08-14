@@ -16,8 +16,10 @@
   <meta property="og:image" content="https://www.cs.toronto.edu/~kianoosh/courses/csc309/images/card.png">
 
   <link rel="shortcut icon" type="image/jpg" href="../../images/favicon.png" />
-  <link rel="stylesheet" type="text/css" href="../../styles/bootstrap4/bootstrap.min.css">
-  <link href="../../plugins/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    crossorigin="anonymous" />
   <link rel="stylesheet" type="text/css" href="../../styles/handout.css?v=1.4">
   <link rel="stylesheet" type="text/css" href="../../styles/course.css?v=1.3">
   <link rel="stylesheet" type="text/css" href="../../styles/handout_responsive.css">
@@ -186,7 +188,8 @@
                   lowercase letter, one uppercase letter, and one sign (i.e., a character from the set
                   <code><span>!@#$%^&*</span> <i class="fa fa-copy" aria-hidden="true"></i></code>). Otherwise, show
                   <span class="copy"><span>Password is invalid</span><i class="fa fa-copy"
-                      aria-hidden="true"></i></span></li>
+                      aria-hidden="true"></i></span>
+                </li>
                 <li>Repeat password must be equal to password. Otherwise, display <span class="copy"><span>Passwords
                       don't match</span><i class="fa fa-copy" aria-hidden="true"></i></span></li>
                 <li>Email must be a valid email address. If not, put the error message <span class="copy"><span>Email is
@@ -215,7 +218,8 @@
                     proceeding</span><i class="fa fa-copy" aria-hidden="true"></i></span> inside the
                 <code>&lt;p&gt;</code> element with ID <code>notification</code>. Also, the problematic fields should
                 become red and their relevant error messages should be shown. If all fields are valid, send the
-                following request:</p>
+                following request:
+              </p>
 
               <ul class="tab_panel_bullets">
                 <li>
@@ -272,17 +276,20 @@
                 if already exists) an item inside its shopping cart and list the cart items in the bellow table (with ID
                 <code>cart-items</code>). The &lt;tr&gt; that encloses the row should have an ID equal to the name of
                 the item. However, since an ID cannot contain whitespaces, you must replace them with underscores. You
-                can assume that item names will not contain underscores. </p>
+                can assume that item names will not contain underscores.
+              </p>
 
               <p> Each row must include the name, price, quantity, and total price (quantity times price) of an item.
                 Also, there are three additional columns in which you should put a minus button (with class
                 <code>decrease</code>), plus button (with class <code>increase</code>), and delete button (with class
                 <code>delete</code>), respectively. The plus button increments the quantity of that item, while the
-                minus button decrements it. The delete button removes the whole row from the table.</p>
+                minus button decrements it. The delete button removes the whole row from the table.
+              </p>
 
               <p>Everytime the cart updates, you should calculate the subtotal (sum of prices), taxes (a fixed 13% HST),
                 and grand total (subtotal plus taxes). These values should be placed inside the &lt;b&gt; tags with ID's
-                <code>subtotal</code>, <code>taxes</code>, and <code>grand_total</code>, respectively.</p>
+                <code>subtotal</code>, <code>taxes</code>, and <code>grand_total</code>, respectively.
+              </p>
 
               <div class="blog_subtitle">Notes</div>
               <ul class="tab_panel_bullets">
@@ -332,7 +339,8 @@
                 touching the next page button). The solution here was to make it <b>seamless</b> so that the user would
                 not need to actively make a decision about staying on the app or leaving it. Therefore, infinite scrolls
                 came about. In other words, once you are <b>close enough</b> to the end of the page, the new page will
-                be fetched and rendered so that you preferably don't even realize that you moved to a new page.</p>
+                be fetched and rendered so that you preferably don't even realize that you moved to a new page.
+              </p>
 
               <p>In this question, you are to implement such a scroll for pieces of text. When the page loads, you
                 should fetch the first page (paragraphs 1 to 5), and everytime the user reaches the <b>bottom</b> of the
@@ -349,7 +357,8 @@
                 <code>like</code> that shows the current number of <b>likes</b> for that paragraph. When that button is
                 clicked, you must send a request to the server to add a new like. Upon server's response, you should
                 extract the new number of likes and replace the current number with that. You can refer to the
-                screenshot at the end of the question as an example. </p>
+                screenshot at the end of the question as an example.
+              </p>
 
               <p>If the response indicates that there is no more page to show, add a new paragraph whose content is the
                 following text in bold (wrapped by the &lt;b&gt; tag): <span class="copy"><span>You have reached the
@@ -625,9 +634,11 @@
     </footer>
   </div>
 
-  <script src="../../js/jquery-3.2.1.min.js"></script>
-  <script src="../../styles/bootstrap4/popper.js"></script>
-  <script src="../../styles/bootstrap4/bootstrap.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" crossorigin="anonymous"></script>
+
   <script src="../../js/handout.js?v=1.2"></script>
 </body>
 
