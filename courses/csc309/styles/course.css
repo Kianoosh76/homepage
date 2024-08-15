@@ -1051,6 +1051,9 @@ li:last-child .comment_item {
 {
 	padding-left: 99px;
 }
+.comment_time {
+	color: black;
+}
 .add_comment_container
 {
 	margin-top: 24px;
