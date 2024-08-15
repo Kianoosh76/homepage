@@ -246,10 +246,20 @@
 	}
 	.home
 	{
-		height: 140px;
+		height: 192px;
+	}
+	.course_title {
+		font-size: 30px;
+	}
+	.header_content {
+		height: 150px;
+	}
+	.breadcrumbs ul li:nth-child(2) {
+		display: none;
 	}
 	.header.scrolled
 	{
+		opacity: 0;
 		top: 0px;
 	}
 	.blog_post

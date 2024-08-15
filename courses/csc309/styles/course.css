@@ -7,18 +7,11 @@
 
 1. Fonts
 2. Body and some general stuff
-3. Header
-	3.1 Top Bar
-	3.2 Header Content
-	3.3 Logo
-	3.4 Main Nav
-	3.5 Hamburger
+3 Logo
 4. Menu
 5. Section
-6. Home
-7. Course
-8. Newsletter
-9. Footer
+6. Course
+8. Footer
 
 
 
@@ -253,121 +246,6 @@ section
 }
 
 /*********************************
-3. Header
-*********************************/
-
-.header
-{
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100%;
-	z-index: 100;
-	box-shadow: 0px 5px 20px rgba(0,0,0,0.05);
-	-webkit-transition: all 200ms ease;
-	-moz-transition: all 200ms ease;
-	-ms-transition: all 200ms ease;
-	-o-transition: all 200ms ease;
-	transition: all 200ms ease;
-}
-.header.scrolled
-{
-	top: -40px;
-}
-
-/*********************************
-3.1 Top Bar
-*********************************/
-
-.top_bar
-{
-	width: 100%;
-	background: var(--primary_color);
-}
-.header.scrolled .top_bar
-{
-
-}
-.top_bar_container
-{
-	width: 100%;
-	height: 100%;
-}
-.top_bar_content
-{
-	width: 100%;
-	height: 40px;
-}
-.top_bar_contact_list li
-{
-	display: inline-block;
-}
-.question
-{
-	font-family: 'Raleway', serif;
-	font-size: 14px;
-	color: #FFFFFF;
-	margin-left: 0px;
-}
-.top_bar_contact_list li i,
-.top_bar_contact_list li > div
-{
-	display: inline-block;
-	font-size: 14px;
-	color: #FFFFFF;
-}
-.top_bar_contact_list li > div
-{
-	margin-left: 1px;
-}
-.top_bar_contact_list li:not(:last-child)
-{
-	margin-right: 21px;
-}
-.top_bar_login
-{
-	height: 100%;
-}
-.login_button
-{
-	width: 160px;
-	height: 100%;
-	background: #f3f3f3;
-	text-align: center;
-}
-.login_button a
-{
-	display: block;
-	font-size: 14px;
-	font-weight: 500;
-	line-height: 40px;
-	color: #013102;
-}
-
-/*********************************
-3.2 Header Content
-*********************************/
-
-.header_container
-{
-	width: 100%;
-	background: #FFFFFF;
-}
-.header_content
-{
-	height: 90px;
-	-webkit-transition: all 200ms ease;
-	-moz-transition: all 200ms ease;
-	-ms-transition: all 200ms ease;
-	-o-transition: all 200ms ease;
-	transition: all 200ms ease;
-}
-.header.scrolled .header_content
-{
-	height: 80px;
-}
-
-/*********************************
 3.3 Logo
 *********************************/
 
@@ -406,170 +284,6 @@ section
 	transition: all 200ms ease;
 }
 .logo_text span
-{
-	color: var(--primary_color);
-}
-.header.scrolled .logo
-{
-	width: 40px;
-	height: 40px;
-}
-.header.scrolled .logo_text
-{
-	font-size: 24px;
-}
-
-/*********************************
-3.4 Main Nav
-*********************************/
-
-.main_nav_contaner
-{
-
-}
-.main_nav,
-.search_button,
-.shopping_cart
-{
-	display: inline-block;
-}
-.main_nav li
-{
-	display: inline-block;
-	position: relative;
-}
-.main_nav li:not(:last-child)
-{
-	margin-right: 44px;
-}
-.main_nav li a
-{
-	font-size: 18px;
-	font-weight: 500;
-	color: #013102;
-	-webkit-transition: all 200ms ease;
-	-moz-transition: all 200ms ease;
-	-ms-transition: all 200ms ease;
-	-o-transition: all 200ms ease;
-	transition: all 200ms ease;
-}
-.main_nav li a:hover,
-.main_nav li.active a
-{
-	color: var(--primary_color);
-}
-.main_nav li.active::after
-{
-	display: block;
-	position: absolute;
-	bottom: -2px;
-	left: 0;
-	width: 100%;
-	height: 2px;
-	background: var(--primary_color);
-	content: '';
-}
-.search_button
-{
-	margin-left: 46px;
-	cursor: pointer;
-}
-.shopping_cart
-{
-	margin-left: 23px;
-	cursor: pointer;
-}
-.search_button i,
-.shopping_cart i
-{
-	font-size: 18px;
-	color: #181818;
-	-webkit-transition: all 200ms ease;
-	-moz-transition: all 200ms ease;
-	-ms-transition: all 200ms ease;
-	-o-transition: all 200ms ease;
-	transition: all 200ms ease;
-}
-.search_button:hover i,
-.shopping_cart:hover i
-{
-	color: var(--primary_color);
-}
-.header_search_form
-{
-	display: block;
-	position: relative;
-	width: 40%;
-}
-.header_search_container
-{
-	position: absolute;
-	bottom: 0px;
-	left: 0px;
-	width: 100%;
-	background: var(--primary_color);
-	z-index: -1;
-	opacity: 0;
-	-webkit-transition: all 400ms ease;
-	-moz-transition: all 400ms ease;
-	-ms-transition: all 400ms ease;
-	-o-transition: all 400ms ease;
-	transition: all 400ms ease;
-}
-.header_search_container.active
-{
-	bottom: -73px;
-	opacity: 1;
-}
-.header_search_content
-{
-	width: 100%;
-	height: 73px;
-}
-.search_input
-{
-	width: 100%;
-	height: 40px;
-	border: none;
-	outline: none;
-	padding-left: 20px;
-}
-.header_search_button
-{
-	position: absolute;
-	top: 0;
-	right: 0;
-	width: 40px;
-	height: 100%;
-	border: none;
-	outline: none;
-	cursor: pointer;
-}
-
-/*********************************
-3.5 Hamburger
-*********************************/
-
-.hamburger_container
-{
-
-}
-.hamburger
-{
-	display: none;
-	cursor: pointer;
-}
-.hamburger i
-{
-	font-size: 20px;
-	color: #353535;
-	-webkit-transition: all 200ms ease;
-	-moz-transition: all 200ms ease;
-	-ms-transition: all 200ms ease;
-	-o-transition: all 200ms ease;
-	transition: all 200ms ease;
-}
-.hamburger:hover i
 {
 	color: var(--primary_color);
 }
@@ -769,56 +483,6 @@ section
 }
 
 /*********************************
-6. Home
-*********************************/
-
-.home
-{
-	width: 100%;
-	height: 140px;
-	background: #f2f4f5;
-	border-bottom: solid 1px #edeff0;
-}
-.breadcrumbs_container
-{
-	position: absolute;
-	left: 0;
-	bottom: 0;
-	width: 100%;
-	padding-bottom: 13px;
-	padding-left: 3px;
-}
-.breadcrumbs ul li
-{
-	display: inline-block;
-	position: relative;
-}
-.breadcrumbs ul li:not(:last-child)::after
-{
-	display: inline-block;
-	font-family: 'FontAwesome';
-	content: '\f105';
-	margin-left: 7px;
-	margin-right: 4px;
-	color: #013102;
-}
-.breadcrumbs ul li a
-{
-	font-size: 14px;
-	font-weight: 400;
-	color: #013102;
-	-webkit-transition: all 200ms ease;
-	-moz-transition: all 200ms ease;
-	-ms-transition: all 200ms ease;
-	-o-transition: all 200ms ease;
-	transition: all 200ms ease;
-}
-.breadcrumbs ul li a:hover
-{
-	color: var(--primary_color);
-}
-
-/*********************************
 7. Course
 *********************************/
 
@@ -957,10 +621,6 @@ section
 	background: linear-gradient(90deg, var(--secondary_color) 0%, var(--primary_color) 100%);
 	color: #FFFFFF;
 }
-.tab_panels
-{
-	
-}
 .tab_panel
 {
 	display: none !important;
@@ -1039,7 +699,7 @@ section
 {
 	display: block;
 	position: absolute;
-	top: 9px;
+	top: 11px;
 	left: 1px;
 	width: 7px;
 	height: 7px;
@@ -1596,113 +1256,6 @@ li:last-child .comment_item {
 	margin-top: 16px;
 }
 
-/*********************************
-8. Newsletter
-*********************************/
-
-.newsletter
-{
-	width: 100%;
-}
-.newsletter_background
-{
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-position: center center;
-}
-.newsletter_container
-{
-	width: 100%;
-	height: 120px;
-}
-.newsletter_title
-{
-	font-family: 'Raleway', serif;
-	font-size: 20px;
-	font-weight: 700;
-	text-transform: uppercase;
-	color: #FFFFFF;
-}
-.newsletter_subtitle
-{
-	font-size: 14px;
-	font-weight: 400;
-	color: #FFFFFF;
-	margin-top: 6px;
-}
-.newsletter_form_container
-{
-	width: 450px;
-	padding-left: 20px;
-}
-.newsletter_form
-{
-	display: block;
-	position: relative;
-	width: 100%;
-}
-.newsletter_input
-{
-	width: calc(100% - 136px);
-	height: 40px;
-	background: rgba(255,255,255,0.4);
-	border: none;
-	outline: none;
-	padding-left: 20px;
-	color: #FFFFFF;
-	border-top-left-radius: 3px;
-	border-bottom-left-radius: 3px;
-}
-.newsletter_input::-webkit-input-placeholder
-{
-	font-size: 14px !important;
-	font-weight: 400 !important;
-	color: #FFFFFF !important;
-}
-.newsletter_input:-moz-placeholder
-{
-	font-size: 14px !important;
-	font-weight: 400 !important;
-	color: #FFFFFF !important;
-}
-.newsletter_input::-moz-placeholder
-{
-	font-size: 14px !important;
-	font-weight: 400 !important;
-	color: #FFFFFF !important;
-} 
-.newsletter_input:-ms-input-placeholder
-{ 
-	font-size: 14px !important;
-	font-weight: 400 !important;
-	color: #FFFFFF !important;
-}
-.newsletter_input::input-placeholder
-{
-	font-size: 14px !important;
-	font-weight: 400 !important;
-	color: #FFFFFF !important;
-}
-.newsletter_button
-{
-	width: 136px;
-	height: 40px;
-	background: #FFFFFF;
-	border-radius: 3px;
-	border: none;
-	outline: none;
-	cursor: pointer;
-	font-size: 14px;
-	text-transform: uppercase;
-	color: var(--primary_color);
-	font-weight: 500;
-	letter-spacing: 0.1em;
-}
 
 /*********************************
 9. Footer
