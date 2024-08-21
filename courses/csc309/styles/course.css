@@ -35,11 +35,6 @@
 	src: url('../fonts/Raleway-SemiBold.ttf') format('truetype');
 }
 
-@font-face {
-	font-family: 'FontAwesome';
-	src: url('../fonts/fontawesome-webfont.ttf') format('truetype');
-}
-
 :root {
 	--primary_color: #0c058e;
 	--primary_color_light: #4b43e2;

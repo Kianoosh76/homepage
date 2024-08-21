@@ -285,7 +285,6 @@ section
 	left: 0;
 	width: 100%;
 	z-index: 100;
-	box-shadow: 0px 5px 20px rgba(0,0,0,0.05);
 	-webkit-transition: all 200ms ease;
 	-moz-transition: all 200ms ease;
 	-ms-transition: all 200ms ease;
@@ -798,12 +797,10 @@ section
 {
 	width: 100%;
 	height: 162px;
-	border-bottom: solid 1px var(--secondary_color);
 }
 .breadcrumbs_container
 {
 	position: absolute;
-	border-top: solid 1px var(--secondary_color);
 	left: 0;
 	bottom: 0;
 	width: 100%;
@@ -854,7 +851,6 @@ section
 {
 	width: 100%;
 	background: #FFFFFF;
-	padding-top: 30px;
 	padding-bottom: 100px;
 }
 .blog_content
@@ -1356,91 +1352,6 @@ section
 	margin-top: 10px;
 	text-transform: uppercase;
 }
-.sidebar_gallery
-{
-	margin-top: 34px;
-}
-.gallery_item
-{
-	position: relative;
-	width: calc((100% - 36px) / 3);
-	margin-bottom: 18px;
-	cursor: pointer;
-}
-.gallery_item img
-{
-	width: 100%;
-}
-.gallery_item_overlay
-{
-	display: block;
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	background: rgba(20,189,238,0.7);
-	opacity: 0;
-	pointer-events: none;
-	font-size: 33px;
-	font-weight: 300;
-	color: #FFFFFF;
-	-webkit-transition: all 200ms ease;
-	-moz-transition: all 200ms ease;
-	-ms-transition: all 200ms ease;
-	-o-transition: all 200ms ease;
-	transition: all 200ms ease;
-}
-.gallery_item:hover .gallery_item_overlay
-{
-	opacity: 1;
-}
-.sidebar_tags
-{
-	margin-top: 40px;
-}
-.tags_list li
-{
-	display: inline-block;
-	padding-left: 19px;
-	padding-right: 18px;
-	background: #f2f4f5;
-	border-radius: 3px;
-	margin-bottom: 10px;
-	-webkit-transition: all 200ms ease;
-	-moz-transition: all 200ms ease;
-	-ms-transition: all 200ms ease;
-	-o-transition: all 200ms ease;
-	transition: all 200ms ease;
-}
-.tags_list li:not(:last-child)
-{
-	margin-right: 5px;
-}
-.tags_list li:hover
-{
-	background: var(--tertiary_color);
-}
-.tags_list li:hover a
-{
-	color: #FFFFFF;
-}
-.quote{
-	color: rgb(0, 100, 0);
-}
-.tags_list li a
-{
-	display: block;
-	font-size: 12px;
-	color: #76777a;
-	text-transform: uppercase;
-	line-height: 30px;
-	-webkit-transition: all 200ms ease;
-	-moz-transition: all 200ms ease;
-	-ms-transition: all 200ms ease;
-	-o-transition: all 200ms ease;
-	transition: all 200ms ease;
-}
 .sidebar_banner
 {
 	width: 100%;
@@ -1789,43 +1700,80 @@ section
 	height: 54px;
 	border-top: solid 1px #353a49;
 }
-.cr_list li
-{
-	display: inline-block;
+.blog_content {
+	border: solid 1px var(--primary_color);
+	border-left-color: var(--secondary_color);
+	border-bottom-color: var(--secondary_color);
+	padding: 2rem;
 }
-.copyright div
+md-block ul
 {
-	font-size: 14px;
-	color: #b5b8be;
+	margin-top: 9px;
 }
-.cr_text a
+md-block li
 {
-	color: #FFFFFF;
-	-webkit-transition: all 200ms ease;
-	-moz-transition: all 200ms ease;
-	-ms-transition: all 200ms ease;
-	-o-transition: all 200ms ease;
-	transition: all 200ms ease;
+	position: relative;
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 1.75;
+	color: black;
+	text-align: justify;
 }
-.cr_text a:hover
+md-block ul li
 {
-	color: var(--tertiary_color);
+	padding-left: 27px;
 }
-.cr_list li:not(:last-child)
+md-block li:not(:last-child)
 {
-	margin-right: 50px;
+	margin-bottom: 2px;
 }
-.cr_list li a
-{
-	font-size: 14px;
-	color: #b5b8be;
-	-webkit-transition: all 200ms ease;
-	-moz-transition: all 200ms ease;
-	-ms-transition: all 200ms ease;
-	-o-transition: all 200ms ease;
-	transition: all 200ms ease;
+md-block p {
+	color: black !important;
 }
-.cr_list li a:hover
+md-block ol {
+	list-style-type: none;
+}
+md-block ul li::before
 {
-	color: var(--tertiary_color);
+	display: block;
+	position: absolute;
+	top: 11px;
+	left: 1px;
+	width: 7px;
+	height: 7px;
+	background: #76777a;
+	content: '';
+	border-radius: 50%;
+}
+md-block img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+	margin: 1rem 0;
+}
+md-block h2 {
+	font-family: 'Raleway', serif;
+	font-size: 24px;
+	font-weight: 700;
+	color: #013102;
+	margin-top: 26px;
+}
+md-block h3 {
+	font-family: 'Raleway', serif;
+	font-size: 20px;
+	font-weight: 700;
+	color: #013102;
+	margin-top: 20px;
+}
+md-block h2:first-child {
+	margin-top: 0;
+}
+md-block p:first-child {
+	margin-top: 0;
+}
+md-block pre {
+	margin: 10px 0;
+}
+md-block h4 {
+	margin-top: 10px;
 }

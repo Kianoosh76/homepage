@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+
+<head>
+  <title>Toronto Fitness Club: part 1</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="CSC309: Programming on the Web Fall 2024 - Course Project">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.cs.toronto.edu/~kianoosh/courses/csc309/handouts/p1.html">
+  <meta property="og:title" content="Toronto Fitness Club">
+  <meta property="og:description" content="CSC309: Programming on the Web - Fall 2024">
+  <meta property="og:image" content="https://www.cs.toronto.edu/~kianoosh/courses/csc309/images/card.png">
+
+  <link rel="shortcut icon" type="image/jpg" href="../../images/favicon.png" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    crossorigin="anonymous" />
+  <link rel="stylesheet" type="text/css" href="../../styles/handout.css?v=3.4.2">
+  <link rel="stylesheet" type="text/css" href="../../styles/course.css?v=3.1">
+  <link rel="stylesheet" type="text/css" href="../../styles/handout_responsive.css?v=3.1">
+</head>
+
+<body>
+
+  <div class="super_container">
+
+    <!-- Header -->
+
+    <header class="header">
+
+      <!-- Header Content -->
+      <div class="header_container">
+        <div class="container">
+          <div class="row">
+            <div class="col">
+
+              <div class="header_content d-flex flex-row align-items-center justify-content-start">
+                <div class="logo_container">
+                  <div class="course_title"><a href="../../index.html" style="color: unset"><span
+                        class="alt_title">CSC309</span>:
+                      Programming on the
+                      Web</a></div>
+                  <div class="course_info_title">University of Toronto - Fall 2024</div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </header>
+
+    <!-- Home -->
+
+    <div class="home">
+      <div class="breadcrumbs_container">
+        <div class="container">
+          <div class="row">
+            <div class="col">
+              <div class="breadcrumbs">
+                <ul>
+                  <li id="handout_title">Handout</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Blog -->
+
+    <div class="blog">
+      <div class="container">
+        <div class="row">
+
+          <!-- Blog Content -->
+          <div class="col-lg-8">
+            <div class="blog_content">
+              <md-block id="markdown_content">
+                Loading handout content...
+              </md-block>
+
+
+            </div>
+            <hr>
+            <!-- Comments -->
+            <div class="comments_container">
+              <h3>Comments</h3>
+              <ul class="comments_list">
+                <li>
+                  <div class="comment_item d-flex flex-row align-items-start jutify-content-start">
+                    <div class="comment_content">
+                      <div class="comment_title_container d-flex flex-row align-items-center justify-content-start">
+                        <div class="comment_author"><a href="#" onclick="return false">Large
+                            Brain</a></div>
+                        <div class="comment_rating">
+                          <div class="rating_r rating_r_5"><i></i><i></i><i></i><i></i><i></i>
+                          </div>
+                        </div>
+                        <div class="comment_time ml-auto" id="date1"></div>
+                      </div>
+                      <div class="comment_text">
+                        <p>This is my seventh time taking CSC309, and inarguably, this is the
+                          best assignment I've ever seen.<br>
+                          Problems are so accurately designed that anyone with their own
+                          knowledge and experience have their own takeaways.<br>
+                          I hope next assignments will be this good, too!
+                        </p>
+                      </div>
+                      <div class="comment_extras d-flex flex-row align-items-center justify-content-start">
+                        <div class="comment_extra comment_likes"><a href="#" onclick="return false"><i
+                              class="fa fa-thumbs-up" aria-hidden="true"></i><span>108</span></a></div>
+                        <div class="comment_extra comment_reply"><a href="#" onclick="return false"><i
+                              class="fa fa-pencil" aria-hidden="true"></i><span>Reply</span></a></div>
+                      </div>
+                    </div>
+                  </div>
+                  <ul>
+                    <li>
+                      <div class="comment_item d-flex flex-row align-items-start jutify-content-start">
+                        <div class="comment_content">
+                          <div class="comment_title_container d-flex flex-row align-items-center justify-content-start">
+                            <div class="comment_author"><a href="#" onclick="return false">Kianoosh</a></div>
+                            <div class="comment_time ml-auto" id="date2"></div>
+                            <script>document.getElementById("date1").innerHTML = new Date().toDateString();
+                              document.getElementById("date2").innerHTML = new Date().toDateString();
+                            </script>
+
+                          </div>
+                          <div class="comment_text">
+                            <p>Thanks bro!</p>
+                          </div>
+                          <div class="comment_extras d-flex flex-row align-items-center justify-content-start">
+                            <div class="comment_extra comment_likes"><a href="#" onclick="return false"><i
+                                  class="fa fa-thumbs-up" aria-hidden="true"></i><span>36</span></a></div>
+                            <div class="comment_extra comment_reply"><a href="#" onclick="return false"><i
+                                  class="fa fa-pencil" aria-hidden="true"></i><span>Reply</span></a></div>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <div class="comment_item d-flex flex-row align-items-start jutify-content-start">
+                    <div class="comment_content">
+                      <div class="comment_title_container d-flex flex-row align-items-center justify-content-start">
+                        <div class="comment_author"><a href="#" onclick="return false">Captain
+                            FiFi</a></div>
+                        <div class="comment_rating" style="display: inline-flex">
+                          <div class="rating_r rating_r_5"><i></i><i></i><i></i><i></i><i></i>
+                          </div>
+                        </div>
+                        <div class="comment_time ml-auto" id="date12"></div>
+                      </div>
+                      <div class="comment_text">
+                        <p>Hey may I suggest that I implement the actual functionality of the
+                          button below in exchange for 10% bonus of the final grade?
+                          Collecting people's feedback can help promote democracy, equity, and
+                          freedom of speech. A diverse environment where every voice is heard
+                          is conducive towards fostering a better post-secondary education.
+                          Alternatively, I can charge you for $500.
+                        </p>
+                      </div>
+                      <div class="comment_extras d-flex flex-row align-items-center justify-content-start">
+                        <div class="comment_extra comment_likes"><a href="#" onclick="return false"><i
+                              class="fa fa-thumbs-up" aria-hidden="true"></i><span>83710</span></a></div>
+                        <div class="comment_extra comment_reply"><a href="#" onclick="return false"><i
+                              class="fa fa-pencil" aria-hidden="true"></i><span>Reply</span></a></div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+              <div class="add_comment_container">
+                <div class="add_comment_title">Write a comment</div>
+                <div class="add_comment_text">Your email address will not be published. Required fields
+                  are marked *</div>
+                <form action="#" class="comment_form">
+                  <div>
+                    <div class="form_title">Review*</div>
+                    <textarea class="comment_input comment_textarea" required="required"></textarea>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-6 input_col">
+                      <div class="form_title">Name*</div>
+                      <input type="text" class="comment_input" required="required">
+                    </div>
+                    <div class="col-md-6 input_col">
+                      <div class="form_title">Email*</div>
+                      <input type="text" class="comment_input" required="required">
+                    </div>
+                  </div>
+                  <div class="comment_notify">
+                    <input type="checkbox" id="checkbox_notify" name="regular_checkbox"
+                      class="regular_checkbox checkbox_account" checked>
+                    <label for="checkbox_notify"><i class="fa fa-check" aria-hidden="true"></i></label>
+                    <span>Notify me of new posts by email</span>
+                  </div>
+                  <div>
+                    <script>
+                      function fakesubmit() {
+                        alert("Thank you so much for writing your feedback.\n\nAs you may already have guessed, your feedback is neither saved nor sent anywhere. In fact, no one will ever even know that you wrote such feedback. " +
+                          "The reason is that it is not possible for this website to store and present such stuff. Throughout this course, you will learn why.\n\n" +
+                          "Now, please copy your feedback to piazza or email it to me or a TA :)")
+                      }
+                    </script>
+                    <button type="submit" onclick="fakesubmit()" class="comment_button trans_200">submit</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+
+          <!-- Blog Sidebar -->
+          <div class="col-lg-4">
+            <div class="sidebar">
+
+              <!-- Feature -->
+              <div class="sidebar_section">
+                <div class="sidebar_section_title">Course Links</div>
+                <div class="sidebar_feature">
+
+                  <!-- Features -->
+                  <div class="feature_list">
+
+                    <!-- Feature -->
+                    <div class="feature d-flex flex-row align-items-center justify-content-start">
+                      <div class="feature_title">
+                        <i class="fa fa-bullhorn" aria-hidden="true"></i>
+                        <span>Announcement - Q&amp;A</span>
+                      </div>
+                      <div class="feature_text ml-auto">
+                        <a href="https://piazza.com/utoronto.ca/fall2024/csc309">Piazza</a>
+                      </div>
+                    </div>
+
+                    <!-- Feature -->
+                    <div class="feature d-flex flex-row align-items-center justify-content-start">
+                      <div class="feature_title">
+                        <i class="fa fa-book" aria-hidden="true"></i>
+                        <span>Weekly exercises</span>
+                      </div>
+                      <div class="feature_text ml-auto">
+                        <a href="">Markus</a>
+                      </div>
+                    </div>
+
+                    <!-- Feature -->
+                    <div class="feature d-flex flex-row align-items-center justify-content-start">
+                      <div class="feature_title">
+                        <i class="fa fa-comment" aria-hidden="true"></i>
+                        <span>Informal chat</span>
+                      </div>
+                      <div class="feature_text ml-auto">
+                        <a href="https://discord.gg/XjY5SnFwhY">Discord</a>
+                      </div>
+                    </div>
+
+                    <div class="feature d-flex flex-row align-items-center justify-content-start">
+                      <div class="feature_title">
+                        <i class="fa fa-code" aria-hidden="true"></i>
+                        <span>Lecture codes</span>
+                      </div>
+                      <div class="feature_text ml-auto">
+                        <a href="">Github</a>
+                      </div>
+                    </div>
+
+
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+
+    <footer class="footer">
+      <div class="container">
+        <div class="row copyright_row">
+          <div class="col">
+            <div class="copyright d-flex flex-lg-row flex-column align-items-center justify-content-start">
+              <div class="cr_text">
+                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                Copyright &copy;
+                <script>document.write(new Date().getFullYear());</script> All rights reserved | This
+                template is made by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" crossorigin="anonymous"></script>
+  <script type="module" src="https://md-block.verou.me/md-block.js"></script>
+  <script src="../../js/handout.js?v=4.2.5"></script>
+
+</body>
+
+</html>

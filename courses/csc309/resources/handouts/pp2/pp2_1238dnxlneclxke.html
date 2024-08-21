@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+
+<head>
+    <title>Toronto Fitness Club: part 1</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="CSC309: Programming on the Web Fall 2024 - Course Project">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.cs.toronto.edu/~kianoosh/courses/csc309/handouts/p1.html">
+    <meta property="og:title" content="Toronto Fitness Club">
+    <meta property="og:description" content="CSC309: Programming on the Web - Fall 2024">
+    <meta property="og:image" content="https://www.cs.toronto.edu/~kianoosh/courses/csc309/images/card.png">
+
+    <link rel="shortcut icon" type="image/jpg" href="../../images/favicon.png" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+        crossorigin="anonymous" />
+    <link rel="stylesheet" type="text/css" href="../../styles/handout.css?v=3.1">
+    <link rel="stylesheet" type="text/css" href="../../styles/course.css?v=3.1">
+    <link rel="stylesheet" type="text/css" href="../../styles/handout_responsive.css?v=3.1">
+</head>
+
+<body>
+
+    <div class="super_container">
+
+        <!-- Header -->
+
+        <header class="header">
+
+            <!-- Header Content -->
+            <div class="header_container">
+                <div class="container">
+                    <div class="row">
+                        <div class="col">
+                            <div class="header_content d-flex flex-row align-items-center justify-content-start">
+                                <div class="logo_container">
+                                    <div class="course_title"><span class="alt_title">CSC309</span>: Programming on the
+                                        Web</div>
+                                    <div class="course_info_title">University of Toronto - Fall 2024</div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </header>
+
+        <!-- Home -->
+
+        <div class="home">
+            <div class="breadcrumbs_container">
+                <div class="container">
+                    <div class="row">
+                        <div class="col">
+                            <div class="breadcrumbs">
+                                <ul>
+                                    <li><a href="../../index.html">Home</a></li>
+                                    <li><a href="#">handouts</a></li>
+                                    <li>Project Backend</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Blog -->
+
+        <div class="blog">
+            <div class="container">
+                <div class="row">
+
+                    <!-- Blog Content -->
+                    <div class="col-lg-8">
+                        <div class="blog_content">
+                            <div class="blog_title">Toronto Fitness Club</div>
+                            <div class="blog_meta">
+                                <ul>
+                                    <li>Due date: <span id="due-date">Sun Oct 27, 2024 22:00:00</span></li>
+                                    <li><span id="remaining-time"></span> remaining</li>
+                                </ul>
+                            </div>
+                            <div class="blog_subtitle"><b>Overview</b></div>
+                            <p> Toronto Fitness Club (TFC) is the new rival for GoodLife Fitness and LA Fitness in
+                                Toronto. The Canada-based business owners founded a new chain fitness club in Toronto
+                                aiming to expand their business to other major cities in North America. A successful
+                                business requires smart investment, perspective, and planning. It is why the business
+                                owners understand the significance of a having perfect website from the very first
+                                stages. They hired you to build their website. For some reason, the owners lack
+                                patience, so you need to deliver the website very quickly. In return, they are going to
+                                give you life-time free admission to all yoga classes, group meditation, and therapy
+                                sessions held by TFC. </p>
+
+                            <img style="display: block; margin: auto; " src="../images/tfc.png" height="150">
+
+                            <p>The project is divided into <b>two parts</b>. Firstly, you will use Django and REST
+                                Framework to implement the backend of the project. Secondly, you will build the frontend
+                                using React JS and connect the backend to it. The eventual outcome of this project is a
+                                fully-functional website that meets the <b>user stories</b> listed in an upcoming
+                                section. </p>
+
+                            <p>The project is handed out from the business owner's point of view. That is, those people
+                                do not necessarily have a computer science background. Therefore, the requirements are
+                                described in a non-technical way, and it is your job to design and implement the web
+                                application that meets them. There is much room for creativity, and you get decent
+                                freedom with respect to the details and various tools you can use for this project. In
+                                fact, there are very few general limitations. For example, you will have to use
+                                <b>Django, REST, and React</b>. Beside these, you can utilize any online packages,
+                                library, or open-source code and template to improve your website.
+                            </p>
+
+                            <div class="blog_subtitle">Deadline</div>
+
+                            <p>This part is due on <strong id="due-date2"></strong>. Late submissions of <code>x</code>
+                                hours (starting from 1) will deduct following percentage from your group's grades.<br>
+                                <img width="150" style="margin-left: 10em" src="../images/penalty-decay.png"
+                                    alt="0.0002 * x ^ 3.06">
+                            </p>
+
+                            <div class="blog_subtitle">Academic Integrity</div>
+
+                            <p>Unlike the assignments, you are allowed to download packages or use open source codes
+                                from the internet for the project. However, <b>sharing or publishing</b> even a small
+                                piece of code to other teams is strictly prohibited (either giving to or taking from
+                                them). Online codes must include a reference to the webpage they are taken from.
+                            </p>
+
+                            <div class="blog_subtitle">Groups</div>
+
+                            <p>Register your groups on Markus as soon as you have found the teammates. The scope of the
+                                project is appropriate for a group of three members. However, if some members have
+                                already had prior knowledge in web development, groups of two would be fine as well. You
+                                can also choose to work entirely on your own, which is strongly discouraged as the load
+                                will be overwhelming. If you have a solid background in web development and want to
+                                intensify and challenge your knowledge, working alone could be an option.</p>
+
+                            <p><b>Note: </b>The number of members will not affect our grading criteria. That is, your
+                                submission will be graded the same way, regardless of how many team members are there.
+                            </p>
+
+                            <div class="blog_subtitle">Mentor sessions</div>
+
+                            <p>For each part, you can sign up for two mentor sessions with a TA to discuss your ideas,
+                                ask questions, or seek help on any project-related issue. You must already have
+                                registered your teams on Markus and use the <a
+                                    href="https://csc309.teach.cs.toronto.edu/">IBS</a> to sign up for a session. Note
+                                that sessions have an availability interval. For example, the first mentor session is
+                                available only in specific dates (e.g., two weeks before the deadline). Therefore, if
+                                you do not book one, you will lose one session and will not get two sessions in the next
+                                week. More details are explained on the IBS docs. </p>
+
+                            <div class="blog_subtitle">Interviews</div>
+                            <p>Each part will be graded separately through interview sessions with TAs. Interviews are
+                                unsurprisingly booked through the IBS system (after all, that is why it is called IBS in
+                                the first place). Please note that if you do not book a session, you will get <b>no
+                                    marks</b> for that part. All team members must be present at the meeting, and the
+                                absent members will not get any marks for the part. Time intervals associated with the
+                                mentor sessions and interviews will be announced on Piazza. </p>
+
+                            <div class="blog_subtitle">Submission</div>
+
+                            <p>You should submit your work to your group's git repository on Markus. That is, you cannot
+                                submit through its normal web interface.
+                                Instead, commit and push your codes to your repository for each part. Find out your
+                                repo's URL by logging into Markus. Note that there is a separate repository for each
+                                part.</p>
+
+                            <p>Moreover, commit your changes now and then, and do not leave your commits to the <b>very
+                                    last minutes</b> before the deadline. Correct use of git is a part of your
+                                assessment for this course.
+
+                            </p>
+
+                            <div class="blog_subtitle">Environment</div>
+
+                            <p>Your code must run in an Ubuntu 20.04 machine that has python 3.10 and virtualenv already
+                                installed. It is fine if you are developing your code on other environments, although
+                                Windows is not encouraged. However, you <b>must</b> make sure that your server and
+                                scripts (described later) run without any problem on Ubuntu 20.04 before submitting. The
+                                teach.cs accounts are good examples of such environments.</p>
+
+                            <div class="blog_subtitle">Participation</div>
+
+                            <p>Each team member must do a fair amount of work on this project. We will assess each
+                                member's participation by investigating the commits they created and asking detailed
+                                questions about the code at the interviews. Even though it is a group project, your
+                                final grade is <b>individual</b>.</p>
+
+                            <hr>
+                            <div class="blog_subtitle"><b>Project description</b></div>
+
+                            <p>The following paragraphs describe the features that should be included in TFC. As stated
+                                earlier, features are explained in terms of user stories, in a non-technical form, and
+                                from an imaginary user's point of view. You should not expect the same level of detail
+                                as assignments. Details that are not discussed below are left out to you, and you get to
+                                design them. Your final grading will be done mostly based on the overall functionality
+                                of your website as if the business owner is testing your application.</p>
+
+                            <div class="blog_subtitle">User stories</div>
+
+
+                            <ul class="tab_panel_bullets">
+                                <p><b>Accounts</b></p>
+                                <li> As a user, I can sign up, log in, log out, and edit my profile. Profile information
+                                    should include first and last name, email, avatar, and phone number.</li>
+
+                                <p><b>Studios</b></p>
+                                <li>As the <b>website admin</b> (i.e., an account that has access to the admin panel), I
+                                    can create/edit/delete studios. A studio has a name, address, geographical location,
+                                    postal code, phone number, and a set of images.</li>
+                                <li> As the <b>website admin</b>, I can update the amenities of a studio (type and
+                                    quantity). </li>
+                                <li> As a user, I want to list studios based on geographical proximity to a specific
+                                    location (e.g., my current location, a pinpoint on map, or a postal code). Studios
+                                    must list starting from the closest one, each having a drop pin on the map. </li>
+                                <li> As a user, I can click on each of the studios and move to the studio page. This
+                                    page should contain the general information of that studio, along with its address,
+                                    location, and a link to get the directions.</li>
+
+                                <p><b>Classes</b></p>
+                                <li> As the <b>website admin</b>, I can create/edit a class in a specific studio. A
+                                    class has a name, description, coach, a list of keywords (e.g., upper-body, core,
+                                    etc.), capacity, and times. Times indicate the recurring instances of the class. For
+                                    example, a HIIT session is held on Mondays from 8:00-9:00am. <br>
+                                    <b>Update</b>: To simplify the concept of recurring classes, your class can now have
+                                    a mandatory "end recursion" date. For example, a HIIT session will be held each
+                                    Monday at 8am until December 1, 2024. However, if your design allows for classes to
+                                    recur <b>indefinitely</b>, (and works well with the user stories), there will be a
+                                    bonus.
+                                </li>
+                                <li> As the <b>website admin</b>, I can cancel a specific class; either one instance or
+                                    all the future occurrences of the class. </li>
+                                <li> As a user, I want to see the class schedule of a specific studio on its page.
+                                    Classes must appear in the order of their start time (from now), and the class
+                                    information must be shown. Past or cancelled classes should not be listed.</li>
+                                <li> As a user, I can enrol/drop a class (either one instance or all future occurrences)
+                                    that has not started yet and has not reached its capacity. This can only happen if I
+                                    have an active subscription. </li>
+                                <li> As a user, I want to see my class schedule and history in chronological order</li>
+
+                                <p><b>Searching and filtering</b></p>
+                                <li> As a user, I want to search/filter through the listed studios (mentioned earlier).
+                                    Search/filter includes stdio name, amenities, class names, and coaches that hold
+                                    classes in those studios.</li>
+                                <li> As a user, I want to search/filter a studio's class schedule. The search/filter can
+                                    be based on the class name, coach name, date, and time range.</li>
+
+                                <p><b>Subscriptions</b></p>
+                                <li> As the <b>website admin</b> I can create/edit/delete the gym subscription plans
+                                    (e.g., 14.99$ per month or $149.99 per year). </li>
+                                <li> As a user, I can subscribe to one of the options; the first payment is made
+                                    immediately after subscription, and each upcoming payment will be automatically made
+                                    in the beginning of their period. </li>
+                                <li> As a user, I can update my credit/debit card information. All subsequent payments
+                                    must be made to the updated card. </li>
+                                <li> As a user, I can see my payment history (amount, card info, date and time, etc.),
+                                    as well as my future payments. </li>
+                                <li> As a user, I can cancel or update my current subscription. The next payment will be
+                                    either cancelled or updated. In case of cancellation, all class booking after the
+                                    current billing period will be invalid.</li>
+                            </ul>
+
+                            <hr>
+                            <div class="blog_subtitle"><b>Part 1 deliverables</b></div>
+
+                            <p>In this part, you will implement the Django backend for the project. All the admin user
+                                stories must be implemented in the Django <b>admin panel</b>, which saves your effort
+                                and time significantly. Refer to the <a
+                                    href="https://docs.djangoproject.com/en/4.1/ref/contrib/admin/">docs</a> for a full
+                                list of options and tools provided in the admin panel. Django's admin panel is so
+                                powerful, and you will be able to implement all the admin user stories using it. All
+                                other user stories are implemented with one or more REST APIs. Your APIs should not have
+                                any template or HTML response.</p>
+                            <p>The project should run in a <b>virtual environment</b>, with all the packages listed in
+                                the requirements file. Ideally, your backend server should not go through many changes
+                                at the next part (this will not happen in practice).
+                            </p>
+
+                            <p>You should implement proper authentication and authorization for the user stories as
+                                well.</p>
+
+                            <p><b>Note 1:</b> As potentially ambiguous as the handout gets, you can ask your questions
+                                on Piazza or discuss them with TAs at mentor sessions. </p>
+
+                            <p><b>Note 2:</b> It is recommended that you replace the Django's default User model with a
+                                custom model that meets the requirements of this handout. Your new model can extend the
+                                default one, or have a one-to-one relation with it. <a
+                                    href="https://docs.djangoproject.com/en/4.1/topics/auth/customizing/#substituting-a-custom-user-model">These
+                                    instructions</a> helps Django recognize your custom model as the auth model so that
+                                all User-specific functionalities (sessions, tokens, etc.) still work. </p>
+
+                            <p><b>Note 3:</b> All API views that return a potentially long list of items (e.g., list of
+                                studios, classes, comments, etc.) must be <b>paginated</b> so that a reasonable amount
+                                of data is returned in one response. Read more information <a
+                                    href="https://www.django-rest-framework.org/api-guide/pagination/">here</a>. </p>
+
+                            <div class="blog_subtitle"><b>What to submit</b></div>
+
+                            <p>You should push your entire Django project to your repo, accompanied by a <span
+                                    class="quote">startup.sh</span> script, a <span class="quote">run.sh</span> script,
+                                a <span class="quote">docs.pdf</span> file, and a <span
+                                    class="quote">postman.json</span> collection. These files should be located in the
+                                root folder of your repository.</p>
+
+                            <p>The <b>startup</b> should run any preparation needed for your code to run in a new
+                                environment. It should create the virtual environment, install all required packages
+                                with pip, and run all migrations. The <b>run</b> script should start your server.
+                                Finally, your documentation must include your design of models, as well as the full list
+                                of all API endpoints, a short <b>description</b>, their methods, and the payloads. You
+                                can use packages that automatically generate the API docs from your code. The TA will
+                                send requests based on the information you provide on that document. Therefore, it is
+                                important to have a usable and clear document. The <b>postman</b> collection must be an
+                                export of all the APIs (not the admin panel views) that are importable into Postman. The
+                                TA will use Postman to test your APIs, so it is important that your collection is
+                                comprehensive, well-organized, and self-explanatory. All the POST data, headers, and GET
+                                query parameters must be pre-filled and editable in that collection.</p>
+
+                            <p><b>Note: </b> Before submitting, make sure that your startup and run scripts work well on
+                                the virtual machines given to you, and your collection can be imported into Postman
+                                without any issues. The TAs will run your application on clean instances of that virtual
+                                machine. If you have worked with another operating system, it is your absolute
+                                <b>responsibility</b> to double-check that your project works fine within the virtual
+                                machine as well.
+                            </p>
+
+
+                        </div>
+                        <hr>
+                        <!-- Comments -->
+                        <div class="comments_container">
+                            <h3>Comments</h3>
+                            <ul class="comments_list">
+                                <li>
+                                    <div class="comment_item d-flex flex-row align-items-start jutify-content-start">
+                                        <div class="comment_content">
+                                            <div
+                                                class="comment_title_container d-flex flex-row align-items-center justify-content-start">
+                                                <div class="comment_author"><a href="#" onclick="return false">Large
+                                                        Brain</a></div>
+                                                <div class="comment_rating">
+                                                    <div class="rating_r rating_r_5"><i></i><i></i><i></i><i></i><i></i>
+                                                    </div>
+                                                </div>
+                                                <div class="comment_time ml-auto" id="date1"></div>
+                                            </div>
+                                            <div class="comment_text">
+                                                <p>This is my seventh time taking CSC309, and inarguably, this is the
+                                                    best assignment I've ever seen.<br>
+                                                    Problems are so accurately designed that anyone with their own
+                                                    knowledge and experience have their own takeaways.<br>
+                                                    I hope next assignments will be this good, too!
+                                                </p>
+                                            </div>
+                                            <div
+                                                class="comment_extras d-flex flex-row align-items-center justify-content-start">
+                                                <div class="comment_extra comment_likes"><a href="#"
+                                                        onclick="return false"><i class="fa fa-thumbs-up"
+                                                            aria-hidden="true"></i><span>108</span></a></div>
+                                                <div class="comment_extra comment_reply"><a href="#"
+                                                        onclick="return false"><i class="fa fa-pencil"
+                                                            aria-hidden="true"></i><span>Reply</span></a></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <ul>
+                                        <li>
+                                            <div
+                                                class="comment_item d-flex flex-row align-items-start jutify-content-start">
+                                                <div class="comment_content">
+                                                    <div
+                                                        class="comment_title_container d-flex flex-row align-items-center justify-content-start">
+                                                        <div class="comment_author"><a href="#"
+                                                                onclick="return false">Kianoosh</a></div>
+                                                        <div class="comment_time ml-auto" id="date2"></div>
+                                                        <script>document.getElementById("date1").innerHTML = new Date().toDateString();
+                                                            document.getElementById("date2").innerHTML = new Date().toDateString();
+                                                        </script>
+
+                                                    </div>
+                                                    <div class="comment_text">
+                                                        <p>Thanks bro!</p>
+                                                    </div>
+                                                    <div
+                                                        class="comment_extras d-flex flex-row align-items-center justify-content-start">
+                                                        <div class="comment_extra comment_likes"><a href="#"
+                                                                onclick="return false"><i class="fa fa-thumbs-up"
+                                                                    aria-hidden="true"></i><span>36</span></a></div>
+                                                        <div class="comment_extra comment_reply"><a href="#"
+                                                                onclick="return false"><i class="fa fa-pencil"
+                                                                    aria-hidden="true"></i><span>Reply</span></a></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <div class="comment_item d-flex flex-row align-items-start jutify-content-start">
+                                        <div class="comment_content">
+                                            <div
+                                                class="comment_title_container d-flex flex-row align-items-center justify-content-start">
+                                                <div class="comment_author"><a href="#" onclick="return false">Captain
+                                                        FiFi</a></div>
+                                                <div class="comment_rating" style="display: inline-flex">
+                                                    <div class="rating_r rating_r_5"><i></i><i></i><i></i><i></i><i></i>
+                                                    </div>
+                                                </div>
+                                                <div class="comment_time ml-auto" id="date12"></div>
+                                            </div>
+                                            <div class="comment_text">
+                                                <p>Hey may I suggest that I implement the actual functionality of the
+                                                    button below in exchange for 10% bonus of the final grade?
+                                                    Collecting people's feedback can help promote democracy, equity, and
+                                                    freedom of speech. A diverse environment where every voice is heard
+                                                    is conducive towards fostering a better post-secondary education.
+                                                    Alternatively, I can charge you for $500.
+                                                </p>
+                                            </div>
+                                            <div
+                                                class="comment_extras d-flex flex-row align-items-center justify-content-start">
+                                                <div class="comment_extra comment_likes"><a href="#"
+                                                        onclick="return false"><i class="fa fa-thumbs-up"
+                                                            aria-hidden="true"></i><span>83710</span></a></div>
+                                                <div class="comment_extra comment_reply"><a href="#"
+                                                        onclick="return false"><i class="fa fa-pencil"
+                                                            aria-hidden="true"></i><span>Reply</span></a></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                            <div class="add_comment_container">
+                                <div class="add_comment_title">Write a comment</div>
+                                <div class="add_comment_text">Your email address will not be published. Required fields
+                                    are marked *</div>
+                                <form action="#" class="comment_form">
+                                    <div>
+                                        <div class="form_title">Review*</div>
+                                        <textarea class="comment_input comment_textarea" required="required"></textarea>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6 input_col">
+                                            <div class="form_title">Name*</div>
+                                            <input type="text" class="comment_input" required="required">
+                                        </div>
+                                        <div class="col-md-6 input_col">
+                                            <div class="form_title">Email*</div>
+                                            <input type="text" class="comment_input" required="required">
+                                        </div>
+                                    </div>
+                                    <div class="comment_notify">
+                                        <input type="checkbox" id="checkbox_notify" name="regular_checkbox"
+                                            class="regular_checkbox checkbox_account" checked>
+                                        <label for="checkbox_notify"><i class="fa fa-check"
+                                                aria-hidden="true"></i></label>
+                                        <span>Notify me of new posts by email</span>
+                                    </div>
+                                    <div>
+                                        <script>
+                                            function fakesubmit() {
+                                                alert("Thank you so much for writing your feedback.\n\nAs you may already have guessed, your feedback is neither saved nor sent anywhere. In fact, no one will ever even know that you wrote such feedback. " +
+                                                    "The reason is that it is not possible for this website to store and present such stuff. Throughout this course, you will learn why.\n\n" +
+                                                    "Now, please copy your feedback to piazza or email it to me or a TA :)")
+                                            }
+                                        </script>
+                                        <button type="submit" onclick="fakesubmit()"
+                                            class="comment_button trans_200">submit</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Blog Sidebar -->
+                    <div class="col-lg-4">
+                        <div class="sidebar">
+
+                            <!-- Feature -->
+                            <div class="sidebar_section">
+                                <div class="sidebar_section_title">Course Links</div>
+                                <div class="sidebar_feature">
+
+                                    <!-- Features -->
+                                    <div class="feature_list">
+
+                                        <!-- Feature -->
+                                        <div class="feature d-flex flex-row align-items-center justify-content-start">
+                                            <div class="feature_title">
+                                                <i class="fa fa-question-circle-o" aria-hidden="true"></i>
+                                                <span>Announcement - Q&amp;A</span>
+                                            </div>
+                                            <div class="feature_text ml-auto">
+                                                <a href="https://piazza.com/utoronto.ca/fall2024/csc309">Piazza</a>
+                                            </div>
+                                        </div>
+
+                                        <!-- Feature -->
+                                        <div class="feature d-flex flex-row align-items-center justify-content-start">
+                                            <div class="feature_title">
+                                                <i class="fa fa-address-book" aria-hidden="true"></i>
+                                                <span>Submissions</span>
+                                            </div>
+                                            <div class="feature_text ml-auto">
+                                                <a href="">Markus</a>
+                                            </div>
+                                        </div>
+
+                                        <!-- Feature -->
+                                        <div class="feature d-flex flex-row align-items-center justify-content-start">
+                                            <div class="feature_title">
+                                                <i class="fa fa-slideshare" aria-hidden="true"></i>
+                                                <span>Informal chat</span>
+                                            </div>
+                                            <div class="feature_text ml-auto">
+                                                <a href="https://discord.gg/6RgTVxYzyA">Discord</a>
+                                            </div>
+                                        </div>
+
+                                        <!-- Feature -->
+                                        <div class="feature d-flex flex-row align-items-center justify-content-start">
+                                            <div class="feature_title">
+                                                <i class="fa fa-microphone" aria-hidden="true"></i>
+                                                <span>Interviews and grades</span>
+                                            </div>
+                                            <div class="feature_text ml-auto">
+                                                <a href="https://csc309.teach.cs.toronto.edu/">IBS</a>
+                                            </div>
+                                        </div>
+
+                                        <div class="feature d-flex flex-row align-items-center justify-content-start">
+                                            <div class="feature_title">
+                                                <i class="fa fa-code" aria-hidden="true"></i>
+                                                <span>Lecture codes</span>
+                                            </div>
+                                            <div class="feature_text ml-auto">
+                                                <a href="https://github.com/Kianoosh76/csc309-fall2024-codes">Github</a>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+
+        <footer class="footer">
+            <div class="container">
+                <div class="row copyright_row">
+                    <div class="col">
+                        <div class="copyright d-flex flex-lg-row flex-column align-items-center justify-content-start">
+                            <div class="cr_text">
+                                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                                Copyright &copy;
+                                <script>document.write(new Date().getFullYear());</script> All rights reserved | This
+                                template is made by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+                                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        crossorigin="anonymous"></script>
+    <script src="../../js/handout.js?v=3.1"></script>
+</body>
+
+</html>
