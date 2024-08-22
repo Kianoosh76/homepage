@@ -35,6 +35,11 @@
 	src: url('../fonts/Raleway-SemiBold.ttf') format('truetype');
 }
 
+@font-face {
+	font-family: 'Poppins';
+	src: url('../fonts/Poppins-Regular.ttf') format('truetype');
+}
+
 :root {
 	--primary_color: #0c058e;
 	--primary_color_light: #4b43e2;
@@ -127,7 +132,7 @@ p a:hover::after
 
 .alt_title {
 	font-family: 'Poppins', serif;
-	font-weight: 500;
+	font-weight: 700;
 }
 
 h1{font-size: 48px;}
@@ -839,7 +844,7 @@ section
 {
 	font-family: 'Poppins', serif;
 	font-size: 16px;
-	font-weight: 500;
+	font-weight: 700;
 	color: #013102;
 	padding-left: 24px;
 }

@@ -308,6 +308,12 @@
 	{
 		font-size: 12px;
 	}
+	.dropdown_title_container {
+		display: block;
+	}
+	.dropdown_title_date {
+		text-align: left;
+	}
 	.dropdown_item_title
 	{
 		font-size: 14px;
