@@ -39,7 +39,7 @@ async function runAutoTester() {
     }
 
     // Construct the full URL for the auto-tester endpoint
-    const url = `${baseUrl}/csc309-e10`;
+    const url = `${baseUrl}/csc309-e11`;
 
     // Make a request to the deployed application
     const response = await fetch(url);
@@ -47,7 +47,7 @@ async function runAutoTester() {
     // Check if the response status is 200 OK
     if (response.status !== 200) {
       throw new Error(
-        `Expected status 200, but got ${response.status} from ${baseUrl}/csc309-e10`
+        `Expected status 200, but got ${response.status} from ${baseUrl}/csc309-e11`
       );
     }
 
