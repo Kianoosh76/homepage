@@ -322,6 +322,12 @@
 		width: 100%;
 		padding-left: 0;
 	}
+	.blog_content {
+		padding: 18px;
+	}
+	md-block ul li {
+		padding-left: 18px;
+	}
 }
 
 /************

@@ -132,11 +132,14 @@
 	{
 		margin-bottom: 40px;
 	}
+	.course {
+		padding-top: 16px;
+	}
 	.course_info
 	{
 	    height: auto;
-	    padding-top: 30px;
-	    padding-bottom: 30px;
+	    padding-top: 10px;
+	    padding-bottom: 10px;
 	}
 	.course_info_item:not(:last-child)
 	{
@@ -289,7 +292,7 @@
 	}
 	p
 	{
-		font-size: 13px;
+		font-size: 16px;
 	}
 	.menu
 	{
@@ -299,21 +302,27 @@
 	.dropdown_item_select,
 	.home_search_button
 	{
-		font-size: 12px;
+		font-size: 16px;
+	}
+	.tab_panel {
+		padding-left: 15px;
+		padding-right: 15px;
 	}
 	.tab_panel_text p,
 	.tab_panel_bullets li,
 	.accordion_panel p
 	{
-		font-size: 13px;
+		font-size: 16px;
 	}
 	.accordion div
 	{
-		font-size: 16px;
+		font-size: 18px;
 	}
 	.tab
 	{
-		font-size: 12px;
+		font-size: 15px;
+		padding-left: 0.8rem;
+		padding-right: 0.8rem;
 	}
 	.dropdown_title_container {
 		display: block;
@@ -323,12 +332,12 @@
 	}
 	.dropdown_item_title
 	{
-		font-size: 14px;
+		font-size: 16px;
 	}
 	.dropdown_item_title span,
 	.dropdown_item_title::before
 	{
-		font-size: 16px;
+		font-size: 18px;
 	}
 	.dropdown_item_title::before
 	{
@@ -341,7 +350,7 @@
 	}
 	.dropdown_item_text p
 	{
-		font-size: 13px;
+		font-size: 16px;
 	}
 	.review_rating_num
 	{

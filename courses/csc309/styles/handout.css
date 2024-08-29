@@ -1742,7 +1742,6 @@ md-block ul li::before
 	height: 7px;
 	background: #76777a;
 	content: '';
-	border-radius: 50%;
 }
 md-block img {
   max-width: 100%;
