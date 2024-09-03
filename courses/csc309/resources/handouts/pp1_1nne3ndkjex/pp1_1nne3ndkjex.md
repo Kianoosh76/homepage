@@ -12,7 +12,7 @@ The project is divided into two parts. In part 1, you will use Next.js, Prisma, 
 
 ### Groups
 
-This project is done in groups of up to three members. Register your groups on Markus as soon as you have found the teammates. The scope of the project is appropriate for a group of three members. However, if some members have already had prior knowledge in web development, groups of two would be fine as well. You can also choose to work entirely on your own, which is strongly discouraged as the load will be overwhelming. If you have a solid background in web development and want to intensify and challenge your knowledge, working alone could be an option.
+This project is done in groups of up to three members. Register your groups on Markus as soon as you have found the teammates. The scope of the project is appropriate for a group of three members. However, if some members have already had prior knowledge in web development, groups of two would be fine as well. You can also choose to work entirely on your own, which is strongly discouraged as the load will be overwhelming.
 
 Note: The number of members will not affect our grading criteria. That is, your submission will be graded the same way, regardless of how many team members are there.
 
@@ -52,7 +52,7 @@ Correct use of git is part of your assessment. Commit your changes now and then,
 
 ### Environment
 
-Your code must run in an Ubuntu 22.04 machine that has Node.js 20+, gcc, g++, python, and Java installed. It is fine if you are developing your code on other operating systems, although Windows is strongly discouraged. However, it is your responsibility to make sure that your server and scripts (described later) run without any problem on Ubuntu 22.04 before submitting. The teach.cs accounts are good examples of such environments.
+Your code must run in an Ubuntu 22.04 machine that has Node.js 20+, gcc, g++, python 3.10+, and Java 20+ installed. It is fine if you are developing your code on other operating systems, although Windows is strongly discouraged. However, it is your responsibility to make sure that your server and scripts (described later) run without any problem on Ubuntu 22.04 before submitting. The teach.cs accounts are good examples of such environments.
 
 ## Scriptorium features
 
