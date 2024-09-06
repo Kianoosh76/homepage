@@ -250,4 +250,15 @@ $(document).ready(function () {
       document.getElementById("handout_title").innerHTML = source + " Handout";
     }
   }
+
+  function fakeSubmit(event) {
+    event.preventDefault();
+    alert(
+      "Thank you so much for writing your feedback.\n\nAs you may already have guessed, your feedback is neither saved nor sent anywhere. In fact, no one will ever even know that you wrote such feedback. " +
+        "The reason is that it is not possible for this website to store and present such stuff. Throughout this course, you will learn why.\n\n" +
+        "Now, please copy your feedback to piazza or email it to me or a TA :)"
+    );
+  }
+
+  $(".comment_form").submit(fakeSubmit);
 });

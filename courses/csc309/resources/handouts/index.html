@@ -195,7 +195,7 @@
                     </div>
                     <div class="col-md-6 input_col">
                       <div class="form_title">Email*</div>
-                      <input type="text" class="comment_input" required="required">
+                      <input type="email" class="comment_input" required="required">
                     </div>
                   </div>
                   <div class="comment_notify">
@@ -205,15 +205,7 @@
                     <span>Notify me of new posts by email</span>
                   </div>
                   <div>
-                    <script>
-                      function fakesubmit(event) {
-                        event.preventDefault();
-                        alert("Thank you so much for writing your feedback.\n\nAs you may already have guessed, your feedback is neither saved nor sent anywhere. In fact, no one will ever even know that you wrote such feedback. " +
-                          "The reason is that it is not possible for this website to store and present such stuff. Throughout this course, you will learn why.\n\n" +
-                          "Now, please copy your feedback to piazza or email it to me or a TA :)")
-                      }
-                    </script>
-                    <button type="submit" onclick="fakesubmit()" class="comment_button trans_200">submit</button>
+                    <button type="submit" id="submitbutton" class="comment_button trans_200">submit</button>
                   </div>
                 </form>
               </div>
@@ -301,7 +293,7 @@
     crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" crossorigin="anonymous"></script>
   <script type="module" src="https://md-block.verou.me/md-block.js"></script>
-  <script src="../../js/handout.js?v=4.3.5"></script>
+  <script src="../../js/handout.js?v=4.4"></script>
 </body>
 
 </html>
