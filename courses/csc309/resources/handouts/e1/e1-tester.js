@@ -96,12 +96,12 @@ if (!$("#hobbies").length) {
   testPassed();
 }
 
-// Test 7: Check for Contact section with email and footer
+// Test 7: Check for Contact section with email
 if (!$("#contact").length) {
   console.log("❌ Test 7: Contact section is missing.");
   testFailed();
 } else if (!$('#contact a[href^="mailto:"]').length) {
-  console.log("❌ Test 7: Footer is missing an email link.");
+  console.log("❌ Test 7: Contact section is missing an email link.");
   testFailed();
 } else {
   console.log("✅ Test 7: Contact section with email is present.");
