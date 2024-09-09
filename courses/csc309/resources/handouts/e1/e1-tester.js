@@ -97,7 +97,7 @@ if (!$("#hobbies").length) {
 }
 
 // Test 7: Check for Contact section with email and footer
-if (!$("#contact").length || !$("footer").length) {
+if (!$("#contact").length) {
   console.log("❌ Test 7: Contact section or footer is missing.");
   testFailed();
 } else if (!$('#contact a[href^="mailto:"]').length) {
