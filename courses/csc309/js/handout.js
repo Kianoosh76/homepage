@@ -227,6 +227,18 @@ $(document).ready(function () {
     return urlParams.get(param);
   }
 
+  // Function to set query parameters in the URL
+  function setQueryParam(param, value) {
+    const urlParams = new URLSearchParams(window.location.search);
+    if (value === undefined) {
+      urlParams.delete(param);
+    } else {
+      urlParams.set(param, value);
+    }
+    window.location.search = urlParams.toString();
+    window.history.pushState({}, "", url);
+  }
+
   // Main function to handle the process
   function loadHandout() {
     const source = getQueryParam("source");
@@ -261,4 +273,68 @@ $(document).ready(function () {
   }
 
   $(".comment_form").submit(fakeSubmit);
+
+  function checkFullscreen() {
+    const fullscreen = getQueryParam("fullscreen");
+    if (fullscreen === "true") {
+      $("header").hide();
+      $(".blog_content + hr").hide();
+      $("footer").hide();
+      $(".comments_container").hide();
+      $(".blog").css("padding-bottom", "10px");
+      $(".blog > .container > .row").children().slice(1).hide();
+      $(".blog > .container > .row > div:first-child").removeClass("col-lg-8");
+      $(".breadcrumbs_container .col-lg-4")
+        .removeClass("col-lg-4")
+        .addClass("col-lg-6");
+      $(".breadcrumbs_container .col-lg-6")
+        .css("padding-left", 0)
+        .css("padding-right", 0);
+      $("#fullscreen_link span").text("Exit Fullscreen");
+      $("#fullscreen_link i")
+        .removeClass("fa-up-right-and-down-left-from-center")
+        .addClass("fa-down-left-and-up-right-to-center");
+
+      if (window.innerWidth < 768) {
+        $(".home").css("height", "80px");
+      } else {
+        $(".home").css("height", "50px");
+      }
+    }
+  }
+
+  checkFullscreen();
+
+  function handleFullscreenLink() {
+    const fullscreen = getQueryParam("fullscreen");
+    if (fullscreen === "true") {
+      setQueryParam("fullscreen", undefined);
+    } else {
+      setQueryParam("fullscreen", "true");
+    }
+  }
+
+  $("#fullscreen_link").click(handleFullscreenLink);
+
+  function checkPrint() {
+    const fullscreen = getQueryParam("fullscreen");
+    const print = getQueryParam("print");
+    if (fullscreen === "true" && print === "true") {
+      $(".breadcrumbs_container").hide();
+      $("<style>")
+        .prop("type", "text/css")
+        .html(
+          ".blog_content p { font-size: 18px; }\n" +
+            ".blog_content p code { font-size: 16px; }\n" +
+            ".blog_content code { font-size: 14px; }\n" +
+            ".blog_content li { font-size: 18px; }\n" +
+            ".blog_content table { font-size: 18px; }\n" +
+            ".blog_content h2 { font-size: 26px; }\n" +
+            ".blog_content h3 { font-size: 22px; }"
+        )
+        .appendTo("head");
+    }
+  }
+
+  checkPrint();
 });

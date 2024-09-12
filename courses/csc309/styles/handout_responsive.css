@@ -254,7 +254,11 @@
 	}
 	.home
 	{
-		height: 192px;
+		height: 230px;
+	}
+	#fullscreen_link {
+		text-align: left;
+		margin: 4px 10px;
 	}
 	.course_title {
 		font-size: 30px;
