@@ -333,6 +333,11 @@ $(document).ready(function () {
             ".blog_content h3 { font-size: 22px; }"
         )
         .appendTo("head");
+    } else {
+      $("<style>")
+        .prop("type", "text/css")
+        .html("#rough_work { display: none; }")
+        .appendTo("head");
     }
   }
 

@@ -1775,6 +1775,9 @@ md-block h3 {
 	color: #013102;
 	margin-top: 20px;
 }
+md-block h1:first-child {
+	margin-top: 0;
+}
 md-block h2:first-child {
 	margin-top: 0;
 }
@@ -1797,4 +1800,13 @@ md-block h4 {
 }
 #fullscreen_link i {
 	margin: 6px;
+}
+@media print {
+	@page :first {
+		margin: 0;
+	}	
+
+	@page {
+		margin: 0.4in 0;
+	}	
 }
