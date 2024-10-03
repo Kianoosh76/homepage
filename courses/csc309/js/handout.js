@@ -283,7 +283,9 @@ $(document).ready(function () {
       $(".comments_container").hide();
       $(".blog").css("padding-bottom", "10px");
       $(".blog > .container > .row").children().slice(1).hide();
-      $(".blog > .container > .row > div:first-child").removeClass("col-lg-8");
+      $(".blog > .container > .row > div:first-child")
+        .removeClass("col-lg-8")
+        .addClass("col-lg-12 p-0");
       $(".breadcrumbs_container .col-lg-4")
         .removeClass("col-lg-4")
         .addClass("col-lg-6");
@@ -324,13 +326,14 @@ $(document).ready(function () {
       $("<style>")
         .prop("type", "text/css")
         .html(
-          ".blog_content p { font-size: 18px; }\n" +
-            ".blog_content p code { font-size: 16px; }\n" +
-            ".blog_content code { font-size: 14px; }\n" +
-            ".blog_content li { font-size: 18px; }\n" +
-            ".blog_content table { font-size: 18px; }\n" +
-            ".blog_content h2 { font-size: 26px; }\n" +
-            ".blog_content h3 { font-size: 22px; }"
+          ".blog_content p { font-size: 20px; line-height: 1.5; }\n" +
+            ".blog_content p code { font-size: 18px; font-weight: 900; color: navy; }\n" +
+            ".blog_content code { font-size: 16px; }\n" +
+            ".blog_content li { font-size: 20px; }\n" +
+            ".blog_content table { font-size: 20px; }\n" +
+            ".blog_content h2 { font-size: 28px; }\n" +
+            ".blog_content h3 { font-size: 24px; }\n" +
+            ".blog_content pre { font-size: 100%; }\n"
         )
         .appendTo("head");
     } else {
