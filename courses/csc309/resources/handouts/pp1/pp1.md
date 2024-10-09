@@ -121,6 +121,10 @@ This part's grading is completely independent of the next part. You get to modif
 
 **Note 2**: All APIs that return a potentially long list of items (e.g., list of templates, blogs, comments, etc.) must be paginated so that a reasonable amount of data is returned in one response.
 
+**Note 3**: When creating the Next.js project (using `npx create-next-app`), it is recommended to choose `yes` for the questions about the use of **Typescript** and **TailwindCSS**. You will not use those in this part, but it will save you quite some time in the next part. Ignore the `.ts` and config files and simply write your code in `.js` files. It will still work as expected.
+
+**Note 4**: Code execution must happen at backend. Running at frontend introduces massive complexity, security issues, platform-dependency, and worst of all, inconsistency.
+
 ## What to submit
 
 You should push your entire Next.js project to your repo, accompanied by a `startup.sh` script, a `run.sh` script, a `docs.pdf` file, and a `postman.json` collection. These files should be located in the root folder of your repository.
