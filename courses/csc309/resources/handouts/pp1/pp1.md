@@ -123,7 +123,7 @@ This part's grading is completely independent of the next part. You get to modif
 
 **Note 3**: When creating the Next.js project (using `npx create-next-app`), it is recommended to choose `yes` for the questions about the use of **Typescript** and **TailwindCSS**. You will not use those in this part, but it will save you quite some time in the next part. Ignore the `.ts` and config files and simply write your code in `.js` files. It will still work as expected.
 
-**Note 4**: Code execution must happen at backend. Running at frontend introduces massive complexity, security issues, platform-dependency, and worst of all, inconsistency.
+**Note 4**: Code execution must happen locally at the backend server (not on frontend or via a third-party API). Running at frontend introduces massive complexity, security issues, platform-dependency, and worst of all, inconsistency.
 
 ## What to submit
 
