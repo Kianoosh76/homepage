@@ -52,7 +52,7 @@ Correct use of git is part of your assessment. Commit your changes now and then,
 
 ### Environment
 
-Your code must run in an Ubuntu 22.04 machine that has Node.js 20+, gcc, g++, python 3.10+, and Java 20+ installed. It is fine if you are developing your code on other operating systems, although Windows is strongly discouraged. However, it is your responsibility to make sure that your server and scripts (described later) run without any problem on Ubuntu 22.04 before submitting. ~~The teach.cs accounts are good examples of such environments.~~
+Your code must run in an Ubuntu 22.04 machine that has Node.js 20+, gcc, g++, python 3.10+, and Java 20+ installed. It is fine if you are developing your code on other operating systems, although Windows is strongly discouraged. However, it is your responsibility to make sure that your server and scripts (described later) run without any problem on Ubuntu 22.04 before submitting. The teach.cs accounts are good examples of such environments.
 
 ## Scriptorium features
 
