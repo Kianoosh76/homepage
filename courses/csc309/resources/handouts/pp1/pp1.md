@@ -125,7 +125,7 @@ This part's grading is completely independent of the next part. You get to modif
 
 **Note 4**: Code execution must happen at the backend server. Running at frontend introduces massive complexity, security issues, platform-dependency, and worst of all, inconsistency.
 
-**Note 5**: Code execution must happen locally, which means that all codes have to run on the same machine that hosts the backend server. The execution is a major part of the project; you cannot use third-party APIs to do it for you.
+**Note 5**: Code execution must happen locally, which means that all codes have to run on the **same machine that hosts the backend server**. The execution is a major part of the project; you cannot use third-party APIs to do it for you.
 
 **Note 6**: You need to implement the project using REST, Next.js, Prisma, React (next part), TailwindCSS (next part), and Docker (next part). Using alternative frameworks (such as GraphQL, Angular, Django, Sequelize, etc.) is not allowed.
 
