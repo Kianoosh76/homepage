@@ -243,7 +243,7 @@ What will be printed to the console when calling `course1.print()` and `course1.
 
 ```
 course1.print() will print "csc309 240" [1 mark] to the console because this refers to the obj object, which contains the firstName property [1 mark].
-course1.printArrow() will print "undefined undefined" [1 mark] because arrow functions do not have their own this context. In this case, this refers to window, which does not have those properties [1 mark].
+course1.printArrow() will print "csc309 240" as well [1 mark]. Arrow functions do not have their own this context and read it from the outer scopes. In this case, the outer scope is the class body, which does have the this value and points to the caller object. [1 mark].
 
 
 ```
