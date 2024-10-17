@@ -1,0 +1,919 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>CSC309</title>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="description" content="Programming on the Web - Winter 2025">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- Open Graph / Facebook -->
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="https://www.cs.toronto.edu/~kianoosh/courses/csc309h5/">
+	<meta property="og:title" content="CSC309">
+	<meta property="og:description" content="Programming on the Web - Winter 2025">
+	<meta property="og:image" content="https://www.cs.toronto.edu/~kianoosh/courses/csc309h5/images/card.png">
+
+	<!-- Twitter -->
+	<meta property="twitter:card" content="summary_large_image">
+	<meta property="twitter:url" content="https://www.cs.toronto.edu/~kianoosh/courses/csc309h5/">
+	<meta property="twitter:title" content="CSC309">
+	<meta property="twitter:description" content="Programming on the Web - Winter 2025">
+	<meta property="twitter:image" content="https://www.cs.toronto.edu/~kianoosh/courses/csc309h5/images/card.png">
+
+	<link rel="shortcut icon" type="image/png" href="images/favicon.png" />
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+		crossorigin="anonymous" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+		crossorigin="anonymous" />
+
+	<link rel="stylesheet" type="text/css" href="styles/course.css?v=3.2.6">
+	<link rel="stylesheet" type="text/css" href="styles/course_responsive.css?v=3.4.4">
+</head>
+
+<body>
+
+	<div class="super_container">
+
+		<!-- Course -->
+
+		<div class="course">
+			<div class="container">
+				<div class="row">
+
+					<!-- Course -->
+					<div class="col-lg-8">
+
+						<div class="course_container">
+							<div class="course_title"><span class="alt_title">CSC309</span>: Programming on the Web</div>
+							<div class="course_info_title">University of Toronto Mississauga - Winter 2025</div>
+							<div
+								class="course_info d-flex flex-lg-row flex-column align-items-lg-center align-items-start justify-content-start"
+								style="margin-top: 20px">
+
+								<!-- Course Info Item -->
+								<div class="course_info_item">
+									<div class="course_info_title">Lectures </div>
+									<div class="course_info_text" style="color: black">
+										Mondays 5-7
+										(MN 1210)
+										<br>
+
+										Mondays 7-9
+										(MN 1210)
+									</div>
+								</div>
+
+								<!-- Course Info Item -->
+								<div class="course_info_item">
+									<div class="course_info_title">Office hours</div>
+									<div class="course_info_text" style="color: black">
+										Mondays 3-5 (?????)
+										<br>
+										Other times: by appointment
+									</div>
+								</div>
+
+								<!-- Course Info Item -->
+								<div class="course_info_item">
+									<div class="course_info_title">Tutorials</div>
+									<div class="course_info_text" style="color: black">
+										Wednesdays 6-7 (DH)
+										<br>
+										Wednesdays 7-8 (DH)
+									</div>
+								</div>
+
+							</div>
+
+							<!-- Course Tabs -->
+							<div class="course_tabs_container">
+								<div class="tabs d-flex flex-row align-items-center justify-content-start">
+									<div class="tab">Description</div>
+									<div class="tab">Schedule</div>
+									<div class="tab">Team</div>
+								</div>
+								<div class="tab_panels">
+
+									<!-- Description -->
+									<div class="tab_panel active">
+										<div class="tab_panel_content">
+											<div class="tab_panel_section">
+												<div class="tab_panel_title">About the course</div>
+												<div class="tab_panel_text">
+													<p>An introduction to software development on the web. The course covers the development of
+														programs
+														that operate on the web and survey of technological alternatives, with emphasis on modern
+														web
+														development technologies. Concepts, including the internet and the web, static client
+														content, dynamic
+														client content, dynamically served content, data management, web development processes,
+														deployment, and containerization are discussed. It features a comprehensive project for
+														students to showcase their understanding over the course content.
+													</p>
+												</div>
+											</div>
+											<div class="tab_panel_section">
+												<div class="tab_panel_title">Learning outcomes</div>
+												<div class="tab_panel_text">
+													<p>At the end of the course, you will:</p>
+												</div>
+												<ul class="tab_panel_bullets">
+													<li>Understand the concept of web, servers, and clients</li>
+													<li>Gain solid knowledge about the different components of a web app</li>
+													<li>Learn how to develop the back-end of a web app with Next.js and Prisma</li>
+													<li>Learn how to develop the front-end of a web app with React</li>
+													<li>Learn how to publish and deploy your app to the internet using Docker</li>
+												</ul>
+											</div>
+
+											<div class="tab_panel_section">
+												<div class="tab_panel_title">Pre-requisites</div>
+												<ul class="tab_panel_bullets">
+													<li>Software Tools &amp; System Programming (CSC209)</li>
+													<li>
+														<strong>Recommended co-requisite:</strong>
+														Introduction to Databases (CSC343)
+													</li>
+												</ul>
+											</div>
+											<div class="tab_panel_section">
+												<div class="tab_panel_subtitle">What is the target audience?</div>
+												<div class="tab_panel_text">
+													<p>This course is suitable for anyone interested in learning web programming and may be
+														seeking a relevant job in the future. It assumes no prior knowledge or experience in web
+														development. Concepts will be discussed from the very basics. However, the focus will be on
+														practical and up-to-date technologies.
+													</p>
+												</div>
+											</div>
+											<div class="tab_panel_section">
+												<div class="tab_panel_title">Assessment</div>
+												<div class="tab_panel_text">
+													<p>Assessment will be done through weekly exercises, a project, and exams. Each one is
+														described in
+														detail below.</p>
+												</div>
+												<br>
+												<div class="tab_panel_subtitle">Weekly exercises</div>
+												<div class="tab_panel_text">
+													<p>
+														Every week, you will be given a handful of small problems related to the topics discussed at
+														the lecture. The exercises are designed to help you understand the concepts better and gain
+														practical experience. Due to the educational nature of the exercises, the auto-grader will
+														be provided to you, so you can check your answers before submission.
+													</p>
+													<p>
+														You should submit your solutions to Markus every <b>Tuesday</b> by <b>12pm</b>. Note that
+														because of the
+														number of exercises, their relatively low impact on your final grade, and the availability
+														of the auto-grader, no late submissions, extensions, or remark requests will be
+														accommodated. Your best 9 out of 11 submissions will count for grading.
+													</p>
+													<p>
+														Keep in mind that the exercises are meant to give you some initial practice with the topics.
+														Therefore, it is important to do them yourself and understand the solutions. It will be
+														possible to
+														satisfy the
+														auto-grader without fully developing the solution. But grading is not the purpose of the
+														exercises, and it might impact your ability to do the project or exams.
+													</p>
+												</div>
+												<br>
+												<div class="tab_panel_subtitle">Project</div>
+												<div class="tab_panel_text">
+													<p>
+														The project simulates a real-world web application that you might be asked to
+														develop as a freelance web developer. Even though the scope is small, it is designed to give
+														a sense
+														of what creating a real website and working as a full-stack developer would entail. For
+														the
+														project, you can form groups of 2 or 3 members. You can also do it alone,
+														but it is not recommended as the workload is excessive for one person. The topic of the
+														project is a ????. Details will be provided once the project
+														handout is released.
+													</p>
+													<p>
+														You will deliver the project in two parts. In part 1, you will deliver the backend of the
+														application. In part 2, you will develop the frontend, connect the backend to it, and
+														deliver the full web application.
+													</p>
+													<p>
+														Grading will take place through interview sessions with TAs. They will work with your
+														website to check if the requirements are implemented correctly. Also, they will ask each
+														member questions about their role and the code they have written.
+														The grade for the former will be shared among all members, while the latter will yield
+														individual grades based on each member's participation and understanding of the entire
+														submission.
+													</p>
+												</div>
+												<br>
+												<div class="tab_panel_subtitle">Examination</div>
+												<div class="tab_panel_text">
+													<p>
+														There will be a midterm exam during week 6 of the lectures, as well as a final exam at the
+														end
+														of the semester. The exams will be held in person and will be closed-book. However, you will
+														be allowed
+														to bring one letter-sized paper with <b>hand-written notes</b> on both sides. Note that
+														printed or
+														typed notes are not allowed. The exams are designed
+														to test your understanding of the concepts, architectures, and practices discussed in the
+														course, rather than your memorization of specific syntax, commands, function
+														names, etc.
+													</p>
+												</div>
+												<br>
+												<div class="tab_panel_subtitle">Grading breakdown</div>
+												<div class="container">
+													<div class="row">
+														<div class="col-sm">
+															<ul class="tab_panel_bullets">
+																<li>Weekly exercises: 10%</li>
+																<li>Midterm: 10%</li>
+																<li>Final exam: 30%</li>
+															</ul>
+														</div>
+														<div class="col-sm">
+															<ul class="tab_panel_bullets">
+																<li>Project part 1: 20%</li>
+																<li>Project part 2: 30%</li>
+															</ul>
+														</div>
+													</div>
+													<div class="tab_panel_text">
+														<p>
+															Note that the final exam is cumulative and will cover all the topics discussed in
+															the course.
+															To pass the course, you need to have a final grade of at least 50%, as well as
+															a grade of 40% or above in the final exam.
+														</p>
+													</div>
+												</div>
+
+											</div>
+
+											<div class="tab_panel_section">
+												<div class="tab_panel_title">Late submissions</div>
+												<div class="tab_panel_text">
+													<p>
+														No late submissions will be accepted for the weekly exercises. For the project, late
+														submissions will be accepted with a penalty of 10% per day, up to a maximum of three days
+														late.
+													</p>
+													<p>
+														If you are registered with Accessibility Services, you might be entitled to extensions on
+														the project deadlines. In that case, email the instructor (via the course-related email) at
+														least
+														one week before the deadline and request the extension. Note that individual entitlements
+														will be adjusted to the size of the team. For example, if one member of a team of two is
+														entitled to 7 days of extensions, the team will be granted ⌈7/2⌉=4 days.
+													</p>
+												</div>
+											</div>
+
+											<div class="tab_panel_section">
+												<div class="tab_panel_title">Remark Policy</div>
+												<div class="tab_panel_text">
+													<p>
+														No remark requests will be accepted for the weekly exercises. For the project, you may
+														request a remark for the interview part of the grading. However, the request must be
+														submitted within <b>three days</b> of receiving your grade through Markus or by email to the
+														instructor or the lead TA. You must point out specific grading errors
+														in your request, and the entire group must agree to it. Keep in mind that your
+														entire work will be re-evaluated, and your grade may increase, decrease, or remain the same.
+													</p>
+												</div>
+											</div>
+
+											<div class="tab_panel_section">
+												<div class="tab_panel_title">Missed Term Work</div>
+												<div class="tab_panel_text">
+													<p>
+														To request special consideration, bring supporting documentation to the instructor in person
+														during office hours at least one week in advance of the due date.
+													</p>
+													<p>
+														In the event of illness or another unforeseen event, please contact the instructor (via the
+														course-related email) and provide
+														supporting documentation within one week of the missed work. You must also declare your
+														absence on Acorn. Do not wait until the due date has passed. It is always easier to make
+														alternate arrangements before the due date.
+													</p>
+												</div>
+											</div>
+
+											<div class="tab_panel_section">
+												<div class="tab_panel_title">Academic Integrity</div>
+												<div class="tab_panel_text">
+													<p>
+
+														Honesty and fairness are fundamental to the University of Toronto’s mission. Plagiarism is a
+														form of academic fraud and is treated very seriously.
+
+														You are also expected to read the handout
+														<a href="http://www.writing.utoronto.ca/advice/using-sources/how-not-to-plagiarize">How Not
+															to Plagiarize</a>
+														and to be familiar with the <a
+															href="https://governingcouncil.utoronto.ca/secretariat/policies/code-behaviour-academic-matters-july-1-2019">Code
+															of Behavior on Academic Matters</a>.
+													</p>
+													<p>
+														You are allowed to search the internet, use online resources, open-source
+														codes, and generative
+														AI (e.g., ChatGPT) to help you with the project.
+														However, sharing even a small
+														piece of code with other teams is strictly prohibited (whether giving or receiving).
+													</p>
+													<p>
+														Note that All work that was not written by you or your teammates must be cited in the code,
+														including open-source codes and code created by generative AI.
+													</p>
+												</div>
+												<br>
+											</div>
+										</div>
+									</div>
+
+									<!-- Curriculum -->
+									<div class="tab_panel tab_panel_2">
+										<div class="tab_panel_content">
+											<div class="tab_panel_content">
+
+												<!-- Dropdowns -->
+												<ul class="dropdowns">
+													<div class="dropdown_item">
+														<div class="dropdown_title_container">
+															<div class="dropdown_item_title">
+																Lecture 1:
+																<span> HTML and CSS </span>
+															</div>
+															<div class="dropdown_title_date">
+																Jan 6th
+															</div>
+
+														</div>
+														<div class="dropdown_item_text">
+															<p>Web architecture, server/client model, request/response, HTTP, course intro, HTML, CSS
+															</p>
+														</div>
+													</div>
+													<hr>
+													<div class="dropdown_item">
+														<div class="dropdown_title_container">
+															<div class="dropdown_item_title">
+																Lecture 2:
+																<span> JavaScript</span>
+															</div>
+															<div class="dropdown_title_date">
+																Jan 13th
+															</div>
+														</div>
+														<div class="dropdown_item_text">
+															<p>Syntax, objects, functions, scope, arrow functions, DOM, elements</p>
+														</div>
+													</div>
+													<hr>
+													<div class="dropdown_item">
+														<div class="dropdown_title_container">
+															<div class="dropdown_item_title">
+																Lecture 3:
+																<span> Node.js, Next.js, and APIs</span>
+															</div>
+															<div class="dropdown_title_date">
+																Jan 20th
+															</div>
+														</div>
+														<div class="dropdown_item_text">
+															<p>Frontend/backend, Modern web apps, server-side JS, node, npm, Next.js, API, Rest
+																framework
+															</p>
+														</div>
+													</div>
+													<hr>
+													<div class="dropdown_item">
+														<div class="dropdown_title_container">
+															<div class="dropdown_item_title">
+																Lecture 4:
+																<span> Models, ORM, and CRUD</span>
+															</div>
+															<div class="dropdown_title_date">
+																Jan 27th
+															</div>
+														</div>
+														<div class="dropdown_item_text">
+															<p>
+																MVC, Models, ORM, Prisma, queries, Next.js API handlers and CRUD, validation</p>
+														</div>
+													</div>
+													<hr>
+													<div class="dropdown_item">
+														<div class="dropdown_title_container">
+															<div class="dropdown_item_title">
+																Lecture 5:
+																<span> Async and Auth </span>
+															</div>
+															<div class="dropdown_title_date">
+																Feb 3rd
+															</div>
+														</div>
+														<div class="dropdown_item_text">
+															<p>
+																Async programming, promises, async/await, auth, sessions, tokens, access and refresh</p>
+														</div>
+													</div>
+													<hr>
+													<div class="dropdown_item">
+														<div class="dropdown_title_container">
+															<div class="dropdown_item_title">
+																Lecture 6:
+																<span> <b>[Midterm]</b> Migrations </span>
+															</div>
+															<div class="dropdown_title_date">
+																Feb 10th
+															</div>
+														</div>
+														<div class="dropdown_item_text">
+															<p>migration workflow, assumptions, conflict resolution</p>
+														</div>
+													</div>
+													<hr>
+													<div class="dropdown_item">
+														<div class="dropdown_title_container">
+															<div class="dropdown_item_title">
+																Lecture 7:
+																<span> React</span>
+															</div>
+															<div class="dropdown_title_date">
+																Feb 24th
+															</div>
+														</div>
+														<div class="dropdown_item_text">
+															<p>
+																React intro, JSX, props, events, state</p>
+														</div>
+													</div>
+													<hr>
+													<div class="dropdown_item">
+														<div class="dropdown_title_container">
+															<div class="dropdown_item_title">
+																Lecture 8:
+																<span> Monorepo and Hooks</span>
+															</div>
+															<div class="dropdown_title_date">
+																Mar 3rd
+															</div>
+														</div>
+														<div class="dropdown_item_text">
+															<p>
+																React in Next.js, monorepo, hooks, fetch API, auth and CORS</p>
+														</div>
+													</div>
+													<hr>
+													<div class="dropdown_item">
+														<div class="dropdown_title_container">
+															<div class="dropdown_item_title">
+																Lecture 9:
+																<span> TypeScript and Advanced CSS</span>
+															</div>
+															<div class="dropdown_title_date">
+																Mar 10th
+															</div>
+														</div>
+														<div class="dropdown_item_text">
+															<p>
+																Context, Type safety, TypeScript, TailwindCSS, responsive design</p>
+														</div>
+													</div>
+													<hr>
+													<div class="dropdown_item">
+														<div class="dropdown_title_container">
+															<div class="dropdown_item_title">
+																Lecture 10:
+																<span> Docker</span>
+															</div>
+															<div class="dropdown_title_date">
+																Mar 17th
+															</div>
+														</div>
+														<div class="dropdown_item_text">
+															<p>
+																Isolation, Docker intro and history, containers, images, volumes, Docker hub</p>
+
+														</div>
+													</div>
+													<hr>
+													<div class="dropdown_item">
+														<div class="dropdown_title_container">
+															<div class="dropdown_item_title">
+																Lecture 11:
+																<span> Deployment</span>
+															</div>
+															<div class="dropdown_title_date">
+																Mar 24th
+															</div>
+														</div>
+														<div class="dropdown_item_text">
+															<p>Dev vs prod, build, process manager, web server, DevOps </p>
+														</div>
+													</div>
+													<hr>
+													<div class="dropdown_item">
+														<div class="dropdown_title_container">
+															<div class="dropdown_item_title">
+																Lecture 12:
+																<span> Optional topics</span>
+															</div>
+															<div class="dropdown_title_date">
+																Mar 31st
+															</div>
+														</div>
+														<div class="dropdown_item_text">
+															<p>TBD</p>
+														</div>
+													</div>
+
+												</ul>
+											</div>
+										</div>
+									</div>
+
+									<!-- Reviews -->
+									<div class="tab_panel tab_panel_3">
+										<!-- Comments -->
+										<div class="comments_container">
+											<ul class="comments_list">
+												<li>
+													<div class="comment_item row align-items-start jutify-content-start">
+														<div class="comment_image col-lg-3">
+															<div>
+																<img src="images/kianoosh.jpg" alt="">
+															</div>
+														</div>
+														<div class="col-lg">
+															<div class="comment_author">
+																<a href="https://www.cs.toronto.edu/~kianoosh">Kianoosh Abbasi (Instructor)</a>
+															</div>
+															<div class="comment_time">
+																<a href="mailto:kianoosh@cs.toronto.edu">kianoosh@cs.toronto.edu</a>
+															</div>
+															<div class="comment_text">
+																<p>I remember daydreaming about teaching at a class when I was 10. It feels good when
+																	dreams come
+																	true. </p>
+															</div>
+														</div>
+													</div>
+												</li>
+												<li>
+													<div class="comment_item row align-items-start jutify-content-start">
+														<div class="comment_image col-lg-3">
+															<div>
+																<img src="images/sajad.jpg" alt="">
+															</div>
+														</div>
+														<div class="col-lg">
+															<div class="comment_author">
+																<a href="">Tom Ksaver
+																	(lead TA)</a>
+															</div>
+															<div class="comment_time">
+																<a href="mailto:sajad.maghrebi@mail.utoronto.ca">sajad.maghrebi@mail.utoronto.ca</a>
+															</div>
+															<div class="comment_text">
+																<p>Geek with enough soft skills. Less is more.</p>
+															</div>
+														</div>
+													</div>
+												</li>
+												<li>
+													<div class="comment_item row align-items-start jutify-content-start">
+														<div class="comment_image col-lg-3">
+															<div>
+																<img src="images/nathan.jpg" alt="">
+															</div>
+														</div>
+														<div class="col-lg">
+															<div class="comment_author">
+																<a href="">Eren Jaegar</a>
+															</div>
+															<div class="comment_time">
+																<a href="mailto:eren.jaegar@mail.utoronto.ca">eren.jaegar@mail.utoronto.ca</a>
+															</div>
+
+															<div class="comment_text">
+																<p>2nd year PhD student researching smartphone addiction and digital wellbeing
+																	interventions. I'm also a big linux and homelab geek, speaker at hackathons, and
+																	writer (nathanlaundry.substack.com)
+																</p>
+															</div>
+														</div>
+													</div>
+												</li>
+												<li>
+													<div class="comment_item row align-items-start jutify-content-start">
+														<div class="comment_image col-lg-3">
+															<div>
+																<img src="images/xinyi.png" alt="">
+															</div>
+														</div>
+														<div class="col-lg">
+															<div class="comment_author">
+																<a href="">Mikasa Ackerman</a>
+															</div>
+															<div class="comment_time">
+																<a href="mailto:m.ackerman@mail.utoronto.ca">m.ackerman@mail.utoronto.ca</a>
+															</div>
+															<div class="comment_text">
+																<p>How about hitting the pier and grabbing some fries when coding hits a snag?</p>
+															</div>
+														</div>
+													</div>
+												</li>
+												<li>
+													<div class="comment_item row align-items-start jutify-content-start">
+														<div class="comment_image col-lg-3">
+															<div>
+																<img src="images/amirhosein.jpg" alt="">
+															</div>
+														</div>
+														<div class="col-lg">
+															<div class="comment_author">
+																<a href="">Conny Springer</a>
+															</div>
+															<div class="comment_time">
+																<a href="mailto:conny.springer@mail.utoronto.ca">conny.springer@mail.utoronto.ca</a>
+																</a>
+															</div>
+															<div class="comment_text">
+																<p>An open-source enthusiast studying AI at UofT, developing PyMilo!</p>
+															</div>
+														</div>
+													</div>
+												</li>
+												<li>
+													<div class="comment_item row align-items-start jutify-content-start">
+														<div class="comment_image col-lg-3">
+															<div>
+																<img src="images/haoze.jpeg" alt="">
+															</div>
+														</div>
+														<div class="col-lg">
+															<div class="comment_author">
+																<a href="">Levi Ackerman</a>
+															</div>
+															<div class="comment_time">
+																<a href="mailto:levi@cs.toronto.edu">levi@cs.toronto.edu</a>
+															</div>
+															<div class="comment_text">
+																<p>Inspired by my love for Harry Potter, I strive to bring a touch of magic to every
+																	project. I hope you'll find your way to work wonders in the digital realm.</p>
+															</div>
+														</div>
+													</div>
+												</li>
+												<li>
+													<div class="comment_item row align-items-start jutify-content-start">
+														<div class="comment_image col-lg-3">
+															<div>
+																<img src="images/victoria.jpg" alt="">
+															</div>
+														</div>
+														<div class="col-lg">
+															<div class="comment_author">
+																<a href="">Annie Leonhart</a>
+															</div>
+															<div class="comment_time">
+																<a href="mailto:annie.leon@mail.utoronto.ca">annie.leon@mail.utoronto.ca</a>
+															</div>
+															<div class="comment_text">
+																<p>Hi, I'm Victoria, a passionate Fullstack Developer! 🙌🏼 Me as a TA: Explains
+																	something simple, then sees the confusion and thinks… 'Did I just invent a new
+																	programming language? 🤔😹💻'</p>
+															</div>
+														</div>
+													</div>
+												</li>
+												<li>
+													<div class="comment_item row align-items-start jutify-content-start">
+														<div class="comment_image col-lg-3">
+															<div>
+																<img src="images/nils.png" alt="">
+															</div>
+														</div>
+														<div class="col-lg">
+															<div class="comment_author">
+																<a href="">Erwin Smith</a>
+															</div>
+															<div class="comment_time">
+																<a href="mailto:erwin.smith@mail.utoronto.ca">erwin.smith@mail.utoronto.ca</a>
+															</div>
+															<div class="comment_text">
+																<p>After completing my BSc and MSc degrees in Computer Science at EPFL, I worked in the
+																	banking and telecom industries as a Software Engineer/DevOps for a few years, mostly
+																	on web applications and cloud infrastructures. I am now pursuing a PhD at UofT.</p>
+															</div>
+														</div>
+													</div>
+												</li>
+
+												<li>
+													<div class="comment_item row align-items-start jutify-content-start">
+														<div class="comment_image col-lg-3">
+															<div>
+																<img src="images/brandon.jpg" alt="">
+															</div>
+														</div>
+														<div class="col-lg">
+															<div class="comment_author">
+																<a href="">Bretholdt Hoover</a>
+															</div>
+															<div class="comment_time">
+																<a href="mailto:b.hoover@mail.utoronto.ca">b.hoover@mail.utoronto.ca</a>
+															</div>
+															<div class="comment_text">
+																<p>Fourth year computer science specialist and stats major who enjoys applying CS
+																	techniques to a variety of domains including economics, health care, and sports.</p>
+															</div>
+														</div>
+													</div>
+												</li>
+												<li>
+													<div class="comment_item row align-items-start jutify-content-start">
+														<div class="comment_image col-lg-3">
+															<div>
+																<img src="images/umayrah.png" alt="">
+															</div>
+														</div>
+														<div class="col-lg">
+															<div class="comment_author">
+																<a href="">Sasha Braus</a>
+															</div>
+															<div class="comment_time">
+																<a href="mailto:sasha.braus@mail.utoronto.ca">sasha.braus@mail.utoronto.ca</a>
+															</div>
+															<div class="comment_text">
+																<p>Tea in one hand, code in the other — that’s my kind of balance. I’m a senior
+																	undergraduate computer science student who loves pairing great code with great tea.
+																</p>
+															</div>
+														</div>
+													</div>
+												</li>
+											</ul>
+										</div>
+									</div>
+
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- Course Sidebar -->
+					<div class="col-lg-4">
+						<div class="sidebar">
+
+							<!-- Feature -->
+							<div class="sidebar_section">
+								<div class="sidebar_section_title">Course Links</div>
+								<div class="sidebar_feature">
+
+									<!-- Features -->
+									<div class="feature_list">
+
+										<!-- Feature -->
+										<div class="feature d-flex flex-row align-items-center justify-content-start">
+											<div class="feature_title">
+												<i class="fa fa-bullhorn" aria-hidden="true"></i>
+												<span>Announcement - Q&amp;A</span>
+											</div>
+											<div class="feature_text ml-auto">
+												<a href="https://piazza.com/utoronto.ca/winter2025/csc309h5">Piazza</a>
+											</div>
+										</div>
+
+										<!-- Feature -->
+										<div class="feature d-flex flex-row align-items-center justify-content-start">
+											<div class="feature_title">
+												<i class="fa fa-book" aria-hidden="true"></i>
+												<span>Submissions</span>
+											</div>
+											<div class="feature_text ml-auto">
+												<a href="">Markus</a>
+											</div>
+										</div>
+
+										<!-- Feature -->
+										<div class="feature d-flex flex-row align-items-center justify-content-start">
+											<div class="feature_title">
+												<i class="fa fa-comment" aria-hidden="true"></i>
+												<span>Informal chat</span>
+											</div>
+											<div class="feature_text ml-auto">
+												<a href="">Discord</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<!-- Feature -->
+							<div class="sidebar_section">
+								<div class="sidebar_section_title">Important dates</div>
+								<div class="sidebar_feature">
+
+									<!-- Features -->
+									<div class="feature_list">
+
+										<div class="feature d-flex flex-row align-items-center justify-content-start">
+											<div class="feature_title">
+												<i class="fa fa-desktop" aria-hidden="true"></i>
+												<span>
+													Weekly exercises
+												</span>
+											</div>
+											<div class="feature_text ml-auto">Every Tuesday, 12:00</div>
+										</div>
+
+										<div class="feature d-flex flex-row align-items-center justify-content-start">
+											<div class="feature_title">
+												<i class="fa fa-pencil" aria-hidden="true"></i>
+												<span>
+													Midterm
+												</span>
+											</div>
+											<div class="feature_text ml-auto">Feb 10th</div>
+										</div>
+
+										<div class="feature d-flex flex-row align-items-center justify-content-start">
+											<div class="feature_title">
+												<i class="fa fa-keyboard" aria-hidden="true"></i>
+												<span>
+													Project part 1
+												</span>
+											</div>
+											<div class="feature_text ml-auto">Mar 7th, 22:00</div>
+										</div>
+
+										<div class="feature d-flex flex-row align-items-center justify-content-start">
+											<div class="feature_title">
+												<i class="fa fa-keyboard" aria-hidden="true"></i>
+												<span>
+													Project part 2
+												</span>
+											</div>
+											<div class="feature_text ml-auto">Apr 4th, 22:00</div>
+										</div>
+
+										<div class="feature d-flex flex-row align-items-center justify-content-start">
+											<div class="feature_title">
+												<i class="fa fa-pencil" aria-hidden="true"></i>
+												<span>
+													Final exam
+												</span>
+											</div>
+											<div class="feature_text ml-auto">TBA</div>
+										</div>
+
+									</div>
+								</div>
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Footer -->
+
+		<footer class="footer">
+			<div class="container">
+				<div class="row copyright_row">
+					<div class="col">
+						<div class="copyright d-flex flex-lg-row flex-column align-items-center justify-content-start">
+							<div class="cr_text">
+								<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+
+								Copyright &copy;
+								<script>
+									document.write(new Date().getFullYear());
+								</script>
+								All rights reserved | This template is made by
+								<a href="https://colorlib.com/" target="_blank">Colorlib</a>
+								<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+
+	<script src="https://code.jquery.com/jquery-3.7.1.min.js" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" crossorigin="anonymous"></script>
+	<script src="js/course.js?v=3.2"></script>
+</body>
+
+</html>
