@@ -129,6 +129,8 @@ This part's grading is completely independent of the next part. You get to modif
 
 **Note 6**: You need to implement the project using REST, Next.js, Prisma, React (next part), TailwindCSS (next part), and Docker (next part). Using alternative frameworks (such as GraphQL, Angular, Django, Sequelize, etc.) is not allowed.
 
+**Note 7**: All of your APIs must use the HTTP protocol and adhere to the REST framework principles. That includes the ones for code execution. Read [https://piazza.com/class/lyxtwbrilt96h0/post/200](this post) for more info on that.
+
 ## What to submit
 
 You should push your entire Next.js project to your repo, accompanied by a `startup.sh` script, a `run.sh` script, a `docs.pdf` file, and a `postman.json` collection. These files should be located in the root folder of your repository.
