@@ -62,15 +62,15 @@ if (!fs.existsSync(htmlPath)) {
       await page.select("#conversion-type", "Weight");
       let inputUnit = await page.$eval("#lhs-unit", (el) => el.value);
       assert(
-        inputUnit === "Kilogram",
-        `Test 2a: Expected "Kilogram". Got "${inputUnit}".`
+        inputUnit === "Kilograms",
+        `Test 2a: Expected "Kilograms". Got "${inputUnit}".`
       );
 
       await page.select("#conversion-type", "Area");
       inputUnit = await page.$eval("#lhs-unit", (el) => el.value);
       assert(
-        inputUnit === "Square Meter",
-        `Test 2b: Expected "Square Meter". Got "${inputUnit}".`
+        inputUnit === "Square Meters",
+        `Test 2b: Expected "Square Meters". Got "${inputUnit}".`
       );
     } else {
       assert(
@@ -85,7 +85,7 @@ if (!fs.existsSync(htmlPath)) {
       (await elementExists("#rhs-input"))
     ) {
       await page.select("#conversion-type", "Length");
-      await page.select("#lhs-unit", "Meter");
+      await page.select("#lhs-unit", "Meters");
       await page.select("#rhs-unit", "Feet");
       await page.type("#lhs-input", "1");
       let rhsValue = parseFloat(
@@ -102,12 +102,10 @@ if (!fs.existsSync(htmlPath)) {
     // Test 4: Filter rhs unit options based on input unit
     if (await elementExists("#lhs-unit")) {
       await page.select("#lhs-unit", "Feet");
-      const rhsUnitOptions = await page.$$eval("#rhs-unit option", (options) =>
-        options.map((option) => option.value)
-      );
+      const rhsUnitValue = await page.$eval("#rhs-unit", (el) => el.value);
       assert(
-        !rhsUnitOptions.includes("Feet"),
-        `Test 4: Expected "Feet" not to be in rhs unit options, but it was.`
+        rhsUnitValue === "Meters",
+        `Test 4: Expected "Feet" not to remain selected in rhs, but it was.`
       );
     } else {
       assert(false, "Test 4: #lhs-unit element does not exist.");
@@ -120,7 +118,7 @@ if (!fs.existsSync(htmlPath)) {
     ) {
       await page.select("#conversion-type", "Area");
       await page.select("#rhs-unit", "Square Feet");
-      await page.select("#lhs-unit", "Square Meter");
+      await page.select("#lhs-unit", "Square Meters");
       await page.type("#rhs-input", "500");
       let rhsValue = parseFloat(
         await page.$eval("#lhs-input", (el) => el.value)
@@ -171,10 +169,10 @@ if (!fs.existsSync(htmlPath)) {
         `Test 7a: Expected "22.05", but got "${outputValue}"`
       );
 
-      // Change to Area conversion, input 1 sq meter, check the output
+      // Change to Area conversion, input 1 sq Meters, check the output
       await page.select("#conversion-type", "Area");
       await page.select("#lhs-unit", "Square Feet");
-      await page.select("#rhs-unit", "Square Meter");
+      await page.select("#rhs-unit", "Square Meters");
       await page.click("#lhs-input", { clickCount: 3 });
       await page.type("#rhs-input", "1");
       outputValue = parseFloat(
@@ -185,9 +183,9 @@ if (!fs.existsSync(htmlPath)) {
         `Test 7b: Expected "10.76", but got "${outputValue}"`
       );
 
-      // Revert back to Length conversion, input 5 meter, check the output
+      // Revert back to Length conversion, input 5 Meters, check the output
       await page.select("#conversion-type", "Length");
-      await page.select("#lhs-unit", "Meter");
+      await page.select("#lhs-unit", "Meters");
       await page.select("#rhs-unit", "Feet");
       await page.click("#lhs-input", { clickCount: 3 });
       await page.type("#lhs-input", "5");
