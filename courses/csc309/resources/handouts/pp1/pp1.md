@@ -64,7 +64,7 @@ Stories that start with _as a user_ indicate a feature that only authenticated u
 
 ### Accounts
 
-- As a user, I want to sign up, log in, log out, and edit my profile. Profile information should include first and last name, email, avatar, and phone number. Authentication should be handled with a proper JWT setup.
+- As a user, I want to sign up, log in, log out, and edit my profile. Profile information should include first and last name, email, profile picture (or avatar), and phone number. Authentication should be handled with a proper JWT setup.
 
 ### Code writing and execution
 
