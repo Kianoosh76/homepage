@@ -133,11 +133,13 @@ This part's grading is completely independent of the next part. You get to modif
 
 **Note 8**: Instead of pre-selected avatars, you can have users upload profile pictures. Either options are okay.
 
+**Note 9**: The `startup.sh` script must also create an admin user, with the username and password being included in the docs.
+
 ## What to submit
 
 You should push your entire Next.js project to your repo, accompanied by a `startup.sh` script, a `run.sh` script, a `docs.pdf` file, and a `postman.json` collection. These files should be located in the root folder of your repository.
 
-The `startup.sh` script should run any preparation needed for your code to run in a new environment. It should create install all required packages via npm, run all migrations, and check that the required compilers/interpreters are already installed. The `run.sh` script should start your server.
+The `startup.sh` script should run any preparation needed for your code to run in a new environment. It should create install all required packages via npm, run all migrations, and check that the required compilers/interpreters are already installed. ** Also, this script must also create an admin user, with the username and password being included in the docs **. The `run.sh` script should start your server.
 
 Your documentation must include your model design and the full list of all API endpoints. Each endpoint must include a short description, the allowed methods, payloads, and an example request and response. You can use packages that automatically generate the API docs from your code. The TA will send requests based on the information you provide on that document. Therefore, it is important to have a usable and clear document.
 
