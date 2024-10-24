@@ -18,7 +18,7 @@ Note: The number of members will not affect our grading criteria. That is, your 
 
 ### Deadline
 
-Part 1 is due on **Sunday, October 27th at 22:00**. Late submissions will be accepted with a penalty of 10% per day, up to a maximum of three days late.
+Part 1 is due on ~Sunday, October 27th at 22:00~ **Sunday, November 3rd at 22:00**. Late submissions will be accepted with a penalty of 10% per day, up to a maximum of three days late.
 
 If you are registered with Accessibility Services, you might be entitled to extensions on the project deadlines. In that case, email the instructor (via the course-related email) at least one week before the deadline and request the extension. Note that individual entitlements will be adjusted to the size of the team. For example, if one member of a team of two is entitled to 7 days of extensions, the team will be granted ⌈7/2⌉=4 days.
 
@@ -129,11 +129,13 @@ This part's grading is completely independent of the next part. You get to modif
 
 **Note 6**: You need to implement the project using REST, Next.js, Prisma, React (next part), TailwindCSS (next part), and Docker (next part). Using alternative frameworks (such as GraphQL, Angular, Django, Sequelize, etc.) is not allowed.
 
-**Note 7**: All of your APIs must use the HTTP protocol and adhere to the REST framework principles. That includes the ones for code execution. Read [https://piazza.com/class/lyxtwbrilt96h0/post/200](this post) for more info on that.
+**Note 7**: All of your APIs must use the HTTP protocol and adhere to the REST framework principles. That includes the ones for code execution. Read [this post](https://piazza.com/class/lyxtwbrilt96h0/post/200) for more info on that.
 
 **Note 8**: Instead of pre-selected avatars, you can have users upload profile pictures. Either options are okay.
 
 **Note 9**: The `startup.sh` script must also create an admin user, with the username and password being included in the docs.
+
+**Note 10**: The marking scheme can be found [here](https://cdn-uploads.piazza.com/paste/keww42r1dy2ns/13ae0acca92a1de0b947426ecf0b6c86482f912acade6c57439b6a25f57ba102/Screenshot_2024-10-24_at_3.36.17_PM.png).
 
 ## What to submit
 
